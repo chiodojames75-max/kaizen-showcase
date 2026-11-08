@@ -5,10 +5,10 @@ An iPhone app for organizing daily habits and long-term goals. Built and publish
 **Status:** in development. Preparing for TestFlight and the App Store.
 
 <p>
-  <img src="docs/screenshots/01_today_1320x2868.png" width="180" alt="Today screen">
-  <img src="docs/screenshots/02_plan_1320x2868.png" width="180" alt="Plan screen">
-  <img src="docs/screenshots/04_progress_1320x2868.png" width="180" alt="Progress screen">
-  <img src="docs/screenshots/05_me_1320x2868.png" width="180" alt="Me screen">
+  <img src="docs/screenshots/01_today_1320x2868.png" width="160" alt="Today screen">
+  <img src="docs/screenshots/02_plan_1320x2868.png" width="160" alt="Plan screen">
+  <img src="docs/screenshots/04_progress_1320x2868.png" width="160" alt="Progress screen">
+  <img src="docs/screenshots/05_me_1320x2868.png" width="160" alt="Me screen">
 </p>
 
 ## What it does
