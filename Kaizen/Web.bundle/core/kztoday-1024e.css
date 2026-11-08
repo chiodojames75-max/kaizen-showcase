@@ -1,0 +1,49 @@
+/* Oct 24 · Today option A "Grove on top" (see kztoday-1024e.js). Old parts hide only once the new ones are built (html.kz-tA). */
+
+/* header, every page: the streak replaces water; the visitor feed button is gone (the Grove replaced visitors) */
+html.kz-hA .kz-hright [data-kz-water]:not(#kz-n1):not(#kz-n2) { display: none !important; }
+html.kz-hA .kz-hright [data-kz-feed]:not(#kz-n1):not(#kz-n2) { display: none !important; }
+html.kz-hA .kz-hright [data-kz-streak-pill]:not(#kz-n1):not(#kz-n2) { display: inline-flex !important; align-items: center; gap: 4px; min-height: 36px; padding: 0 14px !important; border-radius: 18px; background: #1C1C1E !important; color: #FF9F0A !important; }
+html.kz-hA .kz-hright [data-kz-streak-pill] svg { width: 15px; height: 15px; }
+html.kz-hA .kz-hright [data-kz-streak-pill] b { color: #FFFFFF; font-size: 15px; font-weight: 700; }
+
+/* Today: the old single-tree card, its folded strip, the visitors and the "Your trees" strip */
+html.kz-tA #kz-today-s1 :is(.kz-pcard, .kz-pstrip, .kz-visitor):not(#kz-n1):not(#kz-n2),
+html.kz-tA #kz-today-s1 ~ * .kzg-today:not(#kz-n1), html.kz-tA .kzg-today:not(#kz-n1):not(#kz-n2) { display: none !important; }
+
+.kzt-hero { position: relative; display: block; height: 236px; margin: 12px 0 0; border-radius: 22px; background: #0E120E; overflow: hidden; color: #FFFFFF; text-decoration: none; -webkit-tap-highlight-color: transparent; font-family: var(--kz-sans, -apple-system, system-ui, sans-serif); }
+.kzt-hero[hidden] { display: none; }
+.kzt-hero:active { opacity: .85; }
+.kzt-hh { position: absolute; left: 18px; right: 18px; top: 16px; display: flex; justify-content: space-between; z-index: 1; }
+.kzt-hh span { font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #AEAEB2; }
+.kzt-hh b { font-size: 13px; font-weight: 600; color: #E2B93B; }
+.kzt-ground { position: absolute; left: 0; right: 0; bottom: 0; height: 66px; background: #16200F; border-top: 1px solid #22301A; }
+.kzt-row { position: absolute; left: 0; right: 0; bottom: 16px; display: flex; justify-content: space-around; align-items: flex-end; padding: 0 8px; }
+.kzt-row.many { justify-content: flex-start; gap: 4px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding: 44px 12px 0; }
+.kzt-row.many::-webkit-scrollbar { display: none; }
+.kzt-tree { flex: 0 1 auto; min-width: 0; max-width: 46%; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.kzt-row.many .kzt-tree { flex: 0 0 92px; max-width: none; }
+.kzt-art { height: 108px; display: flex; align-items: flex-end; justify-content: center; }
+.kzt-art img { width: auto; max-width: 100px; object-fit: contain; object-position: 50% 100%; }
+.kzt-tree:not(.on) .kzt-art img { opacity: .72; }
+.kzt-tree b { max-width: 100%; font-size: 13px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kzt-tree em { font-style: normal; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #AEAEB2; white-space: nowrap; }
+.kzt-tree.on em { color: #34C759; }
+
+.kzt-prog { display: flex; flex-direction: column; gap: 8px; margin: 14px 4px 4px; font-family: var(--kz-sans, -apple-system, system-ui, sans-serif); }
+.kzt-prog[hidden] { display: none; }
+.kzt-pl { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.kzt-pl b { font-size: 17px; font-weight: 700; color: #FFFFFF; }
+.kzt-pl em { font-style: normal; font-size: 15px; color: #AEAEB2; }
+.kzt-prog.all .kzt-pl em { color: #34C759; }
+.kzt-bar { display: block; height: 8px; border-radius: 4px; background: #2C2C2E; overflow: hidden; }
+.kzt-bar i { display: block; height: 100%; border-radius: 4px; background: #E2B93B; transition: width .3s ease; }
+.kzt-prog.all .kzt-bar i { background: #34C759; }
+
+/* goal rows: the goal's own tree on the left (taken out of the row's grid so its columns stay as they are) */
+#kz-today-s1 .kz-goal.kzt-has:not(#kz-n1):not(#kz-n2) { padding-left: 70px !important; }
+#kz-today-s1 .kz-goal > .kzt-th { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 12px; background: #0E120E; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; pointer-events: none; z-index: 1; }
+#kz-today-s1 .kz-goal > .kzt-th img { width: auto; max-width: 40px; object-fit: contain; object-position: 50% 100%; }
+
+/* Quote of the day / Today's question, now under the lists */
+#kz-today-s1 .kz-dailyrow.kzt-dailylow { margin-top: 24px; }

@@ -1,0 +1,27 @@
+/* Oct 25 w · Calmer, shorter views (James: "simplify the view when you expand a habit, use way fewer words";
+   "center this text"; "glitchy when it opens"). CSS only, plus kzlite-1025w.js for two short lines. */
+
+/* Today: a goal's name sits in the middle of its row when there's no second line */
+body .kz-goal > .kz-gbody { justify-content: center !important; }
+
+/* Kaizen 66 card, unfolded: the tree box has a fixed height, so the open animation knows its final size before the
+   picture has loaded (it used to grow, then jump when the image arrived). Fewer words. */
+body .kzf-tree { height: 150px !important; min-height: 150px !important; max-height: 150px !important; overflow: hidden; display: flex; align-items: flex-end; justify-content: center; }
+body .kzf-tree img { height: 100% !important; width: auto !important; max-width: 100%; object-fit: contain; }
+body .kzf-stripl { display: none !important; }
+body .kzf-more { transition: opacity .18s ease !important; }
+
+/* Goal page: one name, one step, three numbers, the tree with its next stage, this week, notes you wrote */
+#kz-goalpage .kz-g1step { display: none !important; }
+#kz-goalpage .kz-g1stats { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+#kz-goalpage .kz-g1stats > div:nth-child(4) { display: none !important; }
+#kz-goalpage .kzbd-gp .kzbd-gpp { display: none !important; }
+#kz-goalpage .kzg-ms, #kz-goalpage .kzg-note, #kz-goalpage [data-kzg-why] { display: none !important; }
+#kz-goalpage .kzg-hero { max-height: 170px; }
+#kz-goalpage .kz66-gp.kzbd-long { display: none !important; }
+#kz-goalpage .kz-g1hist .kz-callegend { display: none !important; }
+#kz-goalpage .kzl-next { margin: 8px 2px 0; font-size: 15px; color: #AEAEB2; }
+#kz-goalpage .kzl-next b { color: #FFFFFF; font-weight: 600; }
+#kz-goaljournal .kz-g1off > p { display: none !important; }
+#kz-goaljournal .kz-g1day:not(:first-child):has(.kz-g1text.empty) { display: none !important; }
+#kz-goaljournal .kz-g1day .kz-g1text.empty { display: none !important; }

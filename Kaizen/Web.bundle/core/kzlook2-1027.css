@@ -1,0 +1,11 @@
+/* Oct 27 · Reminders sheet (and any kzn-* sheet): pills on the card gradient, the chosen pill / day in gold glass,
+   rows and cards on the gradient, time boxes on the gradient. */
+html body .kzn-sheet :is(.kzn-chip, .kzn-day, button[aria-pressed="false"]):not(.kzsw-btn):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) {
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)) !important; box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28) !important; border: 0 !important; color: #fff !important; }
+html body .kzn-sheet :is(.kzn-chip.on, .kzn-day.on, button[aria-pressed="true"]):not(.kzsw-btn):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7) {
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%) !important; color: #1A1404 !important; border: 0 !important;
+  box-shadow: inset 0 1px .5px rgba(255,255,255,.55), inset 0 -1px .5px rgba(255,255,255,.16), 0 0 12px rgba(226,185,59,.28) !important; }
+html body .kzn-sheet :is(.kzn-row, .kzn-card, .kzn-prev):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) {
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)) !important; box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28) !important; }
+html body .kzn-sheet :is(input[type="time"], input:not([type]), input[type="text"]):not(.kz-sw49):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) {
+  background: linear-gradient(rgba(255,255,255,.14), rgba(255,255,255,.06)) !important; box-shadow: inset 0 1px 0 rgba(255,255,255,.16) !important; border: 0 !important; border-radius: 12px !important; }

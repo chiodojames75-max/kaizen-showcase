@@ -1,0 +1,3 @@
+/* Nov 1: the "Your week" pop-up is fully opaque. The card keeps its glass gradient but now sits on a solid base, and the backdrop no longer lets the Today screen show through. */
+.kz-tmodal.kz-weekpop:not(#kz-n1):not(#kz-n2) { background: #05070B; }
+.kz-weekpop .kz-tmbox.kz-weekcard:not(#kz-n1):not(#kz-n2) { background: linear-gradient(rgba(255,255,255,.11),rgba(255,255,255,.043)), #0E0E10 !important; background-color: #0E0E10 !important; }

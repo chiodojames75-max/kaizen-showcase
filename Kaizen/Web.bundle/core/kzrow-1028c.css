@@ -1,0 +1,12 @@
+/* Oct 28 c · replaces kzrow-1028.css (adds the cut-out behind Edit/Delete) */
+/* Oct 28 · two swipe actions (Edit + Delete) share the space evenly; one action fills it */
+html body #kz-today-s1 .kz-grow.kzr-daily .kz-gswipe:has(> .edit:not([hidden])) > button:not(#kz-n1):not(#kz-n2) { flex: 1 1 0 !important; width: auto !important; max-width: none !important; min-width: 0 !important; }
+/* Oct 28 b · James: the swiped row ends where its buttons begin. The card behind the buttons is blacked out from the row's
+   right edge (with rounded corners cut into the card), so Edit and Delete sit on their own, apart from the row. */
+html body .kz-rows .kz-grow:is(.kz-swiping, .kz-swopen, .kz-swanim, .kzr-drag, .kzr-open) .kz-gswipe:not(#kz-n1)::before {
+  content: ''; position: absolute; top: -9px; bottom: -9px; left: -26px; right: -240px; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(circle at 0 100%, transparent 17.5px, #000 18px) 0 0 / 18px 18px no-repeat,
+    radial-gradient(circle at 0 0, transparent 17.5px, #000 18px) 0 100% / 18px 18px no-repeat,
+    linear-gradient(#000, #000) 18px 0 / 100% 100% no-repeat;
+}

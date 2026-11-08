@@ -1,0 +1,385 @@
+/* ==== kzfix-1023a.css ==== */
+/* Oct 23 QA fixes */
+/* 1. Progress > Your weeks: done days lost their dot (a kzpro rule removes the gradient the dot was painted with) */
+html body #kz-main .kz-calstrip .kz-cald.full i { background: #E2B93B !important; }
+/* rest days (a shield covered the day): blue, everywhere days are drawn */
+html body #kz-main .kz-calstrip .kz-cald.rest i, .kz-cald.rest i, .kz-callegend i.rest { background: #0A84FF !important; box-shadow: none !important; }
+html body #kz-main .kz-g1dot.rest i { background: #0A84FF !important; }
+html body #kz-main .kz-g1day .kz-cald.rest i { background: #0A84FF !important; }
+html body #kz-main #kz-cal#kz-cal .kz-cald.rest { background: #0A84FF !important; }
+html body #kz-main #kz-cal#kz-cal .kz-cald.rest b { color: #fff !important; }
+html body #kz-main #kz-cal#kz-cal .kz-callegend i.rest { background: #0A84FF !important; }
+#kz-cal .kz-calmonth:not(.mini) .kz-cald.rest { background: #0A84FF; }
+/* 2. Today: the + moves into the header, so nothing floats over the goal check-offs */
+html body .kz-fab.kz-fab:not(#kz-none) { display: none !important; }
+.kz-hadd { position: relative; width: 34px; height: 34px; padding: 0; border: 0; border-radius: 50%; background: #E2B93B; color: #000; display: inline-flex; align-items: center; justify-content: center; flex: none; margin-left: 2px; -webkit-tap-highlight-color: transparent; cursor: pointer; }
+.kz-hadd svg { width: 18px; height: 18px; }
+.kz-hadd::after { content: ''; position: absolute; inset: -6px; }   /* 46 pt tap area */
+.kz-hadd:active { transform: scale(0.94); }
+html.kz-kbd .kz-hadd { visibility: hidden; }
+
+/* ==== kzp1-1023c.css ==== */
+/* Oct 23 Phase 1 */
+/* 6. no accounts in v1.0 */
+html.kz-noacct [data-kz-signup], html.kz-noacct [data-kz-login], html.kz-noacct [data-kz-acctlink], html.kz-noacct a[href*="pages/account"] { display: none !important; }
+html.kz-noacct #kz-signin [data-si="out"], html.kz-noacct #kz-signin [data-si="in"], html.kz-noacct #kz-signin [data-si="msg"] { display: none !important; }
+.kz-v1acct { margin-bottom: 20px; text-align: center; }
+/* 2. speech lifted out of the small tree picture */
+.kz-say.kz-say-float { position: fixed; bottom: auto; margin: 0; z-index: 960; pointer-events: none; }
+.kz-say.kz-say-float::after { left: var(--kzt, 50%); }
+.kz-say.kz-say-float.below::after { top: -5px; bottom: auto; }
+/* 4. tap targets: 44 pt or more */
+html body .kz-set .kz-set-legal :is(a, button) { display: inline-block !important; padding: 12px 2px !important; min-width: 44px !important; min-height: 44px !important; box-sizing: border-box !important; }
+html body .kz-set .kz-set-legal + .kz-set-legal { margin-top: -6px; }
+.kz-si-terms { min-height: 44px; display: flex; align-items: center; gap: 10px; }
+.kz-si-terms input[type="checkbox"] { position: relative; }
+.kz-si-terms input[type="checkbox"]::after { content: ''; position: absolute; inset: -10px; }
+/* dense day grids: the hit area fills the whole cell, gaps included, so a tap never lands on nothing */
+#kz-cal .kz-calmonth.mini .kz-cald { position: relative; }
+#kz-cal .kz-calmonth.mini .kz-cald::after { content: ''; position: absolute; inset: -3px; }
+/* balance editor: color swatches and the reset link reach 44 pt */
+.kz-bst-sw{gap:16px!important}
+.kz-bst-sw button{position:relative}
+.kz-bst-sw button::after{content:'';position:absolute;inset:-8px}
+.kz-bst-foot button{display:inline-block;padding:12px 2px!important;margin:-12px 0!important}
+.kz-bst-dellink{padding:14px 0!important;margin:-10px 0!important}
+/* other small controls found in the 44 pt sweep: invisible hit areas, the visuals don't move */
+.kz-secfold,.kz-gmore,.kz-ghandle,.kz-ds-link,.kz-si-skip,.kz-road-more,.kz-brand.kz-htitle,[aria-label='Previous week'],[aria-label='Next week']{position:relative}
+.kz-pfold::after,.kz-secfold::after,.kz-gmore::after,.kz-ghandle::after,.kz-ds-link::after,.kz-si-skip::after,.kz-road-more::after,.kz-brand.kz-htitle::after,[aria-label='Previous week']::after,[aria-label='Next week']::after,#kz-cal .kz-calmonth:not(.mini) .kz-cald::after{content:'';position:absolute}
+.kz-pfold::after{inset:-7px}
+.kz-secfold::after{inset:-4px}
+.kz-gmore::after,.kz-ghandle::after{top:0;bottom:0;left:-6px;right:-6px}
+.kz-ds-link::after{top:-11px;bottom:-11px;left:0;right:0}
+.kz-si-skip::after{top:-9px;bottom:-9px;left:0;right:0}
+.kz-road-more::after{top:-4px;bottom:-4px;left:0;right:0}
+.kz-brand.kz-htitle::after{top:-14px;bottom:-14px;left:-2px;right:-2px}
+[aria-label='Previous week']::after,[aria-label='Next week']::after{inset:-6px}
+#kz-cal .kz-calmonth:not(.mini) .kz-cald::after{inset:-2px}
+.kz-shc-how summary{position:relative}
+.kz-shc-how summary::after{content:'';position:absolute;left:0;right:0;top:-14px;bottom:-14px}
+
+/* ==== kz1b-1023d.css ==== */
+/* Goal sheet: the rules Today’s "+" sheet gets from index.html, so the sheet looks the same on every page */
+.kz-addsheet .kz-morebtn{display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 48px; margin: 2px 0 4px; padding: 0 14px; border-radius: 14px; border: 0; background: rgba(255,255,255,.06); color: #fff; font: 600 15px/1.2 var(--kz-sans, -apple-system, sans-serif); text-align: left; cursor: pointer;}
+.kz-addsheet .kz-morebtn[hidden]{display: none;}
+.kz-addsheet .kz-morebtn svg{width: 20px; height: 20px; flex: none; color: #808A9E; transition: transform 160ms ease;}
+.kz-addsheet .kz-morebtn[aria-expanded="true"] svg{transform: rotate(180deg);}
+.kz-addsheet .kz-moregrp{display: flex; flex-direction: column; gap: 14px;}
+.kz-addsheet .kz-moregrp[hidden]{display: none;}
+.kz-sheet49:not(#kz-none){padding-bottom: 0 !important; transition: none !important;}
+.kz-sheet49 .kz-sheet-in:not(#kz-none){max-height: calc(100dvh - 40px);}
+.kz-addsheet .kz-morebtn:not(#kz-none){border: 1.5px solid #E2B93B; background: rgba(226,185,59,.08); min-height: 52px;}
+.kz-addsheet .kz-morebtn:not(#kz-none) svg{color: #E2B93B;}
+.kz-addsheet .kz-moregrp:not([hidden]){padding: 2px 0 6px;}
+.kz-sheet-in.kz-kbpin{overscroll-behavior: contain; overflow-y: auto !important;}
+@media (prefers-reduced-motion:reduce){.kz-picks49 button{transform:none;transition:none}.kz-pdots49 span{transition:none}}
+.kz-picks49{gap:10px;margin:0 -20px;padding:4px 0 6px;scroll-padding-inline:0;position:relative;scroll-snap-type:x mandatory}
+.kz-picks49::before,.kz-picks49::after{content:"";flex:0 0 calc(7% - 10px)}
+.kz-picks49 button{width:86%;scroll-snap-align:center;min-height:150px;padding:22px 22px 20px;border-radius:22px;border:1px solid color-mix(in srgb,var(--kz-fg) 14%,transparent);gap:0;transform:scale(.92);opacity:.45;transition:transform .25s ease,opacity .25s ease}
+.kz-picks49 button.on{transform:none;opacity:1}
+.kz-picks49 b{font-size:24px;line-height:1.2;margin-bottom:16px}
+.kz-picks49 i{font-style:normal;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--g49,#E2B93B);margin:auto 0 3px}
+.kz-picks49 span{font-size:17px;font-weight:500;line-height:1.35;color:color-mix(in srgb,var(--kz-fg) 88%,transparent)}
+.kz-pdots49{display:flex;justify-content:center;gap:6px;margin-top:12px;min-height:7px}
+.kz-pdots49 span{width:7px;height:7px;border-radius:4px;background:color-mix(in srgb,var(--kz-fg) 22%,transparent);transition:width .25s ease,background .25s ease}
+.kz-pdots49 span.on{width:20px;background:var(--g49,#E2B93B)}
+.kz-addsheet .kz-kindseg{margin-bottom:14px}
+.kz-goalsheet .kz-kindseg{grid-template-columns:repeat(2,1fr)}
+.kz-goalsheet .kz-gs-keep{margin:0;text-align:center}
+
+/* Oct 23 Phase 1B: one look */
+/* page titles: 32 pt everywhere (Archived goals and Your growth were 34) */
+html body #kz-main .kz-section .kz-serif-title { font-size: 32px !important; letter-spacing: -0.02em !important; }
+/* Me: same card corner and row height as Today */
+html body #kz-main .kz-set-card { border-radius: 14px !important; }
+html body #kz-main .kz-set-card > .kz-set-row { min-height: 48px !important; }
+/* Journal tabs: the same segmented control as the New goal sheet */
+html body #kz-main .kz-jtabs.kz-seg { display: grid !important; grid-template-columns: repeat(3, 1fr); gap: 2px !important; padding: 3px !important; border-radius: 14px !important; background: var(--s2, #2C2C2E) !important; }
+html body #kz-main .kz-jtabs.kz-seg .kz-chip { height: 38px !important; min-height: 38px !important; border: 0 !important; border-radius: 11px !important; background: transparent !important; color: rgba(235,235,245,.84) !important; font: 700 14px/1 var(--kz-sans) !important; box-shadow: none !important; padding: 0 6px !important; }
+html body #kz-main .kz-jtabs.kz-seg .kz-chip[aria-selected="true"] { background: #fff !important; color: #111 !important; box-shadow: 0 2px 8px rgba(0,0,0,.35) !important; }
+/* segmented controls: 38 pt pills, 44 pt tap areas (the track's padding counts) */
+.kz-kindseg button, html body #kz-main .kz-jtabs.kz-seg .kz-chip { position: relative; }
+.kz-kindseg button::after, html body #kz-main .kz-jtabs.kz-seg .kz-chip::after { content: '' !important; display: block !important; position: absolute !important; left: 0 !important; right: 0 !important; top: -3px !important; bottom: -3px !important; height: auto !important; width: auto !important; background: none !important; }
+html body #kz-main .kz-jtabs.kz-seg { overflow: visible !important; }
+/* My goals: greys from the app palette (the year card still had the old blue-grey) */
+html body #kz-main .kz-year-top, html body #kz-main .kz-year-top span { color: #8E8E93 !important; }
+/* Progress: cards use the same 16 pt padding as every other card */
+html body #kz-main #kz-prog-s1#kz-prog-s1 :is(.kz-balcard, .kz-tiles3) { padding: 16px !important; }
+html body #kz-main #kz-prog-s1#kz-prog-s1 .kz-note49 { display: none !important; }
+/* Goal page: every day dot is a 44 pt target, one row per week */
+html body #kz-main .kz-g1dots.kz-1b-weeks { display: grid !important; grid-template-columns: repeat(7, minmax(0, 1fr)) !important; gap: 0 !important; justify-items: stretch; width: 100% !important; max-width: 360px !important; margin: 4px auto 0 !important; }
+html body #kz-main .kz-g1dots.kz-1b-weeks > .kz-1b-wd { font: 400 12px/1 var(--kz-sans); color: #636366; text-align: center; padding: 0 0 6px; width: 100%; }
+html body #kz-main .kz-g1dots.kz-1b-weeks > .kz-g1dot { width: 100% !important; max-width: 48px; height: 44px !important; min-height: 44px !important; display: flex !important; align-items: center; justify-content: center; padding: 0 !important; margin: 0 !important; }
+html body #kz-main .kz-g1dots.kz-1b-weeks > .kz-g1dot i { width: 18px !important; height: 18px !important; }
+@media (max-width: 380px) { html body #kz-main .kz-g1hist:has(.kz-1b-weeks) { padding-left: 10px !important; padding-right: 10px !important; } }
+/* Plan: the history calendar now lives on Progress; Plan keeps today's card and a way there */
+html body #kz-main #kz-plan-cal-moved .kz-callegend, html body #kz-main #kz-plan-cal-moved [data-c="months"], html body #kz-main #kz-plan-cal-moved [data-c="earlier"], html body #kz-main #kz-plan-cal-moved [data-c="sum2"] { display: none !important; }
+.kz-1b-golink { display: flex; align-items: center; justify-content: space-between; min-height: 52px; padding: 0 16px; margin-top: 12px; border-radius: 14px; background: #1C1C1E; color: #fff; font: 400 17px/1.2 var(--kz-sans); text-decoration: none; -webkit-tap-highlight-color: transparent; }
+.kz-1b-golink::after { content: ''; width: 8px; height: 8px; border-right: 2px solid #636366; border-top: 2px solid #636366; transform: rotate(45deg); margin-right: 4px; }
+.kz-1b-golink:active { background: #2C2C2E; }
+.kz-1b-golink small { display: block; font: 400 13px/1.3 var(--kz-sans); color: #8E8E93; margin-top: 2px; }
+
+/* ==== kzp2-1023e.css ==== */
+/* Oct 23 Phase 2: empty states */
+/* days with nothing to track (before you started, or no goals yet) stay empty instead of grey tiles */
+html body #kz-main #kz-cal#kz-cal .kz-calmonth .kz-cald.none { background: transparent !important; box-shadow: none !important; }
+html body #kz-main #kz-cal#kz-cal .kz-calmonth .kz-cald.none b { color: #48484A !important; }
+.kz-p2-hint { margin: 0 4px 4px; padding: 12px 14px; border-radius: 14px; background: #1C1C1E; font: 400 15px/1.35 var(--kz-sans); color: #8E8E93; }
+
+/* ==== kzp3-1023g.css ==== */
+/* Oct 23 Phase 3: milestone and weekly recap moments */
+.kz-p3 { position: fixed; inset: 0; z-index: 1200; display: flex; align-items: center; justify-content: center; padding: calc(16px + env(safe-area-inset-top, 0px)) 16px calc(16px + env(safe-area-inset-bottom, 0px)); background: rgba(0,0,0,.78); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); animation: kzP3in .22s ease both; }
+.kz-p3.out { animation: kzP3out .18s ease both; }
+@keyframes kzP3in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes kzP3out { from { opacity: 1; } to { opacity: 0; } }
+.kz-p3-in { position: relative; width: 100%; max-width: 400px; max-height: 100%; overflow-y: auto; padding: 24px 20px 20px; border-radius: 28px; background: #1C1C1E; text-align: center; animation: kzP3pop .42s cubic-bezier(.2,1.3,.4,1) both; }
+@keyframes kzP3pop { from { transform: translateY(18px) scale(.96); opacity: 0; } to { transform: none; opacity: 1; } }
+.kz-p3-x { position: absolute; top: 10px; right: 10px; width: 44px; height: 44px; border: 0; border-radius: 50%; background: transparent; color: #8E8E93; display: flex; align-items: center; justify-content: center; -webkit-tap-highlight-color: transparent; }
+.kz-p3-x svg { width: 18px; height: 18px; padding: 6px; box-sizing: content-box; border-radius: 50%; background: #2C2C2E; }
+.kz-p3-k { display: block; font: 600 13px/1 var(--kz-sans); letter-spacing: .06em; text-transform: uppercase; color: #E2B93B; margin: 6px 0 8px; }
+.kz-p3-t { margin: 0 0 8px; font: 700 28px/1.15 var(--kz-sans); letter-spacing: -.02em; color: #fff; }
+.kz-p3-p { margin: 0 0 20px; font: 400 16px/1.4 var(--kz-sans); color: #8E8E93; }
+.kz-p3-act { display: flex; flex-direction: column; gap: 4px; }
+.kz-p3-act .kz-btn { width: 100%; min-height: 50px; }
+.kz-p3-share { display: flex; align-items: center; justify-content: center; min-height: 44px; border: 0; background: none; color: #E2B93B; font: 600 17px/1 var(--kz-sans); text-decoration: none; -webkit-tap-highlight-color: transparent; }
+/* milestone */
+.kz-p3-art { position: relative; height: 190px; margin: 18px -4px 18px; border-radius: 20px; overflow: hidden; background: radial-gradient(90% 80% at 50% 20%, rgba(226,185,59,.22), rgba(0,0,0,0) 70%), #0b0b0d; }
+.kz-p3-art svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .55; }
+.kz-p3-big { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font: 800 112px/1 var(--kz-sans); letter-spacing: -.04em; color: #E2B93B; text-shadow: 0 6px 30px rgba(0,0,0,.6); animation: kzP3num .7s .1s cubic-bezier(.2,1.6,.4,1) both; }
+@keyframes kzP3num { from { transform: scale(.6); opacity: 0; } to { transform: none; opacity: 1; } }
+/* weekly recap */
+.kz-p3-dots { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin: 16px 0 18px; }
+.kz-p3-d { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.kz-p3-d i { width: 28px; height: 28px; border-radius: 8px; background: #2C2C2E; }
+.kz-p3-d i.full { background: #E2B93B; } .kz-p3-d i.grew { background: #5CD27A; } .kz-p3-d i.setback { background: #E5605A; } .kz-p3-d i.rest { background: #0A84FF; } .kz-p3-d i.none { background: transparent; box-shadow: inset 0 0 0 1.5px #3A3A3C; }
+.kz-p3-d b { font: 400 12px/1 var(--kz-sans); color: #636366; }
+.kz-p3-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 16px; text-align: left; }
+.kz-p3-st { padding: 14px; border-radius: 14px; background: #2C2C2E; display: flex; flex-direction: column; gap: 4px; }
+.kz-p3-st b { font: 600 24px/1.1 var(--kz-sans); color: #fff; }
+.kz-p3-st b small { font-size: 15px; font-weight: 400; color: #8E8E93; }
+.kz-p3-st span { font: 400 13px/1.25 var(--kz-sans); color: #8E8E93; }
+@media (prefers-reduced-motion: reduce) { .kz-p3, .kz-p3.out, .kz-p3-in, .kz-p3-big { animation: none; } }
+
+/* ==== kzp4-1023h.css ==== */
+/* Oct 23 Phase 4: share sheet */
+.kz-p4 { position: fixed; inset: 0; z-index: 1300; display: flex; align-items: flex-end; justify-content: center; background: rgba(0,0,0,.6); animation: kzP3in .2s ease both; }
+.kz-p4-in { width: 100%; max-width: 520px; max-height: calc(100dvh - 24px); overflow-y: auto; padding: 14px 16px calc(16px + env(safe-area-inset-bottom, 0px)); border-radius: 28px 28px 0 0; background: #1C1C1E; display: flex; flex-direction: column; gap: 12px; animation: kzP4up .3s cubic-bezier(.2,.9,.3,1) both; }
+@keyframes kzP4up { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+.kz-p4-top { display: flex; align-items: center; justify-content: space-between; }
+.kz-p4-t { margin: 0; font: 700 22px/1.2 var(--kz-sans); color: #fff; }
+.kz-p4-x { width: 44px; height: 44px; margin-right: -8px; border: 0; background: none; color: #8E8E93; display: flex; align-items: center; justify-content: center; }
+.kz-p4-x svg { width: 18px; height: 18px; padding: 6px; box-sizing: content-box; border-radius: 50%; background: #2C2C2E; }
+.kz-p4-prev { position: relative; align-self: center; height: min(52dvh, 460px); aspect-ratio: 9 / 16; border-radius: 18px; overflow: hidden; background: #000; box-shadow: 0 0 0 1px rgba(255,255,255,.08); }
+.kz-p4-prev img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.kz-p4-wait { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font: 500 15px/1 var(--kz-sans); color: #8E8E93; }
+.kz-p4-wait[hidden] { display: none; }
+.kz-p4-go { width: 100%; min-height: 50px; }
+.kz-p4-sb { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; margin: -4px 0 4px; border: 0; border-radius: 14px; background: #1C1C1E; color: #E2B93B; font: 600 16px/1 var(--kz-sans); -webkit-tap-highlight-color: transparent; }
+.kz-p4-sb svg { width: 20px; height: 20px; }
+.kz-p4-sb:active { background: #2C2C2E; }
+@media (prefers-reduced-motion: reduce) { .kz-p4, .kz-p4-in { animation: none; } }
+
+/* ==== kzfx-1023j.css ==== */
+/* Oct 23 fix pass */
+/* 1. Nothing rides up under the status bar or the Dynamic Island: every sheet stops 12 pt below the safe area */
+html body .kz-sheet49 .kz-sheet-in:not(#kz-none):not(#kz-fx) { max-height: calc(100dvh - env(safe-area-inset-top, 20px) - 12px) !important; }
+html body .kz-p4 .kz-p4-in { max-height: calc(100dvh - env(safe-area-inset-top, 20px) - 12px) !important; }
+/* 2. Today's tree picture: one rounded edge (the box's), art edge to edge, soil-colored behind so no dark corners show */
+html body .kz-pcard-tree svg, html body .kz-pcard-tree svg.kz-lifetree { border-radius: 0 !important; display: block; width: 100% !important; height: 100% !important; }
+html body .kz-pcard-tree { background: #3A2B1F !important; isolation: isolate; -webkit-mask-image: -webkit-radial-gradient(white, black); }
+/* 3. Balance: the star carries the names and counts; the branch editor sits behind one row */
+.kz-balcard, .kz-g-balwrap { position: relative; }
+.kz-bst2 .kz-bst-grow { position: absolute; top: 20px; right: 16px; margin: 0 !important; }
+.kz-g-balwrap .kz-bst2 .kz-bst-grow { top: 2px; right: 0; }
+.kz-bst2 .kz-bst2-star { display: block; width: 100% !important; max-width: 420px !important; height: auto; margin: 4px auto 6px !important; overflow: visible; }
+.kz-bst2-n { font: 600 16px/1 var(--kz-sans); fill: #8E8E93; }
+.kz-bst2-n.on { fill: #fff; }
+.kz-bst2-c { font: 500 14px/1 var(--kz-sans); }
+.kz-bst2 .kz-bst-line { margin: 2px 0 14px !important; }
+.kz-bst2 .kz-bst-trunk, .kz-bst2 .kz-bst-foot { display: none !important; }
+.kz-bst2.editing .kz-bst-trunk { display: block !important; margin-top: 18px; }
+.kz-bst2.editing .kz-bst-foot { display: block !important; }
+.kz-bst2-edit { display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 48px; padding: 0 2px; border: 0; border-top: .5px solid rgba(84,84,88,.6); background: none; color: #fff; font: 400 17px/1 var(--kz-sans); -webkit-tap-highlight-color: transparent; cursor: pointer; }
+.kz-bst2-edit svg { width: 16px; height: 16px; fill: none; stroke: #636366; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; transition: transform .2s ease; }
+.kz-bst2.editing .kz-bst2-edit svg { transform: rotate(90deg); }
+/* Progress: share icon in the stats card's corner */
+.kz-fx-stats { position: relative; }
+html body #kz-main .kz-fx-stats .kz-p4-sb.kz-fx-share { position: absolute; top: 4px; right: 4px; width: 44px; height: 44px; min-height: 44px; margin: 0; padding: 0; border-radius: 22px; background: none; font-size: 0; color: #E2B93B; gap: 0; }
+html body #kz-main .kz-fx-stats .kz-p4-sb.kz-fx-share svg { width: 20px; height: 20px; }
+@media (prefers-reduced-motion: reduce) { .kz-bst2-edit svg { transition: none; } }
+
+/* ==== kzq-1024c.css ==== */
+/* Oct 24 · one pop-up at a time (see kzq-1024c.js): pop-ups waiting their turn stay hidden and untouchable */
+[data-kzq-wait]:not(#kz-n1) { visibility: hidden !important; pointer-events: none !important; }
+[data-kzq-wait] * { visibility: hidden !important; pointer-events: none !important; }
+
+/* ==== kztoday-1024e.css ==== */
+/* Oct 24 · Today option A "Grove on top" (see kztoday-1024e.js). Old parts hide only once the new ones are built (html.kz-tA). */
+
+/* header, every page: the streak replaces water; the visitor feed button is gone (the Grove replaced visitors) */
+html.kz-hA .kz-hright [data-kz-water]:not(#kz-n1):not(#kz-n2) { display: none !important; }
+html.kz-hA .kz-hright [data-kz-feed]:not(#kz-n1):not(#kz-n2) { display: none !important; }
+html.kz-hA .kz-hright [data-kz-streak-pill]:not(#kz-n1):not(#kz-n2) { display: inline-flex !important; align-items: center; gap: 4px; min-height: 36px; padding: 0 14px !important; border-radius: 18px; background: #1C1C1E !important; color: #FF9F0A !important; }
+html.kz-hA .kz-hright [data-kz-streak-pill] svg { width: 15px; height: 15px; }
+html.kz-hA .kz-hright [data-kz-streak-pill] b { color: #FFFFFF; font-size: 15px; font-weight: 700; }
+
+/* Today: the old single-tree card, its folded strip, the visitors and the "Your trees" strip */
+html.kz-tA #kz-today-s1 :is(.kz-pcard, .kz-pstrip, .kz-visitor):not(#kz-n1):not(#kz-n2),
+html.kz-tA #kz-today-s1 ~ * .kzg-today:not(#kz-n1), html.kz-tA .kzg-today:not(#kz-n1):not(#kz-n2) { display: none !important; }
+
+.kzt-hero { position: relative; display: block; height: 236px; margin: 12px 0 0; border-radius: 22px; background: #0E120E; overflow: hidden; color: #FFFFFF; text-decoration: none; -webkit-tap-highlight-color: transparent; font-family: var(--kz-sans, -apple-system, system-ui, sans-serif); }
+.kzt-hero[hidden] { display: none; }
+.kzt-hero:active { opacity: .85; }
+.kzt-hh { position: absolute; left: 18px; right: 18px; top: 16px; display: flex; justify-content: space-between; z-index: 1; }
+.kzt-hh span { font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #AEAEB2; }
+.kzt-hh b { font-size: 13px; font-weight: 600; color: #E2B93B; }
+.kzt-ground { position: absolute; left: 0; right: 0; bottom: 0; height: 66px; background: #16200F; border-top: 1px solid #22301A; }
+.kzt-row { position: absolute; left: 0; right: 0; bottom: 16px; display: flex; justify-content: space-around; align-items: flex-end; padding: 0 8px; }
+.kzt-row.many { justify-content: flex-start; gap: 4px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding: 44px 12px 0; }
+.kzt-row.many::-webkit-scrollbar { display: none; }
+.kzt-tree { flex: 0 1 auto; min-width: 0; max-width: 46%; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.kzt-row.many .kzt-tree { flex: 0 0 92px; max-width: none; }
+.kzt-art { height: 108px; display: flex; align-items: flex-end; justify-content: center; }
+.kzt-art img { width: auto; max-width: 100px; object-fit: contain; object-position: 50% 100%; }
+.kzt-tree:not(.on) .kzt-art img { opacity: .72; }
+.kzt-tree b { max-width: 100%; font-size: 13px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kzt-tree em { font-style: normal; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #AEAEB2; white-space: nowrap; }
+.kzt-tree.on em { color: #34C759; }
+
+.kzt-prog { display: flex; flex-direction: column; gap: 8px; margin: 14px 4px 4px; font-family: var(--kz-sans, -apple-system, system-ui, sans-serif); }
+.kzt-prog[hidden] { display: none; }
+.kzt-pl { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.kzt-pl b { font-size: 17px; font-weight: 700; color: #FFFFFF; }
+.kzt-pl em { font-style: normal; font-size: 15px; color: #AEAEB2; }
+.kzt-prog.all .kzt-pl em { color: #34C759; }
+.kzt-bar { display: block; height: 8px; border-radius: 4px; background: #2C2C2E; overflow: hidden; }
+.kzt-bar i { display: block; height: 100%; border-radius: 4px; background: #E2B93B; transition: width .3s ease; }
+.kzt-prog.all .kzt-bar i { background: #34C759; }
+
+/* goal rows: the goal's own tree on the left (taken out of the row's grid so its columns stay as they are) */
+#kz-today-s1 .kz-goal.kzt-has:not(#kz-n1):not(#kz-n2) { padding-left: 70px !important; }
+#kz-today-s1 .kz-goal > .kzt-th { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 12px; background: #0E120E; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; pointer-events: none; z-index: 1; }
+#kz-today-s1 .kz-goal > .kzt-th img { width: auto; max-width: 40px; object-fit: contain; object-position: 50% 100%; }
+
+/* Quote of the day / Today's question, now under the lists */
+#kz-today-s1 .kz-dailyrow.kzt-dailylow { margin-top: 24px; }
+
+/* ==== kz66-1024f.css ==== */
+/* Oct 24 · Kaizen 66 (see kz66-1024f.js) */
+.kz66-card, .kz66-over, .kz66-gp { font-family: var(--kz-sans, -apple-system, system-ui, sans-serif); color: #FFFFFF; }
+
+/* Today: the run card */
+.kz66-card { margin: 12px 0 0; border-radius: 24px; background: #1C1C1E; border: 1.5px solid #5C4A17; padding: 16px 16px 18px; display: flex; flex-direction: column; gap: 14px; }
+.kz66-card.invite { flex-direction: row; align-items: center; gap: 0; padding: 0; border-color: #3A2F0E; }
+.kz66-top { display: flex; justify-content: space-between; align-items: center; }
+.kz66-lbl { font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #E2B93B; }
+.kz66-sh { display: flex; align-items: center; gap: 3px; }
+.kz66-sh i { width: 18px; height: 20px; display: block; }
+.kz66-sh svg { width: 100%; height: 100%; fill: none; stroke: #48484A; stroke-width: 2; }
+.kz66-sh i.on svg { fill: #0A84FF; stroke: #0A84FF; }
+.kz66-sh em { font-style: normal; font-size: 13px; color: #AEAEB2; margin-left: 3px; }
+.kz66-mid { display: flex; align-items: center; gap: 16px; }
+.kz66-ring { position: relative; width: 104px; height: 104px; flex: none; }
+.kz66-ring > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.kz66-ring .tr, .kz66-art .tr { fill: none; stroke: #2C2C2E; }
+.kz66-ring .pr { fill: none; stroke: #E2B93B; stroke-linecap: round; }
+.kz66-scene { position: absolute; inset: 12px; border-radius: 50%; background: #0E120E; overflow: hidden; display: flex; align-items: flex-end; justify-content: center; }
+.kz66-scene > i { position: absolute; left: 0; right: 0; bottom: 0; height: 26%; background: #16200F; border-top: 1px solid #22301A; }
+.kz66-scene img { position: relative; height: 70%; width: auto; max-width: 90%; object-fit: contain; margin-bottom: 12%; }
+.kz66-txt { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.kz66-txt span { font-size: 17px; font-weight: 600; color: #AEAEB2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kz66-txt b { font-size: 44px; font-weight: 800; letter-spacing: -.03em; line-height: 1.05; }
+.kz66-card.pend .kz66-txt b { font-size: 28px; line-height: 1.15; }
+.kz66-txt em { font-style: normal; font-size: 15px; color: #AEAEB2; }
+.kz66-strip { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 5px; }
+.kz66-strip i { height: 8px; border-radius: 4px; background: #2C2C2E; }
+.kz66-strip i.c { background: #E2B93B; }
+.kz66-strip i.s { background: #0A84FF; }
+.kz66-strip i.now { background: transparent; box-shadow: inset 0 0 0 2px #E2B93B; }
+.kz66-go { display: block; width: 100%; min-height: 52px; border-radius: 15px; border: 0; background: #E2B93B; color: #1A1404; font: 800 17px/1.2 var(--kz-sans, -apple-system, sans-serif); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.kz66-go:active { opacity: .75; }
+.kz66-go.ok { background: #1F3A26; color: #34C759; }
+.kz66-go.ok::before { content: '\2713  '; }
+.kz66-left { margin: -6px 0 0; text-align: center; font-size: 13px; color: #AEAEB2; }
+.kz66-inv { flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; padding: 14px 4px 14px 16px; border: 0; background: none; color: #FFFFFF; text-align: left; font: inherit; cursor: pointer; min-height: 64px; }
+.kz66-num { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; box-shadow: inset 0 0 0 6px #E2B93B; color: #E2B93B; font-size: 24px; font-weight: 800; }
+.kz66-num.sm { width: 40px; height: 40px; flex: none; box-shadow: inset 0 0 0 3.5px #E2B93B; font-size: 15px; }
+.kz66-it { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.kz66-it b { font-size: 17px; font-weight: 700; }
+.kz66-it em { font-style: normal; font-size: 14px; color: #AEAEB2; }
+.kz66-start { flex: none; font-size: 16px; font-weight: 700; color: #E2B93B; }
+.kz66-hide { flex: none; width: 44px; height: 44px; margin-right: 6px; border: 0; background: none; display: grid; place-items: center; cursor: pointer; padding: 0; }
+.kz66-hide svg, .kz66-x svg { width: 14px; height: 14px; fill: none; stroke: #8E8E93; stroke-width: 3; stroke-linecap: round; }
+
+/* full-screen layers */
+.kz66-over { position: fixed; inset: 0; z-index: 9500; background: #000000; opacity: 0; transition: opacity .25s ease; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.kz66-over.on { opacity: 1; }
+.kz66-in { min-height: 100%; box-sizing: border-box; max-width: 480px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; padding: calc(env(safe-area-inset-top, 0px) + 56px) 20px calc(env(safe-area-inset-bottom, 0px) + 24px); position: relative; }
+.kz66-x { position: absolute; top: calc(env(safe-area-inset-top, 0px) + 14px); right: 16px; width: 44px; height: 44px; border-radius: 22px; border: 0; background: #2C2C2E; display: grid; place-items: center; padding: 0; cursor: pointer; }
+.kz66-hd { display: flex; flex-direction: column; align-items: center; }
+.kz66-hd .kz66-num { width: 112px; height: 112px; box-shadow: inset 0 0 0 10px #E2B93B; font-size: 34px; }
+.kz66-hd h2, .kz66-h { margin: 14px 0 0; font-size: 30px; font-weight: 800; letter-spacing: -.02em; line-height: 1.15; }
+.kz66-hd p, .kz66-p { margin: 8px 0 0; font-size: 16px; line-height: 1.45; color: #AEAEB2; }
+.kz66-cap { align-self: stretch; text-align: left; margin: 24px 4px 8px; font-size: 13px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: #AEAEB2; }
+.kz66-list { align-self: stretch; border-radius: 18px; background: #1C1C1E; overflow: hidden; }
+.kz66-g { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 60px; padding: 10px 14px; border: 0; border-top: .5px solid #38383A; background: none; color: #FFFFFF; font: inherit; text-align: left; cursor: pointer; }
+.kz66-g:first-child { border-top: 0; }
+.kz66-gt { flex: none; width: 40px; height: 40px; border-radius: 10px; background: #0E120E; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; }
+.kz66-gt img { height: 34px; width: auto; max-width: 36px; object-fit: contain; }
+.kz66-g b { flex: 1; min-width: 0; font-size: 17px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kz66-g i { flex: none; width: 22px; height: 22px; border-radius: 11px; box-shadow: inset 0 0 0 2px #636366; }
+.kz66-g.sel i { box-shadow: inset 0 0 0 7px #E2B93B; }
+.kz66-rules { align-self: stretch; list-style: none; margin: 0; padding: 0 4px; display: flex; flex-direction: column; gap: 12px; text-align: left; }
+.kz66-rules li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.35; }
+.kz66-rules i { flex: none; width: 28px; height: 28px; border-radius: 8px; background: #3A2F0E; position: relative; }
+.kz66-rules i.s { background: #0B2540; } .kz66-rules i.t { background: #16200F; }
+.kz66-rules i::after { content: ''; position: absolute; inset: 9px; border-radius: 3px; background: #E2B93B; }
+.kz66-rules i.s::after { background: #0A84FF; border-radius: 3px 3px 7px 7px; } .kz66-rules i.t::after { background: #34C759; border-radius: 50%; }
+.kz66-foot { align-self: stretch; margin-top: auto; padding-top: 24px; display: flex; flex-direction: column; gap: 10px; }
+.kz66-foot p { margin: 0; font-size: 13px; color: #8E8E93; }
+.kz66-alt { min-height: 50px; border-radius: 16px; border: 0; background: #1C1C1E; color: #FFFFFF; font: 600 17px/1.2 var(--kz-sans, -apple-system, sans-serif); cursor: pointer; }
+.kz66-alt.q { background: none; color: #AEAEB2; min-height: 44px; }
+.kz66-tag { margin: 0; font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #AEAEB2; }
+.kz66-tag.gold { color: #E2B93B; }
+.kz66-art { position: relative; width: 220px; height: 220px; margin-top: 22px; flex: none; }
+.kz66-art > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.kz66-art .tr { stroke-width: 8; }
+.kz66-art .pr { fill: none; stroke: #8A7330; stroke-width: 8; stroke-linecap: round; }
+.kz66-art.won .pr { stroke: #E2B93B; }
+.kz66-art .kz66-scene { inset: 18px; }
+.kz66-pill { position: absolute; left: 50%; bottom: -14px; transform: translateX(-50%); background: #E2B93B; color: #1A1404; font-size: 17px; font-weight: 800; border-radius: 16px; padding: 6px 14px; white-space: nowrap; }
+.kz66-won .kz66-h { margin-top: 34px; }
+.kz66-stats { align-self: stretch; margin-top: 22px; border-radius: 18px; background: #1C1C1E; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 14px 0; }
+.kz66-stats span { display: flex; flex-direction: column; gap: 2px; }
+.kz66-stats span + span { border-left: 1px solid #38383A; }
+.kz66-stats b { font-size: 22px; font-weight: 800; } .kz66-stats b.bl { color: #0A84FF; } .kz66-stats b.sm { font-size: 16px; line-height: 1.7; }
+.kz66-stats small { font-size: 12px; color: #AEAEB2; }
+.kz66-rows { align-self: stretch; margin-top: 20px; border-radius: 18px; background: #1C1C1E; text-align: left; }
+.kz66-rows span { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 16px; }
+.kz66-rows span + span { border-top: .5px solid #38383A; }
+.kz66-rows em { font-style: normal; font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kz66-rows b { font-size: 15px; font-weight: 600; color: #AEAEB2; white-space: nowrap; } .kz66-rows b.g { color: #E2B93B; } .kz66-rows b.ok { color: #34C759; }
+
+/* goal page */
+.kz66-gp { margin: 16px 0 0; border-radius: 18px; background: #1C1C1E; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.kz66-gp h3 { margin: 0; font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #E2B93B; }
+.kz66-st { margin: 0; display: flex; flex-direction: column; gap: 2px; }
+.kz66-st b { font-size: 22px; font-weight: 800; } .kz66-st span { font-size: 15px; color: #AEAEB2; }
+.kz66-quit { align-self: flex-start; border: 0; background: none; padding: 12px 0; margin: -12px 0; min-height: 44px; color: #AEAEB2; font: 400 15px/1.2 var(--kz-sans, -apple-system, sans-serif); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.kz66-hist { list-style: none; margin: 0; padding: 0; }
+.kz66-hist li { display: flex; justify-content: space-between; padding: 10px 0; border-top: .5px solid #38383A; font-size: 15px; color: #AEAEB2; }
+.kz66-hist b { color: #FFFFFF; font-weight: 600; } .kz66-hist b.g { color: #E2B93B; }
+
+/* Grove badge */
+.kzg-tree .kz66-badge { position: absolute; top: -6px; right: -10px; z-index: 2; font: 800 10px/1 var(--kz-sans, -apple-system, sans-serif); padding: 3px 6px; border-radius: 7px; color: #E2B93B; background: #1C1C1E; box-shadow: inset 0 0 0 1.5px #E2B93B; }
+.kzg-tree .kz66-badge.won { background: #E2B93B; color: #1A1404; box-shadow: none; }
+
+/* Oct 24 fix: picking a goal doesn't flicker - the row never shrinks under the finger, only the dot moves */
+.kz66-g { -webkit-tap-highlight-color: transparent; }
+.kz66-g:not(#kz-n1).kz-pressed, .kz66-g:not(#kz-n1):active { transform: none !important; opacity: 1 !important; }
+.kz66-g i { transition: box-shadow .15s ease; }
+
+/* ==== kz66-1029.css ==== */
+/* Oct 29 · Kaizen 66 card strip: a missed day (kz66-1029 log "m") shows as an empty ring, not a fill. */
+html body .kz66-strip i.m:not(#kz-n1) { background: transparent !important; box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.22) !important; }
+

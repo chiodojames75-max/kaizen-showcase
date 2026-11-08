@@ -1,0 +1,13 @@
+/* Nov 2 · Today's climb: the day total on top, and the sections as plain lists on the black page */
+#kz-today-s1 .kzcl { margin: 4px 2px 14px; }
+#kz-today-s1 .kzcl[hidden] { display: none; }
+#kz-today-s1 .kzcl-k { display: block; font-size: 14px; font-weight: 500; color: #8E8E93; }
+#kz-today-s1 .kzcl-n { display: flex; align-items: baseline; gap: 10px; margin-top: 2px; }
+#kz-today-s1 .kzcl-n b { font-size: 32px; font-weight: 800; letter-spacing: -.6px; color: #fff; font-variant-numeric: tabular-nums; }
+#kz-today-s1 .kzcl-n em { font-style: normal; font-size: 16px; font-weight: 700; color: #FF8A3D; }
+#kz-today-s1 .kzcl-bar { display: block; height: 6px; margin-top: 10px; border-radius: 3px; background: #2A2A2E; overflow: hidden; }
+#kz-today-s1 .kzcl-bar i { display: block; height: 100%; border-radius: 3px; background: linear-gradient(90deg, #F2CF5B, #FF6A1A); transition: width .4s ease; }
+html body #kz-today-s1 .kz-tgroups .kz-tsec > :is(.kz-rows49, .kz-plancard, .kzq-list):not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { background: none !important; background-image: none !important; box-shadow: none !important; border: 0 !important; border-radius: 0 !important; padding-left: 0 !important; padding-right: 0 !important; }
+html body #kz-today-s1 .kz-tgroups .kz-tsec .kz-rows49 > .kz-goal:not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { background: none !important; background-image: none !important; box-shadow: none !important; border-radius: 0 !important; border-bottom: .5px solid #26262A !important; }
+html body #kz-today-s1 .kz-tgroups .kz-tsec .kz-tsec-h h2:not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { font-size: 12.5px !important; font-weight: 700 !important; letter-spacing: .14em !important; text-transform: uppercase !important; color: #8E8E93 !important; }
+html body #kz-today-s1 .kz-tgroups .kz-tsec .kz-tsec-h .kz-tsec-n:not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { font-size: 12.5px !important; font-weight: 700 !important; letter-spacing: .08em !important; color: #6C6C70 !important; }

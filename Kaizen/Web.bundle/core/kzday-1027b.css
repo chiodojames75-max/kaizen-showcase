@@ -1,0 +1,11 @@
+/* Oct 27 b · the number sits in the exact middle of its ring; to-dos done are a list like the goals (green checks) */
+html body .kzd2-rw { position: relative; display: grid; place-items: center; width: 52px; height: 52px; flex: none; }
+html body .kzd2-rw .kzd2-ring { position: absolute; inset: 0; width: 100%; height: 100%; }
+html body .kzd2-rw .kzd2-n:not(#kz-n1) { position: static; top: auto; left: auto; right: auto; height: auto; display: inline-flex; align-items: baseline; justify-content: center; line-height: 1; transform: translateX(1px); }
+html body .kzd2-rw .kzd2-n b { font-size: 18px; line-height: 1; font-variant-numeric: tabular-nums; }
+html body .kzd2-rw .kzd2-n small { font-size: 11px; line-height: 1; margin-left: 1px; }
+html body .kzd2-big { line-height: 52px !important; }
+html body .kzd2-none { line-height: 52px !important; }
+html body .kzd2-sec ul.kzd2-todos li i { background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.45) 0%, rgba(52,199,89,.95) 45%, rgba(30,140,60,.96) 100%); box-shadow: inset 0 1px .5px rgba(255,255,255,.5), 0 0 8px rgba(52,199,89,.25); }
+html body .kzd2-sec ul.kzd2-todos li i::after { border-color: #06150E; }
+html body .kzd2-sec li span { min-width: 0; overflow-wrap: anywhere; }

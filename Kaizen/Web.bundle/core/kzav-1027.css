@@ -1,0 +1,28 @@
+/* Oct 27 · kzav-1027: floating gold pencil on the profile picture + the photo editor (see kzav-1027.js) */
+html body .kzav-cam.kzav-pen:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4) { right: -6px !important; bottom: -4px !important; width: 30px !important; height: 30px !important; background: none !important; box-shadow: none !important; border-radius: 0 !important; }
+html body .kzav-cam.kzav-pen svg { width: 26px !important; height: 26px !important; overflow: visible; filter: drop-shadow(0 3px 5px rgba(0,0,0,.65)) drop-shadow(0 0 6px rgba(226,185,59,.35)); }
+html body .kzav-cam.kzav-pen svg path { stroke: #5A4310 !important; stroke-width: .9 !important; stroke-linejoin: round; fill: url(#kzav-gold) !important; }
+html body .kzav-cam.kzav-pen svg path.t { fill: #F3D677 !important; }
+html body .kzav-cam.kzav-pen svg path.n { fill: #8A6A1E !important; }
+html.kzcr-on, html.kzcr-on body { overflow: hidden !important; }
+html body .kzcr { position: fixed; inset: 0; z-index: 2147483000; background: #000; overflow: hidden; touch-action: none; -webkit-user-select: none; user-select: none; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif; animation: kzcrIn .22s ease both; }
+html body .kzcr.out { animation: kzcrOut .2s ease both; }
+@keyframes kzcrIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes kzcrOut { to { opacity: 0; } }
+html body .kzcr-t { position: absolute; left: 0; right: 0; top: calc(env(safe-area-inset-top, 0px) + 18px); margin: 0; text-align: center; font-size: 17px; font-weight: 600; color: #fff; z-index: 3; }
+html body .kzcr-img { position: absolute; left: 0; top: 0; max-width: none !important; transform-origin: 0 0; will-change: transform; pointer-events: none; }
+/* everything outside the circle is dimmed: the hole's huge shadow */
+html body .kzcr-hole { position: absolute; border-radius: 50%; box-shadow: 0 0 0 200vmax rgba(0,0,0,.72); outline: 1.5px solid rgba(255,255,255,.85); outline-offset: -1px; z-index: 2; pointer-events: none; overflow: hidden; }
+html body .kzcr-g { position: absolute; background: rgba(255,255,255,.28); opacity: 0; transition: opacity .2s; }
+html body .kzcr.moving .kzcr-g { opacity: 1; }
+html body .kzcr-g.v1, html body .kzcr-g.v2 { top: 0; bottom: 0; width: 1px; } html body .kzcr-g.v1 { left: 33.333%; } html body .kzcr-g.v2 { left: 66.666%; }
+html body .kzcr-g.h1, html body .kzcr-g.h2 { left: 0; right: 0; height: 1px; } html body .kzcr-g.h1 { top: 33.333%; } html body .kzcr-g.h2 { top: 66.666%; }
+html body .kzcr-c { position: absolute; background: #E2B93B; box-shadow: 0 0 6px rgba(226,185,59,.8); opacity: 0; transition: opacity .15s; }
+html body .kzcr-c.v { top: 0; bottom: 0; left: 50%; width: 1.5px; margin-left: -.75px; } html body .kzcr-c.h { left: 0; right: 0; top: 50%; height: 1.5px; margin-top: -.75px; }
+html body .kzcr.moving .kzcr-c.on { opacity: 1; }
+html body .kzcr-hint { position: absolute; left: 24px; right: 24px; bottom: calc(env(safe-area-inset-bottom, 0px) + 104px); margin: 0; text-align: center; font-size: 14px; line-height: 1.45; color: #8E8E93; z-index: 3; }
+html body .kzcr-acts { position: absolute; left: 20px; right: 20px; bottom: calc(env(safe-area-inset-bottom, 0px) + 28px); display: flex; gap: 12px; z-index: 3; }
+html body .kzcr-b { flex: 1 1 0; height: 52px; border: 0; border-radius: 999px; font: inherit; font-size: 17px; font-weight: 600; color: #fff; -webkit-tap-highlight-color: transparent;
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)); box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28); }
+html body .kzcr-b.gold { color: #1A1404; font-weight: 700; background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%); box-shadow: inset 0 1px .5px rgba(255,255,255,.55), 0 0 14px rgba(226,185,59,.25), 0 6px 18px rgba(0,0,0,.38); }
+html body .kzcr-b:active { transform: scale(.97); }

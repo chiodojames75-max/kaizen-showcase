@@ -1,0 +1,31 @@
+/* Oct 27 · Growth tab "Hero tree" (see kzhero-1027.js) */
+html.kz-hero body .kzgy-grid:not(#kz-n1):not(#kz-n2), html.kz-hero body .kzg-gs:not(#kz-n1):not(#kz-n2) { display: none !important; }
+html.kz-hero body .kzh { display: flex; flex-direction: column; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif; color: #fff; }
+html.kz-hero body .kzh-hero { display: flex; flex-direction: column; align-items: center; text-align: center; margin: 6px 0 0; padding: 18px 18px 16px; border-radius: 26px; text-decoration: none; color: #fff;
+  background: radial-gradient(120% 70% at 50% 78%, rgba(226,185,59,.10), rgba(226,185,59,0) 60%), linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)); box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28); }
+html.kz-hero body .kzh-hero.k66 { box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28), 0 0 0 1px rgba(226,185,59,.35); }
+html.kz-hero body .kzh-tag { font-style: normal; font-size: 12px; font-weight: 700; letter-spacing: 1.6px; color: #8E8E93; }
+html.kz-hero body .kzh-hero.k66 .kzh-tag { color: #E2B93B; }
+html.kz-hero body .kzh-name { margin-top: 6px; font-size: 26px; font-weight: 700; letter-spacing: -.3px; line-height: 1.2; }
+html.kz-hero body .kzh-stage { position: relative; width: 100%; max-width: 300px; height: 250px; margin-top: 6px; display: flex; align-items: flex-end; justify-content: center; }
+html.kz-hero body .kzh-ground { position: absolute; left: 28px; right: 28px; bottom: 8px; height: 30px; border-radius: 50%; background: radial-gradient(closest-side, rgba(70,52,20,.9), rgba(23,19,10,.7) 70%, rgba(0,0,0,0)); box-shadow: 0 0 60px 18px rgba(226,185,59,.10); }
+html.kz-hero body .kzh-stage img { position: relative; max-width: 260px; max-height: 236px; width: auto; height: auto; display: block; margin-bottom: 16px; object-fit: contain; filter: drop-shadow(0 14px 18px rgba(0,0,0,.45)); }
+html.kz-hero body .kzh-bar { display: block; width: 100%; height: 6px; margin-top: 12px; border-radius: 3px; background: rgba(255,255,255,.1); overflow: hidden; }
+html.kz-hero body .kzh-bar > i { display: block; height: 100%; border-radius: 3px; background: linear-gradient(90deg, #B8902E, #E9C55A); box-shadow: 0 0 10px rgba(226,185,59,.35); }
+html.kz-hero body .kzh-meta { display: flex; justify-content: space-between; width: 100%; margin-top: 8px; font-size: 13px; color: #8E8E93; }
+html.kz-hero body .kzh-meta span:first-child { color: #C7C7CC; font-weight: 600; }
+html.kz-hero body .kzh-gh { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin: 26px 4px 0; }
+html.kz-hero body .kzh-gh h2 { margin: 0; font-size: 20px; font-weight: 700; }
+html.kz-hero body .kzh-gh span { font-size: 14px; color: #8E8E93; }
+html.kz-hero body .kzh-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 12px; }
+html.kz-hero body .kzh-t { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 10px 8px 12px; border-radius: 18px; text-decoration: none; color: #fff; text-align: center; min-height: 128px; box-sizing: border-box;
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)); box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28); }
+html.kz-hero body .kzh-t img { width: 92px; height: 66px; object-fit: contain; }
+html.kz-hero body .kzh-t b { font-size: 13px; font-weight: 600; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+html.kz-hero body .kzh-t i { font-style: normal; font-size: 12px; color: #8E8E93; }
+html.kz-hero body .kzh-t i.ok { color: #30D158; }
+html.kz-hero body .kzh-plant { justify-content: center; color: #E2B93B; }
+html.kz-hero body .kzh-plant span { font-size: 26px; line-height: 1; color: #E2B93B; }
+html.kz-hero body .kzh-plant b { color: #E2B93B; }
+html.kz-hero body :is(.kzh-hero, .kzh-t):active { transform: scale(.985); }
+html.kz-hero body .kzh { padding: 0 16px; }

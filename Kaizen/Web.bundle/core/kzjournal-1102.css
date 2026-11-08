@@ -1,0 +1,3 @@
+/* Nov 2 · Journal stats: no card behind them, centred (James) */
+html body #kz-jstats#kz-jstats#kz-jstats#kz-jstats#kz-jstats#kz-jstats#kz-jstats { display: flex !important; justify-content: center !important; gap: 56px !important; background: none !important; background-image: none !important; box-shadow: none !important; border: 0 !important; }
+html body #kz-jstats#kz-jstats#kz-jstats#kz-jstats#kz-jstats#kz-jstats#kz-jstats > div { display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; background: none !important; box-shadow: none !important; border: 0 !important; }

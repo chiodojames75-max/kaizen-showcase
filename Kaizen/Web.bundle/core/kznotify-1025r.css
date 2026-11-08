@@ -1,0 +1,21 @@
+/* Oct 25 r · Reminders sheet (kznotify-1025r.js); uses the kzsw sheet frame */
+body .kzn-sheet .kzsw { max-height: 92vh; }
+body .kzn-row { display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 14px; font-size: 16px; color: #FFFFFF; }
+body .kzn-row + .kzn-row { border-top: 0.5px solid #3A3A3C; }
+body .kzn-row > span { flex: 1; min-width: 0; }
+body .kzn-row.big { background: #2C2C2E; border-radius: 14px; margin-top: 8px; font-weight: 600; }
+body .kzn-row input[type="time"] { min-height: 40px; border: 0; border-radius: 10px; background: #3A3A3C; color: #FFFFFF; font: inherit; font-size: 16px; padding: 0 10px; color-scheme: dark; }
+body .kzn-card { margin-top: 8px; border-radius: 14px; background: #2C2C2E; overflow: hidden; }
+body .kzn-body[hidden] { display: none !important; }
+body .kzn-lab { margin: 18px 4px 6px; font-size: 13px; font-weight: 600; color: #8E8E93; text-transform: uppercase; letter-spacing: .04em; }
+body .kzn-seg, body .kzn-days { display: flex; flex-wrap: wrap; gap: 8px; }
+body .kzn-chip { min-height: 40px; padding: 0 14px; border-radius: 20px; border: 0; background: #2C2C2E; color: #EBEBF5; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
+body .kzn-chip.on { background: #E2B93B; color: #000000; }
+body .kzn-days .kzn-chip { width: 40px; padding: 0; }
+body .kzn-x { width: 44px; height: 44px; border: 0; background: none; color: #8E8E93; font-size: 22px; cursor: pointer; }
+body .kzn-add { width: 100%; min-height: 48px; border: 0; border-top: 0.5px solid #3A3A3C; background: none; color: #E2B93B; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer; }
+body .kzn-warn { margin: 8px 4px 0; font-size: 13px; color: #FF9F0A; }
+body .kzn-prev { display: flex; flex-direction: column; gap: 2px; padding: 12px 14px; border-radius: 18px; background: rgba(60,60,64,.9); color: #FFFFFF; font-size: 14px; }
+body .kzn-prev .kzn-app { font-size: 11px; font-weight: 700; color: #AEAEB2; letter-spacing: .04em; }
+body .kzn-prev b { font-size: 15px; }
+body .kzn-prev span:last-child { color: #EBEBF5; }

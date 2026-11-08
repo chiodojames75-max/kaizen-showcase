@@ -1,0 +1,20 @@
+/* Oct 26 m · Quote/question button and + in the header of every tab (kzdaily-1026m.js). Same look as Today's. */
+html body #kz-header .kz-hright { gap: 8px; }
+html body #kz-header .kz-hright .kz-chip.kzdy-q:not(#kz-n1):not(#kz-n2) { height: 44px !important; min-height: 44px !important; width: 44px !important; min-width: 44px !important; padding: 0 !important; margin: -6px 0 !important; border: 0 !important; background: transparent !important; box-shadow: none !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; color: #AEAEB2 !important; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+html body #kz-header .kz-hright .kz-chip.kzdy-q:not(#kz-n1):not(#kz-n2) svg { width: 36px !important; height: 32px !important; padding: 7px 9px !important; box-sizing: border-box !important; border-radius: 16px !important; background: #1C1C1E !important; color: #AEAEB2 !important; fill: none !important; stroke: currentColor !important; }
+html body #kz-header .kz-hright .kz-chip.kzdy-q:active svg { background: #2C2C2E !important; }
+html body #kz-header .kz-hright .kz-hadd.kzdy-add:not(#kz-n1):not(#kz-n2) { position: relative; width: 44px !important; height: 44px !important; min-width: 44px !important; min-height: 44px !important; padding: 0 !important; border: 0 !important; border-radius: 50% !important; background: #E2B93B !important; color: #000 !important; display: inline-flex !important; align-items: center; justify-content: center; flex: none !important; margin: -6px 0 -6px 2px !important; -webkit-tap-highlight-color: transparent; cursor: pointer; visibility: visible; }
+html body #kz-header .kz-hright .kz-hadd.kzdy-add svg { width: 18px; height: 18px; display: block; }
+html body #kz-header .kz-hright .kz-hadd.kzdy-add:active { transform: scale(.94); }
+html.kz-kbd body #kz-header .kz-hright .kz-hadd.kzdy-add { visibility: hidden; }
+body .kzf-qs.kzdy-qs { position: fixed; inset: 0; z-index: 2147483000; background: rgba(0,0,0,.55); display: flex; align-items: flex-end; justify-content: center; }
+body .kzdy-qs .kzf-qs-in { will-change: transform; touch-action: none; width: 100%; max-width: 520px; box-sizing: border-box; background: #1C1C1E; border-radius: 20px 20px 0 0; padding: 12px 12px calc(14px + env(safe-area-inset-bottom)); display: flex; flex-direction: column; gap: 8px; }
+body .kzdy-qs .kzf-qs-in button { background: #2C2C2E; border: 0; border-radius: 14px; padding: 14px 16px; min-height: 56px; display: flex; flex-direction: column; align-items: flex-start; gap: 3px; color: #FFFFFF; font: inherit; text-align: left; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+body .kzdy-qs .kzf-qs-in button:active { background: #3A3A3C; }
+body .kzdy-qs .kzf-qs-in button b { font-size: 16px; font-weight: 700; }
+body .kzdy-qs .kzf-qs-in button b i { font-style: normal; font-weight: 600; font-size: 14px; color: #30D158; margin-left: 6px; }
+body .kzdy-qs .kzf-qs-in button span { font-size: 14px; color: #A1A1A6; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+body .kzdy-qs .kzf-qs-in .kzf-qs-x { background: none; align-items: center; min-height: 48px; color: #AEAEB2; font-weight: 600; }
+/* Today's question popup: the heading and box as on Today */
+body .kzdy-modal .kz-rq { font-size: 22px; font-weight: 700; line-height: 1.25; letter-spacing: -.02em; margin: 6px 0 12px; padding: 0; color: #FFFFFF; }
+body .kzdy-modal .kz-rbox { margin: 0 0 12px; min-height: 120px; }

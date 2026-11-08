@@ -1,0 +1,9 @@
+/* Nov 1 · James: "when I swipe … the check circle clutches around … mouthwash is floating to the left. I want it fixed on the card behind it and if I swipe it all follows smoothly."
+   Plan rows now slide like Today's: the whole row (its card background, text and check together) moves as one piece, Edit + Delete ride in on its right edge,
+   and the list clips the row at the card's edges so nothing floats outside. Overrides kzplanswipe-1028.css (which slid the row's contents inside a still row). */
+html body [data-p="day-list"]:has(> li.kz-todo.kzps-on):not(#kz-n1):not(#kz-n2) { overflow-x: clip; }
+html body [data-p="day-list"] > li.kz-todo.kzps-on:not(#kz-n1):not(#kz-n2) { overflow: visible !important; transform: translate3d(var(--kzx, 0px), 0, 0); will-change: transform; }
+html body [data-p="day-list"] > li.kz-todo.kzps-on > :not(.kzps-acts):not(#kz-n1):not(#kz-n2) { transform: none !important; transition: none !important; }
+html body [data-p="day-list"] > li.kz-todo.kzps-anim:not(#kz-n1):not(#kz-n2) { transition: transform .3s cubic-bezier(.22,.8,.24,1) !important; }
+html body [data-p="day-list"] > li.kz-todo.kzps-on .kzps-acts:not(#kz-n1):not(#kz-n2) { left: calc(100% + 8px); right: auto; transform: none; }
+html body [data-p="day-list"] > li.kz-todo.kzps-on .kzps-acts:not(#kz-n1):not(#kz-n2)::before { content: none; }

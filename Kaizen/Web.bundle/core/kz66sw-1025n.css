@@ -1,0 +1,33 @@
+/* Oct 25 n · Change your Kaizen 66 goal (see kz66sw-1025n.js) */
+body .kzsw-row { display: flex; align-items: center; justify-content: center; gap: 28px; }
+body .kzsw-chg { min-height: 44px; padding: 0 4px; border: 0; background: none; font: inherit; font-size: 17px; font-weight: 600; color: #AEAEB2; cursor: pointer; }
+body .kzsw-make { margin-top: 10px; }
+body .kzsw-back { position: fixed; inset: 0; z-index: 9600; display: flex; align-items: flex-end; background: rgba(0,0,0,0); transition: background-color .25s ease; -webkit-tap-highlight-color: transparent; }
+body .kzsw-back.on { background: rgba(0,0,0,.55); }
+body .kzsw { position: relative; width: 100%; max-height: 86vh; overflow-y: auto; box-sizing: border-box; padding: 10px 20px calc(env(safe-area-inset-bottom, 0px) + 22px); border-radius: 22px 22px 0 0; background: #1C1C1E; color: #FFFFFF;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif; transform: translateY(100%); transition: transform var(--kz-spr-smooth-d, .42s) var(--kz-spr-smooth, cubic-bezier(.2,.8,.2,1)); }
+body .kzsw-back.on .kzsw { transform: none; }
+body .kzsw-grab { display: block; width: 36px; height: 5px; border-radius: 3px; background: #48484A; margin: 0 auto 14px; }
+body .kzsw-t { margin: 4px 0 8px; font-size: 22px; font-weight: 700; letter-spacing: -.01em; text-align: center; }
+body .kzsw-p { margin: 0 0 10px; font-size: 16px; line-height: 1.4; color: #EBEBF5; text-align: center; }
+body .kzsw-p.dim { color: #8E8E93; font-size: 15px; }
+body .kzsw-now { margin: 0 0 14px; font-size: 14px; color: #8E8E93; text-align: center; }
+body .kzsw-now b { color: #E2B93B; font-weight: 600; }
+body .kzsw-list { display: flex; flex-direction: column; border-radius: 14px; overflow: hidden; background: #2C2C2E; }
+body .kzsw-g { display: flex; align-items: center; gap: 12px; min-height: 60px; padding: 8px 14px; border: 0; background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+body .kzsw-g + .kzsw-g { border-top: 0.5px solid #3A3A3C; }
+body .kzsw-g:active { background: #3A3A3C; }
+body .kzsw-gt { flex: 0 0 auto; width: 40px; height: 40px; border-radius: 10px; background: #1C1C1E; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; }
+body .kzsw-gt img { max-width: 100%; max-height: 100%; object-fit: contain; }
+body .kzsw-gb { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+body .kzsw-gb b { font-size: 16px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+body .kzsw-gb em { font-style: normal; font-size: 13px; color: #8E8E93; }
+body .kzsw-chev { font-style: normal; font-size: 22px; color: #5A5A5E; }
+body .kzsw-warn { width: 52px; height: 52px; margin: 4px auto 10px; border-radius: 26px; background: rgba(255,69,58,.16); color: #FF453A; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 800; }
+body .kzsw-acts { display: flex; flex-direction: column; gap: 10px; margin-top: 18px; }
+body .kzsw-btn { display: flex; align-items: center; justify-content: center; min-height: 52px; border-radius: 14px; border: 0; font: inherit; font-size: 17px; font-weight: 600; text-decoration: none; cursor: pointer; }
+body .kzsw-btn.red { background: #FF453A; color: #FFFFFF; }
+body .kzsw-btn.gold { background: #E2B93B; color: #000000 !important; }
+body .kzsw-btn.ghost { background: #2C2C2E; color: #FFFFFF; }
+body .kzsw-btn:active, body .kzsw-chg:active { transform: scale(.98); }
+@media (prefers-reduced-motion: reduce) { body .kzsw { transition: none; } }

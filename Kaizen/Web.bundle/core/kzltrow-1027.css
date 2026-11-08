@@ -1,0 +1,19 @@
+/* Oct 27 · long-term rows on My goals (see kzltrow-1027.js) + swipe Edit / Delete in glass */
+html body .kz-grow.kzlt :is(.kz-gstep, .kz-gsub, .kz-gline, .kz-gdots, .kz-check):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4) { display: none !important; }
+html body .kzlt-d { display: block; margin-top: 4px; font-size: 14px; line-height: 1.35; color: #8E8E93; }
+html body .kzlt-d.today { color: #E2B93B; font-weight: 600; }
+html body .kzlt-d.late { color: #FF453A; font-weight: 600; }
+html body .kzlt-ring { position: relative; justify-self: end; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; text-decoration: none; margin-right: 2px; }
+html body .kzlt-ring svg { position: absolute; inset: 0; width: 40px; height: 40px; }
+html body .kzlt-ring circle { fill: none; stroke-width: 3.5; stroke-linecap: round; }
+html body .kzlt-ring .t { stroke: rgba(255,255,255,.12); }
+html body .kzlt-ring .f { stroke: #E2B93B; }
+html body .kzlt-ring b { position: relative; font-size: 11px; font-weight: 800; color: #fff; font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif; }
+/* swipe actions: two rounded glass buttons that sit inside the row's height, never cut off at the edge */
+html body .kz-gswipe:not(#kz-n1):not(#kz-n2) { width: 148px !important; left: auto !important; right: -160px !important; top: 8px !important; bottom: 8px !important; gap: 8px !important; }
+html body .kz-gswipe button:not(#kz-n1):not(#kz-n2):not(#kz-n3) { flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; border-radius: 16px !important; font-size: 13px !important; font-weight: 700 !important; gap: 5px !important; border: 0 !important; }
+html body .kz-gswipe .edit:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4) { background: linear-gradient(rgba(255,255,255,.22), rgba(255,255,255,.1)) !important; color: #fff !important;
+  box-shadow: inset 0 1px .5px rgba(255,255,255,.45), inset 0 -1px .5px rgba(255,255,255,.12), 0 6px 16px rgba(0,0,0,.35) !important; }
+html body .kz-gswipe .del:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4) { background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.38) 0%, rgba(255,92,80,.95) 42%, rgba(196,48,40,.96) 100%) !important; color: #fff !important;
+  box-shadow: inset 0 1px .5px rgba(255,255,255,.5), inset 0 -1px .5px rgba(255,255,255,.14), 0 0 14px rgba(255,69,58,.22), 0 6px 16px rgba(0,0,0,.35) !important; }
+html body .kz-gswipe svg:not(#kz-n1) { width: 20px !important; height: 20px !important; }

@@ -1,0 +1,12 @@
+/* Nov 2 b · Today: only the bar */
+#kz-today-s1 .kzcl.kzcl-only { margin: 2px 2px 16px; }
+#kz-today-s1 .kzcl.kzcl-only .kzcl-bar { margin-top: 0; }
+/* the long-term header shows "Long-term goals" through ::before and hides its own text ("Other goals"); keep it one small line */
+html body #kz-today-s1 .kz-tgroups .kz-gsec[data-kind=long] .kz-tsec-h h2:not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { font-size: 0 !important; letter-spacing: 0 !important; white-space: nowrap !important; }
+html body #kz-today-s1 .kz-tgroups .kz-gsec[data-kind=long] .kz-tsec-h h2:not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9)::before { font-size: 12.5px !important; font-weight: 700 !important; letter-spacing: .14em !important; text-transform: uppercase !important; color: #8E8E93 !important; white-space: nowrap !important; }
+/* habit / long-term rows line up with "Morning" on the left edge, and the name gets the room up to the timer (fewer lines) */
+html body #kz-today-s1 .kz-tgroups .kz-tsec .kz-rows49 > .kz-goal:not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { padding-left: 0 !important; padding-right: 0 !important; }
+html body #kz-today-s1 .kz-tgroups .kz-tsec .kz-rows49 > .kz-goal > .kz-gbody:not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { padding-right: 34px !important; }
+html body #kz-today-s1 .kz-tgroups .kz-tsec .kz-rows49 > .kz-goal > .kz-gmore:not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { width: 34px !important; min-width: 34px !important; }
+html body #kz-today-s1 .kz-tgroups .kz-tsec > .kz-tsec-h:not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { padding-left: 0 !important; margin-left: 0 !important; }
+html body #kz-today-s1 .kz-tgroups .kz-tsec .kz-rows49 > .kz-goal > .kzfv-ib:not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { left: auto !important; right: 90px !important; }

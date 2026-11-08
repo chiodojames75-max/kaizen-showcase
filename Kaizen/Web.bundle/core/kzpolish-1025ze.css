@@ -1,0 +1,9 @@
+/* Oct 25 (ze): toasts ("Clean today. Keep going.", "That's okay. Today counts.") sit just above the tab bar, like iOS,
+   not 64 pt higher (that space was for the old in-page tab bar, which is gone). */
+html body .kz-toast:not(#kz-none) { bottom: calc(env(safe-area-inset-bottom) + 12px); }
+/* ze: the Add / Start quitting button never changes position. While you type it fades out where it is (the keyboard's ✓
+   closes the keyboard, then it fades back in); zd had put it back in line on focus, which flashed it high for a frame. */
+html body .kz-addsheet form > button.kz-btn[type="submit"]:not(#kz-none):not(#kzq1):not(#kzq2) { transition: opacity .16s ease; }
+html body .kz-addsheet form:has(input:not([type="checkbox"]):not([type="radio"]):focus, textarea:focus) > button.kz-btn[type="submit"]:not(#kz-none):not(#kzq1):not(#kzq2):not(#kzq3) { position: sticky; opacity: 0; pointer-events: none; box-shadow: none !important; }
+/* ze: if the "Completed · Undo" bar is up at the same time, the toast sits just above it instead of on top of it */
+html body:has(.kz-undo.show) .kz-toast:not(#kz-none) { bottom: calc(env(safe-area-inset-bottom) + 72px); }

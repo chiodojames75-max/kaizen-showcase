@@ -1,0 +1,14 @@
+/* Oct 28 (c) · James: Balance (its orbit opens right under it), then the calendar (Since …, the month calendar opens
+   right under it), Habits earned, Milestones (the full medals list opens right under it). Replaces kzprog-1028.css,
+   which left #kz-cal, .kz-balcard and .kza at order 0 = the top of the page when opened. */
+html body #kz-prog-s1 .kz-wrap49 > .kzpc-bals:not(#kz-n1):not(#kz-n2) { order: 1 !important; }
+html body #kz-prog-s1 .kz-wrap49 > .kz-balcard:not(#kz-n1):not(#kz-n2) { order: 2 !important; }
+html body #kz-prog-s1 .kz-wrap49 > .kzpc-ht:not(#kz-n1):not(#kz-n2) { order: 3 !important; }
+html body #kz-prog-s1 .kz-wrap49 > #kz-cal:not(#kz-n1):not(#kz-n2) { order: 4 !important; }
+html body #kz-prog-s1 .kz-wrap49 > .kzpc-hb:not(#kz-n1):not(#kz-n2) { order: 5 !important; }
+html body #kz-prog-s1 .kz-wrap49 > .kzpc-ms:not(#kz-n1):not(#kz-n2) { order: 6 !important; }
+html body #kz-prog-s1 .kz-wrap49 > .kza:not(#kz-n1):not(#kz-n2) { order: 7 !important; }
+html body #kz-prog-s1 .kz-wrap49 > .kz-shieldrow:not(#kz-n1):not(#kz-n2),
+html body #kz-prog-s1 .kz-wrap49 > .kzo-sh:not(#kz-n1):not(#kz-n2),
+html body #kz-prog-s1 .kz-wrap49 > .kzg-prog:not(#kz-n1):not(#kz-n2) { order: 8 !important; }
+html body #kz-prog-s1 .kz-wrap49 > .kzpc:not(.kzpc-bals):not(.kzpc-ht):not(.kzpc-hb):not(.kzpc-ms):not(#kz-n1) { order: 9 !important; }

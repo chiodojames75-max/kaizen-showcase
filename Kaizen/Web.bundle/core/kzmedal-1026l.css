@@ -1,0 +1,13 @@
+/* Oct 26 l · Struck-metal medals (kzmedal-1026l.js). The Milestones card's medals keep their size; the drawn coin replaces
+   the flat gradient, and the number is raised from the face. The old looping shine on the last medal plays once. */
+body .kzpc-md[data-kzm] { background: none !important; box-shadow: 0 3px 8px rgba(0,0,0,.45), 0 1px 1px rgba(0,0,0,.5) !important; overflow: hidden !important; border-radius: 50% !important; }
+body .kzpc-md[data-kzm] > .kzm-svg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; border-radius: 50%; }
+body .kzpc-md[data-kzm] b { z-index: 2 !important; }
+body .kzpc-md[data-kzm="bronze"] b { color: #3E1F0A !important; text-shadow: 0 1px 0 rgba(255,225,190,.6), 0 -1px 0 rgba(0,0,0,.35) !important; }
+body .kzpc-md[data-kzm="silver"] b { color: #2E343C !important; text-shadow: 0 1px 0 rgba(255,255,255,.8), 0 -1px 0 rgba(0,0,0,.3) !important; }
+body .kzpc-md[data-kzm="gold"] b { color: #4A3605 !important; text-shadow: 0 1px 0 rgba(255,244,200,.75), 0 -1px 0 rgba(0,0,0,.3) !important; }
+body .kzpc-md[data-kzm="rose"] b { color: #4A1A08 !important; text-shadow: 0 1px 0 rgba(255,225,200,.7), 0 -1px 0 rgba(0,0,0,.3) !important; }
+body .kzpc-md[data-kzm="platinum"] b { color: #24323F !important; text-shadow: 0 1px 0 rgba(255,255,255,.8), 0 -1px 0 rgba(0,0,0,.3) !important; }
+body .kzpc-md[data-kzm="aurora"] b { color: #2A1A4A !important; text-shadow: 0 1px 0 rgba(255,255,255,.75), 0 -1px 0 rgba(0,0,0,.3) !important; }
+body .kzpc-md[data-kzm]::after { z-index: 3 !important; border-radius: 50%; }
+body .kzpc-mi.last .kzpc-md::after { animation-iteration-count: 1 !important; }

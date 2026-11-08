@@ -1,0 +1,7 @@
+/* Oct 27 s · Today, long-term goals with milestones (kzmsrow-1027s.js): heading = next milestone, then when it's due. */
+html body #kz-today-s1 .kz-goal.kzbd-row[data-kzms] .kz-gbody > :is(.kz-gname, .kz-gstep, .kzbd-sub):not(#kz-n1):not(#kz-n2) { display: none !important; }
+html body #kz-today-s1 .kz-goal.kzbd-row[data-kzms] .kzms-t { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 17px; font-weight: 600; line-height: 1.25; letter-spacing: -.17px; color: #FFFFFF; white-space: normal; }
+html body #kz-today-s1 .kz-goal.kzbd-row[data-kzms] .kzms-d { display: block; margin-top: 3px; font-size: 14px; font-weight: 500; line-height: 1.35; letter-spacing: -.1px; color: #8E8E93; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+html body #kz-today-s1 .kz-goal.kzbd-row[data-kzms] .kzms-d.soon { color: #E2B93B; }
+html body #kz-today-s1 .kz-goal.kzbd-row[data-kzms] .kzms-d.late { color: #FF6B5E; }
+html body #kz-today-s1 .kz-goal.kzbd-row[data-kzms] .kzms-d.done { color: #30D158; }

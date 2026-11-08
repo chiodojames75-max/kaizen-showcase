@@ -1,0 +1,23 @@
+/* Oct 28 · Growth tab #8: two equal trees per row */
+html.kz-grid2 body .kzh:not(#kz-n1) { padding: 6px 16px 8px; }
+html.kz-grid2 body .kzg2-gh:not(#kz-n1) { display: flex; align-items: baseline; justify-content: space-between; padding: 4px 4px 12px; }
+html.kz-grid2 body .kzg2-gh h2:not(#kz-n1) { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -.3px; color: #fff; }
+html.kz-grid2 body .kzg2-gh span:not(#kz-n1) { font-size: 15px; color: rgba(235,235,245,.6); }
+html.kz-grid2 body .kzg2-grid:not(#kz-n1) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+html.kz-grid2 body .kzg2-t:not(#kz-n1) { position: relative; display: flex; flex-direction: column; min-width: 0; border-radius: 20px; overflow: hidden; text-decoration: none; color: #fff; -webkit-tap-highlight-color: transparent;
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)), #0e0e10; box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28); transition: transform .12s ease; }
+html.kz-grid2 body .kzg2-t:active:not(#kz-n1) { transform: scale(.97); }
+html.kz-grid2 body .kzg2-t.k66:not(#kz-n1) { box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28), inset 0 0 0 1.5px rgba(233,197,90,.7), 0 0 22px rgba(233,197,90,.14); }
+html.kz-grid2 body .kzg2-stage:not(#kz-n1) { position: relative; height: 140px; display: flex; align-items: flex-end; justify-content: center;
+  background: none; }
+html.kz-grid2 body .kzg2-stage img:not(#kz-n1) { position: relative; height: 116px; width: auto; max-width: 88%; object-fit: contain; margin-bottom: 14px; }
+html.kz-grid2 body .kzg2-t b:not(#kz-n1) { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; margin: 10px 12px 0; height: 2.5em; font-size: 15px; font-weight: 600; line-height: 1.25; overflow: hidden; overflow-wrap: anywhere; }
+html.kz-grid2 body .kzg2-t > i:not(#kz-n1) { display: block; padding: 3px 12px 12px; font-style: normal; font-size: 13px; color: rgba(235,235,245,.6); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+html.kz-grid2 body .kzg2-t > i.ok:not(#kz-n1) { color: #8FD3A4; }
+html.kz-grid2 body .kzg2-t > i.k66:not(#kz-n1) { color: #E9C55A; font-weight: 600; }
+html.kz-grid2 body .kzg2-plant .kzg2-stage:not(#kz-n1) { align-items: center; background: none; }
+html.kz-grid2 body .kzg2-plus:not(#kz-n1) { width: 52px; height: 52px; border-radius: 999px; display: flex; align-items: center; justify-content: center; font-size: 30px; font-weight: 500; line-height: 1; color: #1C1C1E;
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%); box-shadow: 0 0 18px rgba(233,197,90,.3); }
+html.kz-grid2 body .kzg2-plant b:not(#kz-n1) { color: #E9C55A; }
+/* the old grid is only a data source here: hidden from the first paint (it used to show for a frame before the layout replaced it) */
+html body .kzgy-grid:not(#kz-n1):not(#kz-n2), html body .kzg-gs:not(#kz-n1):not(#kz-n2) { display: none !important; }

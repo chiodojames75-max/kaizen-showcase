@@ -1,0 +1,32 @@
+/* Oct 23 Phase 3: milestone and weekly recap moments */
+.kz-p3 { position: fixed; inset: 0; z-index: 1200; display: flex; align-items: center; justify-content: center; padding: calc(16px + env(safe-area-inset-top, 0px)) 16px calc(16px + env(safe-area-inset-bottom, 0px)); background: rgba(0,0,0,.78); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); animation: kzP3in .22s ease both; }
+.kz-p3.out { animation: kzP3out .18s ease both; }
+@keyframes kzP3in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes kzP3out { from { opacity: 1; } to { opacity: 0; } }
+.kz-p3-in { position: relative; width: 100%; max-width: 400px; max-height: 100%; overflow-y: auto; padding: 24px 20px 20px; border-radius: 28px; background: #1C1C1E; text-align: center; animation: kzP3pop .42s cubic-bezier(.2,1.3,.4,1) both; }
+@keyframes kzP3pop { from { transform: translateY(18px) scale(.96); opacity: 0; } to { transform: none; opacity: 1; } }
+.kz-p3-x { position: absolute; top: 10px; right: 10px; width: 44px; height: 44px; border: 0; border-radius: 50%; background: transparent; color: #8E8E93; display: flex; align-items: center; justify-content: center; -webkit-tap-highlight-color: transparent; }
+.kz-p3-x svg { width: 18px; height: 18px; padding: 6px; box-sizing: content-box; border-radius: 50%; background: #2C2C2E; }
+.kz-p3-k { display: block; font: 600 13px/1 var(--kz-sans); letter-spacing: .06em; text-transform: uppercase; color: #E2B93B; margin: 6px 0 8px; }
+.kz-p3-t { margin: 0 0 8px; font: 700 28px/1.15 var(--kz-sans); letter-spacing: -.02em; color: #fff; }
+.kz-p3-p { margin: 0 0 20px; font: 400 16px/1.4 var(--kz-sans); color: #8E8E93; }
+.kz-p3-act { display: flex; flex-direction: column; gap: 4px; }
+.kz-p3-act .kz-btn { width: 100%; min-height: 50px; }
+.kz-p3-share { display: flex; align-items: center; justify-content: center; min-height: 44px; border: 0; background: none; color: #E2B93B; font: 600 17px/1 var(--kz-sans); text-decoration: none; -webkit-tap-highlight-color: transparent; }
+/* milestone */
+.kz-p3-art { position: relative; height: 190px; margin: 18px -4px 18px; border-radius: 20px; overflow: hidden; background: radial-gradient(90% 80% at 50% 20%, rgba(226,185,59,.22), rgba(0,0,0,0) 70%), #0b0b0d; }
+.kz-p3-art svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .55; }
+.kz-p3-big { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font: 800 112px/1 var(--kz-sans); letter-spacing: -.04em; color: #E2B93B; text-shadow: 0 6px 30px rgba(0,0,0,.6); animation: kzP3num .7s .1s cubic-bezier(.2,1.6,.4,1) both; }
+@keyframes kzP3num { from { transform: scale(.6); opacity: 0; } to { transform: none; opacity: 1; } }
+/* weekly recap */
+.kz-p3-dots { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin: 16px 0 18px; }
+.kz-p3-d { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.kz-p3-d i { width: 28px; height: 28px; border-radius: 8px; background: #2C2C2E; }
+.kz-p3-d i.full { background: #E2B93B; } .kz-p3-d i.grew { background: #5CD27A; } .kz-p3-d i.setback { background: #E5605A; } .kz-p3-d i.rest { background: #0A84FF; } .kz-p3-d i.none { background: transparent; box-shadow: inset 0 0 0 1.5px #3A3A3C; }
+.kz-p3-d b { font: 400 12px/1 var(--kz-sans); color: #636366; }
+.kz-p3-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 16px; text-align: left; }
+.kz-p3-st { padding: 14px; border-radius: 14px; background: #2C2C2E; display: flex; flex-direction: column; gap: 4px; }
+.kz-p3-st b { font: 600 24px/1.1 var(--kz-sans); color: #fff; }
+.kz-p3-st b small { font-size: 15px; font-weight: 400; color: #8E8E93; }
+.kz-p3-st span { font: 400 13px/1.25 var(--kz-sans); color: #8E8E93; }
+@media (prefers-reduced-motion: reduce) { .kz-p3, .kz-p3.out, .kz-p3-in, .kz-p3-big { animation: none; } }

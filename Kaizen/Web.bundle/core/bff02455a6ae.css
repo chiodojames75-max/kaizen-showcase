@@ -1,0 +1,44 @@
+
+  /* v98 · pet names, the plan header's day under it, branches inside the balance card */
+  .kz-cr-tag { pointer-events: auto !important; cursor: pointer; }
+  .kz-cr-tag::after { content: ''; display: inline-block; width: 8px; height: 8px; margin-left: 4px; vertical-align: -1px; background: currentColor; opacity: .7; -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4z' fill='black'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4z' fill='black'/%3E%3C/svg%3E") center / contain no-repeat; }
+  .kz-pn-in { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+  .kz-pn-in img { width: 96px; height: 96px; object-fit: contain; }
+  .kz49 .kz-pn-in input { width: 100%; box-sizing: border-box; min-height: 52px; padding: 0 16px; border-radius: 14px; border: 0; background: var(--s2); color: #fff; font: 700 20px/1 var(--kz-sans); text-align: center; }
+  .kz-pn-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 100%; }
+  .kz-wildcell { position: relative; }
+  .kz-petedit { position: absolute; top: 6px; left: 6px; z-index: 2; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: rgba(0,0,0,.55); color: #F5D774; }
+  .kz-petedit svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linejoin: round; }
+  .kz-tsec-h.kz-tsec-stack { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .kz-balcard .kz-progbranches { margin: 6px -2px 6px; }
+  .kz-balcard .kz-progbranches .kz-brbar { background: transparent; padding: 10px 2px 0; border-top: 0.5px solid rgba(255,255,255,.08); border-radius: 0; }
+
+
+  /* v99 · habits carry their goal · calmer ×N highlight · goal card stat line clear of the tree · food steps */
+  .kz-ggoal { display: inline-flex; align-items: center; gap: 5px; color: var(--kz-muted); }
+  .kz-ggoal svg { width: 12px; height: 12px; flex: 0 0 12px; fill: none; stroke: currentColor; stroke-width: 2.2; }
+  .kz-opt { font-style: normal; font-weight: 500; text-transform: none; letter-spacing: 0; color: var(--kz-muted); margin-left: 4px; }
+  .kz49 .kz-tiers span.on, .kz-tiers span.on { background: rgba(48,209,88,.16) !important; border-color: rgba(48,209,88,.5) !important; color: #5BE38A !important; }
+  .kz-tiers span.on * { color: #5BE38A !important; }
+  .kz49 .kz-pcard { grid-template-columns: minmax(0, 1fr) 96px; align-items: start; }
+  .kz49 .kz-pcard .kz-pcard-tree { width: 96px; height: 96px; margin-top: 34px; }
+  .kz49 [data-kz-compline] { display: none !important; }
+  .kz-xprules li.kz-xpr-food { display: block; padding: 14px 0 6px; }
+  .kz-food-h { display: flex; align-items: center; gap: 10px; font-weight: 700; margin-bottom: 10px; }
+  .kz-food-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .kz-xprules .kz-food-steps li { display: flex; align-items: center; justify-content: flex-start; gap: 12px; padding: 10px 12px; border-radius: 14px; background: rgba(118,118,128,.12); border: 0; text-align: left; }
+  .kz-food-steps li b { flex: 0 0 24px; width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; font-size: 12px; background: rgba(255,214,10,.16); color: #FFD60A; }
+  .kz-food-steps li span { display: flex; flex-direction: column; gap: 2px; font-size: 14px; font-weight: 600; line-height: 1.3; }
+  .kz-food-steps li em { font-style: normal; color: #FFD60A; }
+  .kz-food-steps li small { font-size: 12px; font-weight: 500; color: var(--kz-muted); }
+
+
+  /* v99b · the stat line gets the full card width under the tree, so nothing runs underneath it */
+  .kz49 .kz-pcard { grid-template-columns: minmax(0, 1fr) 96px; grid-template-rows: auto auto auto auto; column-gap: 14px; row-gap: 8px; align-items: center; }
+  .kz49 .kz-pcard-l { display: contents; }
+  .kz49 .kz-pcard .kz-label49 { grid-column: 1; grid-row: 1; }
+  .kz49 .kz-pcard .kz-pcard-n { grid-column: 1; grid-row: 2; }
+  .kz49 .kz-pcard .kz-bar49 { grid-column: 1; grid-row: 3; }
+  .kz49 .kz-pcard .kz-pcard-tree { grid-column: 2; grid-row: 1 / 4; margin-top: 30px; align-self: start; }
+  .kz49 .kz-pcard .kz-pcard-s { grid-column: 1 / -1; grid-row: 4; margin-top: 6px; }
+  .kz49 .kz-pcard .kz-statline { justify-content: space-between; }

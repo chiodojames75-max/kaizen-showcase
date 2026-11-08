@@ -1,0 +1,4 @@
+/* Oct 28 · the page fades in once it's finished (kzgate-1028.js); the launch skeleton, where a page has one, stays up meanwhile */
+html:not(.kz-dressed) body > *:not(#kz-skel) { opacity: 0 !important; }
+html.kz-dressed body > *:not(#kz-skel) { transition: opacity .12s ease-out; }
+@media (prefers-reduced-motion: reduce) { html.kz-dressed body > * { transition: none; } }

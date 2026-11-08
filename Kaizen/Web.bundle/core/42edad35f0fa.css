@@ -1,0 +1,7 @@
+
+  /* Wind: each leaf cluster rustles on its own beat; willow strands swing; the whole tree still sways gently */
+  .kz-lifetree .kz-rustle { transform-box: view-box; animation: kzRustle 4.6s ease-in-out infinite; }
+  @keyframes kzRustle { 0%, 100% { transform: rotate(-1.4deg) translate(0, 0); } 35% { transform: rotate(1.2deg) translate(0.6px, -0.4px); } 70% { transform: rotate(-0.4deg) translate(-0.3px, 0.3px); } }
+  .kz-lifetree .kz-strand { transform-box: view-box; animation: kzStrand 5.2s ease-in-out infinite; }
+  @keyframes kzStrand { 0%, 100% { transform: rotate(-3.2deg); } 50% { transform: rotate(3.6deg); } }
+  @media (prefers-reduced-motion: reduce) { .kz-lifetree .kz-rustle, .kz-lifetree .kz-strand { animation: none; } }

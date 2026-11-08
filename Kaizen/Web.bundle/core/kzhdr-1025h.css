@@ -1,0 +1,5 @@
+/* Oct 25 h · Today and Progress show the one-line header title all the time, so the header needs its solid backdrop all the
+   time too (on the phone the backdrop only faded in during scroll, and the title drew over the to-dos). */
+html:is(.kz-fA, .kz-pc) body #kz-header::before:not(#kz-n1) { opacity: 1 !important; background: rgba(0, 0, 0, .86) !important; -webkit-backdrop-filter: saturate(160%) blur(18px); backdrop-filter: saturate(160%) blur(18px); }
+html:is(.kz-fA, .kz-pc) body #kz-header:not(#kz-n1) { z-index: 50; }
+html:is(.kz-fA, .kz-pc) body #kz-header::after:not(#kz-n1) { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: rgba(255, 255, 255, .06); pointer-events: none; }

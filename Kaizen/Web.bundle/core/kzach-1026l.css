@@ -1,0 +1,71 @@
+/* Oct 26 l · Milestones, reworked (kzach-1026l.js): Next up, Streak / Consistency tabs, a case of struck medals.
+   The old grid (kzach-1024a) stays in the page, hidden. */
+body .kza.kzm-on > h3:has(+ .kzm), body .kza.kzm-on > .kza-badges, body .kza.kzm-on > .kza-next { display: none !important; }
+body .kzm { display: flex; flex-direction: column; gap: 14px; margin-top: 26px; font-family: var(--kz-sans, -apple-system, BlinkMacSystemFont, sans-serif); }
+body .kzm-h { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+body .kzm-h h3 { margin: 0 !important; font: 700 13px/1 var(--kz-sans, -apple-system, sans-serif); letter-spacing: .1em; text-transform: uppercase; color: #8E8E93; }
+body .kzm-h em { font-style: normal; font-size: 13px; color: #8E8E93; }
+body .kzm-h em b, body .kzm-p b { color: #fff; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* a coin: drawn medal + raised number; locked = dark blank with a progress ring */
+body .kzm-hang { position: relative; display: flex; flex-direction: column; align-items: center; width: 76px; }
+body .kzm-hang.big { width: 104px; }
+body .kzm-rib { display: block; width: 34px; height: 22px; margin-bottom: -7px; position: relative; z-index: 0; }
+body .kzm-hang.big .kzm-rib { width: 46px; height: 28px; }
+body .kzm-coin { position: relative; z-index: 1; width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 6px 10px rgba(0,0,0,.55)) drop-shadow(0 1px 1px rgba(0,0,0,.6)); }
+body .kzm-hang.big .kzm-coin { width: 88px; height: 88px; }
+body .kzm-coin > .kzm-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+body .kzm-coin b { position: relative; z-index: 2; font: 900 20px/1 var(--kz-sans, -apple-system, sans-serif); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+body .kzm-coin b.w3 { font-size: 17px; }
+body .kzm-hang.big .kzm-coin b { font-size: 27px; } body .kzm-hang.big .kzm-coin b.w3 { font-size: 23px; }
+body .kzm-coin.m-bronze b { color: #3E1F0A; text-shadow: 0 1px 0 rgba(255,225,190,.6), 0 -1px 0 rgba(0,0,0,.35); }
+body .kzm-coin.m-silver b { color: #2E343C; text-shadow: 0 1px 0 rgba(255,255,255,.8), 0 -1px 0 rgba(0,0,0,.3); }
+body .kzm-coin.m-gold b { color: #4A3605; text-shadow: 0 1px 0 rgba(255,244,200,.75), 0 -1px 0 rgba(0,0,0,.3); }
+body .kzm-coin.m-rose b { color: #4A1A08; text-shadow: 0 1px 0 rgba(255,225,200,.7), 0 -1px 0 rgba(0,0,0,.3); }
+body .kzm-coin.m-platinum b { color: #24323F; text-shadow: 0 1px 0 rgba(255,255,255,.8), 0 -1px 0 rgba(0,0,0,.3); }
+body .kzm-coin.m-aurora b { color: #2A1A4A; text-shadow: 0 1px 0 rgba(255,255,255,.75), 0 -1px 0 rgba(0,0,0,.3); }
+body .kzm-coin.lock > .kzm-svg { filter: grayscale(1) brightness(.34) contrast(1.15); }
+body .kzm-coin.lock b { color: rgba(255,255,255,.34) !important; text-shadow: 0 -1px 0 rgba(0,0,0,.6) !important; }
+body .kzm-coin.lock { filter: drop-shadow(0 4px 8px rgba(0,0,0,.5)); }
+body .kzm-coin.m-rose.got { filter: drop-shadow(0 6px 10px rgba(0,0,0,.55)) drop-shadow(0 0 10px rgba(232,150,126,.35)); }
+body .kzm-coin.m-platinum.got { filter: drop-shadow(0 6px 10px rgba(0,0,0,.55)) drop-shadow(0 0 12px rgba(160,210,240,.4)); }
+body .kzm-coin.m-aurora.got { filter: drop-shadow(0 6px 10px rgba(0,0,0,.55)) drop-shadow(0 0 14px rgba(190,140,255,.45)); }
+body .kzm-ring { position: absolute; inset: -7px; width: calc(100% + 14px); height: calc(100% + 14px); z-index: 0; overflow: visible; }
+body .kzm-rt { fill: none; stroke: rgba(255,255,255,.08); stroke-width: 3; }
+body .kzm-rf { fill: none; stroke-width: 3; stroke-linecap: round; stroke: #E2B93B; }
+body .kzm-coin.m-bronze .kzm-rf { stroke: #C98B5A; } body .kzm-coin.m-silver .kzm-rf { stroke: #D5DCE5; } body .kzm-coin.m-rose .kzm-rf { stroke: #E89A84; }
+body .kzm-coin.m-platinum .kzm-rf { stroke: #A8D8F0; } body .kzm-coin.m-aurora .kzm-rf { stroke: #C7A6FF; }
+body .kzm-lk { position: absolute; right: -4px; bottom: -4px; z-index: 3; width: 22px; height: 22px; border-radius: 11px; background: #1C1C1E; color: #AEAEB2; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 2px #000; }
+body .kzm-lk svg { width: 12px; height: 12px; }
+body .kzm-hang.big .kzm-lk { width: 26px; height: 26px; border-radius: 13px; } body .kzm-hang.big .kzm-lk svg { width: 14px; height: 14px; }
+
+/* Next up */
+body .kzm-next { display: flex; align-items: center; gap: 18px; padding: 18px; border-radius: 20px; background: radial-gradient(120% 120% at 0% 0%, rgba(226,185,59,.10), transparent 60%), #1C1C1E; border: .5px solid rgba(255,255,255,.08); }
+body .kzm-nt { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+body .kzm-nk { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #E2B93B; }
+body .kzm-nt > b { font-size: 20px; font-weight: 700; color: #fff; line-height: 1.2; }
+body .kzm-nt > b span { font-size: 15px; font-weight: 500; color: #8E8E93; }
+body .kzm-nd { font-size: 14px; color: #AEAEB2; }
+body .kzm-bar { display: block; height: 6px; margin-top: 8px; border-radius: 3px; background: rgba(255,255,255,.08); overflow: hidden; }
+body .kzm-bar i { display: block; height: 100%; border-radius: 3px; background: linear-gradient(90deg, #B8902E, #F2D27A); }
+
+/* tabs */
+body .kzm-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; border-radius: 14px; background: #1C1C1E; }
+body .kzm-tabs button { min-height: 40px; border: 0; border-radius: 10px; background: none; color: rgba(235,235,245,.6); font: 600 15px/1 var(--kz-sans, -apple-system, sans-serif); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+body .kzm-tabs button span { margin-left: 4px; font-weight: 500; color: rgba(235,235,245,.4); font-variant-numeric: tabular-nums; }
+body .kzm-tabs button[aria-selected="true"] { background: #3A3A3C; color: #fff; }
+body .kzm-tabs button[aria-selected="true"] span { color: rgba(235,235,245,.7); }
+body .kzm-p { margin: 0 2px; font-size: 13px; line-height: 1.6; color: #8E8E93; }
+body .kzm-kind { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+body .kzm-kind svg { width: 12px; height: 12px; }
+body .kzm-kind.k-bal { color: #8FD1B0; } body .kzm-kind.k-all { color: #E2B93B; }
+
+/* the case */
+body .kzm-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 8px; padding: 22px 8px 18px; border-radius: 22px; background: radial-gradient(120% 80% at 50% 0%, #26262A 0%, #161618 70%); box-shadow: inset 0 1px 0 rgba(255,255,255,.05), inset 0 -20px 40px rgba(0,0,0,.35); }
+body .kzm-cell { display: flex; flex-direction: column; align-items: center; gap: 5px; text-align: center; min-width: 0; }
+body .kzm-cell .kzm-hang { margin-bottom: 4px; }
+body .kzm-cell.lock .kzm-hang { padding-top: 15px; } /* room the ribbon takes on an earned medal */
+body .kzm-l { font-size: 14px; font-weight: 600; color: #fff; line-height: 1.2; }
+body .kzm-cell.lock .kzm-l { color: #AEAEB2; }
+body .kzm-s { font-style: normal; font-size: 12px; color: #8E8E93; }
+body .kzm-cell.got.r-epic .kzm-s { color: #F2A991; } body .kzm-cell.got.r-legendary .kzm-s { color: #A8D8F0; } body .kzm-cell.got.r-mythic .kzm-s { color: #D3B8FF; }

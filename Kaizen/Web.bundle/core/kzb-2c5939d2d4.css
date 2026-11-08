@@ -1,0 +1,14 @@
+/* ==== kznoanimal-1026h.css ==== */
+/* Oct 26 h · replaces 78efd9fa7115.css (wildlife styles, no longer loaded). Only its two tree rules are kept. */
+.kz-treeart, .kz-pcard-tree { isolation: isolate; overflow: hidden; }
+.kz-visitor, .kz-cr { display: none !important; }
+/* Journal now has two tabs (Animal chats removed): split the bar evenly */
+html body .kz-jtabs.kz-seg > .kz-chip:not(#kz-n1):not(#kz-n2) { flex: 1 1 0 !important; min-width: 0 !important; justify-content: center; text-align: center; }
+html body .kz-j2 .kz-jtabs.kz-seg:not(#kz-n1):not(#kz-n2) { grid-template-columns: repeat(2, 1fr) !important; }
+
+/* ==== kzlite-1026h.css ==== */
+/* Oct 26 h · Less GPU work while scrolling. Check buttons and the Plan tab's add button sat on opaque cards but still had a
+   backdrop blur, which makes the phone re-blur what's behind every one of them on every scrolled frame. They look the same
+   without it (nothing behind them to blur). Glass stays where it shows: header, tab bar, sheets. */
+html body :is(.kz-check, .kz-pcheck, .kz-qadd-go, #kz-plan-s1 button):not(#kz-n1):not(#kz-n2) { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+

@@ -1,0 +1,328 @@
+/* Nov 2 b · replaces kzmtn-1102.css (brighter tile photos). Nov 2 · replaced kzmtn-1101b.css: the Growth row of mountains, the goal-page pager, the header without the streak chip. */
+/* Nov 1 · Mountains, stages 1–4 (kzmtn-1101b.js; replaces kzmtn-1101.css). Neon orange #FF6A1A = progress only. Gold = earned and actions only. */
+
+/* ---------- Today · Kaizen 66 card ---------- */
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) { position: relative; overflow: hidden; isolation: isolate; }
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) > .kzmx-bg {
+  position: absolute; right: -8%; top: 0; width: 64%; height: 100%; object-fit: cover; object-position: 50% 30%;
+  z-index: -1; opacity: .62; pointer-events: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 55%); mask-image: linear-gradient(90deg, transparent 0%, #000 55%);
+}
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-th { display: none !important; }
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-tx b { text-shadow: 0 1px 10px rgba(0,0,0,.6); }
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-tx > span { color: #D2D4DA; text-shadow: 0 1px 8px rgba(0,0,0,.7); }
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-barrow { flex-wrap: wrap; row-gap: 8px; }
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-bar {
+  position: relative; flex: 1 1 100%; width: 100%; height: 4px; overflow: visible; background: rgba(255,255,255,.18); border-radius: 999px;
+}
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-bar > i {
+  background: #FF6A1A !important; border-radius: 999px; box-shadow: 0 0 6px rgba(255,106,26,.95), 0 0 14px rgba(255,106,26,.55);
+}
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-bar > .kzmx-cp {
+  position: absolute; top: 50%; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px; border-radius: 999px;
+  background: #0B0C10; box-shadow: inset 0 0 0 2px #FF6A1A;
+}
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-bar > .kzmx-cp[hidden] { display: none; }
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-bar > .kzmx-top {
+  position: absolute; right: -6px; top: 50%; width: 0; height: 0; margin-top: -9px;
+  border-left: 7px solid transparent; border-right: 7px solid transparent; border-bottom: 11px solid #F2CF5B;
+}
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-left {
+  flex: 1 1 100%; display: flex; justify-content: space-between; align-items: baseline; gap: 10px; white-space: nowrap;
+  font-size: 13px; font-weight: 700; color: #D2D4DA;
+}
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-left > b { color: #FFFFFF; font-weight: 800; }
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-left > span { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-tree { background: #0B0C10; border-radius: 18px; overflow: hidden; }
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-tree > i { display: none; }
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-tree > img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; transform: none; filter: none; }
+
+/* ---------- Growth · your mountains ---------- */
+html.kz-mtn #kz-main:not(#kz-n1) > :not(#kzmx-g) { display: none !important; }
+.kzmx-g { padding: 6px 16px 120px; color: #E9EAEE; font-family: -apple-system, 'SF Pro Text', system-ui, sans-serif; }
+.kzmx-gh { display: flex; align-items: flex-end; justify-content: space-between; padding: 4px 4px 0; }
+.kzmx-gh p { margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 1.6px; color: #E9C55A; }
+.kzmx-gh h2 { margin: 2px 0 0; font-size: 28px; font-weight: 800; letter-spacing: -.6px; color: #FFFFFF; }
+.kzmx-plus, .kzmx-btn {
+  color: #16120A; text-decoration: none; border-radius: 999px;
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%);
+  box-shadow: 0 10px 26px rgba(184,144,46,.3);
+}
+.kzmx-plus { width: 44px; height: 44px; flex: none; display: flex; align-items: center; justify-content: center; }
+.kzmx-btn { display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; font-size: 15px; font-weight: 800; margin-top: 14px; }
+.kzmx-hero {
+  position: relative; margin: 14px 0 0; height: 214px; border-radius: 24px; overflow: hidden; background: #121318;
+  box-shadow: 0 0 0 1px rgba(212,175,55,.28), 0 18px 40px rgba(0,0,0,.55);
+}
+.kzmx-hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.kzmx-shade { position: absolute; left: 0; right: 0; bottom: 0; height: 120px; background: linear-gradient(rgba(11,12,16,0), rgba(11,12,16,.95)); }
+.kzmx-pin { position: absolute; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 3px; pointer-events: none; }
+.kzmx-pin b {
+  padding: 3px 9px; border-radius: 999px; background: rgba(11,12,16,.8); box-shadow: inset 0 0 0 1px rgba(255,106,26,.8);
+  color: #FFFFFF; font-size: 11px; font-weight: 700; white-space: nowrap;
+}
+.kzmx-pin i { width: 1px; height: 12px; background: rgba(255,106,26,.85); }
+.kzmx-pin u { width: 9px; height: 9px; border-radius: 999px; background: #FFFFFF; box-shadow: 0 0 0 2px #FF6A1A, 0 0 10px rgba(255,106,26,.9); }
+.kzmx-pin.gold b { background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%); color: #16120A; box-shadow: none; font-weight: 800; }
+.kzmx-pin.gold i { width: 2px; background: #F2CF5B; }
+.kzmx-pin.gold u { background: #FFE7A0; box-shadow: 0 0 12px #F2CF5B; }
+.kzmx-stats { position: absolute; left: 16px; right: 16px; bottom: 12px; display: flex; justify-content: space-between; gap: 8px; }
+.kzmx-stats span { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.kzmx-stats b { font-size: 19px; font-weight: 800; color: #FFFFFF; letter-spacing: -.3px; white-space: nowrap; }
+.kzmx-stats b.gold { color: #F2CF5B; }
+.kzmx-stats em { font-style: normal; font-size: 10.5px; font-weight: 600; color: #B7BAC2; letter-spacing: .4px; white-space: nowrap; }
+.kzmx-empty { height: 300px; }
+.kzmx-et { position: absolute; left: 18px; right: 18px; bottom: 18px; display: flex; flex-direction: column; gap: 4px; align-items: flex-start; }
+.kzmx-et b { font-size: 22px; font-weight: 800; color: #FFFFFF; }
+.kzmx-et span { font-size: 14px; color: #D2D4DA; }
+.kzmx-sh { margin: 20px 6px 8px; font-size: 12px; font-weight: 700; letter-spacing: 1.6px; color: #A9ACB5; }
+.kzmx-list { display: flex; flex-direction: column; gap: 8px; }
+.kzmx-row {
+  display: flex; align-items: center; gap: 12px; min-height: 68px; padding: 10px 14px 10px 10px; border-radius: 20px; text-decoration: none; box-sizing: border-box;
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)), #121318;
+}
+.kzmx-row:active { opacity: .82; }
+.kzmx-th { width: 48px; height: 48px; flex: none; border-radius: 14px; object-fit: cover; background: #0B0C10; }
+.kzmx-row.gold { box-shadow: inset 0 0 0 1px rgba(212,175,55,.45); }
+.kzmx-row.gold .kzmx-th { border-radius: 999px; box-shadow: 0 0 0 2px #F2CF5B; }
+.kzmx-rx { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.kzmx-r1 { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.kzmx-rx b { font-size: 16px; font-weight: 800; color: #FFFFFF; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.kzmx-r1 i { font-style: normal; font-size: 13px; font-weight: 700; color: #FF7A2E; white-space: nowrap; }
+.kzmx-bar { display: block; height: 4px; border-radius: 999px; background: #2A2C33; }
+.kzmx-bar i { display: block; height: 4px; border-radius: 999px; background: #FF6A1A; box-shadow: 0 0 8px rgba(255,106,26,.85); }
+.kzmx-rx em { font-style: normal; font-size: 12.5px; color: #A9ACB5; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.kzmx-row.gold em { color: #F2CF5B; }
+.kzmx-why { text-align: center; margin: 22px 0 0; }
+.kzmx-why a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; color: #A9ACB5; font-size: 14px; font-weight: 600; }
+.kzmx-sh.kzmx-first { margin-top: 8px; color: #E9C55A; }
+
+/* ===== 1101b additions: goal page scenes, day-66 screen, retired tree art ===== */
+.kzmx-sh { font-weight: 700; }
+h2.kzmx-sh { font-size: 12px; }
+/* goal page: the tree hero (tree, days grown, Change tree) is replaced by the scene */
+html.kz-mtn-goal #kz-goalpage .kzg-goal:not(#kz-n1) { display: none !important; }
+.kzmx-scene { display: flex; flex-direction: column; gap: 10px; margin: 2px 0 4px; font-family: -apple-system, 'SF Pro Text', system-ui, sans-serif; }
+.kzmx-sc { position: relative; border-radius: 24px; overflow: hidden; background: #121318; box-shadow: 0 0 0 1px rgba(255,255,255,.06), 0 18px 40px rgba(0,0,0,.5); }
+.kzmx-ph { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; }
+.kzmx-sc.exped .kzmx-ph { object-position: 50% 50%; }
+.kzmx-tg { position: absolute; left: 0; right: 0; top: 0; height: 130px; background: linear-gradient(rgba(11,12,16,.82), rgba(11,12,16,0)); }
+.kzmx-bg2 { position: absolute; left: 0; right: 0; bottom: 0; height: 70px; background: linear-gradient(rgba(11,12,16,0), rgba(11,12,16,.7)); }
+.kzmx-hd { position: absolute; left: 18px; right: 18px; top: 16px; }
+.kzmx-eb { margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; color: #D2D4DA; }
+.kzmx-eb.gold { color: #FFE7A0; }
+.kzmx-big { margin: 2px 0 0; font-size: 40px; font-weight: 900; letter-spacing: -1.2px; line-height: 1.05; color: #FFFFFF; }
+.kzmx-sc.exped .kzmx-big, .kzmx-sc.storm .kzmx-big { font-size: 34px; }
+.kzmx-sub { margin: 4px 0 0; font-size: 14px; font-weight: 600; color: #D2D4DA; }
+.kzmx-rt { position: absolute; left: 0; top: 0; overflow: visible; }
+.kzmx-rt-todo { fill: none; stroke: rgba(255,255,255,.6); stroke-width: 1.6; stroke-dasharray: 3 6; stroke-linecap: round; }
+.kzmx-rt-done { fill: none; stroke: #FF6A1A; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 4px rgba(255,106,26,.95)) drop-shadow(0 0 10px rgba(255,106,26,.6)); }
+.kzmx-cp-on { fill: #FF6A1A; }
+.kzmx-cp-off { fill: #0B0C10; stroke: #FF6A1A; stroke-width: 2; }
+.kzmx-flagp { stroke: #FFE7A0; stroke-width: 2; }
+.kzmx-flag { fill: #FFE7A0; }
+.kzmx-pk-on { fill: #FF6A1A; filter: drop-shadow(0 0 6px rgba(255,106,26,.8)); }
+.kzmx-pk-next { fill: #0B0C10; stroke: #FF6A1A; stroke-width: 2; }
+.kzmx-pk-off { fill: rgba(11,12,16,.6); stroke: rgba(255,255,255,.7); stroke-width: 1.5; }
+.kzmx-pkn { position: absolute; transform: translateX(-50%); font-size: 11px; font-weight: 800; color: #D2D4DA; text-shadow: 0 1px 6px #000; }
+.kzmx-pkn.on { color: #FF9A5C; }
+.kzmx-cpl { position: absolute; font-size: 11px; font-weight: 800; color: #E9EAEE; white-space: nowrap; text-shadow: 0 1px 6px #000, 0 0 2px #000; }
+.kzmx-cpl.top { color: #FFE7A0; }
+.kzmx-you { position: absolute; width: 22px; height: 22px; margin: -11px 0 0 -11px; border-radius: 999px; background: #FFFFFF; box-shadow: 0 0 0 3px #FF6A1A, 0 0 20px rgba(255,106,26,.95); }
+.kzmx-you.pulse { animation: kzmx-pulse 2.4s ease-in-out infinite; }
+@keyframes kzmx-pulse { 50% { box-shadow: 0 0 0 3px #FF6A1A, 0 0 32px rgba(255,106,26,1); } }
+@media (prefers-reduced-motion: reduce) { .kzmx-you.pulse { animation: none; } }
+.kzmx-youl { position: absolute; padding: 3px 8px; border-radius: 999px; background: rgba(11,12,16,.82); color: #FFFFFF; font-size: 11px; font-weight: 800; }
+.kzmx-fog { position: absolute; inset: 0; pointer-events: none; }
+.kzmx-fog i { position: absolute; border-radius: 999px; filter: blur(8px); }
+.kzmx-fog i:nth-child(1) { left: -20%; top: 22%; width: 140%; height: 46%; background: radial-gradient(closest-side, rgba(205,210,220,.7), rgba(205,210,220,0)); }
+.kzmx-fog i:nth-child(2) { left: 25%; top: 46%; width: 100%; height: 40%; background: radial-gradient(closest-side, rgba(190,196,206,.6), rgba(190,196,206,0)); }
+.kzmx-fog i:nth-child(3) { left: -35%; top: 58%; width: 110%; height: 40%; background: radial-gradient(closest-side, rgba(180,186,196,.55), rgba(180,186,196,0)); }
+.kzmx-st3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.kzmx-st3 span { display: flex; flex-direction: column; gap: 2px; padding: 12px; border-radius: 18px; min-width: 0; background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)), #121318; }
+.kzmx-st3 b { font-size: 19px; font-weight: 800; color: #FFFFFF; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kzmx-st3 b.orange { color: #FF7A2E; }
+.kzmx-st3 b.gold { color: #F2CF5B; }
+.kzmx-st3 em { font-style: normal; font-size: 10.5px; font-weight: 600; letter-spacing: .3px; color: #A9ACB5; }
+.kzmx-miss { position: relative; display: flex; align-items: center; gap: 12px; padding: 12px 14px 12px 12px; border-radius: 20px; background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)), #121318; }
+.kzmx-miss img { width: 40px; height: 40px; border-radius: 12px; object-fit: cover; flex: none; }
+.kzmx-miss span { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.kzmx-miss b { font-size: 14px; font-weight: 800; color: #FFFFFF; }
+.kzmx-miss em { font-style: normal; font-size: 12.5px; color: #A9ACB5; }
+.kzmx-fogbar { display: flex; flex-direction: column; gap: 8px; padding: 0 2px; }
+.kzmx-fogbar .kzmx-bar { height: 6px; background: rgba(255,255,255,.14); }
+.kzmx-fogbar .kzmx-bar i { height: 6px; }
+.kzmx-fl { display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; }
+.kzmx-fl em { font-style: normal; color: #A9ACB5; }
+.kzmx-fl em.gold { color: #F2CF5B; }
+.kzmx-fl b { color: #FFFFFF; }
+.kzmx-next { display: flex; flex-direction: column; gap: 2px; padding: 14px 16px; border-radius: 20px; background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)), #121318; box-shadow: inset 0 0 0 1px rgba(255,106,26,.35); }
+.kzmx-next em { font-style: normal; font-size: 11px; font-weight: 700; letter-spacing: 1.4px; color: #FF9A5C; }
+.kzmx-next b { font-size: 17px; font-weight: 800; color: #FFFFFF; }
+.kzmx-next span { font-size: 13px; color: #A9ACB5; }
+.kzmx-cta { min-height: 52px; border: 0; border-radius: 999px; font: 800 15px -apple-system, system-ui, sans-serif; color: #16120A;
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%); }
+.kzmx-note { margin: 0; text-align: center; font-size: 14px; font-weight: 700; }
+.kzmx-note.gold { color: #F2CF5B; }
+/* retired tree thumbnails now show the goal's mountain */
+img.kzmx-thumb { object-fit: cover !important; border-radius: 10px; background: #0B0C10; }
+
+/* ===== Day 66: You made it. ===== */
+html.kzmx-sum-on, html.kzmx-sum-on body { overflow: hidden; }
+.kzmx-sum { position: fixed; inset: 0; z-index: 10050; background: #0B0C10; color: #E9EAEE; font-family: -apple-system, 'SF Pro Text', system-ui, sans-serif;
+  display: flex; flex-direction: column; justify-content: flex-end; padding: 0 20px calc(28px + env(safe-area-inset-bottom)); overflow: hidden; }
+.kzmx-sum::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 66%; background: linear-gradient(rgba(11,12,16,0), rgba(11,12,16,.9) 38%, #0B0C10 70%); z-index: 1; }
+.kzmx-sum::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 30%; background: linear-gradient(rgba(11,12,16,.7), rgba(11,12,16,0)); z-index: 1; }
+.kzmx-sum-ph { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 30%; }
+@media (prefers-reduced-motion: no-preference) { .kzmx-sum-ph { animation: kzmx-rise 1.2s cubic-bezier(.2,.8,.2,1) both; } .kzmx-sum-tx, .kzmx-sum-act { animation: kzmx-up .7s .25s cubic-bezier(.2,.8,.2,1) both; } }
+@keyframes kzmx-rise { from { transform: scale(1.08); opacity: .4; } }
+@keyframes kzmx-up { from { transform: translateY(18px); opacity: 0; } }
+.kzmx-sum-top { position: absolute; z-index: 2; left: 20px; right: 20px; top: calc(14px + env(safe-area-inset-top)); display: flex; justify-content: space-between; }
+.kzmx-x, .kzmx-share { height: 44px; min-width: 44px; border: 0; border-radius: 999px; background: rgba(11,12,16,.55); color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: 700 13px -apple-system, system-ui, sans-serif; }
+.kzmx-share { padding: 0 16px; }
+.kzmx-sum-tx { position: relative; z-index: 2; display: flex; flex-direction: column; gap: 6px; margin-bottom: 22px; }
+.kzmx-sum-tx h1 { margin: 0; font-size: 54px; font-weight: 900; letter-spacing: -2px; line-height: .98; color: #FFFFFF; white-space: nowrap; }
+.kzmx-sum-tx p:not(.kzmx-eb) { margin: 4px 0 8px; font-size: 17px; font-weight: 600; line-height: 1.35; color: #D2D4DA; }
+.kzmx-sum-tx .kzmx-st3 span { background: rgba(255,255,255,.07); }
+.kzmx-sum-act { position: relative; z-index: 2; display: flex; flex-direction: column; gap: 10px; }
+.kzmx-gold, .kzmx-ghost { border: 0; border-radius: 999px; font-family: inherit; }
+.kzmx-gold { min-height: 64px; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; color: #16120A; text-align: left;
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%); box-shadow: 0 14px 34px rgba(184,144,46,.35); }
+.kzmx-gold.one { justify-content: center; }
+.kzmx-gold span { display: flex; flex-direction: column; gap: 1px; }
+.kzmx-gold b { font-size: 17px; font-weight: 900; }
+.kzmx-gold em { font-style: normal; font-size: 12px; font-weight: 700; }
+.kzmx-ghost { min-height: 56px; background: rgba(255,255,255,.08); box-shadow: inset 0 0 0 1px rgba(255,255,255,.14); color: #FFFFFF; font-size: 15px; font-weight: 700; }
+.kzmx-gold:focus-visible, .kzmx-ghost:focus-visible, .kzmx-x:focus-visible, .kzmx-share:focus-visible, .kzmx-row:focus-visible, .kzmx-cta:focus-visible { outline: 2px solid #F2CF5B; outline-offset: 3px; }
+/* Growth with no goals: the large-title mode (kzp-lt) waited for a big title that the mountains view replaces, so the
+   header title stayed invisible. The header title always shows on the mountains view. */
+html.kzp-lt.kz-mtn body header#kz-header#kz-header.kz-h49 .kz-htitle { opacity: 1 !important; }
+/* contrast (WCAG AA 4.5:1 measured against the real photo pixels behind each label) */
+.kzmx-tg { height: 175px; background: linear-gradient(rgba(11,12,16,.92), rgba(11,12,16,.6) 60%, rgba(11,12,16,0)); }
+.kzmx-cpl, .kzmx-pkn { padding: 2px 7px; border-radius: 999px; background: rgba(11,12,16,.82); text-shadow: none; }
+.kzmx-pkn { margin-top: 2px; }
+.kzmx-pin b { background: rgba(11,12,16,.9); }
+.kzmx-sum::before { height: 74%; background: linear-gradient(rgba(11,12,16,0), rgba(11,12,16,.93) 30%, #0B0C10 55%); }
+
+/* ===== v2 scene drawing (map-app conventions) ===== */
+.kzmx-ln-case, .kzmx-ln-todo, .kzmx-ln-dcase, .kzmx-ln-glow, .kzmx-ln-done { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.kzmx-ln-case { stroke: rgba(11,12,16,.5); stroke-width: 5; }
+.kzmx-ln-todo { stroke: rgba(255,255,255,.92); stroke-width: 2.2; stroke-dasharray: .01 6.5; }
+.kzmx-ln-dcase { stroke: rgba(11,12,16,.62); stroke-width: 7.5; }
+.kzmx-ln-glow { stroke: rgba(255,106,26,.45); stroke-width: 10; filter: blur(4px); }
+.kzmx-ln-done { stroke: #FF6A1A; stroke-width: 4; }
+.kzmx-cp, .kzmx-puck, .kzmx-step, .kzmx-summit, .kzmx-lab { position: absolute; }
+.kzmx-cp { width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 999px; box-sizing: border-box; background: #0B0C10; border: 2.5px solid #FF6A1A; box-shadow: 0 0 0 1.5px rgba(11,12,16,.55); }
+.kzmx-cp.on { background: #FF6A1A; border-color: #FFFFFF; }
+.kzmx-cp.next { width: 14px; height: 14px; margin: -7px 0 0 -7px; }
+/* YOU: a location puck — white ring, orange core, soft halo that breathes (still with Reduce Motion) */
+.kzmx-puck { width: 24px; height: 24px; margin: -12px 0 0 -12px; border-radius: 999px; background: #FFFFFF; box-shadow: 0 2px 8px rgba(0,0,0,.55); }
+.kzmx-puck .kzmx-pc { position: absolute; left: 5px; top: 5px; width: 14px; height: 14px; border-radius: 999px; background: #FF6A1A; }
+.kzmx-puck::before { content: ""; position: absolute; left: -10px; top: -10px; width: 44px; height: 44px; border-radius: 999px; background: rgba(255,106,26,.28); }
+.kzmx-puck.live::before { animation: kzmx-halo 2.6s ease-out infinite; }
+@keyframes kzmx-halo { 0% { transform: scale(.55); opacity: .9; } 100% { transform: scale(1.25); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .kzmx-puck.live::before { animation: none; } }
+/* the top: a gold badge with a flag on a short stem, the stem's foot exactly on the summit */
+.kzmx-summit { width: 0; height: 0; }
+.kzmx-sdot { position: absolute; left: -4px; top: -4px; width: 8px; height: 8px; border-radius: 999px; background: #FFE7A0; box-shadow: 0 0 0 1.5px rgba(11,12,16,.6), 0 0 10px rgba(242,207,91,.8); }
+.kzmx-stem { position: absolute; left: -1px; top: -14px; width: 2px; height: 12px; border-radius: 2px; background: #F2CF5B; }
+.kzmx-sbadge { position: absolute; left: -15px; top: -44px; width: 30px; height: 30px; border-radius: 999px; display: flex; align-items: center; justify-content: center; color: #16120A;
+  background: radial-gradient(130% 100% at 30% 0%, #FFF3C8 0%, #E9C55A 45%, #B8902E 100%); box-shadow: 0 0 0 1.5px rgba(11,12,16,.55), 0 6px 16px rgba(0,0,0,.45), 0 0 18px rgba(242,207,91,.35); }
+.kzmx-sbadge svg { width: 16px; height: 16px; margin-left: 2px; }
+.kzmx-summit.small .kzmx-sbadge { left: -13px; top: -40px; width: 26px; height: 26px; }
+.kzmx-summit.small .kzmx-sbadge svg { width: 14px; height: 14px; }
+.kzmx-sbadge.dim { color: #F2CF5B; background: rgba(11,12,16,.85); box-shadow: 0 0 0 1.5px #F2CF5B, 0 6px 16px rgba(0,0,0,.45); }
+/* expedition steps: 24 pt numbered markers sitting on the real ridge */
+.kzmx-step { width: 24px; height: 24px; margin: -12px 0 0 -12px; border-radius: 999px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;
+  background: rgba(11,12,16,.82); border: 1.5px solid rgba(255,255,255,.75); color: #FFFFFF; box-shadow: 0 2px 8px rgba(0,0,0,.5); }
+.kzmx-step b { font-size: 11px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.kzmx-step svg { width: 16px; height: 16px; }
+.kzmx-step.on { background: #FF6A1A; border: 2px solid #FFFFFF; color: #FFFFFF; }
+.kzmx-step.next { border: 2.5px solid #FF6A1A; box-shadow: 0 0 0 4px rgba(255,106,26,.25), 0 2px 8px rgba(0,0,0,.5); }
+/* labels: 11 pt pills, dark glass, always inside the card */
+.kzmx-lab { white-space: nowrap; padding: 3px 8px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: .3px; color: #FFFFFF;
+  background: rgba(11,12,16,.86); box-shadow: 0 0 0 1px rgba(255,255,255,.1); transform: translate(-50%, -50%); }
+.kzmx-lab.gold { color: #FFE7A0; box-shadow: 0 0 0 1px rgba(242,207,91,.35); transform: translate(-50%, -100%); }
+.kzmx-lab.side { transform: translate(14px, -50%); }
+.kzmx-lab.you { transform: translate(18px, -50%); }
+.kzmx-lab.below { transform: translate(-50%, 18px); color: #FF9A5C; }
+/* Today card: the top of the bar is a small gold flag */
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-bar > .kzmx-top { position: absolute; right: -4px; top: 50%; width: 14px; height: 14px; margin-top: -12px; border: 0; color: #F2CF5B; filter: drop-shadow(0 1px 2px rgba(0,0,0,.6)); }
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-bar > .kzmx-top svg { width: 14px; height: 14px; display: block; }
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-bar > .kzmx-cp { width: 10px; height: 10px; margin: -5px 0 0 -5px; top: 50%; background: #0B0C10; border: 2px solid #FF6A1A; box-shadow: none; }
+/* Growth: the earned pin carries the flag */
+.kzmx-pin .kzmx-pf { display: inline-flex; width: 12px; height: 12px; margin: 0 4px -1px 0; vertical-align: -1px; }
+.kzmx-pin .kzmx-pf svg { width: 12px; height: 12px; }
+.kzmx-lab.gold.r { transform: translate(22px, -50%); }
+.kzmx-lab.gold.l { transform: translate(calc(-100% - 22px), -50%); }
+.kzmx-lab.side.flip { transform: translate(calc(-100% - 14px), -50%); }
+.kzmx-lab.you.flip { transform: translate(calc(-100% - 18px), -50%); }
+.kzmx-lab.gold.u { transform: translate(-50%, 44px); }
+
+/* ===== Nov 2: pins stand on the photo's ridge; the open Kaizen 66 card shows the goal's climb ===== */
+.kzmx-pin { position: absolute; width: 0; height: 0; transform: none; display: block; }
+.kzmx-pin u { position: absolute; left: -5px; top: -5px; width: 10px; height: 10px; border-radius: 999px; box-sizing: border-box; background: #FFFFFF; box-shadow: 0 0 0 2.5px #FF6A1A, 0 0 0 4px rgba(11,12,16,.5), 0 0 10px rgba(255,106,26,.9); }
+.kzmx-pin i { position: absolute; left: -.5px; bottom: 6px; width: 1.5px; height: var(--stem, 14px); background: rgba(255,106,26,.9); }
+.kzmx-pin b { position: absolute; left: 0; bottom: calc(var(--stem, 14px) + 6px); transform: translateX(-50%); white-space: nowrap; }
+.kzmx-pin.gold u { background: #FFE7A0; box-shadow: 0 0 0 2px #B8902E, 0 0 12px #F2CF5B; }
+.kzmx-pin.gold i { width: 2px; left: -1px; background: #F2CF5B; }
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-tree { position: relative !important; width: 100% !important; height: 210px !important; max-width: none !important; margin: 0 !important; padding: 0 !important; border-radius: 18px; overflow: hidden; background: #0B0C10; }
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-tree > img, section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-tree > i { display: none !important; }
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-tree > .kzmx-mini { position: absolute; inset: 0; height: auto; border-radius: 18px; box-shadow: none; }
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-tree > .kzmx-mini .kzmx-ph { width: 100%; height: 100%; object-fit: cover; }
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-tree { min-height: 210px !important; max-height: 210px !important; display: block !important; }
+section.kzf-66.kzmx:not(#kz-n1):not(#kz-n2) .kzf-tree > .kzmx-mini img.kzmx-ph { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; max-width: none !important; max-height: none !important; margin: 0 !important; object-fit: cover !important; }
+.kzmx-sdot, .kzmx-stem, .kzmx-pc { display: block; }
+.kzmx-pin b { line-height: 16px; }
+/* the trail: footprints on the slope, shrinking with distance; the climbed part thins with height */
+.kzmx-ft { fill: #FFFFFF; }
+.kzmx-ft-sh { fill: rgba(11,12,16,.5); }
+.kzmx-ln-dcase { stroke: rgba(11,12,16,.55); }
+.kzmx-ln-glow { stroke: rgba(255,106,26,.4); filter: blur(3px); }
+
+/* ---------- Nov 2 · header: the streak chip goes, so the quote / question / note button stands out ---------- */
+html body #kz-header .kz-hright > .kz-chip.gold:not(#kz-n1):not(#kz-n2) { display: none !important; }
+html body #kz-header .kz-hright > .kzf-q:not(#kz-n1):not(#kz-n2) { color: #F2CF5B; box-shadow: inset 0 0 0 1px rgba(233,197,90,.45), 0 4px 14px rgba(0,0,0,.35); }
+
+/* ---------- Nov 2 · Growth: swipe through every mountain ---------- */
+.kzmx-car { display: flex; gap: 10px; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  margin: 12px -16px 0; padding: 2px 16px 10px; scroll-padding: 0 16px; }
+.kzmx-car::-webkit-scrollbar { display: none; }
+.kzmx-tile { flex: 0 0 156px; scroll-snap-align: start; display: flex; flex-direction: column; border-radius: 22px; overflow: hidden; text-decoration: none;
+  background: linear-gradient(rgba(255,255,255,.09), rgba(255,255,255,.035)), #121318; box-shadow: 0 0 0 1px rgba(255,255,255,.06), 0 12px 28px rgba(0,0,0,.45); }
+.kzmx-tile:active { transform: scale(.98); }
+.kzmx-tile.run { box-shadow: 0 0 0 1px rgba(212,175,55,.55), 0 12px 28px rgba(0,0,0,.45); }
+.kzmx-tile.gold { box-shadow: 0 0 0 1.5px rgba(242,207,91,.7), 0 12px 28px rgba(0,0,0,.45); }
+.kzmx-tile .kzmx-tsc { display: block; border-radius: 0; box-shadow: none; flex: none; }
+.kzmx-tile .kzmx-ph { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.kzmx-tile .kzmx-summit { transform: scale(.72); transform-origin: 50% 100%; }
+.kzmx-tile .kzmx-cp { transform-origin: 50% 50%; }
+.kzmx-t66 { display: block; margin: 10px 12px -6px; font-style: normal; font-size: 10px; font-weight: 800; letter-spacing: 1.2px; color: #E9C55A; }
+.kzmx-tx { display: flex; flex-direction: column; gap: 3px; padding: 10px 12px 12px; min-width: 0; }
+.kzmx-tx b { font-size: 15px; font-weight: 800; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kzmx-tx em { font-style: normal; font-size: 12.5px; font-weight: 700; color: #FF7A2E; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kzmx-tile.gold .kzmx-tx em { color: #F2CF5B; }
+.kzmx-swipe { margin: 2px 6px 0; font-size: 12px; font-weight: 600; color: #8E8E93; }
+.kzmx-tot { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 10px; margin-top: 12px; padding: 14px 16px; border-radius: 20px; background: linear-gradient(rgba(255,255,255,.09), rgba(255,255,255,.035)), #121318; }
+.kzmx-tot span { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.kzmx-tot b { font-size: clamp(15px, 4.7vw, 19px); font-weight: 800; color: #fff; white-space: nowrap; }
+.kzmx-tot b.gold { color: #F2CF5B; }
+.kzmx-tot em { font-style: normal; font-size: 10.5px; font-weight: 600; color: #B7BAC2; letter-spacing: .4px; line-height: 1.25; }
+
+/* ---------- Nov 2 · goal page: previous · n of N · next, and swipe ---------- */
+.kzmx-pager { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 0 0 8px; font-family: -apple-system, 'SF Pro Text', system-ui, sans-serif; }
+.kzmx-pager a { display: inline-flex; align-items: center; gap: 4px; min-height: 44px; min-width: 0; max-width: 42%; padding: 0 6px; color: #C7C7CC; text-decoration: none; font-size: 14px; font-weight: 600; }
+.kzmx-pager a span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.kzmx-pager svg { flex: none; width: 18px; height: 18px; fill: none; stroke: #E9C55A; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.kzmx-pager b { flex: none; font-size: 13px; font-weight: 700; color: #8E8E93; letter-spacing: .3px; }
+html.kzmx-inr #kzmx-scene { animation: kzmxInR .28s ease both; }
+html.kzmx-inl #kzmx-scene { animation: kzmxInL .28s ease both; }
+@keyframes kzmxInR { from { transform: translateX(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes kzmxInL { from { transform: translateX(-40px); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { html.kzmx-inr #kzmx-scene, html.kzmx-inl #kzmx-scene { animation: none; } .kzmx-tile:active { transform: none; } }
+
+/* Nov 2 b · tile photos a little brighter; no bottom shade (the name sits below the photo, not on it) */
+.kzmx-tile .kzmx-ph { filter: brightness(1.14) contrast(1.06); }
+.kzmx-tile .kzmx-bg2 { display: none; }
+.kzmx-tile .kzmx-step { transform: scale(.82); }
+

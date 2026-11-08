@@ -1,0 +1,2 @@
+/* Nov 2 · My goals: the "days left in the year" bar sits on the black page, no card (James) */
+html body .kz-year:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7):not(#kz-n8) { background: none !important; background-image: none !important; background-color: transparent !important; box-shadow: none !important; border: 0 !important; padding-left: 0 !important; padding-right: 0 !important; }

@@ -1,0 +1,41 @@
+Kaizen mountain photos. All from Unsplash under the Unsplash License (free for commercial use, no attribution required).
+Graded, cropped and resized for the app. Source pages:
+
+p01  https://unsplash.com/photos/sunlight-illuminating-a-snow-covered-mountain-peak-Z4g5S4sksPQ
+p02  https://unsplash.com/photos/aerial-photography-of-grey-and-brown-mountain-OWsdJ-MllYA
+p03  https://unsplash.com/photos/mountain-covered-by-snow-6yBAQeeNROU
+p04  https://unsplash.com/photos/snow-covered-mountain-during-nighttime-ddLiNMqWAOM
+p05  https://unsplash.com/photos/snow-covered-mountain-during-daytime-tU9u8LXFCqU
+p06  https://unsplash.com/photos/snow-covered-mountain-under-blue-sky-during-daytime-sNJmj60mNx8
+p07  https://unsplash.com/photos/mountains-with-snow-under-blue-sky-tMHJUOKFLjU
+p08  https://unsplash.com/photos/landscape-photo-of-black-and-white-mountain-peak-T8gG3G-fWE0
+p09  https://unsplash.com/photos/mountain-covered-with-snow-T0XLKgpyT_c
+p10  https://unsplash.com/photos/snow-covered-mountain-under-blue-sky-during-daytime-P8LFkBnTGVY
+p11  https://unsplash.com/photos/snow-capped-mountain-ranges-under-cloudy-skies-MaG8tiHjqXc
+p12  https://unsplash.com/photos/jagged-mountain-peak-against-a-clear-blue-sky-QArMORTEL5M
+p13  https://unsplash.com/photos/machapuchare-peak-in-the-himalayas-L6jxljMeUoo
+p14  https://unsplash.com/photos/a-mountain-range-covered-in-snow-at-sunset-infssQ2tjeM
+p15  https://unsplash.com/photos/snow-covered-mountain-under-blue-sky-during-daytime-sqdY_rJg8wg
+p16  https://unsplash.com/photos/snow-capped-mountain-peak-under-a-starry-night-sky-5WuO0I4ryaI
+p17  https://unsplash.com/photos/a-black-and-white-photo-of-a-mountain-range-085IokeeEYc
+p18  https://unsplash.com/photos/ice-capped-mountain-at-daytime-xfngap_DToE
+p19  https://unsplash.com/photos/aerial-view-of-mountain-eUFfY6cwjSU
+p20  https://unsplash.com/photos/a-mountain-range-with-a-pink-sky-in-the-background-150fZ07GQqs
+p21  https://unsplash.com/photos/snowy-mountains-under-a-starry-night-sky-SumjjLhysZM
+p22  https://unsplash.com/photos/brown-mountain-near-body-of-water-during-daytime-U6pLKRSQLis
+p23  https://unsplash.com/photos/snow-covered-mountain-under-blue-sky-during-daytime-CoE79_lhTJM
+p24  https://unsplash.com/photos/mount-everest-illuminated-by-golden-sunrise-light-at-sunrise-ksglBz2VHQQ
+p25  https://unsplash.com/photos/a-snow-covered-mountain-with-clouds-in-the-sky-eyn0LjpNWV4
+s01  https://unsplash.com/photos/aerial-photo-of-foggy-mountains-1527pjeb6jg
+s02  https://unsplash.com/photos/hazy-mountain-range-silhouette-at-sunset-OgLSqFUukB4
+s03  https://unsplash.com/photos/landscape-photography-of-mountains-twukN12EN7c
+s04  https://unsplash.com/photos/rocky-mountain-peak-shrouded-in-fog-HKM0ciYbEWo
+s05  https://unsplash.com/photos/gray-scale-photo-of-mountain-and-sea-of-clouds-4IaXCTjjmxA
+s06  https://unsplash.com/photos/the-sun-is-shining-over-the-mountains-and-clouds-5BnbxeVYyBQ
+e01  https://unsplash.com/photos/snow-capped-mountains-rise-above-clouds-at-sunrise-62qybFmz4p0
+e02  https://unsplash.com/photos/snow-covered-mountain-under-blue-sky-during-daytime-oCGLfr7GSPk
+e04  https://unsplash.com/photos/snowy-mountain-peak-under-starry-sky-3s85IxVDyXE
+e05  https://unsplash.com/photos/snow-capped-mountains-under-a-starry-night-sky-2nwL6D1CsDU
+e06  https://unsplash.com/photos/snow-capped-mountains-under-a-clear-blue-sky-4ThlRubnd4o
+
+h1–h6, exped, storm, summit, range, fog: earlier set (Promo Kit/Mountain photos, Unsplash).

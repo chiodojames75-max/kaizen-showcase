@@ -1,0 +1,2 @@
+/* Nov 2 · the to-do multiplier pill is gone (James: "it really does nothing"). */
+html body .kz-mult, html body .kz-mx { display: none !important; }

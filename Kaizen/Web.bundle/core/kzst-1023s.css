@@ -1,0 +1,36 @@
+/* Oct 23 · Stat cards, option B (see kzst-1023s.js) */
+html body .kz-st-src:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5) { display: none !important; }
+.kz-st { font-family: var(--kz-sans, -apple-system, system-ui, sans-serif); color: #fff; }
+.kz-st-tree { display: flex; flex-direction: column; gap: 14px; background: #1C1C1E; border-radius: 14px; padding: 16px; }
+.kz-st-row { display: flex; flex-direction: column; gap: 6px; }
+.kz-st-h { display: flex; justify-content: space-between; align-items: baseline; }
+.kz-st-h span { font: 400 15px/1.2 var(--kz-sans, -apple-system, sans-serif); color: #AEAEB2; }
+.kz-st-h b { font: 700 22px/1.1 var(--kz-sans, -apple-system, sans-serif); letter-spacing: -.02em; color: #fff; font-variant-numeric: tabular-nums; }
+.kz-st-h b.w { color: #64D2FF; }
+.kz-st-bar { height: 8px; border-radius: 4px; background: #2C2C2E; overflow: hidden; }
+.kz-st-bar i { display: block; height: 100%; border-radius: 4px; background: #E2B93B; }
+.kz-st-bar.blue i { background: #64D2FF; }
+.kz-st-segs { display: grid; gap: 4px; }
+.kz-st-segs i { height: 8px; border-radius: 4px; background: #2C2C2E; }
+.kz-st-segs i.on { background: #E2B93B; }
+.kz-st-row small { font: 400 13px/1.3 var(--kz-sans, -apple-system, sans-serif); color: #8E8E93; }
+.kz-st-last { border-top: .5px solid #38383A; padding-top: 12px; }
+/* Progress card: the share icon stays where it was (top right of the card) */
+.kz-st-prog { display: flex; flex-direction: column; gap: 14px; background: #1C1C1E; border-radius: 14px; padding: 14px 16px 16px; margin: 12px 0; }
+.kz-st-top { display: flex; align-items: baseline; gap: 8px; min-height: 44px; padding-right: 48px; }
+.kz-st-top b { font: 700 34px/1 var(--kz-sans, -apple-system, sans-serif); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.kz-st-top span { font: 400 15px/1.2 var(--kz-sans, -apple-system, sans-serif); color: #AEAEB2; }
+.kz-st-week { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+.kz-st-d { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.kz-st-d span { font: 400 12px/1 var(--kz-sans, -apple-system, sans-serif); color: #8E8E93; }
+.kz-st-d.now span { color: #fff; font-weight: 600; }
+.kz-st-d i { width: 32px; height: 32px; border-radius: 16px; box-sizing: border-box; border: 1.5px solid #3A3A3C; }
+.kz-st-d i.on { background: #E2B93B; border-color: #E2B93B; }
+.kz-st-d i.rest { background: #0071E3; border-color: #0071E3; }
+.kz-st-d i.fut { background: #2C2C2E; border-color: #2C2C2E; }
+.kz-st-d i.now { box-shadow: 0 0 0 3px #1C1C1E, 0 0 0 5px rgba(226, 185, 59, .55); }
+.kz-st-foot { display: flex; gap: 20px; font: 400 15px/1.2 var(--kz-sans, -apple-system, sans-serif); color: #AEAEB2; }
+.kz-st-foot b { color: #fff; font-weight: 600; font-variant-numeric: tabular-nums; }
+@media (max-width: 360px) { .kz-st-d i { width: 28px; height: 28px; } }
+/* Today streak card: the shield progress bars fill blue (shields are blue everywhere: rest days, the shield badge), not green (James) */
+html body #kz-main #kz-today-s1#kz-today-s1 .kz-tc-bars i.on:not(.kz-n1) { background: #0A84FF !important; }

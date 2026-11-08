@@ -1,0 +1,42 @@
+/* Oct 25 r · Quit a bad habit (kzquit-1025r.js) */
+html body .kz-kindseg.kzq-seg:not(#kz-n1) { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)) !important; display: grid !important; grid-auto-flow: column; }
+html body .kz-kindseg.kzq-seg > button:not(#kz-n1) { min-width: 0; padding-left: 4px !important; padding-right: 4px !important; font-size: 14px !important; white-space: nowrap; }
+html body .kz-sheet49.kzq-on :is([data-t="picks-wrap"], [data-gx="picks-wrap"], .kz-morebtn, .kz-moregrp, .kzbd, [data-t="gstep-w"], [data-gx="gstep-w"], [data-t="more"]):not(#kz-n1):not(#kz-n2) { display: none !important; }
+body .kzq-box[hidden] { display: none !important; }
+body .kzq-box { display: flex; flex-direction: column; gap: 12px; }
+body .kzq-picks { display: flex; flex-wrap: wrap; gap: 8px; }
+body .kzq-picks button { min-height: 36px; padding: 0 14px; border-radius: 18px; border: 0; background: #2C2C2E; color: #EBEBF5; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
+body .kzq-picks button:active { transform: scale(.96); }
+body .kzq-why { min-height: 48px; }
+/* Today */
+html body #kz-today-s1 .kz-goal.kzq-hide:not(#kz-n1):not(#kz-n2) { display: none !important; }
+html body #kz-today-s1 .kz-gsec.kzq-empty:not(#kz-n1):not(#kz-n2) { display: none !important; }
+body .kzq-sec { order: 999; }
+body .kzq-list { display: flex; flex-direction: column; border-radius: 16px; background: #1C1C1E; overflow: hidden; }
+body .kzq-row { display: flex; align-items: center; gap: 10px; min-height: 64px; padding: 8px 10px 8px 16px; }
+body .kzq-row + .kzq-row { border-top: 0.5px solid #2C2C2E; }
+body .kzq-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; color: #FFFFFF !important; text-decoration: none; }
+body .kzq-main b { font-size: 16px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+body .kzq-main em { font-style: normal; font-size: 13px; color: #30D158; font-weight: 600; }
+body .kzq-act { flex: 0 0 auto; display: flex; align-items: center; gap: 6px; }
+body .kzq-btn { min-height: 40px; padding: 0 12px; border-radius: 20px; border: 0; background: #2C2C2E; color: #EBEBF5; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
+body .kzq-btn.ok { background: #30D158; color: #000000; }
+body .kzq-btn[data-sure] { background: #FF453A; color: #FFFFFF; }
+body .kzq-btn:active { transform: scale(.96); }
+body .kzq-lock { display: inline-flex; align-items: center; gap: 5px; min-height: 36px; padding: 0 12px; border-radius: 18px; background: #2C2C2E; color: #8E8E93; font-size: 13px; font-weight: 700; }
+body .kzq-lock svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+body .kzq-st { font-size: 13px; color: #8E8E93; font-weight: 600; }
+body .kzq-st.ok { color: #30D158; }
+body .kzq-ask { font-size: 13px; color: #EBEBF5; font-weight: 600; margin-right: 2px; }
+body .kzq-undo { min-height: 40px; min-width: 44px; border: 0; background: none; color: #8E8E93; font: inherit; font-size: 13px; cursor: pointer; }
+/* only on Today */
+html body .kzq-gone:not(#kz-n1):not(#kz-n2) { display: none !important; }
+/* the goal page */
+html body #kz-goalpage.kzq-page :is(.kz-g1row, .kzg-goal, .kzbd-gp):not(#kz-n1):not(#kz-n2) { display: none !important; }
+body .kzq-gp { margin: 14px 0 0; padding: 16px; border-radius: 16px; background: #1C1C1E; color: #FFFFFF; }
+body .kzq-big { display: flex; align-items: baseline; gap: 8px; }
+body .kzq-big b { font-size: 44px; font-weight: 900; color: #30D158; letter-spacing: -.02em; }
+body .kzq-big span { font-size: 16px; color: #8E8E93; }
+body .kzq-gl, body .kzq-why2 { margin: 8px 0 0; font-size: 15px; color: #AEAEB2; }
+body .kzq-help { display: block; margin-top: 12px; padding: 12px 14px; border-radius: 12px; background: #2C2C2E; color: #EBEBF5 !important; font-size: 14px; text-decoration: none; line-height: 1.35; }
+html.kzq-66lock body .kzf-ck:not(#kz-n1):not(#kz-n2) { pointer-events: none !important; opacity: .35 !important; }

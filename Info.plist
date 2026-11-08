@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Kaizen uses the microphone only while you use Dictate, to turn what you say into text for a note or journal entry.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Kaizen turns what you say into text when you use Dictate. Kaizen doesn't keep any recording.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Kaizen uses the camera only if you choose to take a new profile photo. The photo stays on your phone.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Kaizen opens your photos only so you can pick a profile photo. It stays on your phone.</string>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>LaunchBackground</string>
+		<key>UIImageName</key>
+		<string>LaunchSplit</string>
+	</dict>
+</dict>
+</plist>

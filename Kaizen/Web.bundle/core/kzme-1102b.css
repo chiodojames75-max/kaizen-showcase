@@ -1,0 +1,10 @@
+/* Nov 2 · Me: no card behind the photo and name, just the black page (James: "take away the background gradient pill"). */
+html body #kz-main #kz-me#kz-me#kz-me .kz-set-card.kzpb-profcard:not(#kz-n1):not(#kz-n2):not(#kz-n3) {
+  background: none !important; background-image: none !important; background-color: transparent !important;
+  box-shadow: none !important; border: 0 !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+}
+html body #kz-main #kz-me#kz-me#kz-me .kz-set-card.kzpb-profcard:not(#kz-n1):not(#kz-n2):not(#kz-n3)::before,
+html body #kz-main #kz-me#kz-me#kz-me .kz-set-card.kzpb-profcard:not(#kz-n1):not(#kz-n2):not(#kz-n3)::after { display: none !important; }
+
+/* Nov 2 b · the stat row sits on the black page too: no card, the thin dividers stay */
+html body #kz-main #kz-me#kz-me#kz-me .kzpb-stats:not(#kz-n1):not(#kz-n2):not(#kz-n3), html body #kz-main#kz-main#kz-main .kzpb-stats:not(#kz-n1):not(#kz-n2):not(#kz-n3) { background: none !important; background-image: none !important; background-color: transparent !important; box-shadow: none !important; border: 0 !important; }

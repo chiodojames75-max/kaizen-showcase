@@ -1,0 +1,8 @@
+/* Oct 30 · kzltgoal-1030.js: a long-term goal with a roadmap shows no daily-habit parts on its goal page. */
+html.kzlt-ms body .kzg-goal .kzg-dayrow:not(#kz-n1):not(#kz-n2),
+html.kzlt-ms body .kzg-goal .kzl-next:not(#kz-n1):not(#kz-n2),
+html.kzlt-ms body .kzg-goal .kzg-ms:not(#kz-n1):not(#kz-n2),
+html.kzlt-ms body .kzg-goal .kzg-bar:not(#kz-n1):not(#kz-n2),
+html.kzlt-ms body .kz-g1step:not(#kz-n1):not(#kz-n2),
+html.kzlt-ms body .kz-g1stats:not(#kz-n1):not(#kz-n2),
+html.kzlt-ms body .kz-g1hist:not(#kz-n1):not(#kz-n2) { display: none !important; }

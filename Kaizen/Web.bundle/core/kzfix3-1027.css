@@ -1,0 +1,10 @@
+/* Oct 27 · see kzfix3-1027.js */
+/* the sheets' main button (Add goal / Start quitting / Save) sits under the last field (below Branch), never floating over the form */
+html body .kz-sheet49 .kz-sheet-in > .kz-btn.gold:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7) { position: relative !important; bottom: auto !important; margin-top: 18px !important; }
+/* profile photo */
+html body .kz-set-av.kzav { position: relative; overflow: visible; background-size: cover; background-position: center; cursor: pointer; }
+html body .kz-set-av.kzav.has { color: transparent !important; }
+html body .kzav-cam { position: absolute; right: -2px; bottom: -2px; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%); box-shadow: 0 0 0 2.5px #1C1C1E, 0 4px 10px rgba(0,0,0,.4); }
+html body .kzav-cam svg { width: 15px; height: 15px; fill: none; stroke: #1A1404; stroke-width: 2.2; stroke-linejoin: round; }
+html body .kz-set-av.kzav.has:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) { background: var(--kzav) center / cover no-repeat, #3A3A3C !important; color: transparent !important; }

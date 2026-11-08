@@ -1,0 +1,287 @@
+<!doctype html><html lang="en"><head><link rel="stylesheet" href="/core/kzgate-1028.css"><script src="/core/kzb-6686e5cb4b.js"></script><style id="kz-gate">html{background:#000}html:not(.kz-shown) body{opacity:0!important}html.kz-shown body{transition:opacity .16s ease-out}</style><script id="kz-gate-js">/* Oct 26: show the screen only once it has finished drawing (no flashes of older layouts while the page sets itself up). Revealed after 100 ms with no changes, or at 700 ms at most. */(function(){var d=document.documentElement,done=0,last=0,t0=0;function show(){if(done)return;done=1;try{mo.disconnect()}catch(e){}d.classList.add("kz-shown")}var mo=new MutationObserver(function(){last=Date.now()});mo.observe(d,{subtree:true,childList:true,attributes:true,characterData:true});function tick(){var n=Date.now();if(n-last>100||n-t0>700)show();else requestAnimationFrame(tick)}function go(){t0=last=Date.now();requestAnimationFrame(function(){requestAnimationFrame(tick)})}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",go);else go();setTimeout(show,1500)})();</script><meta http-equiv="Content-Security-Policy" content="default-src 'self' kaizen:; script-src 'self' kaizen: 'unsafe-inline'; style-src 'self' kaizen: 'unsafe-inline'; img-src 'self' kaizen: data: blob:; font-src 'self' kaizen: data:; media-src 'self' kaizen: data: blob:; connect-src 'self' kaizen: data: blob:; frame-src 'none'; child-src 'none'; worker-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'none'"><script src="/core/kzb-823243f827.js"></script><script>/* Oct 22: tab slide direction, set before the first frame */try{var kzd=JSON.parse(sessionStorage.getItem('kz_vtdir')||'null');sessionStorage.removeItem('kz_vtdir');if(kzd&&Date.now()-kzd.t<2500)document.documentElement.classList.add('kz-vt','kz-vt-'+kzd.d);}catch(e){}</script><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"><meta name="theme-color" content="#0D0F13"><meta name="format-detection" content="telephone=no"><title>Journal · Kaizen</title><link rel="stylesheet" href="/core/pg-journal-1026i.css"><script>(function(){var id="fresh-2026-10-22";try{if(localStorage.getItem("kzreset")!==id){Object.keys(localStorage).forEach(function(k){if(k.indexOf("kz_")===0)localStorage.removeItem(k)});try{sessionStorage.clear()}catch(e){}localStorage.setItem("kzreset",id)}}catch(e){}})();</script><script src="/core/d8db67ae2f89.js"></script><script src="/art/sprites.js"></script><script src="/core/1483bd119abb.js"></script><script>(function(){var y=null,F=/^(INPUT|TEXTAREA|SELECT)$/;document.addEventListener("focusin",function(e){if(F.test(e.target.tagName)&&y===null&&!document.documentElement.classList.contains("kz-lock"))y=window.scrollY;},true);document.addEventListener("focusout",function(){setTimeout(function(){var a=document.activeElement;if(a&&F.test(a.tagName))return;if(y!==null){if(Math.abs(window.scrollY-y)>1)window.scrollTo(0,y);y=null;}},80);},true);})();</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="kz-early-h">/* Oct 24: set the header classes before first paint so the top bar does not flicker on load */document.documentElement.classList.add('kz-hA','kzp-lt')</script><link rel="stylesheet" href="/core/kzb-9feb815784.css">
+</head><body class="kz kz49"><svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="kzseam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#BFC4CC"/><stop offset=".5" stop-color="#BFC4CC"/><stop offset=".5" stop-color="#FFFFFF"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient><linearGradient id="kzseamgold" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#B8902E"/><stop offset=".5" stop-color="#B8902E"/><stop offset=".5" stop-color="#E9C55A"/><stop offset="1" stop-color="#E9C55A"/></linearGradient></defs></svg>
+
+
+
+
+
+
+<link rel="stylesheet" href="/core/kzdays-1030b.css">
+
+
+
+
+
+
+<script src="/core/kzb-45e2e4beeb.js"></script>
+
+
+
+<div class="kz-sheet49 kz-appsheet" id="kz-reminders" hidden role="dialog" aria-modal="true" aria-labelledby="kz-rem-t">
+  <div class="kz-sheet-in kz-center49">
+    <div class="kz-sheet-top"><span class="kz-chip49 green" data-kz-rem-badge hidden><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-kz-rem-badge-t>First goal done</span></span><span></span><button type="button" class="kz-iconbtn" data-kz-close aria-label="Close"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="kz-bell"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4l2-2z"/><path d="M10 21h4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></div>
+    <h2 class="kz-t49" id="kz-rem-t">Keep <span data-kz-tname>your tree</span> alive</h2>
+    <p class="kz-p49" data-kz-rem-how>One nudge in the morning, one rescue at night. Never more than two a day. They go on your phone's Calendar, so they alert even when Kaizen is closed.</p>
+    <div class="kz-steprow">
+      <span>Morning plan</span>
+      <div><button type="button" class="kz-iconbtn solid" data-kz-time="-30" aria-label="30 minutes earlier"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></button><b data-kz-time-v aria-live="polite">7:30 AM</b><button type="button" class="kz-iconbtn solid" data-kz-time="30" aria-label="30 minutes later"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button></div>
+    </div>
+    <label class="kz-steprow kz-switchrow"><span><strong>Evening rescue · 8:00 PM</strong><em>Open Kaizen, finish what's left</em></span><input type="checkbox" class="kz-sw49" data-kz-rem-eve checked></label>
+    <button type="button" class="kz-btn gold" data-kz-rem-go>Add reminders to my Calendar</button>
+    <p class="kz-note49" data-kz-rem-done hidden></p>
+    <button type="button" class="kz-btn ghost danger" data-kz-rem-off hidden>Turn off reminders</button>
+    <button type="button" class="kz-btn ghost" data-kz-close>Not now</button>
+  </div>
+</div>
+
+<div class="kz-sheet49 kz-appsheet" id="kz-delete" hidden role="dialog" aria-modal="true" aria-labelledby="kz-del-t">
+  <div class="kz-sheet-in kz-center49">
+    <h2 class="kz-t49" id="kz-del-t">Delete all your data?</h2>
+    <p class="kz-p49">This erases your goals, check-ins, plans, to-dos, journal, tree and reminders from this phone<span data-kz-del-cloud hidden>, and deletes your Kaizen account and everything synced to it</span>. It can’t be undone.</p>
+    <button type="button" class="kz-btn ghost" data-kz-backup>Export my data first</button>
+    <button type="button" class="kz-btn danger" data-kz-del-go>Delete everything</button>
+    <p class="kz-note49" data-kz-del-msg role="status" hidden></p>
+    <button type="button" class="kz-btn ghost" data-kz-close>Cancel</button>
+  </div>
+</div>
+
+
+
+
+
+
+<script src="/core/kzb-8bc3683d37.js"></script>
+
+
+
+<header class="kz-header kz-h49" id="kz-header">
+  <div class="kz-wrap kz-hbar">
+    
+    <a class="kz-brand kz-htitle" href="/" aria-label="Kaizen, Journal"><svg class="kz-mark" width="20" height="20" viewBox="56 52 88 78"><path d="M64 122 H136 L100 60 L82 91" fill="none" stroke="#E2B93B" stroke-width="8" stroke-linecap="square"/></svg><span><b>Journal</b></span></a>
+    <span class="kz-hright">
+      <span class="kz-chip gold" data-kz-streak-pill hidden><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2.2 1.2-3.6 2.4-4.6.3 1.6 1.2 2.6 2.4 2.6C11 8.6 11 5.6 12 3z"/></svg><b data-kz-streak>0</b><span class="kz-sr">day streak</span><span class="kz-shieldchip" data-kz-shields hidden></span></span>
+      <span class="kz-chip water" data-kz-water hidden><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c3 4 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-7 6-11z"/></svg><b data-kz-water-n>0%</b><span class="kz-sr">water</span></span>
+      <button type="button" class="kz-chip feed" data-kz-feed hidden aria-label="Feed your visitor"><span class="kz-feedico" data-kz-feed-ico aria-hidden="true">🍖</span><b data-kz-feed-n>0</b></button>
+      <button type="button" class="kz-avatar kz-burger" id="kz-burger" aria-expanded="false" aria-controls="kz-menu" aria-label="Account and menu"><span data-kz-initial><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.4-3.6 4.2-5.4 7.5-5.4s6.1 1.8 7.5 5.4"/></svg></span></button>
+    </span>
+  </div>
+  <div class="kz-hprog" data-kz-hprog role="progressbar" aria-label="Today's goals" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" hidden><i></i></div>
+  <div class="kz-menu kz-sheet49" id="kz-menu" hidden>
+    <div class="kz-sheet-in">
+      <div class="kz-sheet-top"><b class="kz-sheet-title">Account</b><button type="button" class="kz-iconbtn" data-kz-menu-close aria-label="Close menu"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+      <div class="kz-menu-acct">
+        <p class="kz-menu-who" data-kz-who hidden></p>
+        <p class="kz-menu-who" data-kz-nosync hidden>Saved on this phone. Nothing leaves it.</p>
+        <a class="kz-btn gold" href="/pages/account?mode=signup" data-kz-signup>Sign up to save your tree</a>
+        <a class="kz-btn ghost" href="/pages/account?mode=login" data-kz-login>Log in</a>
+      </div>
+      <nav class="kz-rowlist" aria-label="Menu">
+        <a href="/pages/my-goals"><span>Manage goals</span><i aria-hidden="true"></i></a>
+        <a href="/pages/journal"><span>Journal</span><i aria-hidden="true"></i></a>
+        <button type="button" data-kz-open-reminders><span>Reminders</span><em data-kz-rem-state>Off</em><i aria-hidden="true"></i></button>
+        <button type="button" data-kz-open-install><span>Add to Home Screen</span><i aria-hidden="true"></i></button>
+        <a href="/pages/archived-goals"><span>Archived goals</span><i aria-hidden="true"></i></a>
+        <button type="button" data-kz-backup><span>Export my data</span><em data-kz-backup-when></em><i aria-hidden="true"></i></button>
+        <label class="kz-rowfile"><span>Restore from a backup</span><i aria-hidden="true"></i><input type="file" accept="application/json,.json" data-kz-restore></label>
+        <label class="kz-rowsw"><span>Sound effects</span><input type="checkbox" class="kz-sw49" data-kz-sound></label>
+        <a href="/legal/privacy.html" data-kz-legal="privacy"><span>Privacy Policy</span><i aria-hidden="true"></i></a>
+        <a href="/legal/terms.html" data-kz-legal="terms"><span>Terms of Service</span><i aria-hidden="true"></i></a>
+        <a href="/legal/subprocessors.html" data-kz-legal="subprocessors"><span>Subprocessors</span><i aria-hidden="true"></i></a>
+        <a href="/legal/licenses.html" data-kz-legal="licenses"><span>Licenses</span><i aria-hidden="true"></i></a>
+        <button type="button" data-kz-cookie-settings data-kz-siteonly><span>Cookie settings</span><i aria-hidden="true"></i></button>
+        <button type="button" class="kz-rowdanger" data-kz-open-delete><span>Delete my data</span><i aria-hidden="true"></i></button>
+        
+      </nav>
+      <button type="button" class="kz-btn danger" data-kz-logout hidden>Log out</button>
+    </div>
+  </div>
+</header>
+<script src="/core/098b073b268b.js"></script>
+<main id="kz-main">
+
+<script src="/core/52fe2d066330.js"></script>
+
+<h1 class="kz-sr">Journal</h1><div class="kzp-title" aria-hidden="true"><b>Journal</b></div>
+<section class="kz-journal49 kz-j2" style="padding-block: 12px 40px">
+  <div class="kz-wrap kz-stack" style="max-width: 760px; gap: 14px">
+    <div class="kz-j2-stats" id="kz-jstats"></div>
+    <a class="kz-j2-today" id="kz-jtoday" href="/#journal" data-j="answer"></a>
+    <div id="kz-otd" class="kz-stack" hidden style="width: 100%; gap: 10px"><div id="kz-otd-list" style="display: flex; flex-direction: column; gap: 10px; width: 100%"></div></div>
+    <div class="kz-jtabs kz-seg" role="tablist" aria-label="Journal sections"><button type="button" class="kz-chip" role="tab" aria-selected="true" data-jtab="answers">Reflections</button><button type="button" class="kz-chip" role="tab" aria-selected="false" data-jtab="notes">Notes</button><button type="button" class="kz-chip" role="tab" aria-selected="false" data-jtab="quotes">Quotes</button></div>
+    <div id="kz-jlist" data-jpane="answers" style="display: flex; flex-direction: column; gap: 10px; width: 100%"></div>
+    <div id="kz-nlist" class="kznt-pane" data-jpane="notes" hidden></div><div id="kz-qlist" data-jpane="quotes" hidden style="display: flex; flex-direction: column; gap: 10px; width: 100%"></div>
+    <div class="kz-j2-empty" id="kz-jempty" hidden><b>Your first page is blank</b><span>Answer today’s question and it starts here. One honest sentence is enough.</span></div>
+    <p class="kz-note" style="text-align: center">Private, saved on this phone.<span data-kz-acctlink> <a href="/pages/account?mode=signup" style="color: inherit">Make an account</a> to keep it everywhere.</span></p>
+  </div>
+</section>
+<script>
+(function () {
+  var K = window.KZ, D = window.KZQ;
+  var rate = K.get('rate', {}), thought = K.get('thought', {}), journal = K.get('journal', {});
+  var byDate = {}; D.all.forEach(function (q) { byDate[q.d] = q; });
+  var days = Object.keys(journal).filter(function (d) { return journal[d]; }).sort().reverse();
+  // Quote notes: every day you rated the quote or wrote your take on it.
+  var qdays = Object.keys(Object.assign({}, rate, thought)).filter(function (d) { return rate[d] || thought[d]; }).sort().reverse();
+  document.getElementById('kz-qlist').innerHTML = qdays.length ? qdays.map(function (d) {
+    var q = byDate[d], r = rate[d] || 0, st = ''; for (var i = 1; i <= 5; i++) st += '<span class="' + (i <= r ? 'on' : '') + '">\u2605</span>';
+    return '<div class="kz-card kz-qnote"><span class="kz-label">' + K.esc(new Date(d + 'T12:00:00').toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' })) + '</span>' +
+      (q ? '<blockquote>\u201c' + K.esc(q.q) + '\u201d' + (q.a ? '<cite>\u2014 ' + K.esc(q.a) + '</cite>' : '') + '</blockquote>' : '') +
+      (r ? '<span class="kz-qstars" aria-label="Rated ' + r + ' of 5">' + st + '</span>' : '') + (thought[d] ? '<p>' + K.esc(thought[d]) + '</p>' : '') + '</div>';
+  }).join('') : '<div class="kz-card"><span class="kz-card-name">No quote notes yet</span><span class="kz-soft">Tap Quote of the day on Today, rate it and add your take. It lands here.</span></div>';
+  var tabs = document.querySelector('.kz-jtabs'), showTab = function (t) {
+    tabs.querySelectorAll('[data-jtab]').forEach(function (b) { b.setAttribute('aria-selected', String(b.dataset.jtab === t)); b.setAttribute('aria-selected', String(b.dataset.jtab === t)); });
+    document.querySelectorAll('[data-jpane]').forEach(function (p) { p.hidden = p.dataset.jpane !== t; });
+    var em = document.getElementById('kz-jempty'); if (em) em.hidden = t !== 'answers' || days.length > 0;
+  };
+  tabs.addEventListener('click', function (e) { var b = e.target.closest('[data-jtab]'); if (b) showTab(b.dataset.jtab); });
+  if (location.hash === '#quotes') showTab('quotes');
+  var list = document.getElementById('kz-jlist'), tk = K.key(K.today()), tq = byDate[tk];
+  var words = days.reduce(function (n, d) { return n + String(journal[d]).trim().split(/\s+/).length; }, 0), run = 0;
+  for (var c = K.today(), g0 = 0; g0 < 400 && journal[K.key(c)]; c = K.addDays(c, -1), g0++) run++;
+  if (!journal[tk]) { for (var c2 = K.addDays(K.today(), -1), g1 = 0; g1 < 400 && journal[K.key(c2)]; c2 = K.addDays(c2, -1), g1++) run++; }
+  document.getElementById('kz-jstats').innerHTML = [[days.length, days.length === 1 ? 'Entry' : 'Entries'], [words.toLocaleString(), 'Words']].map(function (x) { return '<div><b>' + x[0] + '</b><span>' + x[1] + '</span></div>'; }).join('');
+  var tc = document.getElementById('kz-jtoday');
+  tc.innerHTML = '<span class="kz-j2-k">Today’s question</span><b>' + K.esc(tq && tq.n ? tq.n : 'What’s one thing you learned today?') + '</b>' + (journal[tk] ? '<span class="kz-j2-done">✓ Answered. Tap to read it</span>' : '<span class="kz-j2-go">Write your answer →</span>');
+  if (journal[tk]) tc.href = '#edit-' + tk;
+  var otd = [[7, 'A week ago'], [30, 'A month ago']].map(function (p) {
+    var k = K.key(K.addDays(K.today(), -p[0])), q = byDate[k], j = journal[k] || thought[k];
+    if (!j) return '';
+    return '<div class="kz-j2-otd"><span class="kz-j2-k">' + p[1] + ' you wrote</span>' + (q ? '<span class="kz-j2-q">' + K.esc(q.n || q.q) + '</span>' : '') + '<p>' + K.esc(j) + '</p></div>';
+  }).join('');
+  if (otd) { document.getElementById('kz-otd-list').innerHTML = otd; document.getElementById('kz-otd').hidden = false; }
+  if (!days.length) { document.getElementById('kz-jempty').hidden = location.hash === '#quotes' || location.hash === '#chats'; return; }
+  var lastM = '';
+  list.innerHTML = days.map(function (d) {
+    var q = byDate[d], dt = new Date(d + 'T12:00:00'), m = dt.toLocaleDateString(undefined, { month: 'long', year: 'numeric' }), head = m !== lastM ? '<h3 class="kz-j2-month">' + K.esc(m) + '</h3>' : ''; lastM = m;
+    return head + '<article class="kz-j2-entry kz-jentry" id="edit-' + d + '" data-day="' + d + '">' +
+      '<div class="kz-j2-date"><b>' + dt.getDate() + '</b><span>' + K.esc(dt.toLocaleDateString(undefined, { weekday: 'short' })) + '</span></div>' +
+      '<div class="kz-j2-body"><span class="kz-j2-q">' + K.esc(q && q.n ? q.n : 'Reflection') + '</span><p class="kz-jtext">' + K.esc(journal[d]) + '</p>' +
+        '<button type="button" class="kz-j2-edit" data-jedit aria-label="Edit this entry"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4z"/></svg>Edit</button>' +
+        '<div class="kz-jform" hidden><textarea class="kz-jbox" aria-label="Edit this entry"></textarea><div class="kz-row" style="gap: 8px; justify-content: flex-end"><button type="button" class="kz-btn ghost sm" data-jcancel>Cancel</button><button type="button" class="kz-btn sm" data-jsave>Save</button></div></div>' +
+      '</div></article>';
+  }).join('');
+  // Edit a reflection in place. Saving it empty deletes it (and the home page asks the question again).
+  function open(box) {
+    var f = box.querySelector('.kz-jform'), t = f.querySelector('textarea');
+    t.value = (K.get('journal', {}))[box.dataset.day] || ''; f.hidden = false; box.querySelector('.kz-jtext').hidden = true; box.querySelector('[data-jedit]').hidden = true;
+    if (K.autoGrow) K.autoGrow(t); t.focus(); t.setSelectionRange(t.value.length, t.value.length);
+  }
+  function close(box) { box.querySelector('.kz-jform').hidden = true; box.querySelector('.kz-jtext').hidden = false; box.querySelector('[data-jedit]').hidden = false; }
+  list.addEventListener('click', function (e) {
+    var box = e.target.closest('.kz-jentry'); if (!box) return;
+    if (e.target.closest('[data-jedit]')) return open(box);
+    if (e.target.closest('[data-jcancel]')) return close(box);
+    if (e.target.closest('[data-jsave]')) {
+      var m = K.get('journal', {}), v = box.querySelector('.kz-jform textarea').value.trim(), d = box.dataset.day;
+      if (v) m[d] = v; else delete m[d];
+      K.set('journal', m); K.track('kz_journal_edited', { deleted: !v });
+      if (!v) { box.remove(); return; }
+      box.querySelector('.kz-jtext').textContent = v; close(box);
+      var msg = box.querySelector('.kz-jtext'); msg.classList.remove('kz-saved'); void msg.offsetWidth; msg.classList.add('kz-saved');
+    }
+  });
+  var h = location.hash.match(/^#edit-(\d{4}-\d{2}-\d{2})$/);
+  if (h) { var box = document.getElementById('edit-' + h[1]); if (box) { box.scrollIntoView({ block: 'center' }); open(box); } }
+})();
+</script>
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/core/kzb-59456dcb5c.js"></script>
+
+<script id="kz-oct22-kbd-js">
+(function () { if (window.__kzKbd) return; window.__kzKbd = 1;
+  var vv = window.visualViewport, root = document.documentElement;
+  var field = function (el) { if (!el) return false; var t = el.tagName; if (t === 'TEXTAREA' || el.isContentEditable) return true; if (t === 'SELECT') return false; return t === 'INPUT' && !/^(checkbox|radio|button|submit|reset|range|color|file|hidden)$/i.test(el.type || 'text'); };
+  var set = function (on) { if (root.classList.contains('kz-kbd') === on) return; root.classList.toggle('kz-kbd', on); if (!on) requestAnimationFrame(function () { window.scrollTo(window.scrollX, window.scrollY); }); };
+  document.addEventListener('focusin', function (e) { if (field(e.target)) set(true); });
+  document.addEventListener('focusout', function () { setTimeout(function () { if (!field(document.activeElement)) set(false); }, 80); });
+  if (vv) vv.addEventListener('resize', function () { var open = vv.height < window.innerHeight * 0.8; if (!open) set(false); else if (field(document.activeElement)) set(true); });
+})();
+</script>
+<script>
+(function () { if (window.__kzHdr) return; window.__kzHdr = 1; var de = document.documentElement, on = false, raf = 0;
+  var check = function () { raf = 0; var s = (window.scrollY || de.scrollTop) > 4; if (s !== on) { on = s; de.classList.toggle('kz-scrolled', s); } };
+  addEventListener('scroll', function () { if (!raf) raf = requestAnimationFrame(check); }, { passive: true }); check();
+})();
+</script>
+<script id="kzp-title-js">(function(){var t=document.querySelector('.kzp-title');if(t||document.querySelector('#kz-main .kz-serif-title'))document.documentElement.classList.add('kzp-lt');if(!t)return;var e=t.querySelector('[data-kzp-date]'),K=window.KZ;if(e){var d=K&&K.today?K.today():new Date();e.textContent=d.toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric'});}var m=t.querySelector('[data-kzp-month]');if(m){var d2=K&&K.today?K.today():new Date();m.textContent=d2.toLocaleDateString(undefined,{month:'long',year:'numeric'});}})();</script><script id="kzp-press-js">(function(){if(window.__kzpPress)return;window.__kzpPress=1;var OLD='button, .kz-btn, a.kz-pcard-tree, a.kz-pathchip, .kz-chip49, summary, .kz-tabbar a, .kz-rowsw, .kz-rowfile, .kz-menu nav a, [role="button"]';var post=function(){try{var h=window.webkit&&window.webkit.messageHandlers&&window.webkit.messageHandlers.kaizen;if(h)h.postMessage({type:'tick'})}catch(e){}};document.addEventListener('touchstart',function(e){var a=e.target.closest&&e.target.closest('a[href], label.kz-set-row');if(!a||a.closest(OLD)||a.matches(OLD))return;post();},{passive:true});})();</script>
+
+
+<link rel="stylesheet" href="/core/kzb-a03de0125a.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/core/kzb-be32fa5d2d.js"></script></body></html>

@@ -1,0 +1,4 @@
+/* Oct 27 c · goals missed / to-dos not done in the day panel: an empty red-edged ring, text a step quieter */
+html body .kzd2-sec.kzd2-miss li { color: rgba(235,235,245,.78); }
+html body .kzd2-sec.kzd2-miss li i:not(#kz-n1) { background: transparent !important; box-shadow: inset 0 0 0 2px rgba(255,105,97,.75) !important; }
+html body .kzd2-sec.kzd2-miss li i::after { content: none !important; }

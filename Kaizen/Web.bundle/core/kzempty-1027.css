@@ -1,0 +1,15 @@
+/* Oct 27 · first-launch polish (see kzempty-1027.js) */
+html body .kzemp { display: flex; flex-direction: column; align-items: center; gap: 10px; box-sizing: border-box; width: calc(100% - 32px); max-width: 560px; margin: 4px auto 18px; padding: 22px 20px 20px; border-radius: 22px; text-align: center; color: #fff;
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)); box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28); }
+html body .kzemp b { font-size: 19px; font-weight: 700; }
+html body .kzemp p { margin: 0; font-size: 15px; line-height: 1.45; color: rgba(235,235,245,.7); }
+html body .kzemp-go { margin-top: 6px; min-height: 48px; padding: 0 24px; border: 0; border-radius: 999px; font: inherit; font-size: 16px; font-weight: 700; color: #1A1406;
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 -1px 0 rgba(0,0,0,.22), 0 6px 18px rgba(184,144,46,.24); transition: transform .12s ease; }
+html body .kzemp-go:active { transform: scale(.97); }
+html body .kz-bst-grow.kzemp-zero:not(#kz-n1):not(#kz-n2) { color: rgba(235,235,245,.6) !important; }
+html body a.kz-btn[data-g="grow"]:not(#kz-n1):not(#kz-n2):not(#kz-n3) { border: 0 !important; border-radius: 999px !important; color: #1A1406 !important;
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 -1px 0 rgba(0,0,0,.22) !important; transition: transform .12s ease; }
+html body a.kz-btn[data-g="grow"]:active { transform: scale(.97); }
+@media (prefers-reduced-motion: reduce) { html body :is(.kzemp-go, a.kz-btn[data-g="grow"]) { transition: none; } }

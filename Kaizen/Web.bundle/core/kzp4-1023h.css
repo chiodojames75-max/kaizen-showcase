@@ -1,0 +1,17 @@
+/* Oct 23 Phase 4: share sheet */
+.kz-p4 { position: fixed; inset: 0; z-index: 1300; display: flex; align-items: flex-end; justify-content: center; background: rgba(0,0,0,.6); animation: kzP3in .2s ease both; }
+.kz-p4-in { width: 100%; max-width: 520px; max-height: calc(100dvh - 24px); overflow-y: auto; padding: 14px 16px calc(16px + env(safe-area-inset-bottom, 0px)); border-radius: 28px 28px 0 0; background: #1C1C1E; display: flex; flex-direction: column; gap: 12px; animation: kzP4up .3s cubic-bezier(.2,.9,.3,1) both; }
+@keyframes kzP4up { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+.kz-p4-top { display: flex; align-items: center; justify-content: space-between; }
+.kz-p4-t { margin: 0; font: 700 22px/1.2 var(--kz-sans); color: #fff; }
+.kz-p4-x { width: 44px; height: 44px; margin-right: -8px; border: 0; background: none; color: #8E8E93; display: flex; align-items: center; justify-content: center; }
+.kz-p4-x svg { width: 18px; height: 18px; padding: 6px; box-sizing: content-box; border-radius: 50%; background: #2C2C2E; }
+.kz-p4-prev { position: relative; align-self: center; height: min(52dvh, 460px); aspect-ratio: 9 / 16; border-radius: 18px; overflow: hidden; background: #000; box-shadow: 0 0 0 1px rgba(255,255,255,.08); }
+.kz-p4-prev img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.kz-p4-wait { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font: 500 15px/1 var(--kz-sans); color: #8E8E93; }
+.kz-p4-wait[hidden] { display: none; }
+.kz-p4-go { width: 100%; min-height: 50px; }
+.kz-p4-sb { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 48px; margin: -4px 0 4px; border: 0; border-radius: 14px; background: #1C1C1E; color: #E2B93B; font: 600 16px/1 var(--kz-sans); -webkit-tap-highlight-color: transparent; }
+.kz-p4-sb svg { width: 20px; height: 20px; }
+.kz-p4-sb:active { background: #2C2C2E; }
+@media (prefers-reduced-motion: reduce) { .kz-p4, .kz-p4-in { animation: none; } }

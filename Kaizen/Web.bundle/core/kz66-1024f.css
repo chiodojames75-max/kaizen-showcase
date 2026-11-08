@@ -1,0 +1,113 @@
+/* Oct 24 · Kaizen 66 (see kz66-1024f.js) */
+.kz66-card, .kz66-over, .kz66-gp { font-family: var(--kz-sans, -apple-system, system-ui, sans-serif); color: #FFFFFF; }
+
+/* Today: the run card */
+.kz66-card { margin: 12px 0 0; border-radius: 24px; background: #1C1C1E; border: 1.5px solid #5C4A17; padding: 16px 16px 18px; display: flex; flex-direction: column; gap: 14px; }
+.kz66-card.invite { flex-direction: row; align-items: center; gap: 0; padding: 0; border-color: #3A2F0E; }
+.kz66-top { display: flex; justify-content: space-between; align-items: center; }
+.kz66-lbl { font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #E2B93B; }
+.kz66-sh { display: flex; align-items: center; gap: 3px; }
+.kz66-sh i { width: 18px; height: 20px; display: block; }
+.kz66-sh svg { width: 100%; height: 100%; fill: none; stroke: #48484A; stroke-width: 2; }
+.kz66-sh i.on svg { fill: #0A84FF; stroke: #0A84FF; }
+.kz66-sh em { font-style: normal; font-size: 13px; color: #AEAEB2; margin-left: 3px; }
+.kz66-mid { display: flex; align-items: center; gap: 16px; }
+.kz66-ring { position: relative; width: 104px; height: 104px; flex: none; }
+.kz66-ring > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.kz66-ring .tr, .kz66-art .tr { fill: none; stroke: #2C2C2E; }
+.kz66-ring .pr { fill: none; stroke: #E2B93B; stroke-linecap: round; }
+.kz66-scene { position: absolute; inset: 12px; border-radius: 50%; background: #0E120E; overflow: hidden; display: flex; align-items: flex-end; justify-content: center; }
+.kz66-scene > i { position: absolute; left: 0; right: 0; bottom: 0; height: 26%; background: #16200F; border-top: 1px solid #22301A; }
+.kz66-scene img { position: relative; height: 70%; width: auto; max-width: 90%; object-fit: contain; margin-bottom: 12%; }
+.kz66-txt { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.kz66-txt span { font-size: 17px; font-weight: 600; color: #AEAEB2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kz66-txt b { font-size: 44px; font-weight: 800; letter-spacing: -.03em; line-height: 1.05; }
+.kz66-card.pend .kz66-txt b { font-size: 28px; line-height: 1.15; }
+.kz66-txt em { font-style: normal; font-size: 15px; color: #AEAEB2; }
+.kz66-strip { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 5px; }
+.kz66-strip i { height: 8px; border-radius: 4px; background: #2C2C2E; }
+.kz66-strip i.c { background: #E2B93B; }
+.kz66-strip i.s { background: #0A84FF; }
+.kz66-strip i.now { background: transparent; box-shadow: inset 0 0 0 2px #E2B93B; }
+.kz66-go { display: block; width: 100%; min-height: 52px; border-radius: 15px; border: 0; background: #E2B93B; color: #1A1404; font: 800 17px/1.2 var(--kz-sans, -apple-system, sans-serif); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.kz66-go:active { opacity: .75; }
+.kz66-go.ok { background: #1F3A26; color: #34C759; }
+.kz66-go.ok::before { content: '\2713  '; }
+.kz66-left { margin: -6px 0 0; text-align: center; font-size: 13px; color: #AEAEB2; }
+.kz66-inv { flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; padding: 14px 4px 14px 16px; border: 0; background: none; color: #FFFFFF; text-align: left; font: inherit; cursor: pointer; min-height: 64px; }
+.kz66-num { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; box-shadow: inset 0 0 0 6px #E2B93B; color: #E2B93B; font-size: 24px; font-weight: 800; }
+.kz66-num.sm { width: 40px; height: 40px; flex: none; box-shadow: inset 0 0 0 3.5px #E2B93B; font-size: 15px; }
+.kz66-it { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.kz66-it b { font-size: 17px; font-weight: 700; }
+.kz66-it em { font-style: normal; font-size: 14px; color: #AEAEB2; }
+.kz66-start { flex: none; font-size: 16px; font-weight: 700; color: #E2B93B; }
+.kz66-hide { flex: none; width: 44px; height: 44px; margin-right: 6px; border: 0; background: none; display: grid; place-items: center; cursor: pointer; padding: 0; }
+.kz66-hide svg, .kz66-x svg { width: 14px; height: 14px; fill: none; stroke: #8E8E93; stroke-width: 3; stroke-linecap: round; }
+
+/* full-screen layers */
+.kz66-over { position: fixed; inset: 0; z-index: 9500; background: #000000; opacity: 0; transition: opacity .25s ease; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.kz66-over.on { opacity: 1; }
+.kz66-in { min-height: 100%; box-sizing: border-box; max-width: 480px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; padding: calc(env(safe-area-inset-top, 0px) + 56px) 20px calc(env(safe-area-inset-bottom, 0px) + 24px); position: relative; }
+.kz66-x { position: absolute; top: calc(env(safe-area-inset-top, 0px) + 14px); right: 16px; width: 44px; height: 44px; border-radius: 22px; border: 0; background: #2C2C2E; display: grid; place-items: center; padding: 0; cursor: pointer; }
+.kz66-hd { display: flex; flex-direction: column; align-items: center; }
+.kz66-hd .kz66-num { width: 112px; height: 112px; box-shadow: inset 0 0 0 10px #E2B93B; font-size: 34px; }
+.kz66-hd h2, .kz66-h { margin: 14px 0 0; font-size: 30px; font-weight: 800; letter-spacing: -.02em; line-height: 1.15; }
+.kz66-hd p, .kz66-p { margin: 8px 0 0; font-size: 16px; line-height: 1.45; color: #AEAEB2; }
+.kz66-cap { align-self: stretch; text-align: left; margin: 24px 4px 8px; font-size: 13px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: #AEAEB2; }
+.kz66-list { align-self: stretch; border-radius: 18px; background: #1C1C1E; overflow: hidden; }
+.kz66-g { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 60px; padding: 10px 14px; border: 0; border-top: .5px solid #38383A; background: none; color: #FFFFFF; font: inherit; text-align: left; cursor: pointer; }
+.kz66-g:first-child { border-top: 0; }
+.kz66-gt { flex: none; width: 40px; height: 40px; border-radius: 10px; background: #0E120E; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; }
+.kz66-gt img { height: 34px; width: auto; max-width: 36px; object-fit: contain; }
+.kz66-g b { flex: 1; min-width: 0; font-size: 17px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kz66-g i { flex: none; width: 22px; height: 22px; border-radius: 11px; box-shadow: inset 0 0 0 2px #636366; }
+.kz66-g.sel i { box-shadow: inset 0 0 0 7px #E2B93B; }
+.kz66-rules { align-self: stretch; list-style: none; margin: 0; padding: 0 4px; display: flex; flex-direction: column; gap: 12px; text-align: left; }
+.kz66-rules li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.35; }
+.kz66-rules i { flex: none; width: 28px; height: 28px; border-radius: 8px; background: #3A2F0E; position: relative; }
+.kz66-rules i.s { background: #0B2540; } .kz66-rules i.t { background: #16200F; }
+.kz66-rules i::after { content: ''; position: absolute; inset: 9px; border-radius: 3px; background: #E2B93B; }
+.kz66-rules i.s::after { background: #0A84FF; border-radius: 3px 3px 7px 7px; } .kz66-rules i.t::after { background: #34C759; border-radius: 50%; }
+.kz66-foot { align-self: stretch; margin-top: auto; padding-top: 24px; display: flex; flex-direction: column; gap: 10px; }
+.kz66-foot p { margin: 0; font-size: 13px; color: #8E8E93; }
+.kz66-alt { min-height: 50px; border-radius: 16px; border: 0; background: #1C1C1E; color: #FFFFFF; font: 600 17px/1.2 var(--kz-sans, -apple-system, sans-serif); cursor: pointer; }
+.kz66-alt.q { background: none; color: #AEAEB2; min-height: 44px; }
+.kz66-tag { margin: 0; font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #AEAEB2; }
+.kz66-tag.gold { color: #E2B93B; }
+.kz66-art { position: relative; width: 220px; height: 220px; margin-top: 22px; flex: none; }
+.kz66-art > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.kz66-art .tr { stroke-width: 8; }
+.kz66-art .pr { fill: none; stroke: #8A7330; stroke-width: 8; stroke-linecap: round; }
+.kz66-art.won .pr { stroke: #E2B93B; }
+.kz66-art .kz66-scene { inset: 18px; }
+.kz66-pill { position: absolute; left: 50%; bottom: -14px; transform: translateX(-50%); background: #E2B93B; color: #1A1404; font-size: 17px; font-weight: 800; border-radius: 16px; padding: 6px 14px; white-space: nowrap; }
+.kz66-won .kz66-h { margin-top: 34px; }
+.kz66-stats { align-self: stretch; margin-top: 22px; border-radius: 18px; background: #1C1C1E; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 14px 0; }
+.kz66-stats span { display: flex; flex-direction: column; gap: 2px; }
+.kz66-stats span + span { border-left: 1px solid #38383A; }
+.kz66-stats b { font-size: 22px; font-weight: 800; } .kz66-stats b.bl { color: #0A84FF; } .kz66-stats b.sm { font-size: 16px; line-height: 1.7; }
+.kz66-stats small { font-size: 12px; color: #AEAEB2; }
+.kz66-rows { align-self: stretch; margin-top: 20px; border-radius: 18px; background: #1C1C1E; text-align: left; }
+.kz66-rows span { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 16px; }
+.kz66-rows span + span { border-top: .5px solid #38383A; }
+.kz66-rows em { font-style: normal; font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kz66-rows b { font-size: 15px; font-weight: 600; color: #AEAEB2; white-space: nowrap; } .kz66-rows b.g { color: #E2B93B; } .kz66-rows b.ok { color: #34C759; }
+
+/* goal page */
+.kz66-gp { margin: 16px 0 0; border-radius: 18px; background: #1C1C1E; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.kz66-gp h3 { margin: 0; font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #E2B93B; }
+.kz66-st { margin: 0; display: flex; flex-direction: column; gap: 2px; }
+.kz66-st b { font-size: 22px; font-weight: 800; } .kz66-st span { font-size: 15px; color: #AEAEB2; }
+.kz66-quit { align-self: flex-start; border: 0; background: none; padding: 12px 0; margin: -12px 0; min-height: 44px; color: #AEAEB2; font: 400 15px/1.2 var(--kz-sans, -apple-system, sans-serif); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.kz66-hist { list-style: none; margin: 0; padding: 0; }
+.kz66-hist li { display: flex; justify-content: space-between; padding: 10px 0; border-top: .5px solid #38383A; font-size: 15px; color: #AEAEB2; }
+.kz66-hist b { color: #FFFFFF; font-weight: 600; } .kz66-hist b.g { color: #E2B93B; }
+
+/* Grove badge */
+.kzg-tree .kz66-badge { position: absolute; top: -6px; right: -10px; z-index: 2; font: 800 10px/1 var(--kz-sans, -apple-system, sans-serif); padding: 3px 6px; border-radius: 7px; color: #E2B93B; background: #1C1C1E; box-shadow: inset 0 0 0 1.5px #E2B93B; }
+.kzg-tree .kz66-badge.won { background: #E2B93B; color: #1A1404; box-shadow: none; }
+
+/* Oct 24 fix: picking a goal doesn't flicker - the row never shrinks under the finger, only the dot moves */
+.kz66-g { -webkit-tap-highlight-color: transparent; }
+.kz66-g:not(#kz-n1).kz-pressed, .kz66-g:not(#kz-n1):active { transform: none !important; opacity: 1 !important; }
+.kz66-g i { transition: box-shadow .15s ease; }

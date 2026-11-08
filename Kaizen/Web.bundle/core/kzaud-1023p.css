@@ -1,0 +1,16 @@
+/* Oct 23 · Full audit fixes (P2/P3). Tap targets, readable greys, swipe-action contrast. */
+/* tap targets: 44 pt */
+html body :is(.kz-shc-how > summary, .kz-xprulesbox > summary):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4) { min-height: 44px !important; display: flex !important; align-items: center !important; box-sizing: border-box; }
+html body .kz-ghost:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4) { min-height: 44px !important; min-width: 44px !important; }
+html body .kz-brand:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4) { min-width: 44px !important; }
+@media (max-width: 389px) { html body #kz-main #kz-plan-s1#kz-plan-s1 .kz-week7:not(#kz-n1):not(#kz-n2) { gap: 3px !important; } }
+/* readable greys (WCAG AA 4.5:1 for small text) */
+html body :is(.kz-bh-bar > span > small, .kz-calwd, .kz-1b-wd, .kz-g1text.empty, .kz-set-legal, .kz-j2 .kz-note):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4) { color: #8E8E93 !important; }
+html body .kz-set-legal:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4) :is(a, button) { color: #8E8E93 !important; }
+html body :is(.kz-gstep.kz-gsub > i, .kz-txp li > a > b, .kz-xp-rows b):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4) { color: #AEAEB2 !important; }
+html body .kz-cald.rest:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4) { background-color: #0071E3 !important; }
+/* swipe actions: dark text on orange, deeper red behind white */
+html body .kz-gswipe .arch:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4) { color: #1C1C1E !important; }
+html body .kz-gswipe .del:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4) { background: #D93025 !important; }
+/* Tree: an unlocked visitor row opens a one-line note (it did nothing before) */
+.kz-stop-more.kz-aud-own { color: #8E8E93; }

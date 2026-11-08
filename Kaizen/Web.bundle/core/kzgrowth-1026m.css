@@ -1,0 +1,3 @@
+/* Oct 26 m · Growth header count (kzgrowth-1026m.js) */
+#kz-header .kz-htitle .kzpb-sub[data-n] { font-size: 0 !important; }
+#kz-header .kz-htitle .kzpb-sub[data-n]::after { content: attr(data-n); font-size: 15px; }

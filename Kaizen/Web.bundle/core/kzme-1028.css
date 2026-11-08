@@ -1,0 +1,2 @@
+/* Oct 28 · James: no pencil on the Me photo (tapping the photo still changes it) */
+html body .kzav-pen:not(#kz-n1):not(#kz-n2):not(#kz-n3) { display: none !important; }

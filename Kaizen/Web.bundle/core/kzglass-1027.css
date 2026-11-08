@@ -1,0 +1,33 @@
+/* Oct 27 · the last flat-gold buttons get the gold glass every other primary button uses */
+html body :is(#kz-welcome .kz-wl-act .kz-btn:not(.ghost):not(.quiet), .kz-p3-go):not(#kz-n1):not(#kz-n2):not(#kz-n3) {
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 -1px 0 rgba(0,0,0,.22), 0 6px 18px rgba(184,144,46,.24) !important;
+  border: 0 !important; border-radius: 999px !important; color: #1A1406 !important; transition: transform .12s ease;
+}
+html body :is(#kz-welcome .kz-wl-act .kz-btn, .kz-p3-go):active { transform: scale(.97); }
+@media (prefers-reduced-motion: reduce) { html body :is(#kz-welcome .kz-wl-act .kz-btn, .kz-p3-go) { transition: none; } }
+/* journal "Edit": 44 pt tap area without moving anything */
+html body .kz-j2-edit:not(#kz-n1):not(#kz-n2) { padding: 13px 12px !important; margin: -13px -12px !important; }
+/* one "Welcome back", not two: the comeback card already says it, so the greeting line steps aside while it's up */
+html body:has(.kz-nmt:not([hidden])) #kz-week-s1:has(> .kz-wrap > .kz-wb[data-w="back"]:only-child):not(#kz-n1) { display: none !important; }
+/* segmented tabs (Journal: Reflections / Notes / Quotes and the like): the picked one is gold glass like the add sheet, not a white slab */
+html body .kz-seg > .kz-chip:is([aria-selected="true"], [aria-pressed="true"]):not(#kz-n1):not(#kz-n2):not(#kz-n3) {
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 -1px 0 rgba(0,0,0,.22) !important; color: #1A1406 !important; border: 0 !important;
+}
+html body .kz-seg > .kz-chip { transition: transform .12s ease; }
+html body .kz-seg > .kz-chip:active { transform: scale(.96); }
+/* picked chips (Branch in the add sheet and the like): gold glass, not a white slab */
+html body .kz-chips49 > button[aria-pressed="true"]:not(#kz-n1):not(#kz-n2):not(#kz-n3) {
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 -1px 0 rgba(0,0,0,.22) !important; color: #1A1406 !important; border-color: transparent !important;
+}
+html body .kz-chips49 > button { transition: transform .12s ease; }
+html body .kz-chips49 > button:active { transform: scale(.96); }
+html body .kz-chips49[data-t="pillars"] > button:not(#kz-n1):not(#kz-n2):not(#kz-n3) { border-radius: 999px !important; }
+/* medal ribbon (kzrib-1027.js): a little taller so the V and the loop read; the loop tucks under the medal */
+html body .kzm-rib.kzm-rib2:not(#kz-n1) { width: 38px; height: 27px; margin-bottom: -9px; filter: drop-shadow(0 2px 3px rgba(0,0,0,.45)); }
+html body .kzm-hang.big .kzm-rib.kzm-rib2:not(#kz-n1) { width: 50px; height: 34px; margin-bottom: -11px; }
+/* section titles you hold to reorder: no iOS text selection or callout during the hold; nothing scrolls while one is lifted */
+html body #kz-today-s1 .kz-tgroups > section > .kz-tsec-h { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+html body.kzsd-on, html body.kzsd-on #kz-main { overscroll-behavior: none; }

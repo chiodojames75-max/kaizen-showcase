@@ -1,0 +1,15 @@
+/* Nov 2 · Note to self C "Writing first" (kzntc-1102.js) */
+html body .kznt-body.kzntc .kznt-txt:not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { min-height: 220px !important; background: none !important; background-image: none !important; box-shadow: none !important; border: 0 !important; padding: 4px 2px !important; font-size: 19px !important; line-height: 1.4 !important; }
+html body .kznt-body.kzntc > :is(.kznt-mic, .kznt-lab, .kznt-chips):not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9), html body .kznt-body.kzntc > .kznrp:not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { display: none !important; }
+html body .kznt-body.kzntc.kzntc-oa > :is(.kznt-chips):not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { display: flex !important; margin-top: 12px !important; }
+html body .kznt-body.kzntc.kzntc-or > .kznrp:not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { display: block !important; margin-top: 12px !important; }
+html body .kznt-body.kzntc.kzntc-or > .kznrp > .kznt-lab:not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { display: none !important; }
+.kzntc-bar { display: flex; gap: 10px; align-items: center; border-top: .5px solid #2A2A2E; padding-top: 12px; margin-top: 8px; }
+.kzntc-bar button { height: 42px; border-radius: 13px; padding: 0 13px; display: flex; align-items: center; gap: 8px; font: 600 15px/1 inherit; font-family: inherit; color: #D1D1D6; background: none; border: 0; box-shadow: inset 0 0 0 1px #34343A; -webkit-tap-highlight-color: transparent; white-space: nowrap; }
+.kzntc-bar .kzntc-mic { width: 42px; padding: 0; justify-content: center; color: #fff; }
+.kzntc-bar .kzntc-mic svg { width: 22px; height: 22px; }
+.kzntc-bar .kzntc-mic[aria-pressed="true"] { color: #FF453A; box-shadow: inset 0 0 0 1.5px #FF453A; }
+.kzntc-bar .kzntc-area i { width: 9px; height: 9px; border-radius: 5px; flex: none; }
+.kzntc-bar .kzntc-rem svg { width: 18px; height: 18px; }
+.kzntc-bar .kzntc-rem.kzntc-set, .kzntc-bar [aria-expanded="true"] { color: #F2CF5B; box-shadow: inset 0 0 0 1.5px #F2CF5B; }
+.kzntc-bar .kzntc-rem { min-width: 0; overflow: hidden; } .kzntc-bar .kzntc-rem span { overflow: hidden; text-overflow: ellipsis; }

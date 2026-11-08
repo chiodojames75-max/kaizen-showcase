@@ -1,0 +1,90 @@
+/* Nov 2 b · replaces kzfive-1102.css: the timer button and "Worked on it today" sit on one line. */
+/* Nov 2 · "Just 5 min" (kzfive-1102.js). Neutral at rest, gold only while a timer runs or on the action buttons. */
+
+/* habit rows: a small clock beside "…" (the row's name gives up room for it) */
+html body .kz-goal.kzfv-has:not(#kz-n1) { position: relative; }
+html body .kz-goal.kzfv-has > .kz-gbody:not(#kz-n1):not(#kz-n2) { padding-right: 36px; box-sizing: border-box; }
+html body .kz-goal > .kzfv-ib:not(#kz-n1):not(#kz-n2),
+html body section.kzf-66 .kzfv-hb:not(#kz-n1):not(#kz-n2) {
+  position: absolute; width: 34px; height: 34px; padding: 0; border: 0; border-radius: 17px; display: grid; place-items: center; cursor: pointer;
+  color: #8E8E93; background: rgba(255,255,255,.06); box-shadow: inset 0 1px 0 rgba(255,255,255,.10); -webkit-tap-highlight-color: transparent; z-index: 2;
+}
+html body .kz-goal > .kzfv-ib:not(#kz-n1):not(#kz-n2) { right: 104px; top: 50%; margin-top: -17px; }
+html body .kz-goal.open > .kzfv-ib:not(#kz-n1):not(#kz-n2) { top: 32px; margin-top: -17px; }
+html body .kz-goal > .kzfv-ib:not(#kz-n1)::after,
+html body section.kzf-66 .kzfv-hb:not(#kz-n1)::after { content: ""; position: absolute; inset: -5px; }   /* 44 pt tap area */
+html body .kzfv-ib svg:not(#kz-n1), html body .kzfv-hb svg:not(#kz-n1) { width: 18px; height: 18px; display: block; }
+html body .kzfv-ib.on:not(#kz-n1):not(#kz-n2), html body .kzfv-hb.on:not(#kz-n1):not(#kz-n2) {
+  color: #1C1C1E; background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%); box-shadow: 0 0 14px rgba(226,185,59,.3);
+}
+html body .kzfv-ib:active:not(#kz-n1), html body .kzfv-hb:active:not(#kz-n1) { transform: scale(.92); }
+
+/* the Kaizen 66 card: just left of its big check circle */
+html body section.kzf-66 .kzf-top:not(#kz-n1) { position: relative; }
+html body section.kzf-66 .kzfv-hb:not(#kz-n1):not(#kz-n2) { background: rgba(11,12,16,.55); color: #C7C7CC; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+
+/* unfolded habit row: the full button */
+html body .kz-gx > .kzfv-big:not(#kz-n1):not(#kz-n2) { display: flex; flex-direction: column; gap: 8px; margin: 2px 0 12px -24px; }
+html body .kzfv-bb:not(#kz-n1):not(#kz-n2) {
+  display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 50px; padding: 0 18px; border: 0; border-radius: 999px; cursor: pointer;
+  font-family: inherit; font-weight: 800; font-size: 16px; color: #1C1C1E;
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), 0 10px 26px rgba(184,144,46,.28); -webkit-tap-highlight-color: transparent;
+}
+html body .kzfv-bb svg:not(#kz-n1) { width: 20px; height: 20px; }
+html body .kzfv-bb.on:not(#kz-n1):not(#kz-n2) { color: #F2CF5B; background: rgba(233,197,90,.12); box-shadow: inset 0 0 0 1px rgba(233,197,90,.55); }
+html body .kzfv-bb:active:not(#kz-n1) { transform: scale(.98); }
+html body .kzfv-big > small:not(#kz-n1) { text-align: center; font-size: 13.5px; line-height: 1.35; color: #A9ACB5; padding: 0 8px; }
+
+/* long-term rows: "5 min" beside "Worked on it today" */
+html body .kzfv-pr:not(#kz-n1) { display: flex; flex-wrap: nowrap; align-items: center; gap: 8px; order: 2; }
+html body .kzfv-pr > .kzlw:not(#kz-n1):not(#kz-n2) { margin-right: 0; order: 0; flex: 0 1 auto; min-width: 0; }
+html body .kzfv-p:not(#kz-n1):not(#kz-n2) {
+  display: inline-grid; place-items: center; flex: 0 0 auto; order: 1; width: 34px; height: 34px; padding: 0; border: 0; border-radius: 17px; cursor: pointer;
+  color: #D2D4DA; background: rgba(255,255,255,.07); box-shadow: inset 0 0 0 1px rgba(255,255,255,.12);
+  -webkit-tap-highlight-color: transparent; position: relative;
+}
+html body .kzfv-p:not(#kz-n1)::after { content: ""; position: absolute; inset: -5px; }
+html body .kzfv-p svg:not(#kz-n1) { width: 17px; height: 17px; color: #AEAEB2; }
+html body .kzfv-p.on:not(#kz-n1):not(#kz-n2) { color: #1C1C1E; background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%); box-shadow: none; }
+html body .kzfv-p.on svg:not(#kz-n1) { color: #1C1C1E; }
+
+/* "…" menu item */
+html body .kz-gmenu .kzfv-mi svg:not(#kz-n1) { width: 18px; height: 18px; }
+
+/* the clock, dressed for 5 minutes */
+html body .kztm-over.kzfv .kztm-tag:not(#kz-n1):not(#kz-n2), html body .kztm-over.kzfv .kztm-acts:not(#kz-n1):not(#kz-n2) { display: none; }
+html body .kztm-over.kzfv .kztm-min:not(#kz-n1) { margin-top: 6px; }
+html body .kzfv-head:not(#kz-n1) { display: flex; flex-direction: column; align-items: center; gap: 6px; margin: 0 0 26px; padding: 0 12px; max-width: 100%; }
+html body .kzfv-head em:not(#kz-n1) { font-style: normal; font-size: 13px; font-weight: 700; letter-spacing: .14em; color: #E9C55A; }
+html body .kztm-over.kzfv-groove .kzfv-head em:not(#kz-n1) { color: #FF7A2E; }
+html body .kzfv-head b:not(#kz-n1) { font-size: 24px; font-weight: 800; letter-spacing: -.3px; color: #fff; line-height: 1.15; overflow-wrap: anywhere; }
+html body .kzfv-head span:not(#kz-n1) { font-size: 15px; line-height: 1.35; color: #B7BAC2; }
+html body .kztm-over.kzfv-groove .kztm-ring .pr:not(#kz-n1) { stroke: #FF6A1A; }
+html body .kztm-over.kzfv .kztm-t:not(#kz-n1) { font-variant-numeric: tabular-nums; }
+html body .kzfv-acts:not(#kz-n1) { margin-top: 30px; width: 100%; display: flex; flex-direction: column; gap: 12px; }
+html body .kzfv-msg:not(#kz-n1) { margin: 0 0 4px; font-size: 16px; font-weight: 600; color: #D2D4DA; }
+html body .kztm-over.done.kzfv .kzfv-msg:not(#kz-n1) { color: #F2CF5B; font-weight: 800; font-size: 18px; }
+html body .kzfv-q:not(#kz-n1):not(#kz-n2) { min-height: 44px; border: 0; background: none; color: #8E8E93; font-family: inherit; font-weight: 600; font-size: 15px; cursor: pointer; }
+
+/* switch timers? */
+html body .kzfv-ask:not(#kz-n1) { position: fixed; inset: 0; z-index: 2147482995; background: rgba(0,0,0,0); display: flex; align-items: flex-end; transition: background .22s ease; font-family: inherit; }
+html body .kzfv-ask.on:not(#kz-n1) { background: rgba(0,0,0,.55); }
+html body .kzfv-as:not(#kz-n1) { width: 100%; display: flex; flex-direction: column; gap: 10px; padding: 22px 20px calc(min(env(safe-area-inset-bottom, 0px), 24px) + 12px); border-radius: 28px 28px 0 0;
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)), #0e0e10; box-shadow: inset 0 1px 0 rgba(255,255,255,.16); color: #fff; }
+html body .kzfv-as b:not(#kz-n1) { font-size: 18px; font-weight: 800; }
+html body .kzfv-as span:not(#kz-n1) { font-size: 15px; color: #C7C7CC; margin-bottom: 8px; }
+
+@media (prefers-reduced-motion: reduce) { html body .kzfv-ib:active, html body .kzfv-hb:active, html body .kzfv-bb:active { transform: none; } }
+
+/* the "why" on the running clock */
+html body .kzfv-why:not(#kz-n1) { margin: 0 0 6px; padding: 14px 16px; border-radius: 18px; text-align: left; font-size: 15px; line-height: 1.42; color: #C7C7CC; background: rgba(255,255,255,.06); box-shadow: inset 0 1px 0 rgba(255,255,255,.08); }
+html body .kzfv-why b:not(#kz-n1) { color: #fff; font-weight: 800; }
+
+/* the unfolded row's "Did the 2-minute version" button runs the full width, like the buttons under it */
+html body .kz-goal > .kz-gx > .kz-minibtn:not(#kz-n1):not(#kz-n2) { margin-left: -24px; width: calc(100% + 24px); box-sizing: border-box; }
+
+/* Nov 2 b · one line: the pill drops its own top margin, the row carries it */
+html body .kz-goal .kzfv-pr:not(#kz-n1):not(#kz-n2) { margin-top: 10px; margin-bottom: 2px; align-items: center; }
+html body .kz-goal .kzfv-pr > .kzlw:not(#kz-n1):not(#kz-n2) { margin-top: 0 !important; margin-bottom: 0 !important; align-self: center; }
+html body .kz-goal .kzfv-pr > .kzfv-p:not(#kz-n1):not(#kz-n2) { align-self: center; }

@@ -1,0 +1,15 @@
+/* Oct 25 p · overlay manager (kztap-1025p.js): toasts stay above every overlay */
+html body .kz-toast:not(#kz-n1) { z-index: 2147483600 !important; }
+/* 44 pt tap targets for the small controls the tap sweep found (Oct 25 p) */
+html body .kz-hadd:not(#kz-n1):not(#kz-n2) { min-width: 44px !important; min-height: 44px !important; }
+html body .kz-secfold:not(#kz-n1):not(#kz-n2) { min-width: 44px !important; min-height: 44px !important; }
+html body .kz-wknav button:not(#kz-n1):not(#kz-n2):not(#kz-n3) { width: 44px !important; height: 44px !important; }
+html body .kz-gmore:not(#kz-n1):not(#kz-n2) { min-width: 44px !important; min-height: 44px !important; }
+html body .kz-ghandle:not(#kz-n1):not(#kz-n2) { min-width: 44px !important; min-height: 44px !important; }
+html body #kz-main .kz-chip:not(#kz-n1):not(#kz-n2) { min-height: 44px !important; }
+html body .kz-gbody:not(#kz-n1):not(#kz-n2) { min-height: 44px !important; }
+@keyframes kztShake { 0%, 100% { transform: none; } 25% { transform: translateX(-6px); } 50% { transform: translateX(5px); } 75% { transform: translateX(-3px); } }
+html body .kzt-shake { animation: kztShake .32s var(--kz-spr-snappy, ease); }
+@media (prefers-reduced-motion: reduce) { html body .kzt-shake { animation: none; } }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-wknav button:not(#kz-x1):not(#kz-x2):not(#kz-x3) { width: 44px !important; height: 44px !important; }
+html body .kz-wl-skipall:not(#kz-n1):not(#kz-n2) { min-height: 44px !important; display: inline-flex !important; align-items: center !important; }

@@ -1,0 +1,14 @@
+/* Oct 28 · James: the Quote / Today's question / Note to self sheet ends right under Close (it kept 104 pt of empty space),
+   its three rows and Note to self's text box use the card gradient, Close is a glass pill, the picked branch chip is gold. */
+html body .kzf-qs-in:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5) { padding: 12px 12px calc(12px + min(env(safe-area-inset-bottom), 34px)) !important;   /* in the app the inset also counts the tab bar (hidden under this sheet) */ gap: 10px !important; }
+html body .kzf-qs-in button:not(.kzf-qs-x):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5) { background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)), #1a1a1c !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28) !important; border-radius: 18px !important; transition: transform .12s ease !important; outline: none !important; }
+html body .kzf-qs-in button:not(.kzf-qs-x):active:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5) { transform: scale(.98); }
+html body .kzf-qs-in .kzf-qs-x:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5) { margin-top: 2px !important; min-height: 50px !important; align-items: center !important; justify-content: center !important; border-radius: 999px !important;
+  background: linear-gradient(rgba(255,255,255,.13), rgba(255,255,255,.05)) !important; box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28) !important; color: #fff !important; font-weight: 600 !important; outline: none !important; transition: transform .12s ease !important; }
+html body .kzf-qs-in .kzf-qs-x:active:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5) { transform: scale(.97); }
+html body .kzf-qs-in button:focus:not(:focus-visible) { outline: none !important; }
+/* Note to self */
+html body .kznt-sheet .kznt-txt:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5) { background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)), #1a1a1c !important; border: 0 !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28) !important; border-radius: 18px !important; }
+html body .kznt-sheet .kznt-chip.on:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5) { background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%) !important; color: #1C1C1E !important; box-shadow: none !important; }

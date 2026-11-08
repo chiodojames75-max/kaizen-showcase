@@ -1,0 +1,9 @@
+/* Oct 26 m · Plan tab drag (kzorder-1026m.js): the dashed outline where the task will land, and the lifted row. */
+.kzo-ghost { position: fixed; z-index: 0; pointer-events: none; box-sizing: border-box; border: 1.5px dashed rgba(226, 185, 59, .6); border-radius: 16px; background: rgba(226, 185, 59, .06); opacity: 0; transform: scale(.98); transition: opacity .18s ease, transform .18s ease, top .2s cubic-bezier(.2, .9, .25, 1.05), height .2s ease; }
+.kzo-ghost.on { opacity: 1; transform: none; }
+html.kzo-dragging body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="day-list"] > li.kz-todo.kzo-lift:not(#kz-x1):not(#kz-x2):not(#kz-x3):not(#kz-x4), html.kzo-dragging .kzo-list > li.kz-todo.kzo-lift { z-index: 6 !important; border-radius: 16px !important; background-color: #2C2C2E !important; box-shadow: 0 16px 36px rgba(0, 0, 0, .6), 0 0 0 1px rgba(255, 255, 255, .06) !important; }
+html.kzo-dragging body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="day-list"] > li.kz-todo.kzo-lift:not(#kz-x1):not(#kz-x2):not(#kz-x3):not(#kz-x4)::after, html.kzo-dragging .kzo-list > li.kz-todo.kzo-lift::after { opacity: 0 !important; }
+/* the part-of-day heading stays put above the landing spot while the row floats */
+.kzo-ghost[data-lab]::after { content: attr(data-lab); position: absolute; top: -29.5px; left: 14.5px; height: 18px; display: flex; align-items: center; white-space: nowrap; font: 600 13px/19.5px -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif; letter-spacing: .52px; text-transform: uppercase; color: #8E8E93; }
+html.kzo-dragging, html.kzo-dragging body { -webkit-user-select: none; user-select: none; }
+@media (prefers-reduced-motion: reduce) { .kzo-ghost { transition: opacity .12s ease; } }

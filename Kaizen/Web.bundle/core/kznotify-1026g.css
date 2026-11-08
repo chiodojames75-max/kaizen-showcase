@@ -1,0 +1,9 @@
+/* Oct 26 (g): Reminders sheet. The "How often" choices and the interval choices (15 min ... 3 hours) were stacked with
+   no space between them, so on the phone "Custom" sat on top of "15 min", and "Every..." was cut off.
+   Now "How often" is a 2 x 2 grid of equal buttons, chips never truncate, and the rows have room between them. */
+html body .kzn-seg:not(#kz-none) { height: auto !important; align-items: flex-start; row-gap: 10px !important; }
+html body .kzn-seg + .kzn-seg:not(#kz-none) { margin-top: 14px !important; }
+html body .kzn-lab + .kzn-seg:not(#kz-none) { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px !important; }
+html body .kzn-lab + .kzn-seg .kzn-chip:not(#kz-none) { width: 100% !important; justify-content: center; text-align: center; }
+html body .kzn-chip:not(#kz-none) { white-space: nowrap !important; max-width: none !important; overflow: visible !important; text-overflow: clip !important; flex: 0 0 auto; }
+html body .kzn-days:not(#kz-none) { row-gap: 10px !important; }

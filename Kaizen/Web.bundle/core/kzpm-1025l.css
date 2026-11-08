@@ -1,0 +1,83 @@
+/* Oct 25 l (from k) · no extra space under the last row (body already clears the tab bar) · Plan + Me, option B (see kzpm-1025k.js). Everything is scoped to html.kz-pb, set only after the layout builds. */
+/* one-line header with a solid backdrop, like Today and Progress */
+html.kz-pb body #kz-header:not(#kz-n1)::before { opacity: 1 !important; background: rgba(0, 0, 0, .86) !important; -webkit-backdrop-filter: saturate(160%) blur(18px); backdrop-filter: saturate(160%) blur(18px); }
+html.kz-pb body #kz-header:not(#kz-x1):not(#kz-x2) { z-index: 50 !important; }
+html.kz-pb body #kz-header .kz-htitle:not(#kz-x1):not(#kz-x2) { opacity: 1 !important; visibility: visible !important; transform: none !important; }
+html.kz-pb body #kz-header .kzpb-sub:not(#kz-x1):not(#kz-x2) { margin-left: 7px !important; font-weight: 500 !important; font-size: 15px !important; color: #8E8E93 !important; }
+html.kz-pb body #kz-main .kzp-title:not(#kz-x1):not(#kz-x2) { display: none !important; }
+html.kz-pb body .kzpb-off:not(#kz-x1):not(#kz-x2) { display: none !important; }
+/* nothing under the floating tab bar */
+
+/* ---------- Plan ---------- */
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-top49:not(#kz-n1) { gap: 0 !important; padding-top: 6px; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-tsec-h:not(#kz-x1):not(#kz-x2) { margin: 0 4px 6px !important; min-height: 34px !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-tsec-h h2:not(#kz-x1):not(#kz-x2) { font-size: 13px !important; font-weight: 600 !important; letter-spacing: .04em !important; text-transform: uppercase !important; color: #8E8E93 !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-wkrange:not(#kz-x1):not(#kz-x2) { font-size: 13px !important; color: #8E8E93 !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-wknav button:not(#kz-x1):not(#kz-x2) { width: 36px !important; height: 36px !important; background: transparent !important; color: #AEAEB2 !important; }
+/* week strip: day letter, number in a circle (gold when selected), dot when the day has tasks */
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-week7:not(#kz-n1) { gap: 2px; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-week7 button:not(#kz-x1):not(#kz-x2) { background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 4px 0 6px !important; gap: 6px !important; min-height: 76px !important; border-radius: 12px !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-week7 small:not(#kz-x1):not(#kz-x2) { font-size: 12px !important; font-weight: 600 !important; color: #8E8E93 !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-week7 b:not(#kz-x1):not(#kz-x2) { width: 38px !important; height: 38px !important; border-radius: 19px !important; display: flex !important; align-items: center !important; justify-content: center !important; font-size: 18px !important; font-weight: 500 !important; color: #FFFFFF !important; transition: background-color var(--kz-spr-snappy-d, .25s) var(--kz-spr-snappy, ease), transform var(--kz-spr-bouncy-d, .3s) var(--kz-spr-bouncy, ease) !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-week7 button.past b:not(#kz-x1):not(#kz-x2) { color: #636366 !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-week7 button[aria-selected="true"] b:not(#kz-x1):not(#kz-x2) { background: #E2B93B !important; color: #000000 !important; font-weight: 700 !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-week7 button:active b:not(#kz-x1):not(#kz-x2) { transform: scale(.9) !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-week7 i:not(#kz-x1):not(#kz-x2) { min-width: 0 !important; width: 5px !important; height: 5px !important; border-radius: 3px !important; background: transparent !important; color: transparent !important; font-size: 0 !important; overflow: hidden !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-week7 i.on:not(#kz-x1):not(#kz-x2) { background: #E2B93B !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-week7 i.on.done:not(#kz-x1):not(#kz-x2) { background: #30D158 !important; }
+/* day header */
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-pday:not(#kz-n1) { background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; margin-top: 14px; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-pday-h:not(#kz-x1):not(#kz-x2) { display: flex !important; align-items: center !important; gap: 10px !important; padding: 0 4px !important; margin-bottom: 10px !important; min-height: 44px !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-pday-h b:not(#kz-x1):not(#kz-x2) { font-size: 24px !important; font-weight: 700 !important; letter-spacing: -.02em !important; color: #FFFFFF !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 .kz-pday-h span:not(#kz-x1):not(#kz-x2) { font-size: 15px !important; color: #8E8E93 !important; }
+html.kz-pb-plan body .kzpb-edit:not(#kz-x1):not(#kz-x2) { margin-left: auto !important; min-height: 44px !important; padding: 0 2px 0 12px !important; border: 0 !important; background: none !important; font: inherit !important; font-size: 16px !important; font-weight: 600 !important; color: #E2B93B !important; cursor: pointer !important; }
+html.kz-pb-plan body .kzpb-edit[hidden]:not(#kz-x1):not(#kz-x2) { display: none !important; }
+/* timeline: part-of-day labels on the left, a hairline, then the task cards */
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="day-list"]:not(#kz-n1) { display: flex !important; flex-direction: column; gap: 8px; position: relative; margin: 0; padding: 0 0 0 78px !important; list-style: none; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="day-list"]:not(:empty):not(#kz-x1):not(#kz-x2)::before { content: "" !important; position: absolute !important; left: 70px !important; top: 4px !important; bottom: 4px !important; width: 1.5px !important; border-radius: 1px !important; background: #2C2C2E !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="day-list"] > li.kz-todo:not(#kz-x1):not(#kz-x2) { position: relative !important; display: flex !important; align-items: center !important; gap: 12px !important; min-height: 52px !important; margin: 0 !important; padding: 8px 10px 8px 14px !important; border: 0 !important; border-radius: 12px !important; background: #1C1C1E !important; box-shadow: none !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="day-list"] > li.kz-todo[data-kzlab]:not(:first-child):not(#kz-x1):not(#kz-x2) { margin-top: 10px !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="day-list"] > li.kz-todo[data-kzlab]:not(#kz-x1):not(#kz-x2)::after { content: attr(data-kzlab) !important; position: absolute !important; left: -78px !important; top: 0 !important; width: 66px !important; height: 52px !important; display: flex !important; align-items: center !important; font-size: 12px !important; font-weight: 600 !important; color: #8E8E93 !important; pointer-events: none !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="day-list"] .kz-tbody b:not(#kz-x1):not(#kz-x2) { font-size: 16px !important; font-weight: 500 !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="day-list"] .kz-tbody small:not(#kz-x1):not(#kz-x2) { font-size: 12px !important; color: #8E8E93 !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="day-list"] .kz-tdot:not(#kz-x1):not(#kz-x2) { width: 8px !important; height: 8px !important; flex: 0 0 auto !important; }
+/* quick add: a dashed row under the timeline */
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="qadd"]:not(#kz-n1) { margin: 12px 0 0 78px !important; padding: 4px 4px 4px 10px; border: 1.5px dashed #3A3A3C !important; border-radius: 12px; background: transparent !important; box-shadow: none !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="qadd"] input[data-p="qtxt"]:not(#kz-x1):not(#kz-x2) { background: transparent !important; color: #FFFFFF !important; font-size: 16px !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="qadd"] input[data-p="qtxt"]:not(#kz-x1):not(#kz-x2)::placeholder { color: #AEAEB2 !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="qadd"] select:not(#kz-x1):not(#kz-x2) { background: #2C2C2E !important; color: #AEAEB2 !important; border-radius: 9px !important; font-size: 13px !important; }
+
+/* ---------- Me ---------- */
+html.kz-pb-me body #kz-main #kz-me#kz-me#kz-me .kzpb-profcard:not(#kz-n1) { background: transparent !important; border: 0 !important; box-shadow: none !important; margin-top: 10px; }
+html.kz-pb-me body #kz-main #kz-me#kz-me#kz-me .kz-set-prof:not(#kz-x1):not(#kz-x2) { flex-direction: column !important; justify-content: center !important; text-align: center !important; gap: 8px !important; padding: 8px 16px 4px !important; min-height: 0 !important; background: transparent !important; }
+html.kz-pb-me body #kz-main #kz-me#kz-me#kz-me .kz-set-prof .kz-set-av:not(#kz-x1):not(#kz-x2) { width: 84px !important; height: 84px !important; border-radius: 42px !important; font-size: 36px !important; }
+html.kz-pb-me body #kz-main #kz-me#kz-me#kz-me .kz-set-prof .kz-set-id:not(#kz-x1):not(#kz-x2) { align-items: center !important; text-align: center !important; display: flex !important; flex-direction: column !important; }
+html.kz-pb-me body #kz-main #kz-me#kz-me#kz-me .kz-set-prof .kz-set-id b:not(#kz-x1):not(#kz-x2) { font-size: 24px !important; font-weight: 700 !important; }
+html.kz-pb-me body #kz-main #kz-me#kz-me#kz-me .kz-set-prof .kz-set-id small:not(#kz-x1):not(#kz-x2) { font-size: 14px !important; color: #8E8E93 !important; }
+html.kz-pb-me body #kz-main #kz-me#kz-me#kz-me .kz-set-prof > i:not(#kz-x1):not(#kz-x2) { display: none !important; }
+html.kz-pb-me body #kz-main .kzpb-stats:not(#kz-x1):not(#kz-x2) { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; margin: 14px 16px 0 !important; padding: 14px 0 !important; border-radius: 14px !important; background: #1C1C1E !important; color: #FFFFFF !important; text-decoration: none !important; -webkit-tap-highlight-color: transparent !important; transition: transform var(--kz-spr-snappy-d, .2s) var(--kz-spr-snappy, ease) !important; }
+html.kz-pb-me body #kz-main .kzpb-stats:active:not(#kz-x1):not(#kz-x2) { transform: scale(.98) !important; }
+html.kz-pb-me body #kz-main .kzpb-st:not(#kz-x1):not(#kz-x2) { display: flex !important; flex-direction: column !important; align-items: center !important; gap: 2px !important; }
+html.kz-pb-me body #kz-main .kzpb-st + .kzpb-st:not(#kz-x1):not(#kz-x2) { border-left: 0.5px solid #38383A !important; }
+html.kz-pb-me body #kz-main .kzpb-st b:not(#kz-x1):not(#kz-x2) { font-size: 22px !important; font-weight: 800 !important; font-variant-numeric: tabular-nums !important; }
+html.kz-pb-me body #kz-main .kzpb-st.gold b:not(#kz-x1):not(#kz-x2) { color: #E2B93B !important; }
+html.kz-pb-me body #kz-main .kzpb-st small:not(#kz-x1):not(#kz-x2) { font-size: 12px !important; color: #8E8E93 !important; }
+html.kz-pb-me body #kz-main #kz-me#kz-me#kz-me .kzpb-datarow:not(#kz-x1):not(#kz-x2) { margin-top: 28px !important; }
+html.kz-pb-me body #kz-main #kz-me#kz-me#kz-me .kzpb-datarow em:not(#kz-x1):not(#kz-x2) { margin-left: auto !important; font-style: normal !important; color: #8E8E93 !important; font-size: 15px !important; }
+html.kz-pb-me body #kz-main #kz-me#kz-me#kz-me .kzpb-datarow > button > i:not(#kz-x1):not(#kz-x2) { transition: transform var(--kz-spr-snappy-d, .25s) var(--kz-spr-snappy, ease) !important; }
+html.kz-pb-data.kz-pb-me body #kz-main #kz-me#kz-me#kz-me .kzpb-datarow > button > i:not(#kz-x1):not(#kz-x2) { transform: rotate(45deg) !important; }
+html.kz-pb-me:not(.kz-pb-data) body #kz-main #kz-me#kz-me#kz-me .kzpb-dat:not(#kz-x1):not(#kz-x2) { display: none !important; }
+html.kz-pb-me.kz-pb-data body #kz-main #kz-me#kz-me#kz-me p.kzpb-dat:not(#kz-x1):not(#kz-x2) { display: none !important; }
+html.kz-pb-me.kz-pb-data body #kz-main #kz-me#kz-me#kz-me .kz-set-card.kzpb-dat:not(.kz-set-gap):not(#kz-x1):not(#kz-x2) { margin-top: 10px !important; }
+html.kz-pb-me.kz-pb-data body #kz-main #kz-me#kz-me#kz-me .kz-set-card.kzpb-dat.kz-set-gap:not(#kz-x1):not(#kz-x2) { margin-top: 10px !important; }
+@media (prefers-reduced-motion: reduce) { html.kz-pb body .kzpb-stats, html.kz-pb body #kz-plan-s1 .kz-week7 b { transition: none !important; }}html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="day-list"] > li.kz-todo:not(#kz-x1):not(#kz-x2) { overflow: visible !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="qadd"]:not(#kz-x1):not(#kz-x2) { display: flex !important; align-items: center !important; gap: 8px !important; flex-wrap: nowrap !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="qadd"] input[data-p="qtxt"]:not(#kz-x1):not(#kz-x2) { flex: 1 1 0 !important; min-width: 0 !important; width: auto !important; padding: 0 4px !important; min-height: 44px !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="qadd"] select[data-p="qpart"]:not(#kz-x1):not(#kz-x2) { flex: 0 0 auto !important; width: 96px !important; min-height: 44px !important; height: 44px !important; padding: 0 10px !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="qadd"] .kz-qadd-go:not(#kz-x1):not(#kz-x2) { flex: 0 0 auto !important; width: 44px !important; height: 44px !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="qadd"] .kz-qadd-time:not([hidden]):not(#kz-x1):not(#kz-x2) { flex: 1 1 100% !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1#kz-plan-s1#kz-plan-s1 [data-p="qadd"]:has(.kz-qadd-time:not([hidden])):not(#kz-x1):not(#kz-x2) { flex-wrap: wrap !important; }
+html.kz-pb-me body #kz-main .kzpb-stats:not(#kz-x1):not(#kz-x2) { margin: 14px 0 0 !important; }
+html.kz-pb-plan body #kz-main #kz-plan-s1.kzpb-empty#kz-plan-s1#kz-plan-s1 [data-p="qadd"]:not(#kz-x1):not(#kz-x2) { margin-left: 0 !important; }
+html.kz-pb-me body #kz-main .kzpb-stats[hidden]:not(#kz-x1):not(#kz-x2) { display: none !important; }
+html.kz-pb body #kz-main .kz-top49:not(#kz-x1):not(#kz-x2) { padding-bottom: 8px !important; }

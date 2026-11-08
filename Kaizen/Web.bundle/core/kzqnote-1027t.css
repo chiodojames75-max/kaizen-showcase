@@ -1,0 +1,6 @@
+/* Oct 27 t (from q: titles only) · q · "Note to self" row in the quote/question sheet (kzqnote-1027q.js): same row look, a gold pen before the title. */
+body .kzf-qs .kzf-qs-in .kzqn-b b { display: inline-flex; align-items: center; gap: 7px; }
+body .kzf-qs .kzf-qs-in .kzqn-b b svg { width: 16px; height: 16px; color: #E2B93B; flex: none; }
+/* Oct 27 t (James): no preview line under Quote of the day / Today's question / Note to self; tap to see it. Titles stay. */
+body .kzf-qs .kzf-qs-in > button:not(.kzf-qs-x) > span { display: none !important; }
+body .kzf-qs .kzf-qs-in > button:not(.kzf-qs-x) { justify-content: center; }

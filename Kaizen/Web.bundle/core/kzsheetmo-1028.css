@@ -1,0 +1,17 @@
+/* Oct 28 · James's screen recording: bottom sheets (Add, Edit task, goal ⋯ …) faded in see-through (kz49Up: opacity 0→1
+   while moving only 40 px) so the page showed through the sheet, the dim snapped on, and closing vanished in one frame.
+   Now like an iOS sheet: the sheet is solid from the first frame and slides up from the bottom edge on Apple's sheet
+   curve while the background dims; closing slides it back down while the dim fades (kzsheetmo-1028.js keeps a closing
+   sheet on screen for those 260 ms; it is already "hidden" to the app, so nothing waits on it). */
+html body .kz-sheet49:not([hidden]):not(.kz-closing):not(#kz-n1) { animation: kzSheetDim 300ms ease-out both; }
+html body .kz-sheet49:not([hidden]):not(.kz-closing) > :is(.kz-sheet-in, .kz-gs-in):not(#kz-n1):not(#kz-n2) { animation: kzSheetUp 420ms cubic-bezier(.32,.72,0,1) both !important; opacity: 1; }
+html body .kz-sheet49.kz-closing[hidden]:not(#kz-n1):not(#kz-n2) { display: flex !important; pointer-events: none !important; animation: kzSheetUndim 260ms ease-in both; }
+html body .kz-sheet49.kz-closing > :is(.kz-sheet-in, .kz-gs-in):not(#kz-n1):not(#kz-n2) { animation: kzSheetDown 260ms cubic-bezier(.4,0,1,1) both !important; }
+@keyframes kzSheetUp { from { transform: translate3d(0, 100%, 0); } to { transform: none; } }
+@keyframes kzSheetDown { from { transform: none; } to { transform: translate3d(0, 100%, 0); } }
+@keyframes kzSheetDim { from { background-color: rgba(4,6,14,0); } }
+@keyframes kzSheetUndim { to { background-color: rgba(4,6,14,0); } }
+@media (prefers-reduced-motion: reduce) {
+  html body .kz-sheet49:not(#kz-n1):not(#kz-n2), html body .kz-sheet49 > :is(.kz-sheet-in, .kz-gs-in):not(#kz-n1):not(#kz-n2):not(#kz-n3) { animation: none !important; }
+  html body .kz-sheet49.kz-closing[hidden]:not(#kz-n1):not(#kz-n2):not(#kz-n3) { display: none !important; }
+}

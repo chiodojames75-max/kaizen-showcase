@@ -1,0 +1,38 @@
+/* Oct 23 Phase 1 */
+/* 6. no accounts in v1.0 */
+html.kz-noacct [data-kz-signup], html.kz-noacct [data-kz-login], html.kz-noacct [data-kz-acctlink], html.kz-noacct a[href*="pages/account"] { display: none !important; }
+html.kz-noacct #kz-signin [data-si="out"], html.kz-noacct #kz-signin [data-si="in"], html.kz-noacct #kz-signin [data-si="msg"] { display: none !important; }
+.kz-v1acct { margin-bottom: 20px; text-align: center; }
+/* 2. speech lifted out of the small tree picture */
+.kz-say.kz-say-float { position: fixed; bottom: auto; margin: 0; z-index: 960; pointer-events: none; }
+.kz-say.kz-say-float::after { left: var(--kzt, 50%); }
+.kz-say.kz-say-float.below::after { top: -5px; bottom: auto; }
+/* 4. tap targets: 44 pt or more */
+html body .kz-set .kz-set-legal :is(a, button) { display: inline-block !important; padding: 12px 2px !important; min-width: 44px !important; min-height: 44px !important; box-sizing: border-box !important; }
+html body .kz-set .kz-set-legal + .kz-set-legal { margin-top: -6px; }
+.kz-si-terms { min-height: 44px; display: flex; align-items: center; gap: 10px; }
+.kz-si-terms input[type="checkbox"] { position: relative; }
+.kz-si-terms input[type="checkbox"]::after { content: ''; position: absolute; inset: -10px; }
+/* dense day grids: the hit area fills the whole cell, gaps included, so a tap never lands on nothing */
+#kz-cal .kz-calmonth.mini .kz-cald { position: relative; }
+#kz-cal .kz-calmonth.mini .kz-cald::after { content: ''; position: absolute; inset: -3px; }
+/* balance editor: color swatches and the reset link reach 44 pt */
+.kz-bst-sw{gap:16px!important}
+.kz-bst-sw button{position:relative}
+.kz-bst-sw button::after{content:'';position:absolute;inset:-8px}
+.kz-bst-foot button{display:inline-block;padding:12px 2px!important;margin:-12px 0!important}
+.kz-bst-dellink{padding:14px 0!important;margin:-10px 0!important}
+/* other small controls found in the 44 pt sweep: invisible hit areas, the visuals don't move */
+.kz-secfold,.kz-gmore,.kz-ghandle,.kz-ds-link,.kz-si-skip,.kz-road-more,.kz-brand.kz-htitle,[aria-label='Previous week'],[aria-label='Next week']{position:relative}
+.kz-pfold::after,.kz-secfold::after,.kz-gmore::after,.kz-ghandle::after,.kz-ds-link::after,.kz-si-skip::after,.kz-road-more::after,.kz-brand.kz-htitle::after,[aria-label='Previous week']::after,[aria-label='Next week']::after,#kz-cal .kz-calmonth:not(.mini) .kz-cald::after{content:'';position:absolute}
+.kz-pfold::after{inset:-7px}
+.kz-secfold::after{inset:-4px}
+.kz-gmore::after,.kz-ghandle::after{top:0;bottom:0;left:-6px;right:-6px}
+.kz-ds-link::after{top:-11px;bottom:-11px;left:0;right:0}
+.kz-si-skip::after{top:-9px;bottom:-9px;left:0;right:0}
+.kz-road-more::after{top:-4px;bottom:-4px;left:0;right:0}
+.kz-brand.kz-htitle::after{top:-14px;bottom:-14px;left:-2px;right:-2px}
+[aria-label='Previous week']::after,[aria-label='Next week']::after{inset:-6px}
+#kz-cal .kz-calmonth:not(.mini) .kz-cald::after{inset:-2px}
+.kz-shc-how summary{position:relative}
+.kz-shc-how summary::after{content:'';position:absolute;left:0;right:0;top:-14px;bottom:-14px}

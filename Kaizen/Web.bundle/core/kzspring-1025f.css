@@ -1,0 +1,25 @@
+/* Oct 25 f · Springs everywhere (see kzspring-1025f.js). Only timing curves and durations change; what moves stays the same.
+   html.kz-spr is set only when the phone supports linear(), and Reduce Motion keeps the old, shorter motion. */
+@media (prefers-reduced-motion: no-preference) {
+  /* sheets and full-screen layers: slide in on the smooth spring */
+  html.kz-spr .kz-sheet-in:not(#kz-n1) { animation-timing-function: var(--kz-spr-smooth) !important; animation-duration: var(--kz-spr-smooth-d) !important; }
+  html.kz-spr .kz-gsheet .kz-gs-in:not(#kz-n1), html.kz-spr .kzaw-sheet:not(#kz-n1) { transition-timing-function: var(--kz-spr-smooth) !important; transition-duration: var(--kz-spr-smooth-d) !important; }
+  html.kz-spr .kz66-over .kz66-in:not(#kz-n1) { transform: translateY(28px) scale(.985); transition: transform var(--kz-spr-smooth-d) var(--kz-spr-smooth); }
+  html.kz-spr .kz66-over.on .kz66-in:not(#kz-n1) { transform: none; }
+  html.kz-spr .kz-gmenu.kz-gm2:not(#kz-n1) { animation-timing-function: var(--kz-spr-snappy) !important; animation-duration: 300ms !important; }
+  html.kz-spr .kz-reveal-art:not(#kz-n1) { animation-timing-function: var(--kz-spr-bouncy) !important; animation-duration: var(--kz-spr-bouncy-d) !important; }
+  /* rows snapping back after a swipe or a reorder */
+  html.kz-spr .kz49 .kz-grow:not(.kz-swiping):not(.kz-lift):not(#kz-n1) { transition-timing-function: var(--kz-spr-smooth), ease, ease, ease !important; transition-duration: var(--kz-spr-smooth-d), 250ms, 250ms, 250ms !important; }
+  html.kz-spr .kz-secmode > .kz-tsec:not(.kz-secdrag):not(#kz-n1) { transition-timing-function: var(--kz-spr-smooth) !important; transition-duration: var(--kz-spr-smooth-d) !important; }
+  /* the undo bar rises on a spring */
+  html.kz-spr .kz49 .kz-undo:not(#kz-n1), html.kz-spr .kz49 .kz-undo.show:not(#kz-n1) { transition-timing-function: ease, var(--kz-spr-snappy), linear !important; transition-duration: 180ms, var(--kz-spr-snappy-d), 0s !important; }
+  /* presses: quick in, springy out */
+  html.kz-spr :is(.kz49 .kz-btn, .kz49 .kz-check, .kz-mult, .kz-fab, .kzaw-medal, button.kz-collcell, button.kz-wildcell, .kz-pcard-tree, .kz-qstrip-c, .kz-twsp, .kz-picks49 button):not(#kz-n1) { transition-timing-function: var(--kz-spr-snappy) !important; transition-duration: var(--kz-spr-snappy-d) !important; }
+  html.kz-spr :is(.kz49 .kz-btn, .kz49 .kz-check, .kz-mult, .kz-fab, .kzaw-medal, button.kz-collcell, button.kz-wildcell, .kz-pcard-tree, .kz-qstrip-c, .kz-twsp, .kz-picks49 button):active:not(#kz-n1) { transition-duration: 90ms !important; }
+  /* toggles and chevrons */
+  html.kz-spr .kz-switch.kz-sw2::after { transition-timing-function: var(--kz-spr-snappy) !important; transition-duration: var(--kz-spr-snappy-d) !important; }
+  html.kz-spr :is(.kz-gchev, .kz-secfold svg, .kz-fold > summary i, .kz-todo-up summary::after, .kz-bst2-edit svg):not(#kz-n1) { transition-timing-function: var(--kz-spr-smooth) !important; transition-duration: var(--kz-spr-smooth-d) !important; }
+}
+/* taps: no grey flash, no double-tap zoom delay, no text selection on buttons (all pages) */
+html :is(button, a, [role="button"], summary, label) { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+html :is(button, [role="button"], summary) { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }

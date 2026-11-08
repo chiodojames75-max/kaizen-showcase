@@ -1,0 +1,5 @@
+/* Oct 30 · kzplantmr-1030.js: with Today selected on Plan, the gold button reads "Plan tomorrow" / "Edit tomorrow". */
+html.kz-pb-plan.kzpt-today body .kzpb-edit:not(#kz-x1):not(#kz-x2):not(#kz-x3) { display: inline-flex !important; align-items: center; font-size: 0 !important; }
+html.kz-pb-plan.kzpt-today body .kzpb-edit[hidden]:not(#kz-x1):not(#kz-x2):not(#kz-x3) { display: inline-flex !important; }
+html.kz-pb-plan.kzpt-today[data-kzpt="Plan tomorrow"] body .kzpb-edit:not(#kz-x1):not(#kz-x2):not(#kz-x3)::after { content: "Plan tomorrow"; font-size: 16px !important; line-height: 1; }
+html.kz-pb-plan.kzpt-today[data-kzpt="Edit tomorrow"] body .kzpb-edit:not(#kz-x1):not(#kz-x2):not(#kz-x3)::after { content: "Edit tomorrow"; font-size: 16px !important; line-height: 1; }

@@ -1,0 +1,18 @@
+/* Oct 23 QA fixes */
+/* 1. Progress > Your weeks: done days lost their dot (a kzpro rule removes the gradient the dot was painted with) */
+html body #kz-main .kz-calstrip .kz-cald.full i { background: #E2B93B !important; }
+/* rest days (a shield covered the day): blue, everywhere days are drawn */
+html body #kz-main .kz-calstrip .kz-cald.rest i, .kz-cald.rest i, .kz-callegend i.rest { background: #0A84FF !important; box-shadow: none !important; }
+html body #kz-main .kz-g1dot.rest i { background: #0A84FF !important; }
+html body #kz-main .kz-g1day .kz-cald.rest i { background: #0A84FF !important; }
+html body #kz-main #kz-cal#kz-cal .kz-cald.rest { background: #0A84FF !important; }
+html body #kz-main #kz-cal#kz-cal .kz-cald.rest b { color: #fff !important; }
+html body #kz-main #kz-cal#kz-cal .kz-callegend i.rest { background: #0A84FF !important; }
+#kz-cal .kz-calmonth:not(.mini) .kz-cald.rest { background: #0A84FF; }
+/* 2. Today: the + moves into the header, so nothing floats over the goal check-offs */
+html body .kz-fab.kz-fab:not(#kz-none) { display: none !important; }
+.kz-hadd { position: relative; width: 34px; height: 34px; padding: 0; border: 0; border-radius: 50%; background: #E2B93B; color: #000; display: inline-flex; align-items: center; justify-content: center; flex: none; margin-left: 2px; -webkit-tap-highlight-color: transparent; cursor: pointer; }
+.kz-hadd svg { width: 18px; height: 18px; }
+.kz-hadd::after { content: ''; position: absolute; inset: -6px; }   /* 46 pt tap area */
+.kz-hadd:active { transform: scale(0.94); }
+html.kz-kbd .kz-hadd { visibility: hidden; }

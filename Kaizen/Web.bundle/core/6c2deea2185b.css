@@ -1,0 +1,59 @@
+
+  /* v86 · the visitor lives right under Today's goals, only when one comes, and shrinks to a pill */
+  .kz-visitor[data-kz-visitor] { position: relative; margin-top: 10px; }
+  .kz-vis-min { position: absolute; top: 8px; right: 8px; width: 32px; height: 32px; border-radius: 50%; border: 0; background: rgba(118,118,128,.24); color: var(--kz-soft); display: grid; place-items: center; padding: 0; }
+  .kz-vis-min svg { width: 16px; height: 16px; }
+  .kz-visitor.mini { padding: 0; gap: 0; border-radius: 99px; background: var(--s1); }
+  .kz-vis-pill { flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px; height: 46px; padding: 0 8px 0 6px; border: 0; background: transparent; color: var(--kz-fg); font: 600 14.5px/1 var(--kz-sans); text-align: left; }
+  .kz-vis-pill img { width: 34px; height: 34px; flex: none; border-radius: 50%; object-fit: contain; background: rgba(118,118,128,.18); }
+  .kz-vis-pill span { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .kz-vis-pill em { flex: none; font-style: normal; height: 30px; padding: 0 12px; border-radius: 99px; display: inline-flex; align-items: center; background: var(--g49, #E2B93B); color: #1A1404; font: 800 13px/1 var(--kz-sans); }
+  .kz-vis-x { flex: none; width: 40px; height: 46px; border: 0; background: transparent; color: #6E7079; font-size: 15px; }
+  .kz-visitor.mini.t-rare .kz-vis-pill img { box-shadow: 0 0 0 2px rgba(95,168,245,.6); } .kz-visitor.mini.t-epic .kz-vis-pill img { box-shadow: 0 0 0 2px rgba(176,124,255,.6); } .kz-visitor.mini.t-legendary .kz-vis-pill img, .kz-visitor.mini.t-mythic .kz-vis-pill img { box-shadow: 0 0 0 2px rgba(245,184,59,.7); }
+
+
+  /* v87 · four tabs; "Coming up" on Today opens the Plan tab */
+  .kz-tabbar { grid-template-columns: repeat(4, 1fr) !important; }
+  a.kz-todo-up { display: flex; align-items: center; gap: 8px; padding: 10px 4px; color: var(--kz-soft); text-decoration: none; font: 700 14px/1 var(--kz-sans); }
+  a.kz-todo-up[hidden] { display: none; }
+  a.kz-todo-up b { min-width: 22px; height: 22px; padding: 0 6px; border-radius: 11px; background: var(--s2); display: inline-grid; place-items: center; font-size: 12px; }
+  a.kz-todo-up i { width: 7px; height: 7px; margin-left: 2px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg); }
+
+
+  /* v88 · designer pass: surfaces instead of outlines, one quiet edge only where it carries meaning */
+  .kz49 :is(.kz-todo, .kz-planbtn, .kz-week7 button, .kz-pcard, .kz-grow, .kz-goal, .kz-qstrip, .kz-plancard, .kz-fold, .kz-xprules, .kz-visitor, .kz-pp-list, .kz-tsec-add, .kz-pv-list li, .kz-rankcard, .kz-card49, .kz-calday, .kz-refhead, .kz-wknav button, .kz-todo-empty, .kz-collcell, .kz-wildcell, .kz-balcard, .kz-tiles3 > div, .kz-shieldrow, .kz-brbar) { border-color: transparent !important; }
+  .kz49 .kz-todo-empty { background: #0E0F12; }
+  .kz49 .kz-grow.is-done { background: #0E1512; }
+  .kz49 .kz-pcard.full { box-shadow: inset 0 0 0 1px rgba(48,209,88,.35); }
+  /* done = a messy, hand-drawn X over the words (no thin line through them) */
+  .kz49 :is(.kz-grow.is-done .kz-gname, .kz-todo.done .kz-tbody b, .kz-plan-list li.done > span, .kz-pv-list li.done > span) { text-decoration: none !important; position: relative; display: inline-block; width: fit-content; max-width: 100%; align-self: flex-start; color: #8E9097; }
+  .kz49 :is(.kz-grow.is-done .kz-gname, .kz-todo.done .kz-tbody b, .kz-plan-list li.done > span, .kz-pv-list li.done > span)::after { content: ''; position: absolute; left: -6px; right: -6px; top: -3px; bottom: -3px; pointer-events: none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40' preserveAspectRatio='none'%3E%3Cg fill='none' stroke='%23FF453A' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 5 C 22 11, 41 17, 58 23 S 86 33, 97 36' stroke-width='4.2'/%3E%3Cpath d='M6 8 C 30 15, 63 27, 94 33' stroke-width='1.6' opacity='.55'/%3E%3Cpath d='M96 4 C 78 10, 57 18, 42 24 S 14 33, 4 37' stroke-width='4.6'/%3E%3Cpath d='M92 7 C 66 15, 35 27, 8 35' stroke-width='1.4' opacity='.5'/%3E%3C/g%3E%3C/svg%3E") center / 100% 100% no-repeat; opacity: .82; animation: kzXin .32s cubic-bezier(.3,1.4,.5,1) both; }
+  @keyframes kzXin { from { opacity: 0; transform: scale(1.15) rotate(-2deg); } }
+  /* Tree tab: XP front and center, black card */
+  .kz49 .kz-xptop .kz-rankcard { background: #000 !important; box-shadow: none !important; padding: 18px 16px 16px !important; border-radius: 22px; }
+  .kz-xphero { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+  .kz-xph-n { font: 800 40px/1 var(--kz-sans); letter-spacing: -.035em; color: #fff; font-variant-numeric: tabular-nums; }
+  .kz-xph-n small { margin-left: 6px; font: 800 14px/1 var(--kz-sans); letter-spacing: .1em; color: var(--g49, #E2B93B); vertical-align: 6px; }
+  .kz-xphero .kz-bar49 { width: min(280px, 80%); height: 6px; }
+  .kz-xphero .kz-xpnext { max-width: none; font-size: 13px; }
+  /* How you earn XP, grouped and quiet */
+  .kz49 .kz-xprules { background: transparent; padding: 8px 4px 0; margin-top: 40px; text-align: left; }
+  .kz-xprules h3 { text-align: center; font-size: 13px; margin-bottom: 4px; }
+  .kz-xpr-sub { margin: 0 0 16px !important; text-align: center; font: 500 14px/1.4 var(--kz-sans); color: var(--kz-muted); }
+  .kz-xprules h4 { margin: 18px 4px 6px; font: 700 12px/1 var(--kz-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--kz-muted); }
+  .kz-xprules ul { background: var(--s1); border-radius: 18px; padding: 2px 14px; }
+  .kz-xprules li { gap: 12px; min-height: 52px; justify-content: flex-start; }
+  .kz-xprules li span { flex: 1; min-width: 0; }
+  .kz-xprules li i { flex: none; width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; background: rgba(118,118,128,.22); color: #C9CCD3; }
+  .kz-xprules li i.g { background: rgba(48,209,88,.16); color: #5BE38A; }
+  .kz-xprules li i.y { background: rgba(226,185,59,.16); color: #F5D774; }
+  .kz-xprules li i svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+  /* the Plan tab gets the calendar; Progress keeps "Your weeks" */
+  .kz-calh { display: none !important; }
+  body:has(.kz-planpage) .kz-calh { display: flex !important; }
+  body:has(.kz-planpage) #kz-cal { padding-top: 6px; }
+  body:has(.kz-planpage) #kz-cal > .kz-wrap > .kz-label, body:has(.kz-planpage) #kz-cal [data-c="year"], body:has(.kz-planpage) #kz-calweeks { display: none !important; }
+  body:has(.kz-planpage) #kz-cal > .kz-wrap { align-items: stretch; text-align: left; }
+  body:has(.kz-planpage) #kz-cal [data-c="sum"] { margin: -6px 4px 0 !important; max-width: none !important; font-size: 14px !important; }
+  body:has(.kz-balcard) #kz-cal { display: none !important; }
+  body.kz49::before { display: none !important; }

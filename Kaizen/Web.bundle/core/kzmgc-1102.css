@@ -1,0 +1,9 @@
+/* Nov 2 · My goals C "Each climb as a bar" (kzmgc-1102.js) */
+html body .kz-goal.kzmgc > .kz-gbody > .kz-gline:not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { display: none !important; }
+html body .kz-goal.kzmgc > .kz-gbody > .kz-gname:not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { white-space: nowrap !important; overflow: hidden !important; text-overflow: ellipsis !important; display: block !important; }
+.kz-goal.kzmgc .kzmgc-sub { display: block; margin-top: 3px; font-size: 13.5px; font-weight: 500; color: #8E8E93; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kz-goal.kzmgc .kzmgc-bar { display: block; height: 4px; margin-top: 9px; border-radius: 2px; background: #2A2A2E; overflow: hidden; }
+.kz-goal.kzmgc .kzmgc-bar > i { display: block; height: 100%; border-radius: 2px; background: var(--pc, #F2CF5B); transition: width .4s ease; }
+/* the list sits on the black page like the mockup (no card behind it); rows keep their thin dividers */
+html body :is(.kz-rows, .kz-rows49, .kz-list, .kz-grid):has(> .kz-goal.kzmgc):not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { background: none !important; background-image: none !important; box-shadow: none !important; border: 0 !important; border-radius: 0 !important; }
+html body :is(.kz-rows, .kz-rows49, .kz-list, .kz-grid):has(> .kz-goal.kzmgc) > .kz-goal:not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { background: none !important; background-image: none !important; box-shadow: none !important; border-radius: 0 !important; border-bottom: .5px solid #26262A !important; padding-left: 0 !important; }

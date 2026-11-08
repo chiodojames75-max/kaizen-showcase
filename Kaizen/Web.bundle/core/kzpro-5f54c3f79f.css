@@ -1,0 +1,193 @@
+/* ===== Kaizen pro design system: shared layer (all pages). Tokens + header + large title + floating button. ===== */
+:root{--p-bg:#000;--p-s1:#1C1C1E;--p-s2:#2C2C2E;--p-sep:#38383A;--p-t1:#FFFFFF;--p-t2:#8E8E93;--p-t3:#636366;--p-gold:#E2B93B;--p-green:#30D158;--p-red:#FF453A;--p-water:#64D2FF}
+html body .kzp-title{display:flex;flex-direction:column;gap:2px;margin:2px 4px 16px}
+html body .kzp-title b{font:700 34px/1.05 var(--kz-sans);letter-spacing:-.02em;color:var(--p-t1)}
+html body .kzp-title span{font:400 15px/1.3 var(--kz-sans);color:var(--p-t2)}
+html.kzp-lt body header#kz-header#kz-header.kz-h49 .kz-htitle{opacity:0;transition:opacity .18s ease}
+html.kzp-lt.kz-scrolled body header#kz-header#kz-header.kz-h49 .kz-htitle{opacity:1}
+html body header#kz-header#kz-header.kz-h49 .kz-htitle small{display:none!important}
+html body header#kz-header#kz-header.kz-h49 .kz-htitle svg{display:none!important}
+html body header#kz-header#kz-header.kz-h49 .kz-htitle b{font:600 17px/1 var(--kz-sans)!important;letter-spacing:-.01em!important}
+html body header#kz-header#kz-header.kz-h49 .kz-hprog{display:none!important}
+html body header#kz-header#kz-header.kz-h49 .kz-chip{height:32px!important;min-height:0!important;padding:0 11px!important;border-radius:16px!important;border:0!important;background:var(--p-s1)!important;box-shadow:none!important;font:600 15px/1 var(--kz-sans)!important;gap:5px!important}
+html body header#kz-header#kz-header.kz-h49 .kz-chip.gold{color:var(--p-gold)!important}
+html body header#kz-header#kz-header.kz-h49 .kz-chip.water{color:var(--p-water)!important}
+html body header#kz-header#kz-header.kz-h49 .kz-chip.water.amber{color:#FFB340!important}
+html body header#kz-header#kz-header.kz-h49 .kz-chip.water.red{color:#FF6961!important}
+html body header#kz-header#kz-header.kz-h49 .kz-shieldchip{display:none!important}
+html body header#kz-header#kz-header.kz-h49 .kz-chip svg{width:15px!important;height:15px!important}
+html body #kz-main .kz-fab:not(#kzp1):not(#kzp2):not(#kzp3){width:56px!important;height:56px!important;background:var(--p-gold)!important;background-image:none!important;border:0!important;box-shadow:0 4px 14px rgba(0,0,0,.45)!important;filter:none!important;color:#000!important}
+html body #kz-main .kz-fab:not(#kzp1):not(#kzp2):not(#kzp3) svg,html body #kz-main .kz-fab:not(#kzp1):not(#kzp2):not(#kzp3) svg path{color:#000!important;stroke:#000!important}
+/* ===== Batch 1: shared building blocks (sheets, pop-ups, buttons, inputs, chips, labels, toasts) ===== */
+/* Sheet + pop-up surfaces: one dark surface, 20px top corners, no border/glow/gradient */
+html body :is(.kz-sheet49.kz-sheet49 .kz-sheet-in, .kz-qmodal.kz-qmodal .kz-qm-in, .kz-gsheet.kz-gsheet .kz-gs-in, .kz-wcard.kz-wcard .kz-wcard-in){background:var(--p-s1)!important;background-image:none!important;border:0!important;box-shadow:0 -1px 0 rgba(255,255,255,.06)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+html body :is(.kz-sheet49.kz-sheet49 .kz-sheet-in, .kz-qmodal.kz-qmodal .kz-qm-in, .kz-gsheet.kz-gsheet .kz-gs-in)::before{background:#48484A!important;box-shadow:none!important}
+html body :is(.kz-sheet49.kz-sheet49, .kz-qmodal.kz-qmodal, .kz-gsheet.kz-gsheet){background-color:rgba(0,0,0,.6)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+/* Sheet titles + small labels: sentence case, grey, never all caps */
+html body :is(.kz-sheet49,.kz-qmodal,.kz-gsheet,.kz-wcard,.kz-qcard) .kz-sheet-title{font:700 20px/1.2 var(--kz-sans)!important;letter-spacing:-.01em!important;text-transform:none!important;color:var(--p-t1)!important}
+html body :is(.kz-sheet49,.kz-qmodal,.kz-gsheet,.kz-wcard) :is(.kz-label49,.kz-label49.gold){font:400 13px/1.25 var(--kz-sans)!important;letter-spacing:0!important;text-transform:none!important;color:var(--p-t2)!important}
+html body .kz-qcard .kz-qc-l{letter-spacing:.08em!important}
+/* Round close / icon buttons: grey circle, no border, no gold ring */
+html body :is(.kz-sheet49,.kz-qmodal,.kz-gsheet,.kz-wcard,.kz-qcard) .kz-iconbtn.kz-iconbtn{width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;padding:0!important;border-radius:50%!important;border:0!important;background:var(--p-s2)!important;background-image:none!important;box-shadow:none!important;color:var(--p-t2)!important;filter:none!important}
+html body :is(.kz-sheet49,.kz-qmodal,.kz-gsheet,.kz-wcard,.kz-qcard) .kz-iconbtn.kz-iconbtn svg{width:14px!important;height:14px!important}
+html body :is(.kz-sheet49,.kz-qmodal,.kz-gsheet,.kz-wcard,.kz-qcard) .kz-iconbtn.kz-iconbtn::before,html body :is(.kz-sheet49,.kz-qmodal,.kz-gsheet,.kz-wcard,.kz-qcard) .kz-iconbtn.kz-iconbtn::after{display:none!important}
+
+/* Buttons everywhere: primary gold pill, secondary grey pill, destructive red text */
+html body .kz-btn.kz-btn:not(.kz-fab):not(#kzp1):not(#kzp2){min-height:50px!important;border-radius:25px!important;border:0!important;background-image:none!important;box-shadow:none!important;filter:none!important;font:600 17px/1 var(--kz-sans)!important;letter-spacing:-.01em!important;text-transform:none!important;outline:0!important}
+html body .kz-btn.kz-btn:not(.kz-fab)::before,html body .kz-btn.kz-btn:not(.kz-fab)::after{display:none!important}
+html body .kz-btn.kz-btn:not(#kzp1):not(#kzp2).gold{background:var(--p-gold)!important;color:#000!important}
+html body .kz-btn.kz-btn.gold:disabled,html body .kz-btn.kz-btn.gold[aria-disabled=true]{background:var(--p-s2)!important;color:var(--p-t3)!important}
+html body .kz-btn.kz-btn:not(#kzp1):not(#kzp2):is(.ghost,.navy){background:var(--p-s2)!important;color:var(--p-t1)!important}
+html body .kz-btn.kz-btn:not(#kzp1):not(#kzp2).danger{background:var(--p-s2)!important;color:var(--p-red)!important}
+html body .kz-btn.kz-btn.sm{min-height:36px!important;border-radius:18px!important;font-size:15px!important;padding:0 14px!important}
+html body .kz-btn.kz-btn:active,html body .kz-btn.kz-btn.kz-pressed{opacity:.85}
+html body .kz-btn.kz-btn.gold :is(svg,path){stroke:#000!important;color:#000!important}
+
+/* Text fields: grey, 44pt, no outline; gold focus line only */
+html body :is(.kz-sheet49,.kz-qmodal,.kz-gsheet,#kz-main) :is(input[type=text],input[type=search],input[type=email],input:not([type]),textarea,select):not(.kz-sw49){background-color:var(--p-s2)!important;border:0!important;box-shadow:none!important;border-radius:10px!important;color:var(--p-t1)!important;font-family:var(--kz-sans)!important;font-size:17px!important}
+html body :is(.kz-sheet49,.kz-qmodal,.kz-gsheet,#kz-main) :is(input[type=text],input:not([type]),textarea):not(.kz-sw49):focus{box-shadow:0 0 0 1.5px var(--p-gold)!important;outline:0!important}
+html body :is(.kz-sheet49,.kz-qmodal,.kz-gsheet,#kz-main) :is(input,textarea)::placeholder{color:var(--p-t3)!important}
+html body :is(.kz-sheet49,.kz-qmodal,.kz-gsheet,#kz-main) :is(input,textarea){caret-color:var(--p-gold)}
+
+/* Choice chips inside sheets (When: Today / Tomorrow / This week…): grey, selected = white */
+html body .kz-sheet49 [data-t="twhen"] button{background:var(--p-s2)!important;border:0!important;box-shadow:none!important;color:var(--p-t1)!important;border-radius:10px!important}
+html body .kz-sheet49 [data-t="twhen"] button[aria-pressed=true]{background:#fff!important;color:#000!important}
+html body .kz-sheet49 .kz-morebtn{background:var(--p-s2)!important;border:0!important;box-shadow:none!important;color:var(--p-gold)!important}
+
+/* Goal menu rows: one card of rows, no stray gold line */
+html body .kz-gsheet .kz-gs-list{background:var(--p-s2)!important;border:0!important;box-shadow:none!important;border-radius:12px!important;overflow:hidden!important}
+html body .kz-gsheet .kz-gs-row{border:0!important;box-shadow:none!important;background:transparent!important;min-height:48px!important;font:400 17px/1 var(--kz-sans)!important}
+html body .kz-gsheet .kz-gs-row + .kz-gs-row{box-shadow:inset 0 .5px 0 #48484A!important}
+html body .kz-gsheet .kz-gs-row:active{background:#3A3A3C!important}
+html body .kz-gsheet .kz-gs-mv{background:var(--p-s2)!important;border:0!important;box-shadow:none!important;border-radius:12px!important}
+html body .kz-gsheet .kz-gs-row.red{background:var(--p-s2)!important;border-radius:12px!important}
+
+/* Toast: one grey pill */
+html body .kz-toast.kz-toast{background:var(--p-s2)!important;background-image:none!important;border:0!important;box-shadow:0 6px 20px rgba(0,0,0,.5)!important;color:var(--p-t1)!important;font:500 15px/1.3 var(--kz-sans)!important;border-radius:22px!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+html body :is(.kz-sheet49,.kz-qmodal,.kz-gsheet,.kz-wcard,.kz-qcard) .kz-iconbtn.kz-iconbtn:not(#kzp1):not(#kzp2){box-shadow:none!important;border:0!important;background:var(--p-s2)!important}
+html body :is(.kz-sheet49,.kz-qmodal,.kz-gsheet,.kz-wcard,.kz-qcard) :is(button,a,[role=button],[tabindex]):focus{outline:0!important}
+html body :is(.kz-sheet49,.kz-qmodal,.kz-gsheet) :is(.kz-chips49,.kz-picks49) button:not(#kzp1):not(.kz-tl-am):not(.kz-tl-pm):not(.kz-tl-eve):not(.kz-tl-night):not(.kz-tl-link){background:var(--p-s2)!important;background-image:none!important;border:0!important;box-shadow:none!important;color:var(--p-t1)!important;filter:none!important}
+html body :is(.kz-sheet49,.kz-qmodal,.kz-gsheet) :is(.kz-chips49,.kz-picks49) button:is(.on,[aria-pressed=true]):not(#kzp1):not(.kz-tl-am):not(.kz-tl-pm):not(.kz-tl-eve):not(.kz-tl-night):not(.kz-tl-link){background:#fff!important;color:#000!important}
+html body .kz-planmodal .kz-tiers > span{border:0!important;box-shadow:none!important;background:var(--p-s2)!important;border-radius:10px!important;color:var(--p-t2)!important}
+html body .kz-planmodal .kz-tiers > span:is(.on,.hit,.done){background:var(--p-gold)!important;color:#000!important}
+
+/* ===== Batch 3: every deeper page (Manage goals, Goal, Journal, Archived, Growth, Me, Account) uses the same parts ===== */
+/* page titles: big, left, bold (serif titles become the system title) */
+html body #kz-main .kz-serif-title{font:700 28px/1.15 var(--kz-sans)!important;letter-spacing:-.02em!important;text-align:left!important;color:var(--p-t1)!important;margin:4px 4px 6px!important}
+html body #kz-main .kz-section.first .kz-wrap{text-align:left!important;align-items:stretch!important}
+html body #kz-main .kz-section.first .kz-wrap > :is(.kz-label,.kz-soft,p){text-align:left!important;margin-left:4px!important;margin-right:4px!important}
+html body #kz-main .kz-goalpage .kz-wrap > a.kz-quiet:first-child{display:none!important}
+html body #kz-main :is(.kz-label,.kz-label49,.kz-label.gold,.kz-label49.gold){font:400 13px/1.25 var(--kz-sans)!important;letter-spacing:0!important;text-transform:none!important;color:var(--p-t2)!important}
+html body #kz-main .kz-soft{font:400 15px/1.4 var(--kz-sans)!important;color:var(--p-t2)!important}
+html body #kz-main :is(.kz-note,.kz-note49){font:400 13px/1.35 var(--kz-sans)!important;color:var(--p-t3)!important}
+html body #kz-main a.kz-quiet,html body #kz-main button.kz-quiet{background:none!important;background-image:none!important;border:0!important;box-shadow:none!important;color:var(--p-gold)!important;font:400 17px/1.2 var(--kz-sans)!important;text-transform:none!important;letter-spacing:0!important}
+/* cards */
+html body #kz-main :is(.kz-card,.kz-card49,.kz-j2-today,.kz-j2-empty,.kz-year,.kz-brow,.kz-g1hist,.kz-weekcard,.kz-g1day,.kz-gnbox,.kz-g1off){background:var(--p-s1)!important;background-image:none!important;border:0!important;box-shadow:none!important;border-radius:14px!important;outline:0!important}
+html body #kz-main :is(.kz-card,.kz-card49,.kz-j2-today,.kz-j2-empty,.kz-year,.kz-brow,.kz-weekcard)::before,html body #kz-main :is(.kz-card,.kz-card49,.kz-j2-today,.kz-j2-empty,.kz-year,.kz-brow,.kz-weekcard)::after{display:none!important}
+html body #kz-main .kz-card-name{font:600 17px/1.3 var(--kz-sans)!important;color:var(--p-t1)!important}
+/* goal rows anywhere (Manage goals, a goal's page, archived): one card of rows, never separate glowing boxes */
+html body #kz-main :is(#kz-my,.kz-rows,#kz-arch-list){display:flex!important;flex-direction:column!important;gap:0!important;background:var(--p-s1)!important;border-radius:14px!important;overflow:hidden!important;padding:0!important;border:0!important;box-shadow:none!important}
+html body #kz-main :is(#kz-my,.kz-rows,#kz-arch-list):empty{display:none!important}
+html body #kz-main .kz-grow:not(#kzp1){margin:0!important;border:0!important;border-radius:0!important;background:transparent!important;background-image:none!important;box-shadow:none!important;outline:0!important}
+html body #kz-main .kz-grow:not(#kzp1)::before,html body #kz-main .kz-grow:not(#kzp1)::after{display:none!important}
+html body #kz-main .kz-grow + .kz-grow:not(#kzp1){box-shadow:inset 0 .5px 0 var(--p-sep)!important}
+html body #kz-main .kz-grow .kz-gname:not(#kzp1):not(#kzp2){font:600 17px/1.25 var(--kz-sans)!important;letter-spacing:-.01em!important;color:var(--p-t1)!important;text-shadow:none!important;text-decoration:none!important}
+html body #kz-main .kz-grow .kz-gname::before,html body #kz-main .kz-grow .kz-gname::after{display:none!important;content:none!important}
+html body #kz-main .kz-grow.is-done .kz-gname:not(#kzp1):not(#kzp2){color:var(--p-t2)!important}
+html body #kz-main .kz-grow :is(.kz-gstep,.kz-gstep span,.kz-gstage,.kz-gmeta,.kz-gpath){font-family:var(--kz-sans)!important;color:var(--p-t2)!important}
+html body #kz-main .kz-grow .kz-gstep i{font:600 11px/1 var(--kz-sans)!important;font-style:normal!important;letter-spacing:.04em!important;color:var(--p-t2)!important;background:var(--p-s2)!important;border:0!important;border-radius:6px!important;padding:4px 6px!important}
+html body #kz-main .kz-grow .kz-gdots i{background:var(--p-s2)!important;box-shadow:none!important}
+html body #kz-main .kz-grow .kz-gdots i.on{background:var(--p-green)!important}
+html body #kz-main .kz-grow .kz-gdots i.today{background:transparent!important;box-shadow:inset 0 0 0 1.5px var(--p-gold)!important}
+html body #kz-main .kz-grow .kz-gdots i.today.on{background:var(--p-green)!important;box-shadow:none!important}
+html body #kz-main .kz-grow :is(.kz-gmore,.kz-gchev,.kz-ghandle){color:var(--p-t3)!important;background:none!important;box-shadow:none!important;border:0!important}
+html body #kz-main .kz-grow .kz-check:not(#kzp1){width:44px!important;height:44px!important;min-width:44px!important;background:none!important;background-image:none!important;border:0!important;box-shadow:none!important;filter:none!important;border-radius:50%!important}
+html body #kz-main .kz-grow .kz-check:not(#kzp1)::before,html body #kz-main .kz-grow .kz-check:not(#kzp1)::after{display:none!important}
+html body #kz-main .kz-grow .kz-check .kz-chk{width:30px!important;height:30px!important;filter:none!important}
+html body #kz-main .kz-grow .kz-check .kz-chk-ring{fill:none!important;stroke:#48484A!important;stroke-width:1.7!important;filter:none!important;transition:fill .22s cubic-bezier(.2,.9,.3,1.3),stroke .22s ease!important}
+html body #kz-main .kz-grow .kz-check .kz-chk-mark{stroke:transparent!important;filter:none!important}
+html body #kz-main .kz-grow .kz-check.done .kz-chk-ring{fill:var(--p-green)!important;stroke:var(--p-green)!important}
+html body #kz-main .kz-grow .kz-check.done .kz-chk-mark{stroke:#000!important;stroke-width:2.4!important}
+/* stat cards: one card, numbers on top, small grey labels */
+html body #kz-main :is(.kz-g1stats,.kz-j2-stats){display:grid!important;grid-auto-flow:column!important;grid-auto-columns:minmax(0,1fr)!important;gap:0!important;background:var(--p-s1)!important;border:0!important;border-radius:14px!important;box-shadow:none!important;padding:14px 16px!important}
+html body #kz-main :is(.kz-g1stats,.kz-j2-stats) > div{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:3px!important;background:none!important;background-image:none!important;border:0!important;box-shadow:none!important;padding:0!important;min-height:0!important;text-align:left!important}
+html body #kz-main :is(.kz-g1stats,.kz-j2-stats) > div::before,html body #kz-main :is(.kz-g1stats,.kz-j2-stats) > div::after{display:none!important}
+html body #kz-main :is(.kz-g1stats,.kz-j2-stats) b{font:600 22px/1.1 var(--kz-sans)!important;color:var(--p-t1)!important}
+html body #kz-main :is(.kz-g1stats,.kz-j2-stats) span{display:block!important;font:400 13px/1.25 var(--kz-sans)!important;letter-spacing:0!important;text-transform:none!important;color:var(--p-t2)!important}
+html body #kz-main :is(.kz-g1stats,.kz-j2-stats) span::first-letter{text-transform:uppercase}
+/* segmented controls (Journal tabs and others): grey track, selected = lighter grey */
+html body #kz-main .kz-seg:not(#kzp1){background:rgba(118,118,128,.24)!important;border:0!important;box-shadow:none!important;border-radius:10px!important;padding:2px!important;gap:2px!important}
+html body #kz-main .kz-seg .kz-chip{min-height:32px!important;border:0!important;border-radius:8px!important;background:none!important;background-image:none!important;box-shadow:none!important;color:var(--p-t1)!important;font:600 14px/1 var(--kz-sans)!important;text-transform:none!important}
+html body #kz-main .kz-seg .kz-chip:is([aria-pressed="true"],[aria-selected="true"],.on){background:#636366!important}
+/* Journal */
+html body #kz-main .kz-j2-today{padding:16px!important;text-align:left!important}
+html body #kz-main .kz-j2-today .kz-j2-k{font:400 13px/1.2 var(--kz-sans)!important;letter-spacing:0!important;text-transform:none!important;color:var(--p-t2)!important}
+html body #kz-main .kz-j2-today b{font:600 20px/1.3 var(--kz-sans)!important;color:var(--p-t1)!important}
+html body #kz-main .kz-j2-today .kz-j2-go{font:400 15px/1 var(--kz-sans)!important;color:var(--p-gold)!important}
+html body #kz-main .kz-j2-empty b{font:600 17px/1.3 var(--kz-sans)!important;color:var(--p-t1)!important}
+html body #kz-main .kz-j2-empty span{font:400 15px/1.4 var(--kz-sans)!important;color:var(--p-t2)!important}
+/* My goals: year card */
+html body #kz-main .kz-year{padding:14px 16px!important}
+html body #kz-main .kz-year-bar{height:6px!important;border-radius:3px!important;background:var(--p-s2)!important;border:0!important;box-shadow:none!important}
+html body #kz-main .kz-year-bar > *{background:var(--p-gold)!important;background-image:none!important;box-shadow:none!important;border-radius:3px!important}
+/* Growth */
+html body #kz-main .kz-brow{padding:14px 16px!important;text-align:left!important}
+html body #kz-main .kz-blab{font:400 13px/1.2 var(--kz-sans)!important;letter-spacing:0!important;text-transform:none!important}
+html body #kz-main .kz-g-balwrap .kz-label{font:700 20px/1.2 var(--kz-sans)!important;color:var(--p-t1)!important;text-align:left!important;display:block!important}
+html body #kz-main .kz-g-balwrap .kz-label span{font:400 15px/1 var(--kz-sans)!important;color:var(--p-t2)!important}
+html body #kz-main .kz-gsub{font:400 15px/1.3 var(--kz-sans)!important;color:var(--p-t2)!important;text-align:left!important;margin:0 4px!important}
+/* goal page history */
+html body #kz-main .kz-g1hist{padding:16px!important}
+html body #kz-main .kz-g1day{padding:14px 16px!important}
+html body #kz-main .kz-g1day b{font:600 17px/1.3 var(--kz-sans)!important;color:var(--p-t1)!important}
+html body #kz-main .kz-g1text{font:400 15px/1.4 var(--kz-sans)!important;color:var(--p-t1)!important}
+html body #kz-main .kz-g1text.empty{color:var(--p-t3)!important}
+html body #kz-main .kz-g1st{font:400 13px/1 var(--kz-sans)!important;color:var(--p-t2)!important}
+
+html body #kz-main :is(.kz-goalpage .kz-stack,#kz-growth .kz-wrap){text-align:left!important;align-items:stretch!important}
+html body #kz-main :is(.kz-goalpage,#kz-growth) :is(.kz-label,.kz-soft,.kz-g1step,p){text-align:left!important}
+html body #kz-main .kz-g1hist{text-align:left!important}
+html body #kz-main .kz-g1dot i{background:var(--p-s2)!important}
+html body #kz-main .kz-g1dot.full i{background:var(--p-green)!important}
+html body #kz-main .kz-g1dot.setback i{background:var(--p-red)!important}
+html body #kz-main #kz-goaljournal :is(.kz-label,p.kz-soft){text-align:left!important}
+html body #kz-main > .kzp-title{margin:2px 20px 12px!important}
+html body #kz-main .kz-g1hist .kz-callegend i.full{background:var(--p-green)!important}
+html body #kz-main .kz-g1hist .kz-callegend i.setback{background:var(--p-red)!important}
+html body #kz-main .kz-g1hist .kz-callegend span{font:400 13px/1.2 var(--kz-sans)!important;color:var(--p-t2)!important}
+html body #kz-main #kz-goaljournal .kz-wrap{text-align:left!important}
+html body #kz-main .kz-g1day .kz-cald.full i{background:var(--p-green)!important}
+html body #kz-main .kz-g1day .kz-cald.setback i{background:var(--p-red)!important}
+
+/* ===== Batch 4: full-screen moments (tree welcome, onboarding, reveal) follow the same text + control rules ===== */
+html body .kz-twelcome :is(.kz-label,.kz-label.gold,.kz-twlab){font:400 13px/1.25 var(--kz-sans)!important;letter-spacing:0!important;text-transform:none!important;color:var(--p-t2)!important}
+html body .kz-twelcome .kz-input{background:var(--p-s2)!important;border:0!important;box-shadow:none!important;border-radius:12px!important;color:var(--p-t1)!important;font:400 17px/1.2 var(--kz-sans)!important;caret-color:var(--p-gold)}
+html body .kz-twelcome .kz-input:focus{box-shadow:0 0 0 1.5px var(--p-gold)!important;outline:0!important}
+html body .kz-twelcome .kz-twsp{border-color:transparent!important;background:var(--p-s1)!important;box-shadow:none!important;border-radius:14px!important}
+html body .kz-twelcome .kz-twsp[aria-pressed="true"]{border-color:var(--p-gold)!important}
+html body .kz-twelcome .kz-quiet{border:0!important;background:none!important;box-shadow:none!important;color:var(--p-t2)!important;font:400 17px/1.2 var(--kz-sans)!important}
+html body :is(.kz-welcome,.kz-twelcome,.kz-reveal) .kz-btn.kz-btn.navy:not(#kzp1):not(#kzp2){background:var(--p-gold)!important;color:#000!important}
+html body .kz-welcome :is(.kz-label,.kz-label49){letter-spacing:0!important;text-transform:none!important}
+
+/* ===== Batch 5: motion. Progress bars glide, rows answer the finger, everything respects Reduce Motion ===== */
+html body #kz-main :is(.kz-bar49 i,.kz-nc2-bar i,.kz-year-bar > *,.kz-br-bar b){transition:width .45s cubic-bezier(.2,.8,.2,1)!important}
+html body #kz-main :is(a.kz-set-row,.kz-txp-list a,.kz-br-row,.kz-nextcard2,.kz-stop > button,.kz-j2-today,.kz-boost,.kz-qstrip){-webkit-tap-highlight-color:transparent}
+html body #kz-main :is(.kz-txp-list a,.kz-br-row,.kz-nextcard2,.kz-j2-today):active{background:var(--p-s2)!important}
+@media (prefers-reduced-motion: reduce){html body *{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+html body #kz-main :is(.kz-card,.kz-card49):not(#kzp1):not(#kzp2){background:var(--p-s1)!important;background-image:none!important;border:0!important;box-shadow:none!important}
+html body #kz-main .kz-mcnav:not(#kzp1):not(#kzp2){background:var(--p-s2)!important;background-image:none!important;border:0!important;box-shadow:none!important;color:var(--p-t1)!important}
+html body #kz-main .kz-mcnav:disabled{opacity:.35!important}
+html body #kz-main :is(.kz-mcal,.kz-mcgrid,.kz-calgrid) i:is(.full,.grew,.setback,:not([class])){box-shadow:none!important}
+html body #kz-main .kz-set-h{text-transform:none!important;letter-spacing:0!important;font-size:15px!important}
+html body #kz-main :is(.kz-callegend,.kz-mcday,.kz-g1dot,.kz-cald) i{box-shadow:none!important;background-image:none!important}
+html body #kz-main :is(.kz-callegend,.kz-mcday) i.full{background-color:var(--p-gold)!important}
+html body #kz-main :is(.kz-callegend,.kz-mcday) i.grew{background-color:var(--p-green)!important}
+html body #kz-main :is(.kz-callegend,.kz-mcday) i.setback{background-color:var(--p-red)!important}
+
+/* ===== Audit fixes (Oct 23) ===== */
+html body #kz-main .kz-serif-title{font-size:34px!important;line-height:1.08!important}
+html body #kz-main .kz-serif-title.kz-g1name{font-size:28px!important;line-height:1.15!important}
+html body #kz-main .kz-year{margin-left:0!important;margin-right:0!important}
+html body #kz-main :is(.kz-g1hist,#kz-goaljournal) > :is(.kz-label,span.kz-label){display:block!important;align-self:stretch!important;text-align:left!important}
+html body #kz-main #kz-goaljournal .kz-label{display:block!important;align-self:stretch!important;text-align:left!important;margin-left:4px!important}
+html body #kz-main .kz-goals-list .kz-year{width:auto!important;max-width:none!important;align-self:stretch!important}

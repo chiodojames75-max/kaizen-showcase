@@ -1,0 +1,3 @@
+/* Oct 29 · James: remove "Saved on this phone. Nothing leaves it." under Your name. Hidden, not deleted: 098b073b268b.js
+   sets .hidden on [data-kz-nosync], so removing the element would throw. The privacy policy still says it. */
+html body [data-kz-nosync]:not(#kz-n1) { display: none !important; }

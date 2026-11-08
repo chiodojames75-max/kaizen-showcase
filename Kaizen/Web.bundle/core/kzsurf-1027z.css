@@ -1,0 +1,15 @@
+/* Oct 27 z · James: "every pill on this app" uses the to-do card surface (.kz-plancard: soft top-lit gradient + hairline highlights).
+   One list of the flat #1C1C1E cards found on every page (pm/cards.py inventory). Cards with a gold edge keep it (background only). */
+:root { --kzs-bg: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)); --kzs-sh: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28); }
+html body :is(.kzq-list, .kz-qadd, .kzgy-tile, .kzgy-big, .kzpc-card, .kzpb-stats, .kz-set-card, .kz-g1stats, .kzbd-gp, .kz-g1hist, .kz-g1off, .kz-g1day,
+  .kz-j2-stats, .kz-j2-today, .kz-j2-empty, .kz-rows, .kz-todo-empty, .kz-btn.navy.pill, .kz-btn.ghost.pill, .kzg-btn.ghost):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) {
+  background: var(--kzs-bg) !important; box-shadow: var(--kzs-sh) !important; }
+/* gold-edged Kaizen 66 cards: same surface, border untouched */
+html body :is(.kzf-66, .kz66-card.invite, .kzpc-card.kzpc-66):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) { background: var(--kzs-bg) !important; }
+/* rows that are drawn as one card out of several boxes (Plan's to-dos): one gradient stretched over the whole group
+   (kzsurf-1027z.js sets --kzs-h, the group height, and --kzs-y, this row's offset in it) */
+html body li.kz-todo.plan:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) {
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)) 0 calc(-1px * var(--kzs-y, 0)) / 100% calc(1px * var(--kzs-h, 60)) no-repeat, #000 !important; }
+html body li.kz-todo.plan.kzs-first:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) { box-shadow: inset 0 1px 0 rgba(255,255,255,.16) !important; }
+html body li.kz-todo.plan.kzs-last:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) { box-shadow: inset 0 -1px 0 rgba(0,0,0,.28) !important; }
+html body li.kz-todo.plan.kzs-first.kzs-last:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) { box-shadow: var(--kzs-sh) !important; }

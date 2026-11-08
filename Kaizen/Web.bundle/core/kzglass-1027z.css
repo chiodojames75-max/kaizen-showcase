@@ -1,0 +1,19 @@
+/* Oct 27 z (from 1027y: quit rows no longer get their own card; their group does) · James: Kaizen 66 check in glass too; goal checks a little further right; goal/habit cards on the to-do card background */
+/* Kaizen 66 check: glass ring when open, gold glass with a dark tick when done (same recipe as .kz-pcheck) */
+html body .kzf-ck:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) { border: 0 !important;
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.2) 0%, rgba(255,255,255,.06) 45%, rgba(255,255,255,.03) 70%, rgba(255,255,255,.1) 100%) !important;
+  box-shadow: inset 0 1px .5px rgba(255,255,255,.55), inset 0 -1px .5px rgba(255,255,255,.16), inset 0 0 0 .5px rgba(255,255,255,.22), 0 0 0 1.5px rgba(226,185,59,.55), 0 6px 18px rgba(0,0,0,.38), 0 1px 2px rgba(0,0,0,.4) !important; }
+html body .kzf-ck.on:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) {
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%) !important;
+  box-shadow: inset 0 1px .5px rgba(255,255,255,.55), inset 0 -1px .5px rgba(255,255,255,.16), inset 0 0 0 .5px rgba(255,255,255,.22), 0 0 14px rgba(226,185,59,.3), 0 6px 18px rgba(0,0,0,.38), 0 1px 2px rgba(0,0,0,.4) !important; }
+html body .kzf-ck.on:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6)::after { border-color: #1A1404 !important; }
+/* goal / habit checks: pushed right to line up with the to-do checks */
+html body .kz-grow .kz-check:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7) { justify-self: end !important; margin-right: var(--kzgy-ckr, 2px) !important; }
+/* goal / habit cards: same surface as the to-do card */
+html body :is(.kz-rows, .kz-todo-empty):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) { background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)) !important; border-radius: 22px !important; box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28) !important; border: 0 !important; }
+/* "Keep a journal" and "View goal" as glass pills, lined up with the growth preview */
+html body .kz-gx :is(.kz-gxlog, .kz-gxview):not(#kz-n1):not(#kz-n2):not(#kz-n3) { display: flex !important; align-items: center; justify-content: center; gap: 6px; align-self: stretch; box-sizing: border-box; min-height: 46px; margin: 0 0 0 -24px !important; padding: 0 18px !important; border: 0 !important; border-radius: 999px !important; font: 600 15px/1.2 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif !important; text-decoration: none !important;
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)) !important; box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28) !important; }
+html body .kz-gx .kz-gxlog:not(#kz-n1):not(#kz-n2):not(#kz-n3) { color: #E2B93B !important; }
+html body .kz-gx .kz-gxview:not(#kz-n1):not(#kz-n2):not(#kz-n3) { color: #FFFFFF !important; }
+html body .kz-gx :is(.kz-gxlog, .kz-gxview):not(#kz-n1):not(#kz-n2):not(#kz-n3):active { transform: scale(.97); }

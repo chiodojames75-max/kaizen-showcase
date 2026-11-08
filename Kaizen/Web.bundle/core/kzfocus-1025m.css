@@ -1,0 +1,113 @@
+/* Oct 25 m (from 1025e): run strip fills from day 1, day labels under it; no glow under planted seedlings. */
+/* Oct 25 e · Today focus (springs; see kzfocus-1025e.js), option A (see kzfocus-1025a.js). Everything is scoped to html.kz-fA, added only once the card is built. */
+html.kz-fA body #kz-today-s1 :is(.kzt-hero, .kzt-prog, .kz-ux-rem, .kz-dailyrow, .kz-manage, .kzg-today):not(#kz-n1):not(#kz-n2) { display: none !important; }
+html.kz-fA.kz-fA-run body #kz-today-s1 .kz66-card:not(#kz-n1):not(#kz-n2) { display: none !important; }
+html.kz-fA body #kz-today-s1 .kz-goal.kzf-is66:not(#kz-n1):not(#kz-n2) { display: none !important; }
+/* calmer goal rows: no tree thumbnail, no dot line, no DAILY tag */
+html.kz-fA body #kz-today-s1 .kz-tgroups .kz-goal :is(.kzt-th, .kz-gline, .kz-gstep > i):not(#kz-n1):not(#kz-n2) { display: none !important; }
+html.kz-fA body #kz-today-s1 .kz-tgroups .kz-goal.kzt-has.kzt-has:not(#kz-n1):not(#kz-n2):not(#kz-n3) { padding-left: 16px !important; }
+/* to-dos first, goals second */
+html.kz-fA body #kz-today-s1 .kz-tgroups:not(#kz-n1) { display: flex !important; flex-direction: column; }
+html.kz-fA body #kz-today-s1 .kz-tgroups > .kz-todosec:not(#kz-n1):not(#kz-n2):not(#kz-n3) { order: -1 !important; margin-top: 0 !important; }
+html.kz-fA body #kz-today-s1 .kz-tgroups > .kz-gsec:not(#kz-n1):not(#kz-n2):not(#kz-n3) { order: 1 !important; margin-top: 0 !important; }
+html.kz-fA body #kz-today-s1 .kz-tgroups > .kz-tsec + .kz-tsec:not(#kz-n1), html.kz-fA body #kz-today-s1 .kz-tgroups > .kz-tsec:not(#kz-n1) { margin-top: 0; }
+html.kz-fA body #kz-today-s1 .kz-tgroups > .kz-todosec:not(#kz-n1):not(#kz-n2):not(#kz-n3) { margin-bottom: 22px !important; }
+html.kz-fA body #kz-today-s1 .kz-tgroups:not(#kz-n1):not(#kz-n2) { margin-top: 0 !important; padding-top: 0 !important; }
+html.kz-fA body #kz-today-s1 .kz-tsec-h:not(#kz-n1) { min-height: 36px; }
+html.kz-fA body #kz-today-s1 .kzp-title:not(#kz-n1) { margin-bottom: 0; }
+
+/* header: quote / question button */
+body #kz-header .kzf-q { width: 44px; min-width: 44px; height: 44px; margin: -6px 0; background: transparent !important; box-shadow: none; padding: 0; display: inline-flex; align-items: center; justify-content: center; border: 0; color: #AEAEB2; cursor: pointer; }
+body #kz-header .kzf-q svg { width: 34px; height: 32px; padding: 7px 8px; box-sizing: border-box; border-radius: 16px; background: #1C1C1E; }
+body .kzf-edit { margin-left: auto; margin-right: 4px; min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600; color: #AEAEB2 !important; text-decoration: none; }
+
+/* ---------- the Kaizen 66 card ---------- */
+body .kzf-66 { margin: 14px 0 18px; background: #1C1C1E; border: 1px solid rgba(226,185,59,.35); border-radius: 16px; padding: 12px 12px 12px 12px; color: #FFFFFF; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif; }
+body .kzf-66[hidden] { display: none !important; }
+body .kzf-66.done { border-color: rgba(48,209,88,.35); }
+body .kzf-top { display: flex; align-items: center; gap: 10px; }
+body .kzf-fold { flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; background: none; border: 0; padding: 0; margin: 0; color: inherit; font: inherit; text-align: left; cursor: pointer; min-height: 52px; -webkit-tap-highlight-color: transparent; }
+body .kzf-th { width: 52px; height: 52px; flex: 0 0 auto; border-radius: 12px; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; background: radial-gradient(70% 40% at 50% 92%, rgba(110,170,80,.35), rgba(110,170,80,0)), #141416; }
+body .kzf-th img { width: 46px; height: 46px; object-fit: contain; object-position: 50% 100%; }
+body .kzf-tx { min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+body .kzf-tx em { font-style: normal; font-size: 11px; font-weight: 800; letter-spacing: .09em; color: #E2B93B; }
+body .kzf-tx b { font-size: 18px; font-weight: 700; line-height: 1.2; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+body .kzf-tx span { font-size: 14px; color: #A1A1A6; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+body .kzf-ck { width: 48px; height: 48px; flex: 0 0 auto; border-radius: 24px; border: 2.5px solid #E2B93B; background: transparent; box-sizing: border-box; cursor: pointer; position: relative; padding: 0; -webkit-tap-highlight-color: transparent; transition: transform .12s ease; }
+body .kzf-ck:active { transform: scale(.92); }
+body .kzf-ck.on { border: 0; background: #30D158; }
+body .kzf-ck.on::after { content: ""; position: absolute; left: 50%; top: 50%; width: 14px; height: 7px; margin: -6px 0 0 -7px; border-left: 3px solid #000; border-bottom: 3px solid #000; transform: rotate(-45deg); }
+body .kzf-barrow { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
+body .kzf-bar { position: relative; flex: 1; height: 5px; border-radius: 3px; background: #2C2C2E; overflow: hidden; }
+body .kzf-bar i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 3px; background: #E2B93B; transition: width .42s var(--kzf-smooth, cubic-bezier(.3,.8,.3,1)); }
+body .kzf-left { font-size: 12px; font-weight: 700; color: #A1A1A6; white-space: nowrap; }
+body .kzf-morewrap { display: block; overflow: hidden; height: 0; }
+body .kzf-more { display: flex; flex-direction: column; align-items: stretch; gap: 10px; opacity: 0; transition: opacity .22s ease; margin-top: 10px; border-top: 1px solid #2C2C2E; padding-top: 6px; }
+body .kzf-66.open .kzf-more { opacity: 1; }
+body .kzf-ck[hidden], body .kzf-strip[hidden] { display: none !important; }
+body .kzf-tree { position: relative; height: 150px; display: flex; align-items: flex-end; justify-content: center; }
+body .kzf-tree i { position: absolute; left: 50%; bottom: 4px; width: 200px; height: 30px; margin-left: -100px; border-radius: 50%; background: radial-gradient(closest-side, rgba(110,170,80,.32), rgba(110,170,80,0)); }
+body .kzf-tree img { position: relative; max-height: 136px; max-width: 100%; object-fit: contain; object-position: 50% 100%; margin-bottom: 8px; }
+body .kzf-strip { display: grid; grid-template-columns: repeat(10, 1fr); gap: 5px; }
+body .kzf-strip i { height: 8px; border-radius: 4px; background: #2C2C2E; }
+body .kzf-strip i.c { background: #E2B93B; }
+body .kzf-strip i.s { background: #0A84FF; }
+body .kzf-strip i.now { background: transparent; box-shadow: inset 0 0 0 1.5px #E2B93B; }
+body .kzf-facts { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 13px; color: #A1A1A6; }
+body .kzf-sh { display: inline-flex; align-items: center; gap: 4px; }
+body .kzf-sh i { width: 16px; height: 16px; display: inline-flex; }
+body .kzf-sh svg { width: 16px; height: 16px; fill: #2C2C2E; }
+body .kzf-sh i.on svg { fill: #0A84FF; }
+body .kzf-link { align-self: center; min-height: 44px; display: inline-flex; align-items: center; padding: 0 12px; font-size: 15px; font-weight: 600; color: #E2B93B !important; text-decoration: none; }
+
+/* quote / question sheet */
+body .kzf-qs { position: fixed; inset: 0; z-index: 2147483000; background: rgba(0,0,0,.55); display: flex; align-items: flex-end; justify-content: center; }
+body .kzf-qs-in { will-change: transform; touch-action: none; }
+body .kzf-qs-in { width: 100%; max-width: 520px; background: #1C1C1E; border-radius: 20px 20px 0 0; padding: 12px 12px calc(14px + env(safe-area-inset-bottom)); display: flex; flex-direction: column; gap: 8px; }
+body .kzf-qs-in button { background: #2C2C2E; border: 0; border-radius: 14px; padding: 14px 16px; min-height: 56px; display: flex; flex-direction: column; align-items: flex-start; gap: 3px; color: #FFFFFF; font: inherit; text-align: left; cursor: pointer; }
+body .kzf-qs-in button b { font-size: 16px; font-weight: 700; }
+body .kzf-qs-in button span { font-size: 14px; color: #A1A1A6; }
+body .kzf-qs-in .kzf-qs-x { background: none; align-items: center; min-height: 48px; color: #AEAEB2; font-weight: 600; }
+@keyframes kzfIn { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { body .kzf-bar i, body .kzf-more { transition: none !important; } }
+html.kz-fA body #kz-today-s1 .kz-gsec .kzf-edit + .kz-secfold:not(#kz-n1):not(#kz-n2) { margin-left: 0 !important; }
+html body #kz-header .kz-hright .kz-chip.kzf-q:not(#kz-n1):not(#kz-n2) { height: 44px !important; min-height: 44px !important; width: 44px !important; padding: 0 !important; margin: -6px 0 !important; background: transparent !important; }
+html body #kz-header .kz-hright .kz-chip.kzf-q:not(#kz-n1):not(#kz-n2) svg { width: 36px !important; height: 32px !important; padding: 7px 9px !important; box-sizing: border-box !important; border-radius: 16px !important; background: #1C1C1E !important; color: #AEAEB2 !important; fill: none !important; stroke: currentColor !important; }
+
+/* Oct 25 b · To-dos: the plan card's own header goes; its count sits next to "To-dos", ×N and the full-plan button move up into the heading row */
+html.kz-fA body #kz-today-s1 .kz-todosec:has(.kz-plan-list li):not(#kz-n1) { position: relative; }
+html.kz-fA body #kz-today-s1 .kz-todosec:has(.kz-plan-list li) .kz-plan-top > div:first-child:not(#kz-n1):not(#kz-n2),
+html.kz-fA body #kz-today-s1 .kz-todosec:has(.kz-plan-list li) [data-t="plan-bar"]:not(#kz-n1):not(#kz-n2) { display: none !important; }
+html.kz-fA body #kz-today-s1 .kz-todosec:has(.kz-plan-list li) .kz-plan-top:not(#kz-n1):not(#kz-n2) { position: absolute !important; top: 0; right: 40px; height: 36px; margin: 0 !important; padding: 0 !important; display: flex !important; align-items: center; gap: 6px; z-index: 2; background: none !important; border: 0 !important; }
+html.kz-fA body #kz-today-s1 .kz-todosec:has(.kz-plan-list li) .kz-plan-top .kz-mult:not(#kz-n1):not(#kz-n2) { height: 30px !important; min-height: 0 !important; padding: 0 10px !important; transform: none !important; }
+html.kz-fA body #kz-today-s1 .kz-todosec:has(.kz-plan-list li) .kz-plan-top .kz-iconbtn:not(#kz-n1):not(#kz-n2) { width: 44px !important; height: 44px !important; background: transparent !important; box-shadow: none !important; border: 0 !important; }
+html.kz-fA body #kz-today-s1 .kz-todosec:has(.kz-plan-list li) .kz-plancard:not(#kz-n1):not(#kz-n2) { padding-top: 4px !important; }
+html.kz-fA body #kz-today-s1 .kz-todosec:has(.kz-plan-list li) .kz-plan-list:not(#kz-n1):not(#kz-n2) { margin-top: 0 !important; border-top: 0 !important; }
+html.kz-fA body #kz-today-s1 .kz-todosec:has(.kz-plan-list li) .kz-plan-list > li:first-child:not(#kz-n1):not(#kz-n2) { border-top: 0 !important; }
+body .kzf-tn { font-size: 15px; font-weight: 600; color: #8E8E93; margin-left: 8px; }
+html.kz-fA body #kz-today-s1 .kz66-card.invite:not(#kz-n1):not(#kz-n2) { margin-bottom: 18px !important; }
+
+/* Oct 25 c ---------------------------------------------------------------------------------------------------- */
+/* "Other goals" (and every Today section) collapse again: a general rule forced .kz-rows to display:flex !important */
+html body #kz-main .kz-tsec.kz-secshut > :not(.kz-tsec-h):not(#kz-n1):not(#kz-n2) { display: none !important; }
+/* The big "Today / date" title folds into the header row (the header's own "Today · Oct 25" stays visible) */
+html.kz-fA body #kz-today-s1 .kzp-title:not(#kz-n1):not(#kz-n2) { display: none !important; }
+html.kz-fA body #kz-header .kz-htitle:not(#kz-n1):not(#kz-n2) { opacity: 1 !important; visibility: visible !important; transform: none !important; }
+html.kz-fA body #kz-today-s1 .kzf-66:not(#kz-n1), html.kz-fA body #kz-today-s1 .kz66-card.invite:not(#kz-n1):not(#kz-n2) { margin-top: 6px !important; }
+/* taps and scrolling */
+html.kz-fA body #kz-today-s1 :is(button, a, [role="button"]) { touch-action: manipulation; -webkit-tap-highlight-color: transparent; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+html.kz-fA body #kz-today-s1 :is(.kz-check, .kz-pcheck, .kzf-ck) { transition: transform .32s var(--kzf-snappy, cubic-bezier(.2,.9,.3,1.2)); }
+html.kz-fA body #kz-today-s1 :is(.kz-check, .kz-pcheck, .kzf-ck):active { transition-duration: .08s; }
+html.kz-fA body #kz-today-s1 :is(.kz-check, .kz-pcheck):active { transform: scale(.9); }
+html.kz-fA body #kz-today-s1 .kzf-th img, html.kz-fA body #kz-today-s1 .kzf-tree img { transition: opacity .2s ease; }
+html.kz-fA body #kz-today-s1 .kz-tgroups > .kz-todosec:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4) { margin-bottom: 0 !important; }
+html.kz-fA body #kz-today-s1 .kz-todosec:has(.kz-plan-list li) .kz-plancard:not(#kz-n1):not(#kz-n2):not(#kz-n3) { padding-bottom: 6px !important; }
+html.kz-fA body #kz-header .kz-htitle [data-kz-hdate]:not(#kz-n1):not(#kz-n2) { display: inline !important; margin-left: 6px; font-size: 15px; font-weight: 500; color: #8E8E93; opacity: 1 !important; }
+html.kz-fA body #kz-header .kz-htitle > span:not(#kz-n1):not(#kz-n2) { display: inline-flex !important; align-items: baseline; flex-direction: row !important; }
+
+body .kzf-strip i.todo { background: #2C2C2E; }
+body .kzf-strip i.c { background: #E2B93B; }
+body .kzf-stripl { display: flex; justify-content: space-between; margin-top: 6px; font-size: 11px; font-weight: 600; color: #8E8E93; }
+body .kzf-stripl[hidden] { display: none !important; }
+body .kzf-tree.v2 i { display: none !important; }
+body .kzf-tree.v2 img { margin-bottom: 0 !important; }

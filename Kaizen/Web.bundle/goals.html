@@ -1,0 +1,789 @@
+<!doctype html><html lang="en"><head><link rel="stylesheet" href="/core/kzgate-1028.css"><script src="/core/kzb-6686e5cb4b.js"></script><style id="kz-gate">html{background:#000}html:not(.kz-shown) body{opacity:0!important}html.kz-shown body{transition:opacity .16s ease-out}</style><script id="kz-gate-js">/* Oct 26: show the screen only once it has finished drawing (no flashes of older layouts while the page sets itself up). Revealed after 100 ms with no changes, or at 700 ms at most. */(function(){var d=document.documentElement,done=0,last=0,t0=0;function show(){if(done)return;done=1;try{mo.disconnect()}catch(e){}d.classList.add("kz-shown")}var mo=new MutationObserver(function(){last=Date.now()});mo.observe(d,{subtree:true,childList:true,attributes:true,characterData:true});function tick(){var n=Date.now();if(n-last>100||n-t0>700)show();else requestAnimationFrame(tick)}function go(){t0=last=Date.now();requestAnimationFrame(function(){requestAnimationFrame(tick)})}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",go);else go();setTimeout(show,1500)})();</script><meta http-equiv="Content-Security-Policy" content="default-src 'self' kaizen:; script-src 'self' kaizen: 'unsafe-inline'; style-src 'self' kaizen: 'unsafe-inline'; img-src 'self' kaizen: data: blob:; font-src 'self' kaizen: data:; media-src 'self' kaizen: data: blob:; connect-src 'self' kaizen: data: blob:; frame-src 'none'; child-src 'none'; worker-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'none'"><script src="/core/kzb-823243f827.js"></script><script>/* Oct 22: tab slide direction, set before the first frame */try{var kzd=JSON.parse(sessionStorage.getItem('kz_vtdir')||'null');sessionStorage.removeItem('kz_vtdir');if(kzd&&Date.now()-kzd.t<2500)document.documentElement.classList.add('kz-vt','kz-vt-'+kzd.d);}catch(e){}</script><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"><meta name="theme-color" content="#0D0F13"><meta name="format-detection" content="telephone=no"><title>My goals · Kaizen</title><link rel="stylesheet" href="/core/c308fb0c3e38.css"><script>(function(){var id="fresh-2026-10-22";try{if(localStorage.getItem("kzreset")!==id){Object.keys(localStorage).forEach(function(k){if(k.indexOf("kz_")===0)localStorage.removeItem(k)});try{sessionStorage.clear()}catch(e){}localStorage.setItem("kzreset",id)}}catch(e){}})();</script><script src="/core/d8db67ae2f89.js"></script><script src="/art/sprites.js"></script><link rel="stylesheet" href="/core/6c39794d2aaf.css"><script src="/core/1483bd119abb.js"></script><script>(function(){var y=null,F=/^(INPUT|TEXTAREA|SELECT)$/;document.addEventListener("focusin",function(e){if(F.test(e.target.tagName)&&y===null&&!document.documentElement.classList.contains("kz-lock"))y=window.scrollY;},true);document.addEventListener("focusout",function(){setTimeout(function(){var a=document.activeElement;if(a&&F.test(a.tagName))return;if(y!==null){if(Math.abs(window.scrollY-y)>1)window.scrollTo(0,y);y=null;}},80);},true);})();</script><link rel="stylesheet" href="/core/e58c600ad45e.css">
+<style>
+  /* v85 · while a text box is focused the animals hold still, so typing gets the phone's full attention */
+  .kz-typing .kz-cr, .kz-typing .kz-cr * { animation-play-state: paused !important; }
+  .kz49 :is(input, textarea, select) { touch-action: manipulation; }
+</style>
+<link rel="stylesheet" href="/core/6c2deea2185b.css">
+<style>
+  .kz49 .kz-qadd input[data-p="qtxt"], .kz-qadd select { border-color: transparent !important; background: var(--s1); }
+</style>
+<link rel="stylesheet" href="/core/0bc2ec5f662f.css">
+<style>
+  .kz-visitor[data-kz-visitor] .kz-vis-txt { padding-right: 30px; }
+</style>
+<style>
+  .kz-throwword { white-space: nowrap; font-size: 13px !important; padding: 5px 9px; border-radius: 99px; background: rgba(0,0,0,.55); }
+</style>
+<link rel="stylesheet" href="/core/d95607cb2d27.css">
+<style>
+  .kz-h49 .kz-htitle small { white-space: nowrap !important; }
+</style>
+<style>
+  .kz-xpr-tlab { flex: 1 1 100%; margin: 6px 0 0 42px !important; text-align: left !important; font: 600 11.5px/1 var(--kz-sans) !important; color: var(--kz-muted); }
+</style>
+<style>
+  .kz-xprules .kz-xpr-tiers .kz-mx i, .kz-xprules .kz-xpr-tiers .kz-mx b { width: auto; height: auto; padding: 0; margin: 0; border-radius: 0; background: none; display: inline; color: #F5D774; box-shadow: none; }
+  .kz-xprules .kz-xpr-tiers .kz-mx b { font: 800 17px/1 var(--kz-sans); }
+  .kz-xprules .kz-xpr-tiers .kz-mx i { font-size: 11px; opacity: .8; }
+</style>
+<style>
+  .kz-h49 .kz-hright { padding-right: 6px; }
+</style>
+<link rel="stylesheet" href="/core/dc4ed49bcee2.css">
+<style>
+  .kz-cr-tag { bottom: auto !important; top: 6%; transform: translate(-50%, -100%) !important; }
+  .kz-cr.c-turtle .kz-cr-tag, .kz-cr.c-snake .kz-cr-tag, .kz-cr.c-lizard .kz-cr-tag { top: 42%; }
+  .kz-cr.c-cat .kz-cr-tag, .kz-cr.c-canine .kz-cr-tag { top: 22%; }
+</style>
+<link rel="stylesheet" href="/core/bff02455a6ae.css">
+<style>.kz-food-steps li span > i { font-style: normal; }</style>
+<link rel="stylesheet" href="/core/dafd1299b5fc.css">
+<style>.kz49 .kz-gsheet .kz-gs-in { background: #1C1C1E !important; }</style>
+<link rel="stylesheet" href="/core/53e459c25bf1.css">
+
+<style id="kz-oct21n">
+/* ===== Oct 21 night edits ===== */
+/* 1. Seam logo: left half a shade darker than the right, white test */
+path[d="M64 122 H136 L100 60 L82 91"]:not(.track):not(.run):not(.glow) { stroke: url(#kzseamgold) !important; } /* Oct 21: gold seam logo everywhere */
+.kz-tab-orb { background: radial-gradient(circle at 35% 30%, #3A3D44, #17181C 60%, #0C0D10) !important; box-shadow: 0 0 0 5px #000, inset 0 1px 0 rgba(255,255,255,.22), 0 0 0 1.5px rgba(255,255,255,.55), 0 10px 26px rgba(0,0,0,.6) !important; }
+.kz-tabbar a[aria-current="page"] { color: #FFFFFF !important; }
+
+/* 3. "Your tree needs water" is red */
+.kz-rescue { background: linear-gradient(180deg, rgba(255,69,58,.22), rgba(255,69,58,.10)) !important; border: 1.5px solid #FF453A !important; color: #FF8A80 !important; }
+.kz-rescue b { color: #FF5A50 !important; }
+.kz-rescue span { color: #FF9C94 !important; }
+.kz-rescue svg, .kz-rescue svg * { color: #FF453A !important; fill: #FF453A !important; }
+
+/* 7. More glass: cards and buttons float */
+.kz49 :is(.kz-card49, .kz-card, .kz-weekcard, .kz-skillcard, .kz-pcard, .kz-plancard, .kz-goal, .kz-rows .kz-grow, #kz-my .kz-grow, .kz-rankcard, .kz-fold, .kz-shieldrow, .kz-tiles3 > div, .kz-ptsrow, .kz-qstrip, .kz-reflect49, .kz-tcard, .kz-mestats > div, .kz-memenu .kz-rowlist, .kz-install49) {
+  background: linear-gradient(180deg, rgba(255,255,255,.11), rgba(255,255,255,.045)) !important;
+  border: 0.5px solid rgba(255,255,255,.17) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28) !important;
+}
+.kz49 :is(.kz-btn.ghost, .kz-quiet, .kz-edit, .kz-iconbtn, .kz-bb-chips button) {
+  background: linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,.07)) !important;
+  border: 0.5px solid rgba(255,255,255,.2) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 8px 18px -6px rgba(0,0,0,.8) !important;
+}
+.kz49 :is(.kz-btn:not(.ghost):not(.danger):not(.kz-danger):not([disabled]), .kz-submit:not(:disabled)) {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), 0 12px 26px -8px rgba(226,185,59,.55), 0 3px 8px rgba(0,0,0,.4) !important;
+}
+.kz49 .kz-gmore, .kz49 .kz-gmore:hover, .kz49 .kz-gmore[aria-expanded="true"] { background: none !important; border: 0 !important; box-shadow: none !important; width: 32px !important; margin-right: 8px; color: rgba(235,235,245,.55); }
+.kz49 .kz-gmore svg { width: 20px !important; height: 20px !important; }
+/* 5. "+0.3 in · Your tree grew": plain text, nothing behind it */
+.kz49 .kz-gfloat { background: none !important; padding: 0 !important; box-shadow: none !important; }
+.kz-gline { transition: opacity 160ms ease; }
+.kz-gbody:has(.kz-gfloat.show) .kz-gline { opacity: 0; animation: kzLineBack 1500ms ease both; }
+@keyframes kzLineBack { 0%, 85% { opacity: 0; } 100% { opacity: 1; } }
+/* 2. Visitors turn with an eased half-turn instead of snapping; the tap squish no longer fights the pose animation */
+.kz-cr-face { transition: transform 420ms cubic-bezier(.45,0,.2,1) !important; }
+.kz-cr.touched .kz-cr-act { animation: none !important; }
+.kz-cr.touched .kz-cr-face { animation: kzTouchS .3s cubic-bezier(.3,0,.3,1); }
+@keyframes kzTouchS { 40% { scale: 1.06 .94; } }
+
+/* 2. Visitor questions: one quiet "Not now" under the question */
+.kz-bubble .kz-bb-chips { justify-content: center !important; }
+.kz-bubble .kz-bb-skip.only { display: block; margin: 6px auto 0; background: none !important; border: 0 !important; box-shadow: none !important; color: rgba(235,235,245,.6) !important; font: 600 14px/1 var(--kz-sans); padding: 8px 14px; }
+
+/* 5. Archive / delete asked right inside the goal menu */
+.kz-gm-ask { padding: 14px 16px 16px; border-radius: 18px; background: rgba(255,255,255,.06); display: flex; flex-direction: column; gap: 12px; }
+.kz-gm-ask p { margin: 0; font: inherit; font-size: 16px; font-weight: 600; line-height: 1.3; letter-spacing: normal; color: #fff; text-align: center; }
+.kz-gm-ask small { display: block; margin-top: 4px; font: inherit; font-size: 14px; font-weight: 400; line-height: 1.35; letter-spacing: normal; color: rgba(235,235,245,.6); }
+.kz-gm-ask div { display: flex; gap: 8px; }
+.kz-gm-ask button { flex: 1; min-height: 44px; border-radius: 14px; border: 0; font: inherit; font-size: 16px; font-weight: 600; line-height: 1; letter-spacing: normal; }
+.kz-gm-ask [data-kz-gm-arch] { background: #FF9F0A; color: #1A1100; }
+.kz-gm-ask [data-kz-gm-del] { background: rgba(255,69,58,.18); color: #FF6961; }
+.kz-gm-ask [data-kz-gm-del].sure { background: #FF453A; color: #fff; }
+.kz-gm-ask [data-kz-gm-no] { flex: none; background: none; color: rgba(235,235,245,.6); min-height: 32px; }
+
+/* Black background again: no blue/purple glow or grain behind the app */
+html, body, .kz49, body.kz { background: #000 !important; background-color: #000 !important; }
+body::before, body::after { background: none !important; background-image: none !important; content: none !important; }
+
+/* Water card (tap the water chip) */
+[data-kz-water] { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.kz-wcard { position: fixed; inset: 0; z-index: 9000; display: flex; align-items: flex-end; justify-content: center; background: rgba(0,0,0,.55); opacity: 0; transition: opacity 200ms ease; }
+.kz-wcard.on { opacity: 1; }
+.kz-wcard-in { width: 100%; max-width: 520px; box-sizing: border-box; margin: 0 8px calc(8px + env(safe-area-inset-bottom, 0px)); padding: 22px 20px 18px; border-radius: 28px; background: rgba(28,28,32,.94);   border: 0.5px solid rgba(255,255,255,.14); box-shadow: 0 20px 60px rgba(0,0,0,.6); transform: translateY(24px); transition: transform 260ms cubic-bezier(.2,.8,.2,1); color: #fff; }
+.kz-wcard.on .kz-wcard-in { transform: none; }
+.kz-wc-top { display: flex; align-items: center; gap: 12px; }
+.kz-wc-drop { width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; background: rgba(100,181,255,.16); color: #64B5FF; flex: none; }
+.kz-wc-drop.low { background: rgba(255,69,58,.16); color: #FF6961; }
+.kz-wc-drop svg { width: 24px; height: 24px; }
+.kz-wc-top div { flex: 1; min-width: 0; }
+.kz-wc-top small { display: block; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: rgba(235,235,245,.6); }
+.kz-wc-top b { display: block; font-size: 30px; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; }
+.kz-wc-x { width: 32px; height: 32px; border-radius: 50%; border: 0; background: rgba(118,118,128,.24); color: #fff; font-size: 15px; flex: none; }
+.kz-wc-msg { margin: 14px 0 12px; font-size: 16px; line-height: 1.4; color: rgba(235,235,245,.85); }
+.kz-wc-bar { position: relative; height: 10px; border-radius: 6px; background: rgba(255,255,255,.08); overflow: hidden; margin-bottom: 14px; }
+.kz-wc-bar i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 6px; background: linear-gradient(90deg, #3E8EDE, #64B5FF); }
+.kz-wc-bar.low i { background: linear-gradient(90deg, #C93A30, #FF6961); }
+.kz-wc-rows { display: flex; flex-direction: column; border-radius: 16px; background: rgba(255,255,255,.05); overflow: hidden; }
+.kz-wc-rows div { display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px; font-size: 15px; border-bottom: 0.5px solid rgba(255,255,255,.08); }
+.kz-wc-rows div:last-child { border-bottom: 0; }
+.kz-wc-rows span { color: rgba(235,235,245,.6); }
+.kz-wc-rows b { font-weight: 600; text-align: right; }
+
+/* Locked visitors: a dark silhouette of the animal with a light edge and a lock, like locked trees */
+.kz-wildcell.locked { position: relative; }
+.kz-wildcell.locked .kz-wildart { filter: brightness(0) drop-shadow(0 0 0.6px rgba(255,255,255,.55)) drop-shadow(0 0 0.6px rgba(255,255,255,.35)) !important; opacity: 1 !important; }
+.kz-wildcell.locked::after { content: ''; position: absolute; top: 12px; right: 12px; width: 16px; height: 16px; opacity: .7; background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23EBEBF5' stroke-width='2.4' stroke-linecap='round'%3E%3Crect x='5' y='11' width='14' height='10' rx='2.5'/%3E%3Cpath d='M8 11V8a4 4 0 0 1 8 0v3'/%3E%3C/svg%3E"); }
+
+/* Launch: black screen, then the gold logo draws itself (bottom-left → bottom-right → top → back down) */
+#kz-splash { background: transparent !important; }
+#kz-splash > .kz-sp-bg { position: absolute; inset: 0; background: #000; }
+#kz-splash > :not(.kz-sp-bg) { position: relative; z-index: 1; }
+#kz-splash > .kz-sp-morph { position: fixed; z-index: 2; transform-origin: 50% 50%; pointer-events: none; }
+#kz-splash > .kz-sp-dust { position: fixed; inset: 0; z-index: 3; width: 100%; height: 100%; pointer-events: none; }
+
+/* Calendar: gold = every goal, green = water over 50%, red = 50% or less */
+.kz-cald.full i, .kz-callegend i.full, .kz49 .kz-cald.full i, .kz49 .kz-callegend i.full { background: radial-gradient(circle at 35% 30%, #F6DE8D, #E2B93B 55%, #B8902E) !important; box-shadow: 0 0 10px rgba(233,197,90,.5) !important; }
+.kz-cald.grew i, .kz-callegend i.grew, .kz49 .kz-cald.grew i, .kz49 .kz-callegend i.grew { background: #2FD38A !important; box-shadow: 0 0 8px rgba(47,211,138,.35) !important; }
+.kz-cald.setback i, .kz-callegend i.setback, .kz49 .kz-cald.setback i, .kz49 .kz-callegend i.setback { background: #E5484D !important; box-shadow: 0 0 8px rgba(229,72,77,.35) !important; }
+.kz-calday.full .kz-calhead { color: #E9C55A !important; }
+
+/* Long-term goal cards: no color nub; the whole card is outlined in the goal's color, a little taller */
+.kz49 .kz-goal::before, .kz49 .kz-grow::before { display: none !important; }
+body.kz49 .kz-goal.kz-grow:not(#kz-none) { border: 1.5px solid var(--pc, rgba(255,255,255,.17)) !important; padding-top: 14px !important; padding-bottom: 14px !important; }
+
+/* Tree tab: more room above the tree, and the scene a little wider */
+#kz-treehero { padding-top: 16px !important; }
+.kz49 .kz-treehero .kz-treeart { width: calc(100% + 20px) !important; margin-inline: -10px !important; }
+/* XP card: no outline */
+#kz-coll-s1 .kz-rankcard.kz-xpcard:not(#kz-none) { border: 0 !important; box-shadow: none !important; outline: 0 !important; }
+
+/* Visitors: only the one chosen sprite layer is ever visible */
+.kz-cr[data-layer] .kz-3d > i { display: none !important; }
+.kz-cr[data-layer="idle"] .kz-3d > .s-idle, .kz-cr[data-layer="move"] .kz-3d > .s-move, .kz-cr[data-layer="eat"] .kz-3d > .s-eat, .kz-cr[data-layer="sleep"] .kz-3d > .s-sleep, .kz-cr[data-layer="look"] .kz-3d > .s-look, .kz-cr[data-layer="happy"] .kz-3d > .s-happy { display: block !important; }
+
+/* While typing, the tab bar and + button step aside so the keyboard can't drag them up the screen */
+/* Oct 22: the tab bar, + and Undo stay put while typing (hiding them made the screen flicker) */
+
+/* Goal note box: fixed height (scrolls inside), Save note centered and steady */
+.kz-gnbox { height: 120px !important; min-height: 120px !important; max-height: 120px !important; overflow-y: auto !important; resize: none !important; }
+.kz-gnrow { flex-direction: column !important; justify-content: center !important; align-items: center !important; gap: 6px !important; }
+.kz-gnrow .kz-gnsave { order: 1; min-width: 160px; align-self: center; }
+.kz-gnrow .kz-gnsaved { order: 2; text-align: center !important; min-height: 16px; }
+
+/* Today's goals card/strip open My goals */
+[data-t="pcard"], [data-t="pstrip"] { cursor: pointer; }
+.kz-pstrip .kz-qstrip-c { padding: 10px; margin: -10px; box-sizing: content-box; }
+body.kz49 .kz-pcard:not(#kz-none) { border: 0 !important; box-shadow: none !important; outline: 0 !important; background: none !important; background-image: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; } /* Oct 21: Today's goals floats on black, no card */
+body.kz49 .kz-tmr:not(#kz-none) { border: 0 !important; box-shadow: none !important; outline: 0 !important; background: none !important; background-image: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; } /* Oct 21: Tomorrow card floats too */
+
+/* Goal page: "← My goals" floats as plain text, no grey pill */
+.kz49 a.kz-quiet[href="/pages/my-goals"] { background: none !important; border: 0 !important; box-shadow: none !important; padding-left: 4px !important; color: #F2CF5B !important; }
+
+/* Section fold arrows: just the arrow, no circle, far right of the header */
+.kz-tsec-h { display: flex !important; align-items: center !important; }
+.kz-tsec-h > .kz-secfold { margin-left: auto; width: 36px; height: 36px; padding: 0; border: 0 !important; background: none !important; box-shadow: none !important; color: rgba(235,235,245,.6); display: grid; place-items: center; -webkit-tap-highlight-color: transparent; }
+.kz-tsec-h > .kz-secfold svg { width: 22px; height: 22px; transition: transform 220ms cubic-bezier(.2,.8,.2,1); }
+.kz-tsec.kz-secshut > .kz-tsec-h > .kz-secfold svg { transform: rotate(180deg); }
+.kz-tsec.kz-secshut > :not(.kz-tsec-h) { display: none !important; }
+/* To-dos: no "+ Add" in the header (the + button bottom right does it) */
+.kz-tsec-h [data-t="todo-add"] { display: none !important; }
+/* Tomorrow: day name right next to "Tomorrow", fold arrow far right */
+.kz-tmr > .kz-collhead { justify-content: flex-start !important; align-items: center !important; gap: 10px !important; }
+.kz-tmr > .kz-collhead > .kz-secfold { margin-left: auto; margin-right: -10px; width: 36px; height: 36px; padding: 0; border: 0 !important; background: none !important; box-shadow: none !important; color: rgba(235,235,245,.6); display: grid; place-items: center; -webkit-tap-highlight-color: transparent; }
+.kz-tmr > .kz-collhead > .kz-secfold svg { width: 22px; height: 22px; transition: transform 220ms cubic-bezier(.2,.8,.2,1); }
+.kz-tmr.kz-secshut > .kz-collhead > .kz-secfold svg { transform: rotate(180deg); }
+.kz-tmr.kz-secshut > :not(.kz-collhead) { display: none !important; }
+/* Today's goals fold arrow: just the arrow, no grey circle */
+body.kz49 .kz-pfold:not(#kz-none), body.kz49 .kz-pfold:not(#kz-none):hover, body.kz49 .kz-pfold:not(#kz-none):active { background: none !important; background-image: none !important; border: 0 !important; box-shadow: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; color: rgba(235,235,245,.6) !important; }
+body.kz49 .kz-pfold:not(#kz-none) svg { width: 22px !important; height: 22px !important; }
+/* Manage goals: plain floating text, no card, no outline */
+body.kz49 .kz-manage:not(#kz-none) { background: none !important; border: 0 !important; box-shadow: none !important; outline: 0 !important; color: rgba(235,235,245,.75) !important; }
+
+/* Two-tone seam black: left pure black, right a touch lighter, split down the middle (same line as the logo's seam) */
+html:not(#kz-none) { background: #000 !important; background-color: #000 !important; }
+html body:not(#kz-none), html body.kz49:not(#kz-none), html body.kz:not(#kz-none) { background: transparent !important; background-color: transparent !important; }
+/* Top bar (status bar, title, progress bar) stays solid black */
+#kz-header::before { background: #000 !important;   }
+/* Backdrop: big faint seam triangle behind everything, centered, drifts a little with scroll */
+#kz-bd { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+#kz-bd .kz-bd-tri { position: absolute; left: 50%; top: 50%; width: min(86vw, 400px); aspect-ratio: 88 / 78; transform: translate3d(-50%, -50%, 0); will-change: transform; }
+#kz-bd .kz-bd-tri svg, #kz-splash .kz-sp-morph svg { position: absolute !important; width: 100% !important; height: 100% !important; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.kz-bd-line { opacity: .06; } /* Oct 22: quieter backdrop (was .17) */
+.kz-bd-glow { opacity: .05; filter: blur(18px); }
+.kz-bd-run { stroke: #FFE7A0; stroke-dasharray: 26 420; stroke-dashoffset: 26; opacity: 0; animation: kzBdRun 11s linear 4s infinite; }
+@keyframes kzBdRun { 0% { stroke-dashoffset: 26; opacity: 0; } 3% { opacity: .42; } 21% { opacity: .42; } 24% { stroke-dashoffset: -182; opacity: 0; } 100% { stroke-dashoffset: -182; opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .kz-bd-run { animation: none !important; opacity: 0 !important; } }
+
+/* Plan: Repeat every day switch */
+.kz-pm-rep { display: flex; align-items: center; gap: 14px; margin: 4px 0 12px; padding: 12px 14px; border-radius: 16px; background: rgba(255,255,255,.05); cursor: pointer; text-align: left; }
+.kz-pm-rep > span { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.kz-pm-rep b { font-size: 16px; font-weight: 600; color: #fff; }
+.kz-pm-rep small { font-size: 13px; line-height: 1.3; color: rgba(235,235,245,.6); }
+.kz-pm-rep .kz-switch { flex: none; }
+/* Done goals keep the same card look (no color fill); only the check turns green */
+body.kz49 .kz-goal.kz-grow.is-done:not(#kz-none) { background-color: transparent !important; background-image: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)) !important; }
+
+/* To-dos: no outlines */
+body.kz49 :is(.kz-plancard, .kz-todo-empty, .kz-todo-up, ul.kz-todos > li):not(#kz-none) { border: 0 !important; outline: 0 !important; }
+/* Quote of the day / Today's question labels in white */
+body.kz49 :is(.kz-qstrip.mini, .kz-rstrip) .kz-qstrip-l:not(#kz-none) { color: #fff !important; }
+/* Liquid Glass circles: clear glass with a bright top rim, soft bottom rim and a gentle drop shadow */
+body.kz49 :is(.kz-check:not(.done), .kz-pcheck:not(.on), .kz-iconbtn:not(.solid):not(.kz-gmore), .kz-wknav button, .kz-mcnav):not(#kz-none) { background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.2) 0%, rgba(255,255,255,.06) 45%, rgba(255,255,255,.03) 70%, rgba(255,255,255,.1) 100%) !important; -webkit-backdrop-filter: blur(16px) saturate(190%) brightness(1.08) !important; backdrop-filter: blur(16px) saturate(190%) brightness(1.08) !important; border: 0 !important; box-shadow: inset 0 1px 0.5px rgba(255,255,255,.55), inset 0 -1px 0.5px rgba(255,255,255,.16), inset 0 0 0 0.5px rgba(255,255,255,.22), 0 6px 18px rgba(0,0,0,.38), 0 1px 2px rgba(0,0,0,.4) !important; }
+body.kz49 :is(.kz-check:not(.done), .kz-pcheck:not(.on), .kz-iconbtn:not(.solid):not(.kz-gmore), .kz-wknav button, .kz-mcnav):not(#kz-none):active { transform: scale(.94); transition: transform 120ms ease; }
+/* Done = green glass, plan check / quick add = gold glass */
+body.kz49 .kz-check.done:not(#kz-none) { background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(52,212,95,.92) 42%, rgba(28,158,68,.96) 100%) !important; -webkit-backdrop-filter: blur(16px) saturate(190%) brightness(1.08) !important; backdrop-filter: blur(16px) saturate(190%) brightness(1.08) !important; border: 0 !important; color: #fff !important; box-shadow: inset 0 1px 0.5px rgba(255,255,255,.55), inset 0 -1px 0.5px rgba(255,255,255,.16), inset 0 0 0 0.5px rgba(255,255,255,.22), 0 0 16px rgba(48,209,88,.35), 0 6px 18px rgba(0,0,0,.38), 0 1px 2px rgba(0,0,0,.4) !important; }
+body.kz49 :is(.kz-pcheck.on, .kz-qadd-go):not(#kz-none) { background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%) !important; -webkit-backdrop-filter: blur(16px) saturate(190%) brightness(1.08) !important; backdrop-filter: blur(16px) saturate(190%) brightness(1.08) !important; border: 0 !important; color: #1A1404 !important; box-shadow: inset 0 1px 0.5px rgba(255,255,255,.55), inset 0 -1px 0.5px rgba(255,255,255,.16), inset 0 0 0 0.5px rgba(255,255,255,.22), 0 0 14px rgba(226,185,59,.3), 0 6px 18px rgba(0,0,0,.38), 0 1px 2px rgba(0,0,0,.4) !important; }
+/* + button: gold-tinted glass with a gold rim */
+body.kz49 .kz-fab:not(#kz-none) { background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.24) 0%, rgba(226,185,59,.12) 45%, rgba(226,185,59,.2) 100%) !important; -webkit-backdrop-filter: blur(16px) saturate(190%) brightness(1.08) !important; backdrop-filter: blur(16px) saturate(190%) brightness(1.08) !important; border: 0 !important; color: #E9C55A !important; box-shadow: inset 0 0 0 1.5px rgba(233,197,90,.8), inset 0 1px 0.5px rgba(255,255,255,.55), inset 0 -1px 0.5px rgba(255,255,255,.16), inset 0 0 0 0.5px rgba(255,255,255,.22), 0 8px 22px rgba(0,0,0,.5), 0 0 18px rgba(226,185,59,.18) !important; }
+
+/* Water colors: red 0-33%, yellow 34-66%, blue 67-100% (header chip and the Water number in Today's goals) */
+body.kz49 .kz-chip.water.amber:not(#kz-none) { background: rgba(255,214,10,.16) !important; color: #FFD60A !important; }
+body.kz49 .kz-chip.water.red:not(#kz-none) { background: rgba(255,69,58,.18) !important; color: #FF6961 !important; }
+body.kz49 .kz-stat.water[data-lvl="red"] b:not(#kz-none) { color: #FF6961 !important; }
+body.kz49 .kz-stat.water[data-lvl="yellow"] b:not(#kz-none) { color: #FFD60A !important; }
+/* The thirsty banner is gone: the red water number says it */
+body.kz49 [data-t="rescue"]:not(#kz-none) { display: none !important; }
+
+/* "Today's goals" words are the link to My goals */
+[data-t="pcard"] .kz-pcard-l > .kz-label49 { cursor: pointer; -webkit-tap-highlight-color: transparent; display: inline-block; padding: 6px 10px 6px 0; margin: -6px 0; }
+[data-t="pcard"] .kz-pcard-l > .kz-label49:active { opacity: .6; }
+/* Long-term goals: name in the pillar's color, glass outline instead of the colored border */
+body.kz49 .kz-goal.kz-grow:not(#kz-none) { border: 1.5px solid transparent !important; box-shadow: inset 0 0 0 0.5px rgba(255,255,255,.2), inset 0 1px 0.5px rgba(255,255,255,.42), inset 0 -1px 0.5px rgba(255,255,255,.1) !important; }
+body.kz49 .kz-goal.kz-grow .kz-gname:not(#kz-none) { color: var(--pc, #fff) !important; }
+
+/* Δ card: tap the top-left triangle */
+#kz-header .kz-mark { padding: 10px; margin: -10px; box-sizing: content-box; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.kz-delta { position: fixed; left: 0; right: 0; top: 0; z-index: 9500; display: flex; justify-content: center; padding: calc(env(safe-area-inset-top, 0px) + 58px) 16px 0; pointer-events: none; }
+.kz-delta-in { pointer-events: auto; width: 100%; max-width: 380px; box-sizing: border-box; padding: 14px 16px 15px; border-radius: 22px; background: rgba(24,24,28,.98);   box-shadow: inset 0 0 0 0.5px rgba(255,255,255,.18), inset 0 1px 0.5px rgba(255,255,255,.35), 0 18px 44px rgba(0,0,0,.6); display: flex; gap: 14px; align-items: center; transform: translateY(-140%) scale(.96); opacity: 0; transition: transform 420ms cubic-bezier(.2,1.25,.35,1), opacity 220ms ease; }
+.kz-delta.on .kz-delta-in { transform: none; opacity: 1; }
+.kz-delta.off .kz-delta-in { transform: translateY(-140%) scale(.96); opacity: 0; transition: transform 300ms cubic-bezier(.5,0,.75,0), opacity 260ms ease; }
+.kz-delta-mk { flex: none; width: 46px; height: 46px; display: grid; place-items: center; }
+.kz-delta-mk svg { width: 40px; height: 36px; overflow: visible; filter: drop-shadow(0 0 8px rgba(226,185,59,.4)); }
+.kz-delta-tx { min-width: 0; }
+.kz-delta-tx small { display: block; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #E9C55A; margin-bottom: 3px; }
+.kz-delta-tx b { display: block; font-size: 17px; font-weight: 700; line-height: 1.25; color: #fff; }
+.kz-delta-tx span { display: block; margin-top: 3px; font-size: 14px; line-height: 1.35; color: rgba(235,235,245,.7); }
+
+/* First open of the day: the splash starts empty while the gold dust gathers */
+#kz-splash.kz-asm svg { opacity: 0; }
+#kz-splash.kz-asm span { animation: none !important; opacity: 0; }
+/* Every other open: no cover; the background triangle draws itself behind the cards, glows a moment, then dims */
+html.kz-bd-draw #kz-bd .kz-bd-line path, html.kz-bd-draw #kz-bd .kz-bd-glow path { stroke-dasharray: 180; animation: kzBdDraw 1.1s cubic-bezier(.55,.05,.3,1) .15s both; }
+html.kz-bd-draw #kz-bd .kz-bd-line { animation: kzBdLineIn 1.8s ease-out .15s both; }
+html.kz-bd-draw #kz-bd .kz-bd-glow { animation: kzBdGlowIn 1.8s ease-out .15s both; }
+@keyframes kzBdDraw { from { stroke-dashoffset: 180; } to { stroke-dashoffset: 0; } }
+@keyframes kzBdLineIn { 0%, 55% { opacity: .23; } 100% { opacity: .06; } }
+@keyframes kzBdGlowIn { 0%, 55% { opacity: .16; } 100% { opacity: .05; } }
+@media (prefers-reduced-motion: reduce) { html.kz-bd-draw #kz-bd :is(.kz-bd-line, .kz-bd-glow, .kz-bd-line path, .kz-bd-glow path) { animation: none !important; } }
+
+/* Storage-full notice */
+.kz-savefail { position: fixed; left: 12px; right: 12px; bottom: calc(env(safe-area-inset-bottom, 0px) + 96px); z-index: 9600; padding: 14px 16px; border-radius: 18px; background: rgba(60,18,18,.97); box-shadow: inset 0 0 0 0.5px rgba(255,105,97,.5), 0 14px 36px rgba(0,0,0,.55); color: #FFD9D6; font-size: 15px; line-height: 1.35; }
+.kz-savefail b { display: block; color: #fff; margin-bottom: 2px; }
+
+/* Oct 22 (reel plan) */
+/* 13. one primary action: no Sign up / Make an account while accounts aren't live */
+.kz-nosync-cfg [data-kz-signup], .kz-nosync-cfg [data-kz-acctlink] { display: none !important; }
+/* 3. progress bars: one solid seam gold, no blue-to-gold gradient */
+.kz49 .kz-hprog i, .kz-hprog i, .kz49 .kz-hprog.full i, .kz-hprog.full i, .kz49 .kz-pcard .kz-bar49[data-t="bar"] > i { background: #E2B93B !important; }
+/* 6. no colored stripe on goal cards (the pillar color stays on the name) */
+body .kz-gsub:not(#kz-none) { border-left: 0 !important; padding-left: 0 !important; }
+/* 10. tab transition (James picked Fade, Oct 22): only the page content fades in, 120 ms; the background triangle, header and tab bar never animate */
+html.kz-vt #kz-main { animation: kzTabFade 120ms ease-out backwards; }
+@keyframes kzTabFade { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { html.kz-vt #kz-main { animation: none; } }
+
+/* Oct 22: bottom sheets never slide up when the keyboard opens (they used to be padded by the keyboard's height) */
+.kz-sheet49:not(#kz-none) { padding-bottom: 0 !important; transition: none !important; }
+.kz-sheet49 .kz-sheet-in:not(#kz-none) { max-height: calc(100dvh - 40px); }
+/* Oct 22: a sheet held still while the keyboard is up scrolls on its own and never hands the swipe to the page */
+.kz-sheet-in.kz-kbpin { overscroll-behavior: contain; overflow-y: auto !important; }
+
+/* Oct 22: Balance Bloom */
+.kz-wheel.kz-bloom { width: 100%; max-width: 400px; margin: 0 auto; overflow: visible; }
+.kz-bloom .kz-wl { font: 600 15px var(--kz-sans, -apple-system, sans-serif); }
+.kz-bloom .kz-wv { font: 700 14px var(--kz-sans, -apple-system, sans-serif); fill: rgba(235,235,245,.72); }
+.kz-bloom .kz-bnum { font: 800 21px var(--kz-sans, -apple-system, sans-serif); fill: #fff; letter-spacing: -.01em; }
+.kz-bloom .kz-bsub { font: 700 8.5px var(--kz-sans, -apple-system, sans-serif); fill: #E2B93B; letter-spacing: .06em; text-transform: uppercase; }
+.kz-bloom .kz-petal { transform-box: view-box; transform-origin: 200px 200px; }
+.kz-bloom.grow .kz-petal { animation: kzPetal 560ms cubic-bezier(.2,.9,.25,1.15) both; }
+.kz-bloom.grow .kz-even { animation: kzEven 400ms ease-out 560ms both; }
+@keyframes kzPetal { from { transform: scale(.05) rotate(-18deg); opacity: 0; } }
+@keyframes kzEven { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .kz-bloom.grow .kz-petal, .kz-bloom.grow .kz-even { animation: none; } }
+
+/* 8. Tree tab: no rank/XP header; every card the same width, centered */
+.kz49 .kz-treehero .kz-treeart { width: 100% !important; max-width: none !important; margin-inline: 0 !important; }
+/* Oct 21: center tab = the gold seam logo floating on its own, no circle, level with the other tab icons */
+.kz-tabbar a .kz-tab-orb, .kz-tabbar a[aria-current="page"] .kz-tab-orb, .kz-tabbar .kz-tab-tree[aria-current="page"] .kz-tab-orb { background: none !important; box-shadow: none !important; border: 0 !important; top: 3px !important; width: 40px !important; height: 40px !important; margin-left: -20px !important; border-radius: 0 !important; }
+.kz-tabbar .kz-tab-orb svg { width: 36px !important; height: 36px !important; overflow: visible; filter: drop-shadow(0 0 7px rgba(226,185,59,.45)) drop-shadow(0 2px 4px rgba(0,0,0,.6)); transition: transform .18s ease, filter .18s ease; }
+.kz-tabbar .kz-tab-tree:active .kz-tab-orb svg { transform: scale(.9); }
+.kz-tabbar .kz-tab-tree[aria-current="page"] .kz-tab-orb svg { filter: drop-shadow(0 0 11px rgba(233,197,90,.7)) drop-shadow(0 2px 4px rgba(0,0,0,.6)); }
+.kz-tabbar .kz-tab-orb path[d="M64 122 H136 L100 60 L82 91"]:not(.track):not(.run):not(.glow) { stroke: url(#kzseamgold) !important; }
+/* XP card under the tree: number + bar only */
+#kz-coll-s1 .kz-xpcard { margin: 0 !important; }
+#kz-coll-s1 .kz-xpcard .kz-xpnext { display: none !important; }
+
+/* 9. Me tab: XP sits next to the number, centered on it */
+.kz-mestats > div:first-child { flex-direction: row !important; align-items: center !important; justify-content: flex-start !important; gap: 8px !important; }
+.kz-gm-ask [data-gs-arch] { background: #FF9F0A; color: #1A1100; }
+.kz-gm-ask [data-gs-del] { background: rgba(255,69,58,.18); color: #FF6961; }
+.kz-gm-ask [data-gs-del].sure { background: #FF453A; color: #fff; }
+.kz-gm-ask [data-gs-no] { flex: none; background: none; color: rgba(235,235,245,.6); min-height: 32px; }
+.kz-gsheet .kz-gm-ask { margin-top: 2px; }
+.kz-mestats > div:first-child small { font-size: 13px !important; color: #F5D774 !important; opacity: .85; }
+</style>
+<style>/* Oct 22: black void. No backdrop, no two-tone, just black behind everything */html:not(#kz-none),body.kz49:not(#kz-none){background:#000 !important}</style><link rel="stylesheet" href="/core/kzb-3ab9a3b3f4.css">
+
+
+<script id="kz-early-h">/* Oct 24: set the header classes before first paint so the top bar does not flicker on load */document.documentElement.classList.add('kz-hA','kzp-lt')</script><link rel="stylesheet" href="/core/kzb-3b58828c8f.css"></head><body class="kz kz49"><svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="kzseam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#BFC4CC"/><stop offset=".5" stop-color="#BFC4CC"/><stop offset=".5" stop-color="#FFFFFF"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient><linearGradient id="kzseamgold" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#B8902E"/><stop offset=".5" stop-color="#B8902E"/><stop offset=".5" stop-color="#E9C55A"/><stop offset="1" stop-color="#E9C55A"/></linearGradient></defs></svg><style id="kz-nosplash">#kz-splash{display:none!important}</style><div id="kz-splash" aria-hidden="true"><i class="kz-sp-bg"></i><svg viewBox="56 52 88 78"><defs><linearGradient id="kzsp" gradientUnits="userSpaceOnUse" x1="64" y1="0" x2="136" y2="0"><stop offset="0" stop-color="#B8902E"/><stop offset=".5" stop-color="#B8902E"/><stop offset=".5" stop-color="#E9C55A"/><stop offset="1" stop-color="#E9C55A"/></linearGradient></defs><path class="track" d="M64 122 H136 L100 60 L82 91" fill="none" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter"/><path class="glow" d="M64 122 H136 L100 60 L82 91" fill="none" stroke="#E2B93B" stroke-width="8"/><path class="run" d="M64 122 H136 L100 60 L82 91" fill="none" stroke="#F4D676" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path class="full" d="M64 122 H136 L100 60 L82 91" fill="none" stroke="url(#kzsp)" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter"/></svg><span>KAIZEN</span></div><script>(function(){var s=document.getElementById("kz-splash"),seen=0;try{seen=sessionStorage.getItem("kz_splash")}catch(e){}/* Oct 26: no launch animation; Today shows immediately */if(s)s.remove();try{sessionStorage.setItem("kz_splash","1")}catch(e){}return;if(seen){s.remove();return}try{sessionStorage.setItem("kz_splash","1")}catch(e){}s.classList.add("kz-shock");s.dataset.t0=Date.now();setTimeout(function(){if(s.isConnected&&!s.dataset.go){s.classList.add("out");setTimeout(function(){s.remove()},550)}},2500);setTimeout(function(){if(s.isConnected){s.classList.add("out");setTimeout(function(){s.remove()},550)}},8000)})();</script>
+
+
+<link rel="stylesheet" href="/core/kzb-0f16b29ec2.css">
+
+
+
+
+
+
+
+
+
+
+<script src="/core/kzb-12488eb2ed.js"></script>
+
+<div class="kz-sheet49 kz-appsheet" id="kz-install" hidden role="dialog" aria-modal="true" aria-labelledby="kz-install-t">
+  <div class="kz-sheet-in">
+    <div class="kz-sheet-top"><span class="kz-label49 gold">30 seconds</span><button type="button" class="kz-iconbtn" data-kz-close aria-label="Close"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <h2 class="kz-t49" id="kz-install-t">Put Kaizen on your Home Screen</h2>
+    <p class="kz-p49">It opens full screen like an app, with no browser bars. One tap from your Home Screen instead of finding the sticker again.</p>
+    <ol class="kz-steps49">
+      <li><b>1</b><div><strong>Tap Share</strong><span>The square with the arrow, at the bottom of Safari.</span></div><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7.5 7.5L12 3l4.5 4.5"/><path d="M6 11H5v10h14V11h-1"/></svg></li>
+      <li><b>2</b><div><strong>Add to Home Screen</strong><span>Scroll down the list, tap it, then tap Add.</span></div><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M12 8v8M8 12h8"/></svg></li>
+      <li><b>3</b><div><strong>Open it from there</strong><span>Tap the Kaizen icon. Your goals and tree are already in it.</span></div><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M12 4L21 20H3z"/></svg></li>
+    </ol>
+    <p class="kz-note49" data-kz-install-note>On Android: tap the ⋮ menu, then Install app or Add to Home screen.</p>
+    <button type="button" class="kz-btn gold" data-kz-close>Got it</button>
+  </div>
+</div>
+
+<div class="kz-sheet49 kz-appsheet" id="kz-reminders" hidden role="dialog" aria-modal="true" aria-labelledby="kz-rem-t">
+  <div class="kz-sheet-in kz-center49">
+    <div class="kz-sheet-top"><span class="kz-chip49 green" data-kz-rem-badge hidden><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-kz-rem-badge-t>First goal done</span></span><span></span><button type="button" class="kz-iconbtn" data-kz-close aria-label="Close"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="kz-bell"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4l2-2z"/><path d="M10 21h4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></div>
+    <h2 class="kz-t49" id="kz-rem-t">Keep <span data-kz-tname>your tree</span> alive</h2>
+    <p class="kz-p49" data-kz-rem-how>One nudge in the morning, one rescue at night. Never more than two a day. They go on your phone's Calendar, so they alert even when Kaizen is closed.</p>
+    <div class="kz-steprow">
+      <span>Morning plan</span>
+      <div><button type="button" class="kz-iconbtn solid" data-kz-time="-30" aria-label="30 minutes earlier"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M5 12h14"/></svg></button><b data-kz-time-v aria-live="polite">7:30 AM</b><button type="button" class="kz-iconbtn solid" data-kz-time="30" aria-label="30 minutes later"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button></div>
+    </div>
+    <label class="kz-steprow kz-switchrow"><span><strong>Evening rescue · 8:00 PM</strong><em>Open Kaizen, finish what's left</em></span><input type="checkbox" class="kz-sw49" data-kz-rem-eve checked></label>
+    <button type="button" class="kz-btn gold" data-kz-rem-go>Add reminders to my Calendar</button>
+    <p class="kz-note49" data-kz-rem-done hidden></p>
+    <button type="button" class="kz-btn ghost danger" data-kz-rem-off hidden>Turn off reminders</button>
+    <button type="button" class="kz-btn ghost" data-kz-close>Not now</button>
+  </div>
+</div>
+
+<div class="kz-sheet49 kz-appsheet" id="kz-delete" hidden role="dialog" aria-modal="true" aria-labelledby="kz-del-t">
+  <div class="kz-sheet-in kz-center49">
+    <h2 class="kz-t49" id="kz-del-t">Delete all your data?</h2>
+    <p class="kz-p49">This erases your goals, check-ins, plans, to-dos, journal, tree and reminders from this phone<span data-kz-del-cloud hidden>, and deletes your Kaizen account and everything synced to it</span>. It can’t be undone.</p>
+    <button type="button" class="kz-btn ghost" data-kz-backup>Export my data first</button>
+    <button type="button" class="kz-btn danger" data-kz-del-go>Delete everything</button>
+    <p class="kz-note49" data-kz-del-msg role="status" hidden></p>
+    <button type="button" class="kz-btn ghost" data-kz-close>Cancel</button>
+  </div>
+</div>
+
+<div class="kz-reveal" id="kz-reveal" hidden role="dialog" aria-modal="true" aria-labelledby="kz-reveal-t">
+  <div class="kz-reveal-in">
+    <span class="kz-chip49 solidgold"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg>UNLOCKED</span>
+    <div class="kz-reveal-art" data-kz-reveal-art></div>
+    <h2 class="kz-t49 big" id="kz-reveal-t" data-kz-reveal-name></h2>
+    <p class="kz-p49" data-kz-reveal-why></p>
+    <button type="button" class="kz-btn gold" data-kz-reveal-plant>Plant it now</button>
+    <button type="button" class="kz-btn ghost" data-kz-close>Later</button>
+  </div>
+</div>
+
+<script src="/core/kzxp-1026i.js"></script>
+
+<div class="kz-treeview" id="kz-treeview" hidden role="dialog" aria-modal="true" aria-labelledby="kz-tv-name">
+  <div class="kz-tv-top"><div><span class="kz-label49 gold" data-tv="stage"></span><h2 class="kz-t49" id="kz-tv-name" data-tv="name"></h2></div><button type="button" class="kz-iconbtn" data-kz-close aria-label="Close"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="kz-tv-art" data-tv="art"></div>
+  <div class="kz-tv-foot">
+    <span class="kz-bar49 water" role="progressbar" aria-label="Water" aria-valuemin="0" aria-valuemax="100" data-tv="bar"><i></i></span>
+    <p class="kz-p49" data-tv="mood"></p>
+    <div class="kz-tv-btns"><a class="kz-btn ghost" href="/pages/profile">Collection</a><button type="button" class="kz-btn gold" data-kz-share>Share</button></div>
+  </div>
+</div>
+<script src="/core/kzb-4fd115745b.js"></script>
+
+<link rel="stylesheet" href="/core/kzb-2c5939d2d4.css">
+
+<header class="kz-header kz-h49" id="kz-header">
+  <div class="kz-wrap kz-hbar">
+    
+    <a class="kz-brand kz-htitle" href="/" aria-label="Kaizen, My goals"><svg class="kz-mark" width="20" height="20" viewBox="56 52 88 78"><path d="M64 122 H136 L100 60 L82 91" fill="none" stroke="#E2B93B" stroke-width="8" stroke-linecap="square"/></svg><span><b>My goals</b></span></a>
+    <span class="kz-hright">
+      <span class="kz-chip gold" data-kz-streak-pill hidden><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2.2 1.2-3.6 2.4-4.6.3 1.6 1.2 2.6 2.4 2.6C11 8.6 11 5.6 12 3z"/></svg><b data-kz-streak>0</b><span class="kz-sr">day streak</span><span class="kz-shieldchip" data-kz-shields hidden></span></span>
+      <span class="kz-chip water" data-kz-water hidden><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c3 4 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-7 6-11z"/></svg><b data-kz-water-n>0%</b><span class="kz-sr">water</span></span>
+      <button type="button" class="kz-chip feed" data-kz-feed hidden aria-label="Feed your visitor"><span class="kz-feedico" data-kz-feed-ico aria-hidden="true">🍖</span><b data-kz-feed-n>0</b></button>
+      <button type="button" class="kz-avatar kz-burger" id="kz-burger" aria-expanded="false" aria-controls="kz-menu" aria-label="Account and menu"><span data-kz-initial><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.4-3.6 4.2-5.4 7.5-5.4s6.1 1.8 7.5 5.4"/></svg></span></button>
+    </span>
+  </div>
+  <div class="kz-hprog" data-kz-hprog role="progressbar" aria-label="Today's goals" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" hidden><i></i></div>
+  <div class="kz-menu kz-sheet49" id="kz-menu" hidden>
+    <div class="kz-sheet-in">
+      <div class="kz-sheet-top"><b class="kz-sheet-title">Account</b><button type="button" class="kz-iconbtn" data-kz-menu-close aria-label="Close menu"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+      <div class="kz-menu-acct">
+        <p class="kz-menu-who" data-kz-who hidden></p>
+        <p class="kz-menu-who" data-kz-nosync hidden>Saved on this phone. Nothing leaves it.</p>
+        <a class="kz-btn gold" href="/pages/account?mode=signup" data-kz-signup>Sign up to save your tree</a>
+        <a class="kz-btn ghost" href="/pages/account?mode=login" data-kz-login>Log in</a>
+      </div>
+      <nav class="kz-rowlist" aria-label="Menu">
+        <a href="/pages/my-goals"><span>Manage goals</span><i aria-hidden="true"></i></a>
+        <a href="/pages/journal"><span>Journal</span><i aria-hidden="true"></i></a>
+        <button type="button" data-kz-open-reminders><span>Reminders</span><em data-kz-rem-state>Off</em><i aria-hidden="true"></i></button>
+        <button type="button" data-kz-open-install><span>Add to Home Screen</span><i aria-hidden="true"></i></button>
+        <a href="/pages/archived-goals"><span>Archived goals</span><i aria-hidden="true"></i></a>
+        <button type="button" data-kz-backup><span>Export my data</span><em data-kz-backup-when></em><i aria-hidden="true"></i></button>
+        <label class="kz-rowfile"><span>Restore from a backup</span><i aria-hidden="true"></i><input type="file" accept="application/json,.json" data-kz-restore></label>
+        <label class="kz-rowsw"><span>Sound effects</span><input type="checkbox" class="kz-sw49" data-kz-sound></label>
+        <a href="/legal/privacy.html" data-kz-legal="privacy"><span>Privacy Policy</span><i aria-hidden="true"></i></a>
+        <a href="/legal/terms.html" data-kz-legal="terms"><span>Terms of Service</span><i aria-hidden="true"></i></a>
+        <a href="/legal/subprocessors.html" data-kz-legal="subprocessors"><span>Subprocessors</span><i aria-hidden="true"></i></a>
+        <a href="/legal/licenses.html" data-kz-legal="licenses"><span>Licenses</span><i aria-hidden="true"></i></a>
+        <button type="button" data-kz-cookie-settings data-kz-siteonly><span>Cookie settings</span><i aria-hidden="true"></i></button>
+        <button type="button" class="kz-rowdanger" data-kz-open-delete><span>Delete my data</span><i aria-hidden="true"></i></button>
+        
+      </nav>
+      <button type="button" class="kz-btn danger" data-kz-logout hidden>Log out</button>
+    </div>
+  </div>
+</header>
+<script src="/core/098b073b268b.js"></script>
+<main id="kz-main">
+<style>
+  .kz-goals-layout { display: flex; flex-direction: column; align-items: center; gap: 40px; }
+  .kz-goals-list { width: 100%; }
+  #kz-add { width: 100%; max-width: 560px; }
+</style>
+<h1 class="kz-sr">My goals</h1><div class="kzp-title" aria-hidden="true"><b>My goals</b></div>
+
+<section class="kz-goals49" style="padding-block: 12px 40px">
+  <div class="kz-wrap kz-goals-layout">
+    <div class="kz-goals-list" style="display: flex; flex-direction: column; gap: 18px; min-width: 0">
+      <div class="kz-stack" style="gap: 8px"><span class="kz-label" id="kz-goal-count">Your goals</span><div class="kz-year" data-kz-year></div><span class="kz-row" style="font-weight: 800"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3c1 4 5 5.5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-3.5 2.5-5 .5 1.5 1.5 2 2.5 2-.5-2-.5-4.5 0-7z"></path></svg><span><span data-kz-days>0</span> days showed up</span></span></div>
+      <div class="kz-filter" id="kz-filter" hidden><span id="kz-filter-name"></span><button type="button" class="kz-quiet gold" id="kz-filter-all">Show all goals</button></div>
+      <div class="kz-grid two" id="kz-my"></div>
+      <div class="kz-filter-empty" id="kz-filter-empty" hidden></div>
+      <div class="kz-card" id="kz-my-empty" hidden style="align-items: center; text-align: center"><span class="kz-card-name">No goals yet</span><span class="kz-soft">Tap "+ Add a goal" to start. It can be big, like a half marathon, or small, like drinking water before coffee.</span></div>
+    </div>
+
+    <span class="kz-anchor" id="add"></span>
+    <button type="button" class="kz-btn gold" id="kz-open-add"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Add a goal</button>
+    <p class="kz-note" id="kz-saved" aria-live="polite" hidden style="margin: 0; text-align: center"></p>
+    <form class="kz-card kz-addform" id="kz-add" hidden>
+      <div class="kz-af-head"><span class="kz-af-t">New goal</span><button type="button" class="kz-af-cancel" id="kz-cancel">Cancel</button></div>
+      <div role="group" aria-label="Goal type" class="kz-seg">
+        <button type="button" class="kz-chip" data-kind="long" aria-pressed="true">Long-term</button>
+        <button type="button" class="kz-chip" data-kind="daily" aria-pressed="false">Daily habit</button>
+      </div>
+      <div class="kz-af-field">
+        <label for="kz-g-name" class="kz-af-l">What do you want to do?</label>
+        <input id="kz-g-name" class="kz-input" maxlength="90" required placeholder="Run my first half marathon" autocomplete="off">
+        <button type="button" class="kz-af-ideas" id="kz-ideas-open" aria-expanded="false" aria-controls="kz-ideas">Need ideas?</button>
+      </div>
+      <div class="kz-ideas" id="kz-ideas" hidden>
+        <div class="kz-ideas-tabs" role="group" aria-label="Branch" id="kz-ideas-p"></div>
+        <div class="kz-ideas-cats" role="group" aria-label="Category" id="kz-ideas-c"></div>
+        <div class="kz-ideas-list" id="kz-ideas-l"></div>
+      </div>
+      <div class="kz-af-field">
+        <span class="kz-af-l">Branch <em id="kz-g-path-note">We'll guess from your goal</em></span>
+        <div role="group" aria-label="Branch" class="kz-paths kz-af-paths" id="kz-g-path"></div>
+      </div>
+      <div class="kz-af-field" id="kz-g-step-wrap">
+        <label for="kz-g-step" class="kz-af-l">Small daily step <em>optional</em></label>
+        <input id="kz-g-step" class="kz-input" maxlength="140" placeholder="Run 2 easy miles" autocomplete="off">
+      </div>
+      <div class="kz-af-group">
+        <div class="kz-af-row"><span><b id="kz-log-label">Journal for this goal</b><small>A private daily note</small></span><button type="button" class="kz-switch kz-sw2" role="switch" aria-checked="false" aria-labelledby="kz-log-label" id="kz-log"></button></div>
+        <div class="kz-af-row" hidden><span><b id="kz-pub-label">Share on Goal inspiration</b><small id="kz-pub-state">Private</small></span><button type="button" class="kz-switch kz-sw2" role="switch" aria-checked="false" aria-labelledby="kz-pub-label" id="kz-pub" disabled></button></div>
+      </div>
+      <!-- Oct 22: public goal sharing is off until there is a server to receive it (it used to report success without sending anything) -->
+      <button type="submit" class="kz-btn" style="width: 100%">Save goal</button>
+      <span class="kz-note" id="kz-add-msg" aria-live="polite"></span>
+    </form>
+  </div>
+</section>
+
+<script>
+(function () {
+  var K = window.KZ, $ = function (id) { return document.getElementById(id); };
+  var kind = 'long', pub = false, path = '', log = false;
+  function paintPath() {
+    var guess = !path && $('kz-g-name').value.trim() ? K.guessPath($('kz-g-name').value) : '';
+    $('kz-g-path').querySelectorAll('[data-path]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.path === path)); b.classList.toggle('guess', !path && b.dataset.path === guess); });
+    $('kz-g-path-note').textContent = path ? 'Grows ' + b2n(path) : (guess ? 'Looks like ' + b2n(guess) : 'We\u2019ll guess from your goal');
+  }
+  function b2n(id) { var p = (K.PATHS || []).filter(function (x) { return x.id === id; })[0]; return p ? p.name : id; }
+  // Pillar chips come from the person's own pillars (presets or custom).
+  function paintChips() {
+    $('kz-g-path').innerHTML = K.PATHS.map(function (p) { return '<button type="button" class="kz-pathchip" data-path="' + p.id + '" aria-pressed="false"><i style="background: ' + p.c2 + '"></i>' + K.esc(p.name) + '</button>'; }).join('');
+    if (path && !K.pillar(path)) path = ''; paintPath();
+  }
+  $('kz-g-path').addEventListener('click', function (e) { var b = e.target.closest('[data-path]'); if (!b) return; path = path === b.dataset.path ? '' : b.dataset.path; paintPath(); });
+  paintChips(); document.addEventListener('kz:pillars', paintChips);
+  setTimeout(function () { $('kz-g-name').addEventListener('input', paintPath); }, 0);
+
+  // Pillar filter: tapping a pillar in the skill tree shows only that pillar's goals.
+  var only = '';
+  try { only = new URLSearchParams(location.search).get('pillar') || ''; } catch (e) {}
+  function pillar(id) { return (K.PATHS || []).filter(function (x) { return x.id === id; })[0]; }
+  K.showPath = function (id) {
+    only = pillar(id) ? id : ''; render();
+    var top = $('kz-goal-count').getBoundingClientRect().top + window.scrollY - 90;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+    K.track('kz_pillar_view', { pillar: only });
+  };
+  function render() {
+    var all = K.goals(), n = all.filter(function (x) { return x.pub; }).length, p = pillar(only);
+    var g = p ? all.filter(function (x) { return K.pathOf(x) === only; }) : all;
+    $('kz-filter').hidden = !p;
+    if (p) $('kz-filter-name').innerHTML = '<i style="background: ' + p.c2 + '"></i>' + p.name + '<b>' + g.length + (g.length === 1 ? ' goal' : ' goals') + '</b>';
+    $('kz-filter-empty').hidden = !(p && !g.length);
+    if (p && !g.length) $('kz-filter-empty').innerHTML = '<p>No ' + p.name + ' goals yet.</p><button type="button" class="kz-quiet gold" data-add-pillar="' + p.id + '">+ Add a ' + p.name + ' goal</button>';
+    var myHTML = g.map(function (x) { return K.cardHTML(x, { showTag: true, removable: true }); }).join('');
+    if (K.morphList) K.morphList($('kz-my'), myHTML); else $('kz-my').innerHTML = myHTML;   // Oct 25 p: only changed rows are redrawn
+    $('kz-my-empty').hidden = all.length > 0;
+    var vc = all.filter(function (x) { return !x.quit; }).length; $('kz-goal-count').textContent = vc + (vc === 1 ? ' goal' : ' goals');   /* Oct 27: sharing is off and Quit habits live on Today only, so the count matches the rows you see */
+    if (!$('kz-add').hidden)
+    K.updateStreak();
+  }
+  document.addEventListener('kz:changed', render); document.addEventListener('kz:goals', render);
+  $('kz-filter-all').addEventListener('click', function () { only = ''; render(); });
+  $('kz-filter-empty').addEventListener('click', function (e) { var b = e.target.closest('[data-add-pillar]'); if (b && K.openAdd) K.openAdd(b.dataset.addPillar); });
+  document.addEventListener('kz:step', function () { K.updateStreak(); });
+  $('kz-my').addEventListener('click', function (e) {
+    var d = e.target.closest('[data-kz-done]'), r = e.target.closest('[data-kz-remove]');
+    if (r) {
+      if (r.dataset.confirm) { K.removeGoal(r.dataset.kzRemove); render(); }
+      else { r.dataset.confirm = '1'; r.textContent = 'Tap again to remove'; }
+    }
+  });
+
+  document.querySelectorAll('[data-kind]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      kind = b.dataset.kind;
+      document.querySelectorAll('[data-kind]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      $('kz-g-name').placeholder = kind === 'long' ? 'Ex. Run my first half marathon' : 'Ex. Drink water before coffee';
+    });
+  });
+  $('kz-log').addEventListener('click', function () { log = !log; this.setAttribute('aria-checked', String(log)); });
+  $('kz-pub').addEventListener('click', function () {
+    return; /* Oct 22: sharing is off */
+    pub = !pub; this.setAttribute('aria-checked', String(pub)); $('kz-pub-state').textContent = pub ? 'Shared anonymously' : 'Private';
+  });
+
+  function sendForReview(name, k) {
+    return Promise.resolve(false); /* Oct 25 security: the website's public-goal review form never sends from the app */
+    var body = new URLSearchParams();
+    body.append('form_type', 'contact'); body.append('utf8', '✓');
+    body.append('contact[email]', );
+    body.append('contact[tags]', 'kaizen-public-goal');
+    body.append('contact[body]', 'PUBLIC GOAL FOR REVIEW\nGoal: ' + name + '\nType: ' + (k === 'daily' ? 'Daily' : 'Long-term') + '\n\nApprove: open https://admin.shopify.com/store//content/entries/public_goal/new , paste the goal, pick the type, Save.');
+    return fetch('/contact', { method: 'POST', body: body, credentials: 'same-origin', headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
+      .then(function (r) { return r.ok && r.url.indexOf('challenge') === -1; })
+      .catch(function () { return false; });
+  }
+
+  $('kz-add').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = $('kz-g-name').value.trim(); if (!name) return;
+    K.addGoal({ name: name, kind: kind, step: $('kz-g-step').value.trim(), pub: pub, log: log, path: path || K.guessPath(name) }); if (log) K.track('kz_goal_journal_on');
+    log = false; $('kz-log').setAttribute('aria-checked', 'false');
+    path = ''; paintPath();
+    var wasPub = pub;
+    $('kz-g-name').value = ''; $('kz-g-step').value = '';
+    render();
+    if (wasPub) {
+      $('kz-add-msg').textContent = 'Saved. Sending it for review…';
+      sendForReview(name, kind).then(function (ok) {
+        $('kz-add-msg').textContent = ok ? 'Saved. It will show on Goal inspiration soon, with no name attached.' : 'Saved here. Sending it for review didn’t work this time; it stays private for now.';
+      });
+    } else {
+      $('kz-add-msg').innerHTML = 'Saved. Only you can see it. <a href="/#steps" style="color: var(--kz-gold)">Back to today \u2192</a>';
+    }
+    $('kz-add').hidden = true; $('kz-open-add').hidden = false; $('kz-saved').innerHTML = $('kz-add-msg').innerHTML; $('kz-saved').hidden = false;
+    setTimeout(function () { $('kz-saved').hidden = true; }, 6000);
+  });
+
+  // Prefill from the Goal inspiration's "Use this goal"
+
+  function openAdd(scroll) {
+    if (K.goalSheet) { K.goalSheet.open({ mode: 'add', path: openAdd.p || '' }); openAdd.p = ''; return; }   // Oct 23: the same sheet as Today’s +
+    $('kz-add').hidden = false; $('kz-open-add').hidden = true; $('kz-add-msg').textContent = '';
+    if (scroll) setTimeout(function () { $('kz-add').scrollIntoView({ block: 'start', behavior: 'smooth' }); $('kz-g-name').focus({ preventScroll: true }); }, 60);
+  }
+  function closeAdd() {
+    $('kz-add').hidden = true; $('kz-open-add').hidden = false;
+    $('kz-g-name').value = ''; $('kz-g-step').value = ''; path = ''; paintPath();
+    if (location.hash === '#add') history.replaceState(null, '', location.pathname);
+    $('kz-my').scrollIntoView({ block: 'start', behavior: 'smooth' });
+  }
+  K.openAdd = function (p) { openAdd.p = typeof p === 'string' ? p : ''; openAdd(true); };
+  // Fill the add form from a library goal: name, daily step, pillar and type.
+  function setKind(k) { kind = k === 'daily' ? 'daily' : 'long'; document.querySelectorAll('#kz-add [data-kind]').forEach(function (x) { x.setAttribute('aria-pressed', String(x.dataset.kind === kind)); }); }
+  K.prefillGoal = function (it) {
+    if (K.goalSheet) { K.goalSheet.open({ mode: 'add', path: it.p, kind: it.k, name: it.n, step: it.s }); K.track('kz_library_pick', { pillar: it.p }); return; }
+    openAdd(true);
+    $('kz-g-name').value = it.n; $('kz-g-step').value = it.s; path = it.p; paintPath(); setKind(it.k);
+    closeIdeas(); K.track('kz_library_pick', { pillar: it.p });
+  };
+  // "Need ideas?" panel: pillar tabs, then category chips, then goals.
+  var ip = '', ic = '';
+  function paintIdeas() {
+    var L = K.LIBRARY || {}, P = (K.PATHS || []).filter(function (p) { return L[p.id]; });
+    if (!ip || !L[ip]) ip = (path && L[path]) ? path : (P[0] && P[0].id);
+    var cats = Object.keys(L[ip] || {}); if (cats.indexOf(ic) < 0) ic = cats[0];
+    $('kz-ideas-p').innerHTML = P.map(function (p) { return '<button type="button" class="kz-pathchip" data-ip="' + p.id + '" aria-pressed="' + (p.id === ip) + '"><i style="background: ' + p.c2 + '"></i>' + p.name + '</button>'; }).join('');
+    $('kz-ideas-c').innerHTML = cats.map(function (c) { return '<button type="button" class="kz-chip" data-ic="' + c + '" aria-pressed="' + (c === ic) + '">' + c + '</button>'; }).join('');
+    $('kz-ideas-l').innerHTML = ((L[ip] || {})[ic] || []).map(function (g, n) { return '<button type="button" class="kz-idea" data-ii="' + n + '"><b>' + K.esc(g.n) + '</b><span>' + K.esc(g.s) + '</span><em>' + (g.k === 'daily' ? 'Daily habit' : 'Long-term') + '</em></button>'; }).join('');
+  }
+  function closeIdeas() { $('kz-ideas').hidden = true; $('kz-ideas-open').setAttribute('aria-expanded', 'false'); $('kz-ideas-open').textContent = 'Need ideas?'; }
+  $('kz-ideas-open').addEventListener('click', function () {
+    var open = $('kz-ideas').hidden; if (!open) return closeIdeas();
+    ip = path || ip; paintIdeas(); $('kz-ideas').hidden = false; $('kz-ideas-open').setAttribute('aria-expanded', 'true'); $('kz-ideas-open').textContent = 'Hide ideas';
+  });
+  $('kz-ideas').addEventListener('click', function (e) {
+    var a = e.target.closest('[data-ip]'), c = e.target.closest('[data-ic]'), g = e.target.closest('[data-ii]');
+    if (a) { ip = a.dataset.ip; ic = ''; paintIdeas(); }
+    if (c) { ic = c.dataset.ic; paintIdeas(); }
+    if (g) { var it = K.LIBRARY[ip][ic][+g.dataset.ii]; K.prefillGoal({ p: ip, c: ic, n: it.n, s: it.s, k: it.k }); }
+  });
+  // Coming from Goal inspiration's Starter ideas (or another page): fill the form once.
+  try { var pg = sessionStorage.getItem('kz_prefill_goal'); if (pg) { sessionStorage.removeItem('kz_prefill_goal'); setTimeout(function () { K.prefillGoal(JSON.parse(pg)); }, 0); } } catch (e) {}
+  $('kz-open-add').addEventListener('click', function () { openAdd(true); });
+  $('kz-cancel').addEventListener('click', closeAdd);
+  document.addEventListener('click', function (e) { var a = e.target.closest('a[href="#add"], a[href$="my-goals#add"]'); if (a && location.pathname.indexOf('my-goals') > -1) { e.preventDefault(); openAdd(true); } });
+  window.addEventListener('hashchange', function () { if (location.hash === '#add') openAdd(true); });
+  if (location.hash === '#add') setTimeout(function () { openAdd(true); }, 250);
+  try { var pre = sessionStorage.getItem('kz_prefill'); if (pre && K.goalSheet) { sessionStorage.removeItem('kz_prefill'); setTimeout(function () { K.goalSheet.open({ mode: 'add', name: pre }); }, 250); } else if (pre) { $('kz-g-name').value = pre; sessionStorage.removeItem('kz_prefill'); $('kz-g-name').focus(); } } catch (e) {}
+  render();
+})();
+</script>
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+<nav class="kz-tabbar kz-tab5" aria-label="Sections">
+  <a href="/" aria-current="page">
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.4"/><path d="M7.7 12.3l3 3 5.6-5.8" stroke="#000"/></svg>
+    <span>Today</span></a>
+  <a href="/pages/plan" >
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="3.5" width="15" height="18" rx="3" /><path d="M8.5 9.5l1.6 1.6 3-3M8.5 15.5l1.6 1.6 3-3" /></svg>
+    <span>Plan</span></a>
+  <a href="/pages/profile" class="kz-tab-tree"  aria-label="Tree">
+    <span class="kz-tab-orb"><svg aria-hidden="true" viewBox="56 52 88 78"><defs><linearGradient id="kztabm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7E7A6"/><stop offset=".45" stop-color="#D4AF37"/><stop offset="1" stop-color="#B8902E"/></linearGradient></defs><path d="M64 122 H136 L100 60 L82 91" fill="none" stroke="url(#kztabm)" stroke-width="9" stroke-linecap="square" stroke-linejoin="miter"/></svg></span>
+    <span>Tree</span></a>
+  <a href="/pages/calendar" >
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" /></svg>
+    <span>Progress</span></a>
+  <a href="/pages/me" >
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><circle cx="12" cy="8.4" r="4"/><path d="M4.4 20.4c1.5-3.8 4.3-5.6 7.6-5.6s6.1 1.8 7.6 5.6"/></svg>
+    <span>Me</span></a>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/core/kzb-fcd389850c.js"></script>
+<style id="kz-oct22-kbd">
+/* Oct 22: while the keyboard is up, the tab bar and + button step aside (iOS moves fixed bars around the keyboard) */
+html.kz-kbd .kz-tabbar,html.kz-kbd .kz-fab{display:none !important}
+</style>
+<script id="kz-oct22-kbd-js">
+(function () { if (window.__kzKbd) return; window.__kzKbd = 1;
+  var vv = window.visualViewport, root = document.documentElement;
+  var field = function (el) { if (!el) return false; var t = el.tagName; if (t === 'TEXTAREA' || el.isContentEditable) return true; if (t === 'SELECT') return false; return t === 'INPUT' && !/^(checkbox|radio|button|submit|reset|range|color|file|hidden)$/i.test(el.type || 'text'); };
+  var set = function (on) { if (root.classList.contains('kz-kbd') === on) return; root.classList.toggle('kz-kbd', on); if (!on) requestAnimationFrame(function () { window.scrollTo(window.scrollX, window.scrollY); }); };
+  document.addEventListener('focusin', function (e) { if (field(e.target)) set(true); });
+  document.addEventListener('focusout', function () { setTimeout(function () { if (!field(document.activeElement)) set(false); }, 80); });
+  if (vv) vv.addEventListener('resize', function () { var open = vv.height < window.innerHeight * 0.8; if (!open) set(false); else if (field(document.activeElement)) set(true); });
+})();
+</script><style id="kz-oct22-compacthdr">
+/* Oct 22: compact header. One short row on every page, no live blur (it was re-rendering behind the header and tab bar on every scroll frame).
+   The header is see-through at the top of the page and turns solid black once you scroll. */
+.kz-h49::before {   background: #000 !important; opacity: 0; transition: opacity .18s ease; }
+html.kz-scrolled .kz-h49::before { opacity: 1; }
+.kz-h49 { border-bottom-color: transparent !important; transition: border-color .18s ease; }
+html.kz-scrolled .kz-h49 { border-bottom-color: rgba(255,255,255,.1) !important; }
+.kz-h49 .kz-hbar { min-height: calc(46px + env(safe-area-inset-top, 0px)); box-sizing: border-box; padding-block: calc(4px + env(safe-area-inset-top, 0px)) 4px !important; }
+.kz-h49 .kz-htitle b { font-size: 22px !important; line-height: 1.1 !important; }
+.kz-h49 .kz-htitle span { flex-direction: row !important; align-items: baseline; gap: 8px; }
+.kz-h49 .kz-htitle small { font-size: 14px !important; font-weight: 500 !important; color: #8e8e93 !important; }
+.kz-tabbar {   background: rgba(0,0,0,.97) !important; }
+</style>
+<script>
+(function () { if (window.__kzHdr) return; window.__kzHdr = 1; var de = document.documentElement, on = false, raf = 0;
+  var check = function () { raf = 0; var s = (window.scrollY || de.scrollTop) > 4; if (s !== on) { on = s; de.classList.toggle('kz-scrolled', s); } };
+  addEventListener('scroll', function () { if (!raf) raf = requestAnimationFrame(check); }, { passive: true }); check();
+})();
+</script>
+<link rel="stylesheet" href="/core/kzpro-5f54c3f79f.css" id="kzp-shared"><script id="kzp-title-js">(function(){var t=document.querySelector('.kzp-title');if(t||document.querySelector('#kz-main .kz-serif-title'))document.documentElement.classList.add('kzp-lt');if(!t)return;var e=t.querySelector('[data-kzp-date]'),K=window.KZ;if(e){var d=K&&K.today?K.today():new Date();e.textContent=d.toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric'});}var m=t.querySelector('[data-kzp-month]');if(m){var d2=K&&K.today?K.today():new Date();m.textContent=d2.toLocaleDateString(undefined,{month:'long',year:'numeric'});}})();</script><script id="kzp-press-js">(function(){if(window.__kzpPress)return;window.__kzpPress=1;var OLD='button, .kz-btn, a.kz-pcard-tree, a.kz-pathchip, .kz-chip49, summary, .kz-tabbar a, .kz-rowsw, .kz-rowfile, .kz-menu nav a, [role="button"]';var post=function(){try{var h=window.webkit&&window.webkit.messageHandlers&&window.webkit.messageHandlers.kaizen;if(h)h.postMessage({type:'tick'})}catch(e){}};document.addEventListener('touchstart',function(e){var a=e.target.closest&&e.target.closest('a[href], label.kz-set-row');if(!a||a.closest(OLD)||a.matches(OLD))return;post();},{passive:true});})();</script>
+
+
+<link rel="stylesheet" href="/core/kzb-837dc82972.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/core/kzb-cb63219525.js"></script></body></html>

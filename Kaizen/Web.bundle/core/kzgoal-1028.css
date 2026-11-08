@@ -1,0 +1,116 @@
+/* Oct 28 · replaces kzgoal-1027.css: the hidden drag handle keeps its grid slot (display:none shifted the row's columns: the title squeezed into the handle's column and wrapped, the check moved in). */
+/* Oct 27 · goal page tidy (see kzgoal-1027.js) */
+
+/* ---- 1 · one journal ---- */
+html body #kz-goaljournal .kz-g1day:has(.kz-g1text.empty):not(.kzgj-show):not(#kz-n1):not(#kz-n2):not(#kz-n3) { display: none !important; }
+html body #kz-goaljournal .kz-g1day.kzgj-show:not(#kz-n1):not(#kz-n2):not(#kz-n3) { display: block !important; }
+html body #kz-goalpage:not(#kz-n1):not(#kz-n2) { padding-bottom: 14px !important; }
+html body #kz-goaljournal .kzgj-earlier[hidden] { display: none !important; }
+html body #kz-goaljournal .kzgj-earlier { margin-top: 6px; }
+html body #kz-goaljournal:not(#kz-n1):not(#kz-n2) { padding-top: 8px !important; border-top: 0 !important; }
+html body #kz-goaljournal > .kz-wrap > .kz-label.gold:first-child { font-size: 13px; }
+
+/* composer: a single card; Dictate and Save share one row */
+html body #kz-goaljournal .kz-gnote:not(#kz-n1):not(#kz-n2):not(#kz-n3) {
+  display: grid !important; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 10px !important;
+  padding: 16px; border-radius: 20px; box-sizing: border-box;
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28) !important;
+}
+html body #kz-goaljournal .kz-gnote > .kz-label:not(#kz-n1):not(#kz-n2) { grid-column: 1 / -1; margin: 0 !important; color: rgba(235,235,245,.72) !important; font-size: 13px !important; font-weight: 600 !important; letter-spacing: 0 !important; text-transform: none !important; }
+html body #kz-goaljournal .kz-gnote > textarea:not(#kz-n1):not(#kz-n2):not(#kz-n3) {
+  grid-column: 1 / -1; width: 100% !important; min-height: 96px; margin: 0 !important; box-sizing: border-box;
+  border-radius: 14px !important; background: rgba(0,0,0,.32) !important; border: 0 !important;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.5), inset 0 -1px 0 rgba(255,255,255,.06) !important;
+}
+html body #kz-goaljournal .kz-gnote > .kz-mic:not(#kz-n1):not(#kz-n2):not(#kz-n3) {
+  grid-column: 1; width: auto !important; min-height: 44px; padding: 0 16px !important; margin: 0 !important; border-radius: 999px !important; border: 0 !important;
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28) !important;
+  color: rgba(235,235,245,.85) !important; font-size: 15px !important; transition: transform .12s ease;
+}
+html body #kz-goaljournal .kz-gnote > .kz-mic[aria-pressed="true"]:not(#kz-n1):not(#kz-n2):not(#kz-n3) { background: linear-gradient(rgba(255,105,97,.32), rgba(255,69,58,.16)) !important; color: #FF8A82 !important; }
+html body #kz-goaljournal .kz-gnote > .kz-mic[hidden] { display: none !important; }
+html body #kz-goaljournal .kz-gnote > .kz-gnrow:not(#kz-n1):not(#kz-n2) { grid-column: 2; justify-self: stretch; width: 100% !important; min-width: 0; margin: 0 !important; justify-content: flex-end !important; gap: 10px; }
+html body #kz-goaljournal .kz-gnote > .kz-gnrow:first-of-type:not(#kz-n1) { grid-column: 1 / -1; }
+html body #kz-goaljournal .kz-gnote > .kz-mic[hidden] + .kz-gnrow { grid-column: 1 / -1; }
+html body #kz-goaljournal .kz-gnote .kz-gnsaved:not(#kz-n1) { flex: 1 1 auto; min-width: 0; text-align: right !important; font-size: 13px; }
+html body #kz-goaljournal .kz-gnote .kz-gnsave:not(#kz-n1):not(#kz-n2):not(#kz-n3) {
+  flex: none !important; min-width: 132px !important; margin: 0 0 0 auto !important; min-height: 44px; padding: 0 22px !important; border-radius: 999px !important; border: 0 !important; color: #1A1406 !important; font-weight: 700 !important;
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 -1px 0 rgba(0,0,0,.22), 0 4px 14px rgba(184,144,46,.22) !important; transition: transform .12s ease;
+}
+html body #kz-goaljournal .kz-gnote :is(.kz-mic, .kz-gnsave):active { transform: scale(.96); }
+
+/* ---- 2 · quit header ---- */
+html body #kz-goalpage.kzgq-on :is(.kzq-gp, .kz-g1stats):not(#kz-n1):not(#kz-n2):not(#kz-n3) { display: none !important; }
+html body #kz-goalpage .kzgq {
+  display: flex; flex-direction: column; gap: 14px; width: 100%; box-sizing: border-box; margin: 4px 0 0; padding: 18px 16px 16px; border-radius: 22px; color: #fff;
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28);
+}
+html body #kz-goalpage .kzgq-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+html body #kz-goalpage .kzgq-top .kz-label { margin: 0; color: #E9C55A !important; font-size: 13px !important; font-weight: 600 !important; letter-spacing: 0 !important; text-transform: none !important; }
+html body #kz-goalpage .kzgq-since { font-size: 13px; color: rgba(235,235,245,.6); }
+html body #kz-goalpage .kzgq-big { display: flex; align-items: baseline; justify-content: center; gap: 10px; padding: 4px 0 2px; }
+html body #kz-goalpage .kzgq-big b { font-size: 64px; line-height: 1; font-weight: 800; letter-spacing: -.03em; font-variant-numeric: tabular-nums;
+  background: linear-gradient(180deg, #FFF1C4 0%, #E9C55A 55%, #B8902E 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+html body #kz-goalpage .kzgq-big span { font-size: 17px; font-weight: 600; color: rgba(235,235,245,.72); }
+html body #kz-goalpage .kzgq-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-radius: 16px; overflow: hidden;
+  background: rgba(0,0,0,.28); box-shadow: inset 0 1px 2px rgba(0,0,0,.45), inset 0 -1px 0 rgba(255,255,255,.06); }
+html body #kz-goalpage .kzgq-stats > div { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 12px 4px; min-width: 0; }
+html body #kz-goalpage .kzgq-stats > div + div { border-left: 1px solid rgba(255,255,255,.07); }
+html body #kz-goalpage .kzgq-stats b { font-size: 22px; line-height: 1.1; font-weight: 700; font-variant-numeric: tabular-nums; color: #fff; }
+html body #kz-goalpage .kzgq-stats span { font-size: 12px; color: rgba(235,235,245,.6); white-space: nowrap; }
+html body #kz-goalpage .kzgq-kept { margin: -2px 0 0; text-align: center; font-size: 14px; line-height: 1.4; color: rgba(235,235,245,.72); }
+html body #kz-goalpage .kzgq-why { padding: 12px 14px; border-radius: 16px; background: rgba(233,197,90,.07); box-shadow: inset 3px 0 0 rgba(233,197,90,.7); }
+html body #kz-goalpage .kzgq-why .kz-label { display: block; margin: 0 0 4px; color: rgba(233,197,90,.9) !important; font-size: 12px !important; font-weight: 600 !important; letter-spacing: 0 !important; text-transform: none !important; }
+html body #kz-goalpage .kzgq-why p { margin: 0; font-size: 16px; line-height: 1.4; color: #fff; overflow-wrap: anywhere; }
+html body #kz-goalpage a.kzgq-help { display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 8px 8px 8px 12px; border-radius: 999px; text-decoration: none; color: #fff;
+  background: linear-gradient(rgba(255,255,255,.08), rgba(255,255,255,.03)); box-shadow: inset 0 1px 0 rgba(255,255,255,.12), inset 0 -1px 0 rgba(0,0,0,.28); transition: transform .12s ease; }
+html body #kz-goalpage a.kzgq-help:active { transform: scale(.98); }
+html body #kz-goalpage .kzgq-help > i { flex: none; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 999px; color: #E9C55A; background: rgba(233,197,90,.12); }
+html body #kz-goalpage .kzgq-help > span { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; }
+html body #kz-goalpage .kzgq-help b { font-size: 15px; font-weight: 600; }
+html body #kz-goalpage .kzgq-help small { font-size: 12px; color: rgba(235,235,245,.6); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+html body #kz-goalpage .kzgq-help em { flex: none; font-style: normal; font-size: 15px; font-weight: 700; color: #1A1406; padding: 10px 18px; border-radius: 999px;
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 -1px 0 rgba(0,0,0,.22); }
+@media (max-width: 359px) { html body #kz-goalpage .kzgq-big b { font-size: 54px; } html body #kz-goalpage .kzgq-stats span { font-size: 11px; } }
+@media (prefers-reduced-motion: reduce) { html body #kz-goalpage a.kzgq-help, html body #kz-goaljournal .kz-gnote :is(.kz-mic, .kz-gnsave) { transition: none; } }
+
+/* past-note Edit / + Add a note: a small pill, not a loose text link */
+html body #kz-goaljournal .kz-g1day .kz-g1edit:not(#kz-n1):not(#kz-n2):not(#kz-n3) { display: inline-flex !important; align-items: center; min-height: 36px; margin: 10px 0 0 !important; padding: 0 16px !important; border-radius: 999px !important; border: 0 !important;
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)) !important; box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28) !important; color: #E9C55A !important; font-size: 14px !important; font-weight: 600 !important; transition: transform .12s ease; }
+html body #kz-goaljournal .kz-g1day .kz-g1edit[hidden] { display: none !important; }
+html body #kz-goaljournal .kz-g1day .kz-g1edit:active { transform: scale(.96); }
+
+/* the goal's name is already the page title: it never pops into the step row when you check it off (no jump) */
+html body #kz-goalpage .kz-g1row .kz-gname:not(#kz-n1):not(#kz-n2):not(#kz-n3) { display: none !important; }
+
+/* goal page sections keep one fixed order, so redrawing after a check-off never swaps them */
+html body #kz-goalpage [data-g1="body"] > .kz-label { order: 1; }
+html body #kz-goalpage [data-g1="body"] > .kz-g1name { order: 2; }
+html body #kz-goalpage [data-g1="body"] > .kzg-goal { order: 3; }
+html body #kz-goalpage [data-g1="body"] > .kz-g1step { order: 4; }
+html body #kz-goalpage [data-g1="body"] > :is(.kz-g1row, [data-g1restore]) { order: 5; }
+html body #kz-goalpage [data-g1="body"] > :is(.kzgq, .kzq-gp) { order: 6; }
+html body #kz-goalpage [data-g1="body"] > .kz-g1stats { order: 7; }
+html body #kz-goalpage [data-g1="body"] > .kz66-gp { order: 8; }
+html body #kz-goalpage [data-g1="body"] > .kzbd-gp { order: 9; }
+html body #kz-goalpage [data-g1="body"] > .kz-g1hist { order: 10; }
+html body #kz-goalpage [data-g1="body"] > * { order: 20; }
+
+/* no "End this run" on the goal page (James, Oct 27): the run is still shown, just without an end button */
+html body #kz-goalpage .kz66-gp .kz66-quit:not(#kz-n1):not(#kz-n2):not(#kz-n3) { display: none !important; }
+
+/* the step row on a goal page stays put: no drag handle */
+html body #kz-goalpage .kz-g1row [data-kz-drag]:not(#kz-n1):not(#kz-n2) { visibility: hidden !important; pointer-events: none !important; }
+html body #kz-goalpage .kz-g1row .kz-grow:not(#kz-n1) { touch-action: pan-y; }
+
+/* X in the journal composer's top-right corner (closes this goal's journal) */
+html body #kz-goaljournal .kz-gnote:not(#kz-n1) { position: relative; }
+html body #kz-goaljournal .kzgj-x { position: absolute; top: 8px; right: 8px; display: grid; place-items: center; width: 32px; height: 32px; padding: 0; border: 0; border-radius: 999px; color: rgba(235,235,245,.7);
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)); box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28); transition: transform .12s ease; }
+html body #kz-goaljournal .kzgj-x::before { content: ""; position: absolute; inset: -6px; }
+html body #kz-goaljournal .kzgj-x:active { transform: scale(.9); }

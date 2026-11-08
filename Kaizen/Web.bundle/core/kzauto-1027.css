@@ -1,0 +1,11 @@
+/* Oct 27 · see kzauto-1027.js */
+html body .kzs-auto:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7):not(#kz-n8) {
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28) !important; }
+/* header pills (quote/question chat button, streak) on the card gradient; the gold + buttons (header, Plan's New task) in gold glass */
+html body .kz-hbar .kz-chip:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7):not(#kz-n8) {
+  background: linear-gradient(rgba(255,255,255,.13), rgba(255,255,255,.05)) !important; border: 0 !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.18), inset 0 -1px 0 rgba(0,0,0,.28), 0 4px 14px rgba(0,0,0,.35) !important; }
+html body :is(.kz-hadd, .kz-qadd-go):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7):not(#kz-n8):not(#kz-n9):not(#kz-n10):not(#kz-n11):not(#kz-n12):not(#kz-n13) {
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%) !important; color: #1A1404 !important; border: 0 !important;
+  box-shadow: inset 0 1px .5px rgba(255,255,255,.55), inset 0 -1px .5px rgba(255,255,255,.16), inset 0 0 0 .5px rgba(255,255,255,.22), 0 0 14px rgba(226,185,59,.3), 0 6px 18px rgba(0,0,0,.38) !important; }

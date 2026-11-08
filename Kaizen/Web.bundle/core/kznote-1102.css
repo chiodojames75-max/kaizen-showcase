@@ -1,0 +1,4 @@
+/* Nov 2 · Note to self takes only the height it needs (James): the sheet hugs its content at the bottom of the screen
+   instead of filling it; with the keyboard up (kz-kbfit) it still fits above the keys. Nothing removed. */
+html body .kznt-back .kznt-sheet:not(#kz-n1):not(#kz-n2) { flex: 0 1 auto !important; margin-top: auto !important; max-height: 100% !important; }
+html body .kznt-back .kznt-sheet .kznt-body:not(#kz-n1):not(#kz-n2) { flex: 0 1 auto !important; }

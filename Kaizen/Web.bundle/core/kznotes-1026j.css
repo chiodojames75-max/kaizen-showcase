@@ -1,0 +1,52 @@
+/* Oct 26 j · Note to self (kznotes-1026j.js). Self-contained: Journal's merged stylesheet doesn't carry the app's sheet styles.
+   The sheet comes down from the top like an iOS page sheet, so Cancel and Save stay above the keyboard. */
+.kznt-back { position: fixed; inset: 0; z-index: 9600; background: rgba(0,0,0,0); transition: background .26s ease; display: flex; flex-direction: column; justify-content: flex-start; padding-top: calc(env(safe-area-inset-top, 0px) + 10px); }
+.kznt-back.on { background: rgba(0,0,0,.55); }
+.kznt-sheet { flex: 1 1 auto; display: flex; flex-direction: column; min-height: 0; background: #1C1C1E; border-radius: 22px 22px 0 0; box-shadow: 0 -8px 40px rgba(0,0,0,.5); transform: translateY(100%); transition: transform .32s cubic-bezier(.2,.9,.25,1); font-family: var(--kz-sans, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif); color: #fff; }
+.kznt-back.on .kznt-sheet { transform: none; }
+@media (prefers-reduced-motion: reduce) { .kznt-sheet, .kznt-back { transition: none; } }
+.kznt-bar { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 8px; padding: 14px 16px 10px; border-bottom: .5px solid rgba(84,84,88,.6); }
+.kznt-bar h2 { margin: 0; font-size: 17px; font-weight: 600; text-align: center; letter-spacing: -.01em; }
+.kznt-cancel, .kznt-save { justify-self: start; min-height: 44px; padding: 0 4px; border: 0; background: none; font: inherit; font-size: 17px; color: rgba(235,235,245,.75); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.kznt-save { justify-self: end; font-weight: 600; color: #E2B93B; }
+.kznt-save:disabled { color: rgba(235,235,245,.3); cursor: default; }
+.kznt-body { flex: 1 1 auto; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 16px 16px calc(env(safe-area-inset-bottom, 0px) + 24px); display: flex; flex-direction: column; gap: 12px; }
+.kznt-txt { width: 100%; box-sizing: border-box; min-height: 132px; resize: none; border: 0; border-radius: 14px; background: #2C2C2E; color: #fff; padding: 14px 16px; font: inherit; font-size: 17px; line-height: 1.4; outline: none; }
+.kznt-txt::placeholder { color: rgba(235,235,245,.35); }
+.kznt-txt:focus { box-shadow: inset 0 0 0 1.5px rgba(226,185,59,.55); }
+.kznt-mic { display: flex; }
+.kznt-mic .kz-mic { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 0 14px; border: 0; border-radius: 18px; background: #2C2C2E; color: rgba(235,235,245,.85); font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; }
+.kznt-mic .kz-mic[aria-pressed="true"] { background: rgba(255,69,58,.18); color: #FF6961; }
+.kznt-mic .kz-mic[hidden] { display: none; }
+.kznt-lab { margin: 6px 2px 0; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #8E8E93; }
+.kznt-chips, .kznt-filter { display: flex; flex-wrap: wrap; gap: 8px; }
+.kznt-chip { display: inline-flex; align-items: center; gap: 7px; min-height: 36px; padding: 0 14px; border: 0; border-radius: 18px; background: #2C2C2E; color: rgba(235,235,245,.85); font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; white-space: nowrap; -webkit-tap-highlight-color: transparent; transition: background .15s ease, color .15s ease; }
+.kznt-chip i { width: 8px; height: 8px; border-radius: 50%; background: var(--c, #E2B93B); }
+.kznt-chip.on { background: #fff; color: #000; }
+.kznt-chip:active { transform: scale(.96); }
+.kznt-del { align-self: center; margin-top: 18px; min-height: 44px; padding: 0 18px; border: 0; background: none; font: inherit; font-size: 16px; font-weight: 500; color: #FF6961; cursor: pointer; }
+.kznt-del.sure { font-weight: 700; }
+/* + sheet entry */
+.kznt-entry { display: grid; grid-template-columns: 20px auto 1fr; align-items: center; gap: 10px; width: 100%; box-sizing: border-box; min-height: 48px; margin: 12px 0 2px; padding: 0 14px; border: 0; border-radius: 14px; background: rgba(226,185,59,.1); color: #E2B93B; font: inherit; text-align: left; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.kznt-entry svg { width: 18px; height: 18px; }
+.kznt-entry span { font-size: 16px; font-weight: 600; }
+.kznt-entry em { font-style: normal; font-size: 14px; color: rgba(235,235,245,.55); text-align: right; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.kznt-entry:active { background: rgba(226,185,59,.18); }
+/* Journal → Notes */
+html body .kz-j2 .kz-jtabs.kz-seg:not(#kz-n1):not(#kz-n2):not(#kz-n3) { grid-template-columns: repeat(3, 1fr) !important; }
+.kznt-pane:not([hidden]) { display: flex; flex-direction: column; gap: 10px; width: 100%; }
+.kznt-new { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; border: 0; border-radius: 14px; background: rgba(226,185,59,.12); color: #E2B93B; font: inherit; font-size: 16px; font-weight: 600; cursor: pointer; }
+.kznt-new svg { width: 18px; height: 18px; }
+.kznt-new:active { background: rgba(226,185,59,.2); }
+.kznt-filter { margin-top: 4px; }
+.kznt-month { margin: 12px 2px 0; font: 700 13px/1 var(--kz-sans, -apple-system, sans-serif); letter-spacing: .06em; text-transform: uppercase; color: #8E8E93; }
+.kznt-card { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border-radius: 18px; background: #1C1C1E; border: .5px solid rgba(84,84,88,.5); }
+.kznt-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 13px; color: #8E8E93; }
+.kznt-tag { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--c, #E2B93B); }
+.kznt-tag i { width: 8px; height: 8px; border-radius: 50%; background: var(--c, #E2B93B); }
+.kznt-p { margin: 0; font-size: 17px; line-height: 1.4; color: #fff; white-space: pre-wrap; overflow-wrap: anywhere; }
+.kznt-edit { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 32px; margin: 2px 0 -6px -4px; padding: 0 4px; border: 0; background: none; color: #8E8E93; font: inherit; font-size: 14px; cursor: pointer; }
+.kznt-edit svg { width: 14px; height: 14px; }
+.kznt-empty { display: flex; flex-direction: column; gap: 6px; align-items: center; text-align: center; padding: 28px 18px; border-radius: 18px; background: #1C1C1E; }
+.kznt-empty b { font-size: 17px; font-weight: 600; color: #fff; }
+.kznt-empty span { font-size: 15px; color: #8E8E93; line-height: 1.4; }

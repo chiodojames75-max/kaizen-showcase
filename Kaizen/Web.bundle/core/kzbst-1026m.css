@@ -1,0 +1,33 @@
+/* Oct 26 m · Edit branches in the app's current look (James: "upgrade this to the new look"): an iOS inset list like
+   Habits earned and the Plan tab. No trunk or connector lines; one row per branch (colour dot, name, goal count,
+   chevron) on hairline separators; "Grow a new branch" is a gold + row. "Edit branches" (shown again under the open
+   list) is hidden while editing: the Balance header's Done closes it. */
+html body .kz-bst2 > .kz-bst2-edit[aria-expanded="true"]:not(#kz-n1):not(#kz-n2):not(#kz-n3) { display: none !important; }
+html body .kz-bst2 .kz-bst-trunk:not(#kz-n1):not(#kz-n2):not(#kz-n3) { margin: 0 !important; padding: 0 !important; }
+html body .kz-bst2 .kz-bst-trunk:not(#kz-n1):not(#kz-n2):not(#kz-n3)::before,
+html body .kz-bst2 .kz-bst-trunk:not(#kz-n1):not(#kz-n2):not(#kz-n3)::after,
+html body .kz-bst2 .kz-bst-row:not(#kz-n1):not(#kz-n2):not(#kz-n3)::before { display: none !important; content: none !important; }
+html body .kz-bst2 .kz-bst-row:not(#kz-n1):not(#kz-n2):not(#kz-n3) { position: relative; padding: 0 !important; margin: 0 !important; }
+html body .kz-bst2 .kz-bst-row + .kz-bst-row:not(#kz-n1):not(#kz-n2):not(#kz-n3)::after { content: "" !important; display: block !important; position: absolute; left: 30px; right: 0; top: 0; height: .5px; background: #38383A; }
+html body .kz-bst2 .kz-bst-main:not(#kz-n1):not(#kz-n2):not(#kz-n3) { display: flex !important; align-items: center !important; gap: 14px !important; width: 100% !important; min-height: 54px !important; height: auto !important; padding: 0 !important; background: none !important; text-align: left; }
+html body .kz-bst2 .kz-bst-main:active:not(#kz-n1):not(#kz-n2):not(#kz-n3) { opacity: .6; }
+html body .kz-bst2 .kz-bst-dot:not(#kz-n1):not(#kz-n2):not(#kz-n3) { flex: 0 0 auto; width: 14px !important; height: 14px !important; margin: 0 2px !important; border: 0 !important; border-radius: 50% !important; background: var(--bc, #8E8E93) !important; box-shadow: none !important; }
+html body .kz-bst2 .kz-bst-row:not(.on):not(.kz-bst-add) .kz-bst-dot:not(#kz-n1):not(#kz-n2):not(#kz-n3) { background: transparent !important; box-shadow: inset 0 0 0 1.75px var(--bc, #8E8E93) !important; }
+html body .kz-bst2 .kz-bst-nm:not(#kz-n1):not(#kz-n2):not(#kz-n3) { flex: 1 1 auto; min-width: 0; font-size: 17px !important; font-weight: 500 !important; color: #fff !important; letter-spacing: -.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+html body .kz-bst2 .kz-bst-row:not(.on):not(.kz-bst-add) .kz-bst-nm:not(#kz-n1):not(#kz-n2):not(#kz-n3) { color: rgba(235,235,245,.6) !important; }
+html body .kz-bst2 .kz-bst-ct:not(#kz-n1):not(#kz-n2):not(#kz-n3) { flex: 0 0 auto; font-size: 15px !important; font-weight: 400 !important; color: #8E8E93 !important; }
+html body .kz-bst2 .kz-bst-chev:not(#kz-n1):not(#kz-n2):not(#kz-n3) { flex: 0 0 auto; width: 14px !important; height: 14px !important; margin-left: 2px; fill: none; stroke: #636366 !important; stroke-width: 2.6 !important; stroke-linecap: round; stroke-linejoin: round; transition: transform .2s ease; }
+html body .kz-bst2 .kz-bst-main[aria-expanded="true"] .kz-bst-chev:not(#kz-n1):not(#kz-n2):not(#kz-n3) { transform: rotate(90deg); }
+/* + New branch */
+html body .kz-bst2 .kz-bst-add .kz-bst-dot:not(#kz-n1):not(#kz-n2):not(#kz-n3) { width: 22px !important; height: 22px !important; margin: 0 -2px !important; background: rgba(226,185,59,.16) linear-gradient(#E2B93B, #E2B93B) center / 10px 2px no-repeat !important; box-shadow: none !important; position: relative; }
+html body .kz-bst2 .kz-bst-add .kz-bst-dot:not(#kz-n1):not(#kz-n2):not(#kz-n3)::after { content: ""; position: absolute; left: 50%; top: 50%; width: 2px; height: 10px; margin: -5px 0 0 -1px; border-radius: 1px; background: #E2B93B; }
+html body .kz-bst2 .kz-bst-add .kz-bst-nm:not(#kz-n1):not(#kz-n2):not(#kz-n3) { color: #E2B93B !important; font-weight: 600 !important; }
+/* the open editor under a row */
+html body .kz-bst2 .kz-bst-edit:not(#kz-n1):not(#kz-n2):not(#kz-n3) { margin: 0 0 14px 30px !important; padding: 0 !important; }
+/* footnote */
+html body .kz-bst2 .kz-bst-foot:not(#kz-n1):not(#kz-n2):not(#kz-n3) { margin: 10px 0 0 !important; font-size: 13px !important; line-height: 1.45 !important; text-align: left !important; color: #8E8E93 !important; }
+html body .kz-bst2 .kz-bst-foot button:not(#kz-n1):not(#kz-n2):not(#kz-n3) { color: #E2B93B !important; text-decoration: none !important; font: inherit; background: none; border: 0; }
+/* the card's own "Edit branches" row: hidden while the list is open (Done in the Balance header closes it); otherwise a plain list row */
+html.kz-pc-ed body .kzo-bal .kzo-edit:not(#kz-n1):not(#kz-n2):not(#kz-n3) { display: none !important; }
+html body .kzo-bal .kzo-edit:not(#kz-n1):not(#kz-n2):not(#kz-n3) { border-top: 0 !important; min-height: 50px; font-size: 17px !important; color: #fff !important; }
+html body .kzo-bal .kzo-edit b:not(#kz-n1):not(#kz-n2):not(#kz-n3) { color: #636366 !important; }

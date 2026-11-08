@@ -1,0 +1,27 @@
+/* Oct 23 fix pass */
+/* 1. Nothing rides up under the status bar or the Dynamic Island: every sheet stops 12 pt below the safe area */
+html body .kz-sheet49 .kz-sheet-in:not(#kz-none):not(#kz-fx) { max-height: calc(100dvh - env(safe-area-inset-top, 20px) - 12px) !important; }
+html body .kz-p4 .kz-p4-in { max-height: calc(100dvh - env(safe-area-inset-top, 20px) - 12px) !important; }
+/* 2. Today's tree picture: one rounded edge (the box's), art edge to edge, soil-colored behind so no dark corners show */
+html body .kz-pcard-tree svg, html body .kz-pcard-tree svg.kz-lifetree { border-radius: 0 !important; display: block; width: 100% !important; height: 100% !important; }
+html body .kz-pcard-tree { background: #3A2B1F !important; isolation: isolate; -webkit-mask-image: -webkit-radial-gradient(white, black); }
+/* 3. Balance: the star carries the names and counts; the branch editor sits behind one row */
+.kz-balcard, .kz-g-balwrap { position: relative; }
+.kz-bst2 .kz-bst-grow { position: absolute; top: 20px; right: 16px; margin: 0 !important; }
+.kz-g-balwrap .kz-bst2 .kz-bst-grow { top: 2px; right: 0; }
+.kz-bst2 .kz-bst2-star { display: block; width: 100% !important; max-width: 420px !important; height: auto; margin: 4px auto 6px !important; overflow: visible; }
+.kz-bst2-n { font: 600 16px/1 var(--kz-sans); fill: #8E8E93; }
+.kz-bst2-n.on { fill: #fff; }
+.kz-bst2-c { font: 500 14px/1 var(--kz-sans); }
+.kz-bst2 .kz-bst-line { margin: 2px 0 14px !important; }
+.kz-bst2 .kz-bst-trunk, .kz-bst2 .kz-bst-foot { display: none !important; }
+.kz-bst2.editing .kz-bst-trunk { display: block !important; margin-top: 18px; }
+.kz-bst2.editing .kz-bst-foot { display: block !important; }
+.kz-bst2-edit { display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 48px; padding: 0 2px; border: 0; border-top: .5px solid rgba(84,84,88,.6); background: none; color: #fff; font: 400 17px/1 var(--kz-sans); -webkit-tap-highlight-color: transparent; cursor: pointer; }
+.kz-bst2-edit svg { width: 16px; height: 16px; fill: none; stroke: #636366; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; transition: transform .2s ease; }
+.kz-bst2.editing .kz-bst2-edit svg { transform: rotate(90deg); }
+/* Progress: share icon in the stats card's corner */
+.kz-fx-stats { position: relative; }
+html body #kz-main .kz-fx-stats .kz-p4-sb.kz-fx-share { position: absolute; top: 4px; right: 4px; width: 44px; height: 44px; min-height: 44px; margin: 0; padding: 0; border-radius: 22px; background: none; font-size: 0; color: #E2B93B; gap: 0; }
+html body #kz-main .kz-fx-stats .kz-p4-sb.kz-fx-share svg { width: 20px; height: 20px; }
+@media (prefers-reduced-motion: reduce) { .kz-bst2-edit svg { transition: none; } }

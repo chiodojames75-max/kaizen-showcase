@@ -1,0 +1,9 @@
+/* Oct 26 (a): Today shows added to-dos inside the to-do list (see kztodo-1026a.js) */
+html body .kz-todosec.kztd-on ul.kz-todos:not(#kz-none) { display: none !important; }   /* the old separate card (check on the left, ×) */
+html body .kz-todosec.kztd-on .kz-tsec-h .kzf-tn:not(#kz-none),
+html body .kz-todosec.kztd-on .kz-tsec-h [data-t="todo-n"]:not(#kz-none) { display: none !important; }   /* two counts -> one */
+html body .kz-today .kz-tdel:not(#kz-none) { display: none !important; }   /* delete only on the Plan tab */
+html body .kztd-solo[hidden] { display: none !important; }
+/* no plan today: the to-dos get the same card the plan list sits in */
+html body .kztd-solo:not([hidden]) { display: block; border-radius: 22px; padding: 4px 14px 6px; background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)); box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28); }
+html body .kztd-solo .kz-plan-list { margin: 0; padding: 0; }

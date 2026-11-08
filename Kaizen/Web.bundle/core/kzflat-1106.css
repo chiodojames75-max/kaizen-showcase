@@ -1,0 +1,13 @@
+/* Nov 6 · James: "take away the grey pill backgrounds" on Progress: the Balance card, the Milestones strip, the Next up
+   card and the medal case. Content and spacing stay; only the box (fill, border, shadow) goes. Beats kzsurf's chains. */
+html body .kzpc-card.kzwl-on:not(#kzf1):not(#kzf2):not(#kzf3):not(#kzf4):not(#kzf5):not(#kzf6):not(#kzf7):not(#kzf8):not(#kzf9):not(#kzf10):not(#kzf11):not(#kzf12),
+html body .kzpc-card.kzpc-mcard:not(#kzf1):not(#kzf2):not(#kzf3):not(#kzf4):not(#kzf5):not(#kzf6):not(#kzf7):not(#kzf8):not(#kzf9):not(#kzf10):not(#kzf11):not(#kzf12),
+html body .kza .kzm-next:not(#kzf1):not(#kzf2):not(#kzf3):not(#kzf4):not(#kzf5):not(#kzf6):not(#kzf7):not(#kzf8):not(#kzf9):not(#kzf10):not(#kzf11):not(#kzf12),
+html body .kza .kzm-grid:not(#kzf1):not(#kzf2):not(#kzf3):not(#kzf4):not(#kzf5):not(#kzf6):not(#kzf7):not(#kzf8):not(#kzf9):not(#kzf10):not(#kzf11):not(#kzf12) { background: none !important; background-color: transparent !important; box-shadow: none !important; border-color: transparent !important; }
+html body .kzpc-card.kzwl-on:not(#kzf1):not(#kzf2):not(#kzf3):not(#kzf4):not(#kzf5):not(#kzf6):not(#kzf7):not(#kzf8):not(#kzf9):not(#kzf10):not(#kzf11):not(#kzf12)::before, html body .kzpc-card.kzwl-on:not(#kzf1):not(#kzf2):not(#kzf3):not(#kzf4):not(#kzf5):not(#kzf6):not(#kzf7):not(#kzf8):not(#kzf9):not(#kzf10):not(#kzf11):not(#kzf12)::after,
+html body .kzpc-card.kzpc-mcard:not(#kzf1):not(#kzf2):not(#kzf3):not(#kzf4):not(#kzf5):not(#kzf6):not(#kzf7):not(#kzf8):not(#kzf9):not(#kzf10):not(#kzf11):not(#kzf12)::before, html body .kzpc-card.kzpc-mcard:not(#kzf1):not(#kzf2):not(#kzf3):not(#kzf4):not(#kzf5):not(#kzf6):not(#kzf7):not(#kzf8):not(#kzf9):not(#kzf10):not(#kzf11):not(#kzf12)::after { display: none !important; }
+html body .kza .kzm-next:not(#kzf1):not(#kzf2):not(#kzf3):not(#kzf4):not(#kzf5):not(#kzf6):not(#kzf7):not(#kzf8):not(#kzf9):not(#kzf10):not(#kzf11):not(#kzf12) { padding: 6px 0 !important; }
+html body .kza .kzm-grid:not(#kzf1):not(#kzf2):not(#kzf3):not(#kzf4):not(#kzf5):not(#kzf6):not(#kzf7):not(#kzf8):not(#kzf9):not(#kzf10):not(#kzf11):not(#kzf12) { padding: 10px 0 6px !important; }
+/* Nov 6 · James: take the gold "Add a … goal" button and the "Least effort" line off the Balance card (the + on the
+   chart still adds a goal in the missing area). */
+html body .kzwl .kzwl-add:not(#kzf1):not(#kzf2):not(#kzf3):not(#kzf4):not(#kzf5):not(#kzf6):not(#kzf7):not(#kzf8):not(#kzf9):not(#kzf10):not(#kzf11):not(#kzf12), html body .kzwl .kzwl-low:not(#kzf1):not(#kzf2):not(#kzf3):not(#kzf4):not(#kzf5):not(#kzf6):not(#kzf7):not(#kzf8):not(#kzf9):not(#kzf10):not(#kzf11):not(#kzf12) { display: none !important; }

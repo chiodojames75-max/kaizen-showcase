@@ -1,0 +1,7 @@
+/* Nov 1 b · replaces kzplanswipe-1101.css (which slid the whole row out of the card; on the iPhone that hid the MORNING header and broke the card).
+   Back to kzplanswipe-1028's look, with James's two fixes:
+   1. "the check circle clutches around": while the finger is down nothing inside the row runs its own transition, so the check moves exactly with the text.
+   2. "mouthwash is floating to the left": the row clips its own contents with clip-path (WebKit honours it for moving layers), so nothing shows past the card. */
+html body [data-p="day-list"] > li.kz-todo.kzps-on:not(#kz-n1):not(#kz-n2) { -webkit-clip-path: inset(0); clip-path: inset(0); }
+html body [data-p="day-list"] > li.kz-todo.kzps-on:not(.kzps-anim):not(#kz-n1):not(#kz-n2) > *,
+html body [data-p="day-list"] > li.kz-todo.kzps-on:not(.kzps-anim):not(#kz-n1):not(#kz-n2) > * * { transition: none !important; }

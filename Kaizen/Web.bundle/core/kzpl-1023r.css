@@ -1,0 +1,10 @@
+/* Oct 23 (James's phone): Plan tomorrow sheet.
+   1 · the reached multiplier tier was green text on a gold fill (two old rules fighting): dark text on gold, like every gold button.
+   2 · "Lock in my plan" was cut off at the bottom of the sheet on the phone: it now stays pinned to the bottom of the sheet, fully visible, while the list scrolls above it. */
+html body .kz-planmodal .kz-tiers > span:is(.on, .hit, .done):not(#kz-n1):not(#kz-n2),
+html body .kz-planmodal .kz-tiers > span:is(.on, .hit, .done):not(#kz-n1):not(#kz-n2) * { color: #1A1404 !important; opacity: 1 !important; }
+html body .kz-planmodal .kz-pm-in:not(#kz-n1):not(#kz-n2) { max-height: calc(100dvh - env(safe-area-inset-top, 20px) - 24px) !important; }
+html body .kz-planmodal .kz-pm-in:not(#kz-n1):not(#kz-n2) > .kz-btn.gold { position: sticky !important; bottom: 0 !important; z-index: 3; flex-shrink: 0; overflow: visible !important; }
+/* a soft fade above the pinned button and the sheet colour below it, so the list scrolls cleanly underneath */
+html body .kz-planmodal .kz-pm-in:not(#kz-n1):not(#kz-n2) > .kz-btn.gold::before { content: ""; position: absolute; left: -18px; right: -18px; bottom: 100%; height: 28px; pointer-events: none; background: linear-gradient(rgba(28, 28, 30, 0), #1C1C1E); }
+html body .kz-planmodal .kz-pm-in:not(#kz-n1):not(#kz-n2) > .kz-btn.gold::after { content: ""; position: absolute; left: -18px; right: -18px; top: 100%; height: 18px; pointer-events: none; background: #1C1C1E; }

@@ -1,0 +1,23 @@
+/* Oct 27 · James: every box and pill in Add goal / Edit goal (Long-term, Daily habit, To-dos, Quit), the goal note
+   (Today's note, Dictate, Save note) on the card gradient; the chosen kind in gold glass so it still reads as chosen. */
+:root { --kzf-card: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)); --kzf-sh: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28);
+  --kzf-gold: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%); }
+/* text boxes */
+html body :is(.kz-addsheet, .kz-goalsheet, .kz-sheet, .kz-gx, .kz-gnote, .kz-g1, #kz-main) :is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not(.kz-sw49), textarea, select):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) {
+  background: var(--kzf-card) !important; box-shadow: var(--kzf-sh) !important; border: 0 !important; border-radius: 14px !important; }
+html body :is(input, textarea):focus:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7) { box-shadow: var(--kzf-sh), 0 0 0 1.5px rgba(226,185,59,.6) !important; outline: none !important; }
+/* kind pills: Long-term / Daily habit / To-dos / Quit */
+html body :is([role="radio"][data-kind], .kzq-kind):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) { background: var(--kzf-card) !important; box-shadow: var(--kzf-sh) !important; border: 0 !important; color: #fff !important; }
+html body :is([role="radio"][data-kind], .kzq-kind)[aria-checked="true"]:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) { background: var(--kzf-gold) !important; color: #1A1404 !important;
+  box-shadow: inset 0 1px .5px rgba(255,255,255,.55), inset 0 -1px .5px rgba(255,255,255,.16), 0 0 12px rgba(226,185,59,.28) !important; }
+/* every other plain button in the sheets (suggestions, branches, Break it down, close) and the switch rows */
+html body :is(.kz-addsheet, .kz-goalsheet) :is(button:not(.kz-btn):not([role="radio"]):not(.kznt-entry):not(.kzq-kind):not([aria-pressed="true"]):not([aria-checked="true"]):not(.on):not(.sel), .kz-morebtn, .kz-steprow, .kz-switchrow):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) {
+  background: var(--kzf-card) !important; box-shadow: var(--kzf-sh) !important; border: 0 !important; }
+/* goal note: Dictate on the card gradient, Save note in gold glass */
+html body .kz-mic:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) { background: var(--kzf-card) !important; box-shadow: var(--kzf-sh) !important; border: 0 !important; color: #fff !important; }
+html body .kz-gnsave:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) { background: var(--kzf-gold) !important; color: #1A1404 !important; border: 0 !important;
+  box-shadow: inset 0 1px .5px rgba(255,255,255,.55), inset 0 -1px .5px rgba(255,255,255,.16), 0 0 14px rgba(226,185,59,.25), 0 6px 18px rgba(0,0,0,.38) !important; }
+/* the roadmap progress bar that always shows on a long-term goal (kzroadbar-1027.js); the open roadmap keeps only its count */
+html body .kzrd-mini { display: block; height: 4px; margin: 9px 0 2px; border-radius: 2px; background: rgba(255,255,255,.1); overflow: hidden; }
+html body .kzrd-mini > i { display: block; height: 100%; border-radius: 2px; background: linear-gradient(90deg, #B8902E, #E9C55A); transition: width .4s cubic-bezier(.25,.1,.25,1); }
+html body .kzrd > .kzrd-bar:not(#kz-n1) { display: none !important; }

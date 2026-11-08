@@ -1,0 +1,3 @@
+/* Oct 27 · kztoday-1027 (see kztoday-1027.js) */
+html body .kz-pm-in > [data-t="pm-save"].kzt-lock:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7):not(#kz-n8):not(#kz-n9):not(#kz-n10):not(#kz-n11):not(#kz-n12):not(#kz-n13) { position: relative !important; bottom: auto !important; top: auto !important; margin-top: 16px !important; margin-bottom: 4px !important; z-index: auto !important; }
+html body .kzseg:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7):not(#kz-n8):not(#kz-n9):not(#kz-n10):not(#kz-n11):not(#kz-n12):not(#kz-n13) { transform: translateX(var(--kzt-dx, 0px)) !important; }

@@ -1,0 +1,14 @@
+/* Oct 27 · note reminders (see kznoterem-1027.js). Chips/cards reuse the Reminders sheet's look (kzn-*, kzlook2-1027). */
+html body .kznr { margin-top: 6px; }
+html body .kznr-hint { margin: -4px 4px 10px; font-size: 13px; color: #8E8E93; }
+html body .kznr-seg { flex-wrap: wrap; }
+html body .kznr-notes { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin: 12px 0; padding: 14px 16px; border-radius: 18px; cursor: pointer;
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)); box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif; }
+html body .kznr-notes span { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+html body .kznr-notes b { font-size: 16px; font-weight: 600; color: #fff; }
+html body .kznr-notes small { font-size: 13px; line-height: 1.35; color: #8E8E93; }
+html body .kzn-prev .kznr-list { white-space: pre-line; line-height: 1.5; }
+/* every close X in the app is just the X (no circle or pill behind it) */
+html body :is(.kzn-x, .kzo-x, .kzaw-x, .kz66-x, .kz-wc-x, .kz-p4-x, [data-kz-close], [data-kz-menu-close], [data-t="pv-close"], [data-t="pm-close"], [data-dy="close"]):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7):not(#kz-n8):not(#kz-n9):not(#kz-n10) {
+  background: none !important; box-shadow: none !important; border: 0 !important; color: #AEAEB2 !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }

@@ -1,0 +1,2 @@
+/* Oct 28 · two swipe actions (Edit + Delete) share the space evenly; one action fills it */
+html body #kz-today-s1 .kz-grow.kzr-daily .kz-gswipe:has(> .edit:not([hidden])) > button:not(#kz-n1):not(#kz-n2) { flex: 1 1 0 !important; width: auto !important; max-width: none !important; min-width: 0 !important; }

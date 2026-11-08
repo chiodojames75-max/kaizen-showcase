@@ -1,0 +1,11 @@
+/* Nov 4: retire the old tree's leaf sparks on check-off; styles for the climb and the day-66 light (kzfx-1104.js) */
+.kz-leafp, .kz-leaffall, .kz-leaf-sparks, .kz-leaf-ring { display: none !important; }
+.kzmx-sc.kzfx-run { overflow: hidden !important; }
+.kzfx-ft { position: absolute; z-index: 30; transform: translate(-50%, -100%); font: 800 20px/1 -apple-system, Inter, sans-serif; color: #FF8A3D; text-shadow: 0 2px 10px rgba(0,0,0,.75); pointer-events: none; white-space: nowrap; opacity: 0; }
+.kzfx-ring { position: absolute; z-index: 29; width: 22px; height: 22px; border-radius: 50%; box-shadow: 0 0 0 2.5px #FF8A3D, 0 0 14px rgba(255,138,61,.7); pointer-events: none; }
+.kzfx-burst { position: absolute; z-index: 4; width: 420px; height: 420px; border-radius: 50%; pointer-events: none; opacity: 0;
+  background: radial-gradient(circle, rgba(255,230,160,.85) 0, rgba(255,200,110,.35) 18%, rgba(255,170,80,.12) 38%, rgba(255,170,80,0) 62%), repeating-conic-gradient(from 0deg, rgba(255,220,150,.12) 0 4deg, rgba(255,220,150,0) 4deg 20deg);
+  -webkit-mask: radial-gradient(circle, #000 0, #000 30%, transparent 66%); mask: radial-gradient(circle, #000 0, #000 30%, transparent 66%); mix-blend-mode: screen; }
+.kzmx-sum.kzfx-wait { opacity: 0 !important; pointer-events: none !important; }
+.kzmx-sum.kzfx-in { animation: kzfx-in .6s ease-out both; }
+@keyframes kzfx-in { from { opacity: 0; } to { opacity: 1; } }

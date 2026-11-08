@@ -1,0 +1,18 @@
+/* Oct 27 p (from o: travelling copies built on the real ancestry, aligned to the pixel; rows slide instead of cards stretching) · Check-off (James): no "+1 day grown" float (it covered the goal's own line), and the glide into Done today
+   (index.html sink(): rows, cards and sections move together on one curve). */
+.kz-gfloat, .kz-gfloat.show { display: none !important; animation: none !important; }
+.kz-gbody:has(.kz-gfloat.show) .kz-gline { opacity: 1 !important; animation: none !important; }
+html.kzsk-on, html.kzsk-on body { overflow-anchor: none; }
+/* the travelling copy: fixed to the screen above the list, built with the list's own classes so it looks the same */
+html body #kz-today-s1 > .kzsk-ghost:not(#kz-n1):not(#kz-n2):not(#kz-n3), html body #kz-today-s1 > .kzsk-hghost:not(#kz-n1):not(#kz-n2):not(#kz-n3) { position: fixed !important; z-index: 40 !important; display: block !important; margin: 0 !important; padding: 0 !important; height: auto !important; min-height: 0 !important; gap: 0 !important; pointer-events: none; border-radius: 14px; will-change: transform, opacity; transform-origin: 50% 50%; }
+html body #kz-today-s1 > :is(.kzsk-ghost, .kzsk-hghost) > .kzsk-gsec:not(#kz-n1):not(#kz-n2):not(#kz-n3), html body #kz-today-s1 .kzsk-ghost .kzsk-gw:not(.kzsk-gcard):not(#kz-n1):not(#kz-n2):not(#kz-n3) { display: block !important; margin: 0 !important; padding: 0 !important; order: 0 !important; transform: none !important; }
+html body #kz-today-s1 .kzsk-ghost .kzsk-gcard:not(#kz-n1):not(#kz-n2):not(#kz-n3) { margin: 0 !important; }
+html body #kz-today-s1 .kzsk-ghost .kzsk-gw:not(.kzsk-gcard):not(#kz-n1):not(#kz-n2):not(#kz-n3) { background: none !important; border: 0 !important; box-shadow: none !important; width: auto !important; max-width: none !important; min-height: 0 !important; }
+html body #kz-today-s1 > .kzsk-ghost:not(.kzsk-gcard):not(#kz-n1):not(#kz-n2):not(#kz-n3) { background: none !important; border: 0 !important; }
+.kzsk-clip { overflow: hidden !important; }
+html.kzsk-on body #kz-today-s1 .kz-tsec.kzsk-keep:not(#kz-n1):not(#kz-n2):not(#kz-n3) { display: flex !important; }
+html body #kz-today-s1 > .kzsk-hghost:not(#kz-n1):not(#kz-n2):not(#kz-n3) { z-index: 39 !important; }
+/* a row sliding inside its card carries the card's colour, so it never shows a hole */
+html body #kz-today-s1 .kz-rows > .kz-goal.kzsk-mv:not(#kz-n1):not(#kz-n2) { background-color: var(--kzsk-bg) !important; position: relative; z-index: 2; }
+/* the copy is a still picture of the row: no press/pop/grow animation restarts inside it */
+html body #kz-today-s1 > .kzsk-ghost :is(.kz-check, .kz-check *), html body #kz-today-s1 > .kzsk-hghost * { animation: none !important; transition: none !important; }

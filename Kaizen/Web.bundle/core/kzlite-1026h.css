@@ -1,0 +1,4 @@
+/* Oct 26 h · Less GPU work while scrolling. Check buttons and the Plan tab's add button sat on opaque cards but still had a
+   backdrop blur, which makes the phone re-blur what's behind every one of them on every scrolled frame. They look the same
+   without it (nothing behind them to blur). Glass stays where it shows: header, tab bar, sheets. */
+html body :is(.kz-check, .kz-pcheck, .kz-qadd-go, #kz-plan-s1 button):not(#kz-n1):not(#kz-n2) { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }

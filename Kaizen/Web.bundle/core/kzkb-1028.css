@@ -1,0 +1,5 @@
+/* Oct 29 · note editor with the keyboard up (kzkb-1028.js): never slid off screen; the text box scrolls inside past a third of the screen */
+html body .kznt-back .kznt-sheet:not(#kz-n1) { translate: none !important; }
+html body .kznt-back.kz-kbfit:not(#kz-n1) { bottom: auto !important; }
+html body .kznt-back.kz-kbfit .kznt-body:not(#kz-n1) { padding-bottom: 16px !important; }
+html body .kznt-sheet .kznt-txt:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) { max-height: 34vh !important; overflow-y: auto !important; -webkit-overflow-scrolling: touch; }

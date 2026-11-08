@@ -1,0 +1,5 @@
+/* Oct 28 · the first paint already uses the new default order (the script then applies your saved order) */
+html.kz-fA body #kz-today-s1 .kz-tgroups > .kz-gsec[data-kind="daily"]:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5) { order: 1 !important; }
+html.kz-fA body #kz-today-s1 .kz-tgroups > .kz-todosec:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5) { order: 2 !important; }
+html.kz-fA body #kz-today-s1 .kz-tgroups > .kzq-sec:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5) { order: 3 !important; }
+html.kz-fA body #kz-today-s1 .kz-tgroups > .kz-gsec[data-kind="long"]:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5) { order: 4 !important; }

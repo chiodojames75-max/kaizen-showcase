@@ -1,0 +1,13 @@
+/* Oct 26 l · Reorder Today's sections (kzsecdrag-1026l.js). One even gap between sections in any order; the title row can be
+   held (no text selection or iOS callout); the lifted section gets a raised card behind it. */
+html.kz-fA body #kz-today-s1 .kz-tgroups > :is(.kz-gsec, .kzq-sec, .kz-todosec):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4) { margin-top: 0 !important; }
+html body #kz-today-s1 .kz-tgroups > section > .kz-tsec-h { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; touch-action: manipulation; }
+html body #kz-today-s1 .kz-tgroups > section { position: relative; }
+html body #kz-today-s1 .kz-tgroups > section.kzsd-lift { z-index: 60; transition: none !important; will-change: transform; }
+html body #kz-today-s1 .kz-tgroups > section.kzsd-lift::before,
+html body #kz-today-s1 .kz-tgroups > section.kzsd-drop::before { content: ""; position: absolute; inset: -10px -12px; z-index: -1; border-radius: 24px; background: rgba(28,28,30,.96); box-shadow: 0 24px 60px rgba(0,0,0,.65), 0 2px 8px rgba(0,0,0,.4), inset 0 0 0 .5px rgba(255,255,255,.08); pointer-events: none; animation: kzsdIn .18s ease-out both; }
+html body #kz-today-s1 .kz-tgroups > section.kzsd-drop::before { animation: kzsdOut .28s ease-in both; }
+@keyframes kzsdIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes kzsdOut { from { opacity: 1; } to { opacity: 0; } }
+html body.kzsd-on, html body.kzsd-on * { -webkit-user-select: none !important; user-select: none !important; }
+@media (prefers-reduced-motion: reduce) { html body #kz-today-s1 .kz-tgroups > section:is(.kzsd-lift, .kzsd-drop)::before { animation: none; } }

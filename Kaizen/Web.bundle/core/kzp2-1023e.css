@@ -1,0 +1,5 @@
+/* Oct 23 Phase 2: empty states */
+/* days with nothing to track (before you started, or no goals yet) stay empty instead of grey tiles */
+html body #kz-main #kz-cal#kz-cal .kz-calmonth .kz-cald.none { background: transparent !important; box-shadow: none !important; }
+html body #kz-main #kz-cal#kz-cal .kz-calmonth .kz-cald.none b { color: #48484A !important; }
+.kz-p2-hint { margin: 0 4px 4px; padding: 12px 14px; border-radius: 14px; background: #1C1C1E; font: 400 15px/1.35 var(--kz-sans); color: #8E8E93; }

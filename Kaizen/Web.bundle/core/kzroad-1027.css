@@ -1,0 +1,43 @@
+/* Oct 27 · long-term goal roadmap (see kzroad-1027.js) */
+html body .kz-grow > .kzrd { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 10px; padding: 6px 2px 4px; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif; cursor: default; }
+html body .kzrd-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding: 0 4px; }
+html body .kzrd-head b { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #E2B93B; }
+html body .kzrd-head span { font-size: 13px; color: #8E8E93; font-variant-numeric: tabular-nums; }
+html body .kzrd-bar { display: block; height: 5px; margin: 0 4px; border-radius: 3px; background: rgba(255,255,255,.1); overflow: hidden; }
+html body .kzrd-bar > i { display: block; height: 100%; border-radius: 3px; background: linear-gradient(90deg, #B8902E, #E9C55A); transition: width .4s cubic-bezier(.25,.1,.25,1); }
+html body .kzrd-list { list-style: none; margin: 4px 0 0; padding: 12px 14px; border-radius: 18px; background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)); box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28); }
+html body .kzrd-m { position: relative; display: flex; align-items: center; gap: 14px; min-height: 58px; }
+/* the road: a line through the checks, gold where it's walked */
+html body .kzrd-m::before { content: ""; position: absolute; left: 16px; top: -10px; bottom: -10px; width: 2px; margin-left: -1px; background: rgba(255,255,255,.12); }
+html body .kzrd-m:first-child::before { top: 50%; }
+html body .kzrd-m:last-child::before { bottom: 50%; }
+html body .kzrd-m:first-child:last-child::before { display: none; }
+html body .kzrd-m.done::before { background: linear-gradient(#B8902E, #E9C55A); }
+html body .kzrd-ck { position: relative; z-index: 1; flex: 0 0 32px; width: 32px; height: 32px; padding: 0; border: 0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: transparent; cursor: pointer; -webkit-tap-highlight-color: transparent;
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.2) 0%, rgba(255,255,255,.06) 45%, rgba(255,255,255,.03) 70%, rgba(255,255,255,.1) 100%), #161618;
+  box-shadow: inset 0 1px .5px rgba(255,255,255,.55), inset 0 -1px .5px rgba(255,255,255,.16), inset 0 0 0 .5px rgba(255,255,255,.22), 0 4px 12px rgba(0,0,0,.38); }
+html body .kzrd-ck::after { content: ""; position: absolute; inset: -6px; border-radius: 50%; }
+html body .kzrd-ck svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+html body .kzrd-m.done .kzrd-ck { color: #1A1404; background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%);
+  box-shadow: inset 0 1px .5px rgba(255,255,255,.55), inset 0 -1px .5px rgba(255,255,255,.16), inset 0 0 0 .5px rgba(255,255,255,.22), 0 0 12px rgba(226,185,59,.35), 0 4px 12px rgba(0,0,0,.38); }
+html body .kzrd-m.next .kzrd-ck { box-shadow: inset 0 1px .5px rgba(255,255,255,.55), inset 0 -1px .5px rgba(255,255,255,.16), 0 0 0 2px rgba(226,185,59,.75), 0 4px 12px rgba(0,0,0,.38); }
+html body .kzrd-ck:active { transform: scale(.9); }
+html body .kzrd-ck.pop { animation: kzrdPop .42s cubic-bezier(.2,1.5,.4,1); }
+@keyframes kzrdPop { 0% { transform: scale(.82); } 100% { transform: scale(1); } }
+html body .kzrd-t { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+html body .kzrd-t b { font-size: 16px; font-weight: 600; line-height: 1.3; color: #fff; }
+html body .kzrd-t em { font-style: normal; font-size: 13px; color: #8E8E93; }
+html body .kzrd-m.done .kzrd-t b { color: #8E8E93; text-decoration: line-through; text-decoration-color: rgba(142,142,147,.6); }
+html body .kzrd-m.done .kzrd-t em { color: #B8902E; }
+html body .kzrd-m.next .kzrd-t b { font-weight: 700; }
+html body .kzrd-m.next .kzrd-t em { color: #C7C7CC; }
+html body .kzrd-m.today .kzrd-t em { color: #E2B93B; font-weight: 600; }
+html body .kzrd-m.late .kzrd-t em { color: #FF453A; font-weight: 600; }
+html body .kzrd-won { margin: 2px 0 0; text-align: center; font-size: 14px; font-weight: 600; color: #30D158; }
+html body .kzrd-empty { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 18px; background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)); box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28); }
+html body .kzrd-empty b { font-size: 16px; color: #fff; }
+html body .kzrd-empty span { font-size: 14px; line-height: 1.4; color: #8E8E93; }
+html body .kzrd-pill { display: flex; align-items: center; justify-content: center; min-height: 46px; border-radius: 999px; font-size: 15px; font-weight: 600; color: #fff; text-decoration: none;
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)); box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28); }
+html body .kzrd-pill.gold { color: #1A1404; background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%); box-shadow: inset 0 1px .5px rgba(255,255,255,.55), 0 0 14px rgba(226,185,59,.25), 0 6px 18px rgba(0,0,0,.38); }
+html body .kzrd-pill:active { transform: scale(.98); }

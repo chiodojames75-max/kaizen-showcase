@@ -1,0 +1,9 @@
+/* Oct 28 · Plan's to-do rows get exactly the same surface and edges as its plan-task rows (kzsurf-1028.js puts both in one
+   group): one gradient across the card, a highlight only on the card's top row, a dark edge only on its bottom row. */
+html body [data-p="day-list"] li.kz-todo.kzs-row:not(.plan):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) {
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)) 0 calc(-1px * var(--kzs-y, 0)) / 100% calc(1px * var(--kzs-h, 60)) no-repeat, #000 !important; box-shadow: none !important; }
+html body [data-p="day-list"] li.kz-todo.kzs-row.kzs-first:not(.plan):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) { box-shadow: inset 0 1px 0 rgba(255,255,255,.16) !important; }
+html body [data-p="day-list"] li.kz-todo.kzs-row.kzs-last:not(.plan):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) { box-shadow: inset 0 -1px 0 rgba(0,0,0,.28) !important; }
+html body [data-p="day-list"] li.kz-todo.kzs-row.kzs-first.kzs-last:not(.plan):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) { box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28) !important; }
+/* a row in the middle of a card never draws an edge of its own */
+html body [data-p="day-list"] li.kz-todo.kzs-row:not(.kzs-first):not(.kzs-last):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) { box-shadow: none !important; }

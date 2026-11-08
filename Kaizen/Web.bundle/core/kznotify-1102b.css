@@ -1,0 +1,2 @@
+/* Nov 2 b · Reminders: no tick marks on the day bar (James) */
+html body .kzn3-tk:not(#kz-c1):not(#kz-c2):not(#kz-c3):not(#kz-c4):not(#kz-c5):not(#kz-c6):not(#kz-c7):not(#kz-c8):not(#kz-c9) { display: none !important; }

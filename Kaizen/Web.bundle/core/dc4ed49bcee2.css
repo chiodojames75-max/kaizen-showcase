@@ -1,0 +1,8 @@
+
+  /* v97 · the logo sits optically centered in the tree button; the streak is just a flame and a number; pet name tags */
+  .kz-tab-orb svg { margin-top: 0 !important; transform: translateY(-2px); }
+  .kz49 .kz-h49 .kz-chip.gold { background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 0 4px !important; }
+  .kz-xph-n { font-size: 24px !important; }
+  .kz-xph-n small { font-size: 11px !important; vertical-align: 3px !important; }
+  .kz-cr-tag { position: absolute; left: 50%; bottom: 100%; transform: translate(-50%, -2px); padding: 3px 8px; border-radius: 99px; background: rgba(0,0,0,.6); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); color: #F5D774; font: 700 10.5px/1.1 var(--kz-sans); letter-spacing: .02em; white-space: nowrap; pointer-events: none; z-index: 5; }
+  .kz-cr.flip .kz-cr-tag { transform: translate(-50%, -2px) scaleX(1); }

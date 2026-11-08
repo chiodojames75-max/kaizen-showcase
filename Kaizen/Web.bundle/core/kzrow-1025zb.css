@@ -1,0 +1,39 @@
+/* Oct 25 zb (from za) · narrow iOS-size Delete; the whole row slides.
+   Oct 25 z · Today: a "LATER" line between your open goals and Tomorrow (James picked B); swipe left on a daily habit or
+   a Quit habit shows a red Delete, like iOS; Break it down dates sit in the middle of their box. */
+
+/* B: the line */
+body .kzdv { display: flex; align-items: center; gap: 12px; margin: 28px 4px -8px; }
+body .kzdv[hidden] { display: none !important; }
+body .kzdv i { flex: 1 1 auto; height: 1px; background: #3A3A3C; }
+body .kzdv span { font-size: 12px; font-weight: 700; letter-spacing: .14em; color: #8E8E93; }
+
+/* swipe: sideways drags belong to the row, up/down still scrolls the page (iOS cancelled the swipe before) */
+body #kz-today-s1 .kz-grow, body .kzq-row { touch-action: pan-y; }
+/* daily habits and Quit: one wide red Delete (long-term goals keep Archive + Delete) */
+body #kz-today-s1 .kz-grow.kzr-daily .kz-gswipe .arch { display: none !important; }
+body #kz-today-s1 .kz-grow.kzr-daily .kz-gswipe .del { flex: 1 1 auto; }
+
+/* Quit rows */
+body .kzq-row { position: relative; }
+body .kzr-qdel { position: absolute; top: 0; bottom: 0; left: calc(100% + 8px); right: auto; width: 88px; border: 0; border-radius: 18px; background: #FF453A; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center; }
+
+/* Break it down: the date sits in the middle of its box (iOS put it top-left) */
+html body .kzbd-by, html body .kzbd-mb { text-align: center !important; text-align-last: center; line-height: normal; display: flex !important; align-items: center; justify-content: center; }
+html body .kzbd-by::-webkit-date-and-time-value, html body .kzbd-mb::-webkit-date-and-time-value { text-align: center; margin: 0 auto; width: 100%; }
+html body .kzbd-by::-webkit-datetime-edit, html body .kzbd-mb::-webkit-datetime-edit { display: flex; justify-content: center; }
+
+/* add sheet: what's missing */
+body .kzr-need { margin: -4px 4px 4px; font-size: 14px; font-weight: 600; color: #FF9F0A; }
+/* Oct 25 za: Delete only exists while you swipe or once the row is open (the Quit row's background is see-through,
+   so the button behind it showed all the time). Same guard for the habit rows' Delete. */
+body .kzr-qdel { visibility: hidden; opacity: 0; transition: opacity .15s ease; }
+body .kzq-row.kzr-drag .kzr-qdel, body .kzq-row.kzr-open .kzr-qdel { visibility: visible; opacity: 1; }
+body #kz-today-s1 .kz-grow .kz-gswipe { visibility: hidden; }
+body #kz-today-s1 .kz-grow.kz-swiping .kz-gswipe, body #kz-today-s1 .kz-grow.kz-swopen .kz-gswipe, body #kz-today-s1 .kz-grow.kz-swanim .kz-gswipe, body #kz-today-s1 .kz-grow.kzr-drag .kz-gswipe, body #kz-today-s1 .kz-grow.kzr-open .kz-gswipe { visibility: visible; }
+body #kz-today-s1 .kz-grow.kzr-daily .kz-gswipe .del { width: 100% !important; max-width: none !important; flex: 1 1 100% !important; }
+body #kz-today-s1 .kz-grow.kzr-open .kz-gswipe .del, body .kzq-row.kzr-open .kzr-qdel { opacity: 1 !important; transform: none !important; filter: none !important; }
+
+/* zb: the Quit list clips the row that slides, like the habit list */
+body .kzq-sec .kzq-list, body .kzq-sec .kzq-box { overflow: hidden; }
+body .kzq-row { overflow: visible; }

@@ -1,0 +1,21 @@
+/* Oct 27 · Edit task: Repeat row + the sheet on the app's glass theme (kzedrep-1027.js) */
+html body .kzo-sheet .kzer-seg { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+html body .kzo-sheet .kzer-days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; margin-top: 10px; }
+html body .kzo-sheet :is(.kzer-seg, .kzer-days) > button { min-height: 44px; padding: 0 4px; border: 0; border-radius: 999px; font: inherit; font-size: 14px; font-weight: 600; white-space: nowrap; color: rgba(235,235,245,.85);
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)); box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28); transition: transform .12s ease; }
+html body .kzo-sheet .kzer-days > button { min-height: 40px; padding: 0; }
+html body .kzo-sheet :is(.kzer-seg, .kzer-days) > button[aria-pressed="true"],
+html body .kzo-sheet .kzo-parts > button[aria-checked="true"]:not(#kz-n1):not(#kz-n2) { color: #1A1406 !important; border-color: transparent !important;
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%) !important; box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 -1px 0 rgba(0,0,0,.22) !important; }
+html body .kzo-sheet :is(.kzer-seg, .kzer-days, .kzo-parts) > button:active { transform: scale(.95); }
+html body .kzo-sheet .kzer-hint { margin: 8px 0 0; font-size: 13px; line-height: 1.4; color: rgba(235,235,245,.6); }
+html body .kzo-sheet .kzo-save:not(#kz-n1):not(#kz-n2) { border: 0 !important; border-radius: 999px !important; color: #1A1406 !important;
+  background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%) !important; box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 -1px 0 rgba(0,0,0,.22), 0 6px 18px rgba(184,144,46,.24) !important; transition: transform .12s ease; }
+html body .kzo-sheet .kzo-save:active { transform: scale(.97); }
+@media (max-width: 359px) { html body .kzo-sheet .kzer-seg > button { font-size: 12px; } }
+/* New to-do → Pick days: Every week / Just this week (kzrpweek-1027.js) */
+html body .kzrpw { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 10px 0 0; }
+html body .kzrpw > button { min-height: 40px; border: 0; border-radius: 999px; font: inherit; font-size: 14px; font-weight: 600; color: rgba(235,235,245,.85);
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)); box-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28); transition: transform .12s ease; }
+html body .kzrpw > button[aria-pressed="true"] { color: #1A1406; background: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 -1px 0 rgba(0,0,0,.22); }
+html body .kzrpw > button:active { transform: scale(.96); }

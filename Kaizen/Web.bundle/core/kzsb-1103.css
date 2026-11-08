@@ -1,0 +1,4 @@
+/* Nov 3 · tab bar away while a sheet is open (kzsb-1103.js) */
+html.kzsb body .kz-tabbar:not(#kz-s1):not(#kz-s2):not(#kz-s3):not(#kz-s4):not(#kz-s5):not(#kz-s6):not(#kz-s7):not(#kz-s8):not(#kz-s9):not(#kz-s10):not(#kz-s11):not(#kz-s12),
+html.kzsb body .kz-qadd:not(#kz-s1):not(#kz-s2):not(#kz-s3):not(#kz-s4):not(#kz-s5):not(#kz-s6):not(#kz-s7):not(#kz-s8):not(#kz-s9):not(#kz-s10):not(#kz-s11):not(#kz-s12),
+html.kzsb body .kz-fab:not(#kz-s1):not(#kz-s2):not(#kz-s3):not(#kz-s4):not(#kz-s5):not(#kz-s6):not(#kz-s7):not(#kz-s8):not(#kz-s9):not(#kz-s10):not(#kz-s11):not(#kz-s12) { visibility: hidden !important; pointer-events: none !important; opacity: 0 !important; transition: none !important; }

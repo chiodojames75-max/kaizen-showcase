@@ -1,0 +1,3 @@
+/* Oct 24 · one pop-up at a time (see kzq-1024c.js): pop-ups waiting their turn stay hidden and untouchable */
+[data-kzq-wait]:not(#kz-n1) { visibility: hidden !important; pointer-events: none !important; }
+[data-kzq-wait] * { visibility: hidden !important; pointer-events: none !important; }

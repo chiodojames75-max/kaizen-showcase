@@ -1,0 +1,8 @@
+/* Oct 25 x (replaces 1025s): no soil band behind the trees; every tree gets a fixed column (a third of the scene), its
+   name and line are cut with "…" inside that column, so a long goal name never covers the one next to it.
+   (1025s took the label's width limit away, which let long names spill over.) */
+html.kz-grove2 body .kzg-scene::before { background: none !important; }
+html.kz-grove2 body .kzg-ground { background: none !important; border-top: 0 !important; box-shadow: none !important; }
+html.kz-grove2 body .kzg-tree { width: 31%; min-width: 0; }
+html.kz-grove2 body .kzg-lbl { width: 100%; max-width: 100% !important; min-width: 0; overflow: hidden; }
+html.kz-grove2 body .kzg-lbl b, html.kz-grove2 body .kzg-lbl em { display: block; width: 100%; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: center; }

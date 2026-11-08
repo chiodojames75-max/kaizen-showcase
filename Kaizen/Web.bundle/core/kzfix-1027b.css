@@ -1,0 +1,23 @@
+/* Oct 27 b · James, on Edit goal / Plan today:
+   1. Auto-gradient cards (kzauto-1027) sit on a solid dark base, so a sheet like Plan today is never see-through.
+   2. "+ Add a milestone": rounded like every other button.
+   3. Every X (milestone remove, sheet close) is just the X: no pill or circle behind it. (The native back arrow lost its
+      circle in ContentView.swift, and hides while a sheet is open.)
+   4. Milestone rows fit the width: number · text/date · X.
+   5. Save / Lock in stays at the bottom of the sheet; while the keyboard is up it sits at the end of the form instead of
+      floating up over the fields. */
+html body .kzs-auto:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7):not(#kz-n8):not(#kz-n9) {
+  background: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043)), #0E0E10 !important; }
+html body .kzbd-add:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7):not(#kz-n8) { border-radius: 14px !important; padding: 0 16px !important; min-height: 44px; }
+html body :is(.kzbd-mx, .kz-sheet49 .kz-iconbtn, .kz-sheet .kz-iconbtn, .kzsw .kz-iconbtn, [aria-label="Close"], [aria-label="Close the sheet"], [data-x="close"], .kz-p4-x, .kz-gs-x):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7):not(#kz-n8):not(#kz-n9) {
+  background: none !important; box-shadow: none !important; border: 0 !important; color: #AEAEB2 !important; }
+html body .kzbd-mr:not(#kz-n1):not(#kz-n2):not(#kz-n3) { grid-template-columns: 24px minmax(0, 1fr) 36px !important; column-gap: 8px !important; }
+html body .kzbd-mr :is(.kzbd-mt, .kzbd-mb):not(#kz-n1):not(#kz-n2) { min-width: 0 !important; width: 100% !important; box-sizing: border-box !important; }
+html body .kzbd-mx:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7):not(#kz-n8):not(#kz-n9):not(#kz-n10) { width: 36px !important; min-width: 36px !important; height: 44px !important; padding: 0 !important; }
+html body :is(.kz-sheet49, .kz-sheet, .kz-p4-in, .kz-gs-in):focus-within :is(.kz-sheet-in > .kz-btn.gold, .kz-btn.gold):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) { position: relative !important; bottom: auto !important; }
+/* the planner (Plan today) scrolls far enough that Lock in my plan clears the bottom edge */
+html body :is(.kz-pm-in, .kz-sheet-in):not(#kz-n1):not(#kz-n2):not(#kz-n3) { padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 36px) !important; scroll-padding-bottom: 40px; }
+/* header: the chat button matches the streak pill (was a 44 pt square-ish block) */
+html body .kz-hbar .kz-chip.kzf-q:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7):not(#kz-n8):not(#kz-n9) { width: 36px !important; height: 36px !important; min-width: 36px !important; min-height: 36px !important; padding: 0 !important; border-radius: 18px !important; position: relative; margin: 4px !important; }
+html body .kz-hbar .kz-chip.kzf-q:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7):not(#kz-n8):not(#kz-n9)::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; }
+html body .kz-hbar .kz-chip.kzf-q svg:not(#kz-n1):not(#kz-n2) { width: 18px !important; height: 18px !important; }

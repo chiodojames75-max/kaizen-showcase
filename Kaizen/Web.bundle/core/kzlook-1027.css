@@ -1,0 +1,41 @@
+/* Oct 27 · James: "rework these screens to have the gradient and glass look … across the whole app".
+   One theme layer over every sheet, pop-up and button family:
+   - sheet panels: the to-do card gradient on a near-black base, a hairline of light along the top
+   - gold buttons: gold glass (the done-check recipe); red buttons: red glass; ghost/grey buttons: the card gradient
+   - sheet text: one hierarchy (22 title / 16 body in soft white with bold white / 14 note in grey), centred
+   Linked last on every page; selectors carry extra :not(#id) so they win over older page rules. */
+:root {
+  --kzl-card: linear-gradient(rgba(255,255,255,.11), rgba(255,255,255,.043));
+  --kzl-card-sh: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.28);
+  --kzl-sheet: linear-gradient(rgba(255,255,255,.085), rgba(255,255,255,.025)), #121214;
+  --kzl-gold: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.5) 0%, rgba(233,197,90,.95) 42%, rgba(184,144,46,.96) 100%);
+  --kzl-red: radial-gradient(130% 100% at 30% 0%, rgba(255,255,255,.38) 0%, rgba(255,92,80,.95) 42%, rgba(196,48,40,.96) 100%);
+  --kzl-glass-sh: inset 0 1px .5px rgba(255,255,255,.55), inset 0 -1px .5px rgba(255,255,255,.16), inset 0 0 0 .5px rgba(255,255,255,.22), 0 6px 18px rgba(0,0,0,.38), 0 1px 2px rgba(0,0,0,.4);
+}
+/* ---------- sheets and pop-ups ---------- */
+html body :is(.kzsw, .kz-sheet-in, .kzf-qs-in, .kz-gs-in, .kz-p4-in, .kznt-sheet, .kzg-why-in, .kzdy-modal > div):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) {
+  background: var(--kzl-sheet) !important; box-shadow: inset 0 1px 0 rgba(255,255,255,.14), 0 -12px 40px rgba(0,0,0,.55) !important; }
+html body > div.kzm.kzs[role="menu"]:not(#kz-n1) { background: var(--kzl-sheet) !important; box-shadow: inset 0 1px 0 rgba(255,255,255,.14), 0 -12px 40px rgba(0,0,0,.55) !important; }
+html body :is(.kzsw-list, .kzs-grp):not(#kz-n1):not(#kz-n2):not(#kz-n3) { background: var(--kzl-card) !important; box-shadow: var(--kzl-card-sh) !important; }
+/* switch sheet text: clear hierarchy */
+html body .kzsw-warn:not(#kz-n1):not(#kz-n2) { width: 56px; height: 56px; border-radius: 50%; background: var(--kzl-red) !important; color: #fff !important; box-shadow: var(--kzl-glass-sh), 0 0 18px rgba(255,69,58,.35) !important; font-size: 26px; }
+html body .kzsw-t:not(#kz-n1):not(#kz-n2) { font-size: 22px; font-weight: 700; line-height: 1.25; margin: 6px 12px 10px; }
+html body .kzsw-p:not(#kz-n1):not(#kz-n2) { font-size: 16px; line-height: 1.45; color: #C7C7CC; margin: 0 8px 10px; }
+html body .kzsw-p b:not(#kz-n1) { color: #fff; font-weight: 700; }
+html body .kzsw-p.dim:not(#kz-n1):not(#kz-n2) { font-size: 14px; color: #8E8E93; margin-top: 4px; }
+html body .kzsw-acts:not(#kz-n1):not(#kz-n2) { gap: 10px; margin-top: 22px; }
+/* ---------- buttons ---------- */
+html body :is(.kz-btn.gold, .kzsw-btn.gold, .kz66-go:not(.ok), .kzg-btn.gold):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) {
+  background: var(--kzl-gold) !important; color: #1A1404 !important; border: 0 !important; box-shadow: var(--kzl-glass-sh), 0 0 16px rgba(226,185,59,.25) !important; opacity: 1 !important; }
+html body :is(.kz-btn.danger, .kz-btn.kz-danger, .kzsw-btn.red):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) {
+  background: var(--kzl-red) !important; color: #fff !important; border: 0 !important; box-shadow: var(--kzl-glass-sh), 0 0 16px rgba(255,69,58,.22) !important; }
+html body :is(.kz-btn.ghost, .kzsw-btn.ghost, .kz66-quit, .kzg-btn.ghost, .kz-btn.navy):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) {
+  background: var(--kzl-card) !important; color: #fff !important; border: 0 !important; box-shadow: var(--kzl-card-sh) !important; }
+html body :is(.kz-btn, .kzsw-btn, .kz66-go, .kz66-quit, .kzg-btn):not(#kz-n1):not(#kz-n2):not(#kz-n3) { border-radius: 16px; min-height: 52px; font-weight: 700; letter-spacing: -.01em; }
+html body :is(.kz-btn.sm):not(#kz-n1):not(#kz-n2):not(#kz-n3) { min-height: 38px; border-radius: 12px; }
+html body :is(.kz-btn, .kzsw-btn, .kz66-go, .kz66-quit, .kzg-btn):active { transform: scale(.98); }
+/* ---------- Kaizen 66 card on a goal page ---------- */
+html body :is(.kz66-card, .kz66-gp):not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4) { background: var(--kzl-card) !important; box-shadow: var(--kzl-card-sh), 0 0 0 1px rgba(226,185,59,.28) !important; border-color: transparent !important; border-radius: 22px !important; }
+html body :is(.kz66-card, .kz66-gp) h3:not(#kz-n1):not(#kz-n2) { color: #E2B93B !important; opacity: 1 !important; font-size: 12px !important; letter-spacing: .14em !important; }
+html body .kz66-st span:not(#kz-n1):not(#kz-n2) { color: #C7C7CC !important; font-size: 15px !important; line-height: 1.45 !important; }
+html body .kz66-st b:not(#kz-n1):not(#kz-n2) { color: #fff !important; font-size: 20px !important; }

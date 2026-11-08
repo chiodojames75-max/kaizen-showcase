@@ -1,0 +1,17 @@
+# Xcode
+xcuserdata/
+DerivedData/
+*.xcuserstate
+build/
+# macOS
+.DS_Store
+# Big or generated folders kept out of version control
+render/
+Promo Kit/
+_backup-before-oct21-edits/
+_to_delete/
+Legal-pre/
+*.zip
+_backup-*/
+_perf/
+_mockart/

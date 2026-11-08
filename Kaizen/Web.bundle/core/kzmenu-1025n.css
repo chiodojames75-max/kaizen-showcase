@@ -1,0 +1,19 @@
+/* Oct 25 i · Goal actions menu (see kzmenu-1025i.js). Springs come from kzspring-1025f (--kz-spr-*), with plain fallbacks. */
+body .kzm-back { position: fixed; inset: 0; z-index: 9400; background: rgba(0,0,0,.28); -webkit-backdrop-filter: blur(14px) saturate(140%); backdrop-filter: blur(14px) saturate(140%); opacity: 0; transition: opacity .22s ease; }
+body .kzm-back.on { opacity: 1; }
+html body .kz-goal.kzm-on:not(#kz-n1):not(#kz-n2):not(#kz-n3) { position: relative !important; z-index: 9450 !important; transform: scale(1.025) !important; box-shadow: 0 18px 44px rgba(0,0,0,.55) !important; border-radius: 14px !important; transition: transform var(--kz-spr-snappy-d, .3s) var(--kz-spr-snappy, ease); background: #2C2C2E !important; }
+body .kzm { position: fixed; z-index: 9500; width: 250px; background: rgba(44,44,46,.97); border-radius: 14px; overflow: hidden; box-shadow: 0 22px 54px rgba(0,0,0,.6); font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  opacity: 0; transform: scale(.86); transition: transform var(--kz-spr-snappy-d, .3s) var(--kz-spr-snappy, cubic-bezier(.2,.9,.3,1.1)), opacity .16s ease; }
+body .kzm.on { opacity: 1; transform: none; }
+body .kzm.out { opacity: 0; transform: scale(.94); transition: transform .18s ease, opacity .16s ease; }
+body .kzm.calm, body .kzm-back.calm { transition: opacity .12s ease !important; transform: none !important; }
+body .kzm-it { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-height: 46px; padding: 0 16px; background: none; border: 0; color: #FFFFFF; font: inherit; font-size: 16px; text-align: left; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+body .kzm-it + .kzm-it { border-top: 0.5px solid rgba(255,255,255,.1); }
+body .kzm-it svg { width: 19px; height: 19px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; opacity: .9; }
+body .kzm-it:active { background: rgba(255,255,255,.08); }
+body .kzm-it[disabled] { color: #636366; cursor: default; }
+body .kzm-it.gold { color: #E2B93B; }
+body .kzm-it.red, body .kzm-it.sure { color: #FF453A; }
+body .kzm-it.sure { font-weight: 600; }
+body .kzm-sep { display: block; height: 8px; background: rgba(0,0,0,.35); }
+body .kz-goal { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }

@@ -1,0 +1,8 @@
+/* Oct 27 · James: the gold + circles a little smaller (header top right on every tab: 44 -> 36; Plan's "New task" +: 40 -> 34).
+   The tap area stays 44 pt through an invisible ring around the button. */
+html body .kz-hadd:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) { width: 36px !important; height: 36px !important; min-width: 36px !important; min-height: 36px !important; margin: 4px !important; position: relative; }
+html body .kz-hadd:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6) svg { width: 16px !important; height: 16px !important; }
+html body .kz-hadd:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6)::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; }
+html body .kz-qadd-go:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7):not(#kz-n8):not(#kz-n9):not(#kz-n10):not(#kz-n11):not(#kz-n12) { flex: 0 0 34px !important; width: 34px !important; height: 34px !important; min-width: 34px !important; min-height: 34px !important; margin: 3px !important; position: relative; }
+html body .kz-qadd-go:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7):not(#kz-n8):not(#kz-n9):not(#kz-n10):not(#kz-n11):not(#kz-n12) svg { width: 16px !important; height: 16px !important; }
+html body .kz-qadd-go:not(#kz-n1):not(#kz-n2):not(#kz-n3):not(#kz-n4):not(#kz-n5):not(#kz-n6):not(#kz-n7):not(#kz-n8):not(#kz-n9):not(#kz-n10):not(#kz-n11):not(#kz-n12)::after { content: ""; position: absolute; inset: -3px; border-radius: 50%; }
