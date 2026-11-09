@@ -5,19 +5,20 @@ An iPhone app for organizing daily habits and long-term goals. Built and publish
 **Status:** in development. Preparing for TestFlight and the App Store.
 
 <p>
-  <img src="docs/screenshots/01_today_1320x2868.png" width="160" alt="Today screen">
-  <img src="docs/screenshots/02_plan_1320x2868.png" width="160" alt="Plan screen">
-  <img src="docs/screenshots/04_progress_1320x2868.png" width="160" alt="Progress screen">
-  <img src="docs/screenshots/05_me_1320x2868.png" width="160" alt="Me screen">
+  <img src="docs/screenshots/01_today_1320x2868.png" width="150" alt="Today screen">
+  <img src="docs/screenshots/02_plan_1320x2868.png" width="150" alt="Plan screen">
+  <img src="docs/screenshots/03_mountains_1320x2868.png" width="150" alt="Mountains screen">
+  <img src="docs/screenshots/04_progress_1320x2868.png" width="150" alt="Progress screen">
+  <img src="docs/screenshots/05_me_1320x2868.png" width="150" alt="Me screen">
 </p>
 
 ## What it does
 
-- **Today:** your daily habits and to-dos in one list, checked off as you go.
-- **Long-term goals:** set a bigger goal, break it into steps, and keep a journal for it.
-- **Plan:** schedule to-dos and reminders by time of day.
-- **Progress:** a calendar of your days, a balance view across goals, and your streaks.
-- **Streak shields:** a full week earns a shield, so one missed day doesn't erase weeks of progress.
+- **Today:** your daily habits, to-dos, and long-term goals in one list, checked off as you go.
+- **Mountains:** every goal is its own mountain. Each day you check it off, you climb, with checkpoints on the way. At day 66 you reach the top and the habit is yours.
+- **Plan:** plan tomorrow the night before, and schedule to-dos by time of day.
+- **Progress:** a calendar of your days, a balance view across the areas of your life, and milestones.
+- **Shields:** checkpoints on the climb earn shields that protect your progress.
 - **Journal:** write or dictate short notes.
 
 ## Privacy
